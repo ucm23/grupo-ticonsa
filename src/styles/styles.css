@@ -115,7 +115,6 @@ li a.active, li a:hover{
   }
 }
 
-
 @media (max-width: 952px){
   .enlace{
       padding-top: 10px;
@@ -130,7 +129,7 @@ ul {
   margin-bottom: 0 !important;
 }
 
-@media (max-width: 858px){
+@media (max-width: 1062px){ /* 858px */
   .checkbtn{
       display: block;
   }
@@ -144,6 +143,7 @@ ul {
       text-align: center;
       transition: all .5s;
       z-index: 25;
+      padding-left: 0 !important;
   }
   nav ul li{
       display: block;
@@ -155,7 +155,7 @@ ul {
   }
   li a:hover, li a.active{
       background: none;
-      color: red;
+      color: #1d50dd;
   }
   #check:checked ~ ul{
       left:0;
