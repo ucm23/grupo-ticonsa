@@ -122,7 +122,7 @@ export default function Carousel() {
                               rounded={'md'}
                               colorScheme='facebook'
                               color={'white'}
-                              onClick={()=>window.open('https://victum.eastus.cloudapp.azure.com/')}
+                              onClick={()=>{}}
                               rightIcon={<MdCall />}
                             >
                                 {card.phone}
