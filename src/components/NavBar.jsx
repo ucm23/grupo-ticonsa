@@ -16,9 +16,7 @@ export default function NavBar({children}) {
         {id:6, href: "/contacto", content: "Contacto"},
     ]
 
-    const handleCheckBoxChange = (event) => {
-        setIsChecked(event.target.checked);
-    };
+    const handleCheckBoxChange = ({target}) => setIsChecked(target.checked);
     
     if (isChecked) {
         document.body.style.overflow = 'hidden';
@@ -31,7 +29,7 @@ export default function NavBar({children}) {
             <nav>
                 <input type="checkbox" id="check" onChange={handleCheckBoxChange} />
                 <label htmlFor="check" className="checkbtn" >
-                    <i className="fas fa-bars"></i>
+                    <i className={isChecked?"fas fa-circle":"fas fa-bars"}></i>
                 </label>
                 <a href="#" className="enlace d-flex justify-content-center align-items-center">
                     <img src="vite.svg" className="logo" alt="" />
