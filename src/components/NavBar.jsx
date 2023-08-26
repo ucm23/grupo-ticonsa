@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types'
 import { Link,useLocation } from "wouter"
 import SmallCentered from './Footer'
+import { useState } from 'react';
 
 export default function NavBar({children}) {
     const [location] = useLocation();
+    const [isChecked, setIsChecked] = useState(false);
 
     const routes = [
         {id:1, href: "/", content: "Inicio"},
@@ -14,10 +16,20 @@ export default function NavBar({children}) {
         {id:6, href: "/contacto", content: "Contacto"},
     ]
 
+    const handleCheckBoxChange = (event) => {
+        setIsChecked(event.target.checked);
+    };
+    
+    if (isChecked) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
+
     return (
         <>
             <nav>
-                <input type="checkbox" id="check" />
+                <input type="checkbox" id="check" onChange={handleCheckBoxChange} />
                 <label htmlFor="check" className="checkbtn" >
                     <i className="fas fa-bars"></i>
                 </label>
