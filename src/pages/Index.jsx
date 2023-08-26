@@ -6,6 +6,7 @@ import info from "../assets/info.json"
 import items from '../assets/services_card.json'
 import ServicesCard from "../components/ServicesCard"
 import { Text } from "@chakra-ui/react"
+import CV from "../components/CV"
 
 const Index = () => {
     return (
@@ -36,6 +37,8 @@ const Index = () => {
                         }
                     </section>
                 </section>
+
+                <CV />
             </section>
         </NavBar>
     )
