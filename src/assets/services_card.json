@@ -1,0 +1,32 @@
+[
+    {
+        "id":4, 
+        "img": "/services_card1.jpg",
+        "title": "Sistema de pretensado y postensado."
+    },
+    {
+        "id":7, 
+        "img": "/services_card4.jpg",
+        "title": "Proyectos arquitectónicos."
+    },
+    {
+        "id":5, 
+        "img": "/services_card2.jpg", 
+        "title": "Estructuración y diseño estructural."
+    },
+    {
+        "id":6, 
+        "img": "/services_card3.jpg",
+        "title": "Supervisión de obras y dirección de proyecto."
+    },
+    {
+        "id":8,
+        "img": "/services_card5.jpg", 
+        "title": "Fabricación y montaje de elementos de concreto."
+    },
+    {
+        "id":9,
+        "img": "/services_card6.jpg",  
+        "title": "Transporte de elementos de concreto."
+    }
+]
