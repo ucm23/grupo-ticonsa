@@ -1,0 +1,78 @@
+[
+    {
+        "id": 1,
+        "name": "Más de 3,000 aulas prefabricadas de 1 y 2 niveles en toda la República Mexicana.",
+        "year": "1971-1981",
+        "img": "/project1.jpg"
+    },{
+        "id": 2,
+        "name": "Primera “Planta Portátil” Oaxaca. Asientos para el Estadio de la Guelaguetza.",
+        "year": "1975",
+        "img": "/project1.jpg"
+    },{
+        "id": 3,
+        "name": "Fosas prefabricadas para Panteones.",
+        "year": "1976 -1977",
+        "img": "/project1.jpg"
+    },{
+        "id": 4,
+        "name": "Almacenes para Fertimex.Las Trabes pretensadas de “Mayor Longitud en el Mundo” fabricadas con una planta a pie de obra, única en su momento. (testimonios internacionales)",
+        "year": "1978 -1984",
+        "img": "/project1.jpg"
+    },{
+        "id": 5,
+        "name": "Primera Estructura integral prefabricada y pretensada a pie de obra con Planta Portátil. Hotel Calinda Cancún, Quintana Roo. Primera, segunda y tercera etapa.",
+        "year": "1979 - 2007",
+        "img": "/project1.jpg"
+    },{
+        "id": 6,
+        "name": "Superestructura para Puente Prefabricado sobre el mar (3.5 Km). Puente “El Zacatal”. Ciudad del Carmen, Campeche.",
+        "year": "1994",
+        "img": "/project1.jpg"
+    },{
+        "id": 7,
+        "name": "Superestructura totalmente prefabricada y presforzada para Puente Atirantado (única en su momento).Puente Quetzalapa, autopista México-Acapulco.",
+        "year": "1994",
+        "img": "/project1.jpg"
+    },{
+        "id": 8,
+        "name": "Venta de tecnología al Extranjero: Planta portátil para fabricar puentes de autopista en República de Chile.",
+        "year": "1995 -2005",
+        "img": "/project1.jpg"
+    },{
+        "id": 9,
+        "name": "Desarrollo de Plantas Portátiles para pretensar  a pie de obra. Más de 40 Plantas instaladas en toda la República Mexicana y República de Chile.",
+        "year": "1975 -2009",
+        "img": "/project1.jpg"
+    },{
+        "id": 10,
+        "name": "Losa “Multi T” con trabe portante integrada. Más de 1,000 cuartos de hotel realizados con el sistema en Cancún, Playa del Carmen y Riviera Maya, Quintana Roo.",
+        "year": "2003 -2009",
+        "img": "/project1.jpg"
+    },{
+        "id": 11,
+        "name": "Páneles presforzados en 2 sentidos.",
+        "year": "2008",
+        "img": "/project1.jpg"
+    },{
+        "id": 12,
+        "name": "Sistema modular para Hoteles.",
+        "year": null,
+        "img": "/project1.jpg"
+    },{
+        "id": 13,
+        "name": "Solución estructural a base de elementos de concreto presforzado para viaductos elevados.",
+        "year": "2008 -2009",
+        "img": "/project1.jpg"
+    },{
+        "id": 14,
+        "name": "Todo tipo de fachadas y elementos arquitectónicos de concreto.",
+        "year": null,
+        "img": "/project1.jpg"
+    },{
+        "id": 15,
+        "name": "Casa integral prefabricada.",
+        "year": null,
+        "img": "/project1.jpg"
+    }
+]

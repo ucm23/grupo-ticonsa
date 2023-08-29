@@ -21,14 +21,19 @@ body{
   color: #fff;
 }
 
-.card__img{
+.card__img, .img_projects{
   transform: scale(1);
   transition: all 0.2s ease-in-out;
 }
 
-.card__img:hover{
+.card__img:hover, .img_projects:hover{
   transform: scale(1.03);
 }
+
+.img_projects:hover{
+  transform: scale(1.15);
+}
+
 
 nav{
   background: #131313;

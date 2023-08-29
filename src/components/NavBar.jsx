@@ -32,16 +32,18 @@ export default function NavBar({children}) {
                     <i className={isChecked?"fas fa-circle":"fas fa-bars"}></i>
                 </label>
                 <a href="#" className="enlace d-flex justify-content-center align-items-center">
-                    <img src="vite.svg" className="logo" alt="" />
-                    <h1 className="m-0 text-white" >TICONSA</h1>     
+                    <img src="/logo.jfif" className="logo rounded-circle" alt="logo ticonsa" />
+                    <h1 className="m-0 text-white">TICONSA</h1>     
                 </a>
                 <ul>
                     {
-                        routes.map( ({id,href,content}) => 
+                        routes.map(({id,href,content}) => 
                             <li key={id}>
                                 <Link href={href}>
                                     <a className={
-                                        (href===location)?"active":""
+                                        (href===location)
+                                            ? "active"
+                                            : ""
                                     }>
                                         {content}
                                     </a>
