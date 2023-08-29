@@ -11,7 +11,7 @@ export default function NavBar({children}) {
         {id:1, href: "/", content: "Inicio"},
         {id:2, href: "/historia", content: "Historia"},
         {id:3, href: "/prefabricado", content: "Sistema de prefabricado"},
-        {id:4, href: "/productos", content: "Productos"},
+        /* {id:4, href: "/productos", content: "Productos"}, */
         {id:5, href: "/portafolio", content: "Portafolio"},
         {id:6, href: "/contacto", content: "Contacto"},
     ]

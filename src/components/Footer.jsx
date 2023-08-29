@@ -41,18 +41,24 @@ export default function SmallCentered() {
   return (
     <Box
       bg={'#1b1c1b'}
-      color={useColorModeValue('gray.50', 'gray.200')}>
+      color={useColorModeValue('gray.50', 'gray.200')}
+    >
       <Container
         as={Stack}
-        maxW={'6xl'}
+        maxW='6xl'
         py={4}
         spacing={4}
-        justify={'center'}
-        align={'center'}
-        >
-          <h1>LOGO</h1>
+        justify='center'
+        align='center'
+      >
+          <img 
+            src="/logo.jfif" 
+            className='rounded-circle' 
+            alt="logo Grupo Ticonsa"
+            style={{ width: '5rem' }}
+          />
         
-        <Stack direction={'row'} spacing={6}>
+        <Stack direction='row' spacing={6}>
           <Box as="a" href={'/'}>
             Inicio
           </Box>
