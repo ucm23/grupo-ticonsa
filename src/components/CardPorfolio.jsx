@@ -19,39 +19,37 @@ function getColor() {
 }
   
 
-const CardPorfolio = ({img,year,name}) => {
-    return (
-        <Card className="m-4" style={{width: "22rem"}}>
-            <Badge.Ribbon 
-                text={
-                    <h5 className="mb-0 py-1 d-flex align-items-center" >
-                        <BsFillCalendarCheckFill className="d-inline mx-1" />
-                        {year || 'Ticonsa'}
-                    </h5>
-                } 
-                color={getColor()}
-            >
-                <CardBody>
-                    <Tooltip 
-                        title={`${name} (${year||'Ticonsa'})`} 
-                        placement="left"
-                    >
-                        <section className="overflow-hidden" >
-                            <img 
-                                src={img} 
-                                alt={name} 
-                                loading="lazy" 
-                                style={{ width: "20rem" }}
-                                className="img_projects rounded-3"
-                            />
-                        </section>
-                    </Tooltip>
-                    <h4 className="text-center mb-0 mt-1">{name}</h4>
-                </CardBody>
-            </Badge.Ribbon>
-        </Card>
-    )
-}
+const CardPorfolio = ({img,year,name}) => 
+    <Card className="m-4" style={{width: "22rem"}}>
+        <Badge.Ribbon 
+            text={
+                <h5 className="mb-0 py-1 d-flex align-items-center" >
+                    <BsFillCalendarCheckFill className="d-inline mx-1" />
+                    {year || 'Ticonsa'}
+                </h5>
+            } 
+            color={getColor()}
+        >
+            <CardBody>
+                <Tooltip 
+                    title={`${name} (${year||'Ticonsa'})`} 
+                    placement="left"
+                >
+                    <section className="overflow-hidden" >
+                        <img 
+                            src={img} 
+                            alt={name} 
+                            loading="lazy" 
+                            style={{ width: "20rem" }}
+                            className="img_projects rounded-3"
+                        />
+                    </section>
+                </Tooltip>
+                <h4 className="text-center mb-0 mt-1">{name}</h4>
+            </CardBody>
+        </Badge.Ribbon>
+    </Card>
+
 
 CardPorfolio.propTypes = {
     img: PropTypes.string,
