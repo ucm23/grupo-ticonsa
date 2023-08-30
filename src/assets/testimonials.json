@@ -3,21 +3,21 @@
         "id":1,
         "title": "OFICINA CANCUN ",
         "text": "Av. Bonampak No. 4 y 5 Local 108 y 109. SM.3 Cancún, Quintana Roo Teléfono (998) 892-3143",
-        "src": "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+        "src": "/logo.jfif",
         "name": "Grupo Ticonsa"
     },
     {
         "id":2,
         "title": "OFICINA MEXICO",
         "text": "Presa No.85 Col. San Jerónimo Lídice México, D.F. Teléfono (55) 5484-8364",
-        "src": "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+        "src": "/logo.jfif",
         "name": "Grupo Ticonsa"
     },
     {
         "id":3,
         "title": "TRAMET",
         "text": "Camino San Isidro del Progreso S/N. San Juan Teotihuacán, Estado de México Teléfono (594) 956-1645",
-        "src": "https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+        "src": "/logo.jfif",
         "name": "Grupo Ticonsa"
     }
 ]

@@ -1,12 +1,9 @@
-import { FcMultipleDevices } from 'react-icons/fc'
 import PropTypes from 'prop-types';
 import {
   Box,
   Center,
   Heading,
   Stack,
-  useColorModeValue,
-  Button,
 } from '@chakra-ui/react';
 
 export default function ServicesCard(props) {

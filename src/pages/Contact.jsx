@@ -8,7 +8,7 @@ const Contact = () => {
             <section className="_main">
                 <Locations />
             </section>
-                <ContactForm />
+            <ContactForm />
         </NavBar>
     )
 }

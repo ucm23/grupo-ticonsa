@@ -35,13 +35,13 @@ const CardPorfolio = ({img,year,name}) =>
                     title={`${name} (${year||'Ticonsa'})`} 
                     placement="left"
                 >
-                    <section className="overflow-hidden" >
+                    <section className="overflow-hidden rounded-3" >
                         <img 
                             src={img} 
                             alt={name} 
                             loading="lazy" 
                             style={{ width: "20rem" }}
-                            className="img_projects rounded-3"
+                            className="img_projects "
                         />
                     </section>
                 </Tooltip>

@@ -49,7 +49,6 @@ export default function Carousel() {
   ]
 
   const handleBeforeChange = () => {
-    // Reiniciar la animación en cada cambio de imagen
     document.querySelectorAll('.image-part').forEach((imagePart) => {
       imagePart.style.animation = 'none';
       void imagePart.offsetWidth; // Forced reflow to reset animation

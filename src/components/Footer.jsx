@@ -40,8 +40,8 @@ const SocialButton = ({
 export default function SmallCentered() {
   return (
     <Box
-      bg={'#1b1c1b'}
-      color={useColorModeValue('gray.50', 'gray.200')}
+        bg={'#1b1c1b'}
+        color={useColorModeValue('gray.50', 'gray.200')}
     >
       <Container
         as={Stack}
@@ -61,9 +61,6 @@ export default function SmallCentered() {
         <Stack direction='row' spacing={6}>
           <Box as="a" href={'/'}>
             Inicio
-          </Box>
-          <Box as="a" href={'#'}>
-            Productos
           </Box>
           <Box as="a" href={'#'}>
             Portafolio
