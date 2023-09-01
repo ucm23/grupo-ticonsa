@@ -101,7 +101,15 @@ export default function Carousel() {
                         imageUrl={card.image} 
                         numParts={mobile?3:6}
                     >
-                        <Container zIndex={10} size="container.lg" height="600px" p={0} width={'100%'} position="relative" top={mobile?(-575):(-500)}>
+                        <Container 
+                          zIndex={10} 
+                          size="container.lg" 
+                          height="600px" 
+                          p={0} 
+                          width={'100%'} 
+                          position="relative" 
+                          top={mobile?('-35rem'):('-30rem')}
+                        >
                           <Stack
                             spacing={6}
                             w={'full'}
