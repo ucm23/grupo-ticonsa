@@ -19,7 +19,6 @@ export default function ServicesCard(props) {
                 maxW={'350px'}
                 minW={'250px'}
                 w={'full'}
-                /* bg={useColorModeValue('white', 'gray.900')} */
                 bg={'#2F302F'}
                 boxShadow={'2xl'}
                 rounded={'md'}
@@ -47,8 +46,6 @@ export default function ServicesCard(props) {
 
                 <Stack mt={5}>
                     <Heading
-                        /* color={useColorModeValue('gray.700', 'white')} */
-                        
                         color={'#fff'}
                         fontSize={'2xl'}
                         fontFamily={'body'}
@@ -57,21 +54,6 @@ export default function ServicesCard(props) {
                         {title}
                     </Heading>
                 </Stack>
-
-                {/* <Stack mt={2} direction={'row'} spacing={4}>
-                    <Button
-                        flex={1}
-                        fontSize='md'
-                        rounded='full'
-                        bg='purple.100'
-                        _focus={{ bg: 'purple.200'}}
-                        _hover={{ bg: 'purple.200'}}
-                        onClick={()=>handleRedirect(web)}
-                    >
-                        <FcMultipleDevices className='mx-1' />
-                        Ir al Portal
-                    </Button>
-                </Stack> */}
             </Box>
         </Center>
     );

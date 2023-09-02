@@ -106,9 +106,13 @@ export default function Carousel() {
                           size="container.lg" 
                           height="600px" 
                           p={0} 
-                          width={'100%'} 
+                          width='100%' 
                           position="relative" 
-                          top={mobile?('-35rem'):('-30rem')}
+                          top={
+                            mobile
+                            ? '-35rem'
+                            : '-30rem'
+                          }
                         >
                           <Stack
                             spacing={6}
