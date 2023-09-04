@@ -2,15 +2,18 @@
     {
         "id":4, 
         "img": "/systems/5.jpg",
-        "title": "Sistemas Multi T"
+        "title": "Sistemas Multi T",
+        "newTab": true
     },{
         "id":5, 
         "img": "/systems/6.jpg", 
-        "title": "Proceso y prod. de montaje"
+        "title": "Proceso y prod. de montaje",
+        "newTab": true
     },
     {
         "id":7, 
         "img": "/systems/7.jpeg",
-        "title": "Ventajas de Prefabricado"
+        "title": "Ventajas de Prefabricado",
+        "newTab": true
     }
 ]
