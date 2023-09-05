@@ -20,7 +20,7 @@ function getColor() {
   
 
 const CardPorfolio = ({img,year,name}) => 
-    <Card className="m-4" style={{width: "22rem"}}>
+    <Card className="m-4 shadow" style={{width: "22rem"}}>
         <Badge.Ribbon 
             text={
                 <h5 className="mb-0 py-1 d-flex align-items-center" >

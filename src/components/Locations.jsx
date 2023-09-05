@@ -18,7 +18,7 @@ const Testimonial = ({children}) =>
 const TestimonialContent = ({children}) => 
     <Stack
         bg={useColorModeValue('white', 'gray.800')}
-        boxShadow={'lg'}
+        className='shadow'
         p={8}
         rounded={'xl'}
         align={'center'}
@@ -62,9 +62,9 @@ const TestimonialAvatar = ({
   src,
   name,
 }) => 
-    <Flex align={'center'} mt={8} direction={'column'} bg={"#131313"} >
-        <Avatar src={src} mb={2} />
-        <Stack spacing={-1} align={'center'}>
+    <Flex align={'center'} mt={8} direction={'column'} bg={"#fff"} >
+        <Avatar src={src} mb={2} className='shadow' />
+        <Stack spacing={-1} align={'center'} >
             <Text fontSize={'md'} fontWeight={600}>{name}</Text>
         </Stack>
     </Flex>
@@ -72,7 +72,7 @@ const TestimonialAvatar = ({
 
 export default function Locations() {
   return (
-    <Box bg={"#131313"}>
+    <Box bg={"#fff"}>
       <Container maxW={'7xl'} pb={16} as={Stack} spacing={12}>
         <Stack spacing={0} align={'center'}>
             <Heading

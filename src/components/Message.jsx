@@ -40,7 +40,7 @@ export default function Message() {
                         key={mess.id} 
                         fontSize={{ base: 'xl', md: '2xl' }} 
                         textAlign='center'
-                        style={ mess?.img ? styles : null  }
+                        style={ mess?.img ? styles : { color: "#000" }  }
                         width={'100%'}
                         p={mobile?'1.3rem':'2.5rem'}
                         mb={0}

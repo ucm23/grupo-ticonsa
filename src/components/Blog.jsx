@@ -95,7 +95,7 @@ const CardNew = props => {
                     as="p"
                     marginTop="2"
                     color={
-                        useColorModeValue('gray.100', 'gray.200')
+                        useColorModeValue('gray.900', 'gray.800')
                     }
                     fontSize="xl"
                 >

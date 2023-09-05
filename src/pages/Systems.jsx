@@ -18,7 +18,7 @@ const Systems = () => {
                             <img src="/systems/8.jpeg" className="px-3"  />
                         </div>
                         <div className="col-md-8 p-4" style={{ backgroundColor: "#023896" }} >
-                            <div className="" >
+                            <div className="text-white" >
                                 A diferencia de los sistemas convencionales, en el Sistema de Prefabricado los elementos estructurales se fabrican previamente en plantas de producción. Después de un riguroso control de calidad en el proceso de fabricación,  las piezas se transportan para colocarlas en el lugar de la obra, abatiendo en forma considerable el tiempo de construcción.
 
                                 Una característica de este sistema es que pueden salvar grandes claros con elementos ligeros. Esto se logra mediante la técnica del Presfuerzo, que consiste en aplicar una fuerza de tensión al acero de presfuerzo (cables o torones) antes de iniciar el colado, logrando incrementar la resistencia y mejorar el comportamiento estructural de los elementos.
