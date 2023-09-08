@@ -30,10 +30,10 @@ export default function NavBar({children}) {
                 <label htmlFor="check" className="checkbtn" >
                     <i className={isChecked?"fas fa-circle":"fas fa-bars"}></i>
                 </label>
-                <a href="#" className="enlace d-flex justify-content-center align-items-center">
+                <Link href="/" className="enlace d-flex justify-content-center align-items-center">
                     <img src="/logo.jfif" className="logo rounded-circle" alt="logo ticonsa" />
                     <h1 className="m-0">TICONSA</h1>     
-                </a>
+                </Link>
                 <ul>
                     {
                         routes.map(({id,href,content}) => 

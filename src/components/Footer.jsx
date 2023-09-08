@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react'
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import PropTypes from 'prop-types'
+import { Link } from 'wouter'
 
 const SocialButton = ({
   children,
@@ -59,15 +60,16 @@ export default function SmallCentered() {
           />
         
         <Stack direction='row' spacing={6}>
-          <Box as="a" href={'/'}>
-            Inicio
-          </Box>
-          <Box as="a" href={'#'}>
+
+          <Link href={'/'}>
+              Inicio
+          </Link>
+          <Link href={'/portafolio'}>
             Portafolio
-          </Box>
-          <Box as="a" href={'#'}>
+          </Link>
+          <Link href={'/contacto'}>
             Contacto
-          </Box>
+          </Link>
         </Stack>
       </Container>
 
@@ -85,13 +87,13 @@ export default function SmallCentered() {
           align={{ base: 'center', md: 'center' }}>
           <Text textAlign={'center'} >© 2023 Grupo Ticonsa. Todo los derechos reservados.</Text>
           <Stack direction={'row'} spacing={6}>
-            <SocialButton label={'Twitter'} href={'#'}>
+            <SocialButton label={'Twitter'} href={'/'}>
               <FaTwitter />
             </SocialButton>
-            <SocialButton label={'YouTube'} href={'#'}>
+            <SocialButton label={'YouTube'} href={'/'}>
               <FaYoutube />
             </SocialButton>
-            <SocialButton label={'Instagram'} href={'#'}>
+            <SocialButton label={'Instagram'} href={'/'}>
               <FaInstagram />
             </SocialButton>
           </Stack>
