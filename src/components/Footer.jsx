@@ -40,7 +40,7 @@ const SocialButton = ({
 export default function SmallCentered() {
   return (
     <Box
-        bg={'#1b1c1b'}
+        bg={'#03296A'} 
         color={useColorModeValue('gray.50', 'gray.200')}
     >
       <Container

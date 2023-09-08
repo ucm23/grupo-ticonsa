@@ -20,11 +20,11 @@ export default function ServicesCard(props) {
                 maxW='350px'
                 minW='250px'
                 w='full'
-                bg='#2F302F'
+                bg='#03296A'
                 boxShadow='2xl'
                 rounded='md'
                 p={6}
-                className='card__img'
+                className='card__img '
                 cursor={newTab?'pointer':''}
             >
                 {
