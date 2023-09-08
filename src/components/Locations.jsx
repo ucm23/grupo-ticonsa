@@ -84,7 +84,7 @@ export default function Locations() {
                 mt={5}
             >
                 <Text as='b' color='blue.500'>
-                    Contactanos
+                    Contáctanos
                 </Text>
             </Heading>
         </Stack>
