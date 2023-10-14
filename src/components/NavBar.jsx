@@ -11,8 +11,9 @@ export default function NavBar({children}) {
         {id:1, href: "/", content: "Inicio"},
         {id:2, href: "/historia", content: "Historia"},
         {id:3, href: "/prefabricado", content: "Sistema de prefabricado"},
-        {id:5, href: "/portafolio", content: "Portafolio"},
         {id:6, href: "/contacto", content: "Contacto"},
+        {id:5, href: "/portafolio", content: "Instalaciones"},
+        {id:7, href: "/#", content: "Productos/Servicios"},
     ]
 
     const handleCheckBoxChange = ({target}) => setIsChecked(target.checked);
@@ -25,14 +26,14 @@ export default function NavBar({children}) {
 
     return (
         <>
-            <nav>
+            <nav className="container" >
                 <input type="checkbox" id="check" onChange={handleCheckBoxChange} />
                 <label htmlFor="check" className="checkbtn" >
                     <i className={isChecked?"fas fa-circle":"fas fa-bars"}></i>
                 </label>
                 <Link href="/" className="enlace d-flex justify-content-center align-items-center">
-                    <img src="/logo.jfif" className="logo rounded-circle" alt="logo ticonsa" />
-                    <h1 className="m-0">TICONSA</h1>     
+                    <img src="/log.jpg" className="logo rounded-circle" alt="logo ticonsa" />
+                    <h1 className="m-0"></h1>     
                 </Link>
                 <ul>
                     {
