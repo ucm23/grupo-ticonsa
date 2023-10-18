@@ -50,21 +50,21 @@ nav{
   padding: 5px 50px;
 }
 .logo{
-  height: 40px;
+  height: 50px;
 }
 nav ul{
   float: right;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 nav ul li{
   display: inline-block;
   line-height: 59px;
-  margin: 0 2px;
+  margin: 0 15px;
 }
 nav ul li a{
   color: var(--dark-theme);
   font-size: 17px;
-  padding: 7px 13px;
+  padding: 7px 15px;
   border-radius: 3px;
   text-transform: uppercase;
 }

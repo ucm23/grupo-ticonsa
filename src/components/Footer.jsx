@@ -7,7 +7,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react'
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaInstagram, FaTwitter, FaYoutube, FaFacebook } from 'react-icons/fa'
 import PropTypes from 'prop-types'
 import { Link } from 'wouter'
 
@@ -53,19 +53,17 @@ export default function SmallCentered() {
         align='center'
       >
           <img 
-            src="/logo.jfif" 
-            className='rounded-circle' 
+            src="/222.jpg" 
             alt="logo Grupo Ticonsa"
-            style={{ width: '5rem' }}
+            style={{ width: '7rem' }}
           />
         
         <Stack direction='row' spacing={6}>
-
           <Link href={'/'}>
               Inicio
           </Link>
-          <Link href={'/portafolio'}>
-            Portafolio
+          <Link href={'/historia'}>
+            Historia
           </Link>
           <Link href={'/contacto'}>
             Contacto
@@ -95,6 +93,9 @@ export default function SmallCentered() {
             </SocialButton>
             <SocialButton label={'Instagram'} href={'/'}>
               <FaInstagram />
+            </SocialButton>
+            <SocialButton label={'Facebook'} href={'https://www.facebook.com/GrupoTiconsa/?locale=es_LA'}>
+              <FaFacebook />
             </SocialButton>
           </Stack>
         </Container>

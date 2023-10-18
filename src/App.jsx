@@ -6,6 +6,7 @@ import Systems from "./pages/Systems"
 import Products from "./pages/Products"
 import Porfolio from "./pages/Porfolio"
 import Contact from "./pages/Contact"
+import Plantas from "./pages/Plantas"
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/productos" component={Products} />
             <Route path="/portafolio" component={Porfolio} />
             <Route path="/prefabricado" component={Systems} />
+            <Route path="/plantas" component={Plantas} />
         </Switch>
     )
 }
