@@ -20,6 +20,7 @@ import {
 } from '@chakra-ui/react'
 import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from 'react-icons/bs'
 import { MdEmail, MdOutlineEmail } from 'react-icons/md'
+import color from '../color'
 
 const confetti = {
   light: {
@@ -41,7 +42,7 @@ export default function ContactForm() {
   const mobile = useBreakpointValue({ base: true, md: false });
 
   return (
-    <Flex
+    /*<Flex
       bg={useColorModeValue('gray.800', 'gray.900')}
       align="center"
       justify="center"
@@ -140,7 +141,7 @@ export default function ContactForm() {
                 p={8}
                 color={useColorModeValue('gray.700', 'whiteAlpha.900')}
                 shadow="base"
-                width={!mobile?'26rem':'20rem'}
+                width={!mobile ? '26rem' : '20rem'}
               >
                 <VStack spacing={5}>
                   <FormControl isRequired>
@@ -180,7 +181,7 @@ export default function ContactForm() {
                     colorScheme="blue"
                     bg="blue.400"
                     color="white"
-                    _hover={{ bg: 'blue.500'}}
+                    _hover={{ bg: 'blue.500' }}
                     width="full">
                     Enviar mensaje
                   </Button>
@@ -189,6 +190,64 @@ export default function ContactForm() {
             </Stack>
           </VStack>
         </Box>
+      </Box>
+    </Flex>*/
+    <Flex style={{ width: '100%', }}>
+      <Box>
+        <VStack>
+
+          <Stack
+            direction={{ base: 'column', md: 'row' }}
+          >
+            <Box
+              width={!mobile ? '26rem' : '20rem'}
+            >
+              <VStack spacing={5}>
+                <FormControl isRequired>
+                  <FormLabel>Nombre</FormLabel>
+
+                  <InputGroup>
+                    <InputLeftElement>
+                      <BsPerson />
+                    </InputLeftElement>
+                    <Input type="text" name="name" placeholder="Tu nombre" />
+                  </InputGroup>
+                </FormControl>
+
+                <FormControl isRequired>
+                  <FormLabel>Correo</FormLabel>
+
+                  <InputGroup>
+                    <InputLeftElement>
+                      <MdOutlineEmail />
+                    </InputLeftElement>
+                    <Input type="email" name="email" placeholder="Tu correo" />
+                  </InputGroup>
+                </FormControl>
+
+                <FormControl isRequired>
+                  <FormLabel>Mensaje</FormLabel>
+
+                  <Textarea
+                    name="message"
+                    placeholder="Tu mensaje"
+                    rows={6}
+                    resize="none"
+                  />
+                </FormControl>
+
+                <Button
+                  colorScheme="blue"
+                  bg="blue.400"
+                  color="white"
+                  _hover={{ bg: 'blue.500' }}
+                  width="full">
+                  Enviar mensaje
+                </Button>
+              </VStack>
+            </Box>
+          </Stack>
+        </VStack>
       </Box>
     </Flex>
   )

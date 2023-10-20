@@ -12,7 +12,7 @@ import {
     /* VStack */
 } from '@chakra-ui/react';
 
-const BlogAuthor= props => {
+const BlogAuthor = props => {
     return (
       <HStack marginTop="2" spacing="2" display="flex" alignItems="center">
             <FcManager size={32} />
@@ -64,7 +64,7 @@ const CardNew = props => {
                     </Link>
                 </Box>
 
-                <Box zIndex="1" width="100%" position="absolute" height="100%">
+                {/*<Box zIndex="1" width="100%" position="absolute" height="100%">
                     <Box
                         bgGradient={
                             useColorModeValue(
@@ -73,10 +73,10 @@ const CardNew = props => {
                             )
                         }
                         backgroundSize="20px 20px"
-                        opacity="0.4"
+                        opacity="0.3"
                         height="100%"
                     />
-                </Box>
+                    </Box>*/}
 
             </Box>
             <Box

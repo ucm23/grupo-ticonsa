@@ -1,21 +1,21 @@
 [
     {
         "id": 1,
-        "text": "Hoy, al echar la vista atrás para recorrer nuevamente nuestra historia, sentimos el legítimo orgullo de quien está plenamente satisfecho por haber cumplido a cabalidad, como hombres y mujeres, como profesionistas y como mexicanos con los propósitos que nos llevaron a constituir, el 15 de febrero de 1971, la empresa “Técnicas Internacionales de Construcción, S.A. de C.V.”  (TICONSA),  cuya primera planta fue instalada en terrenos aledaños a la “Ciudad donde los Hombres se convierten en Dioses”: Teotihuacán. Ciudad milenaria que dese entonces nos identifica como empresa.",
-        "img": "/fig.png"
+        "text": "Hoy, al echar la vista atrás para recorrer nuevamente nuestra historia, sentimos el legítimo orgullo de quien está plenamente satisfecho por haber cumplido a cabalidad, como hombres y mujeres, como profesionistas y como mexicanos con los propósitos que nos llevaron a constituir, el 15 de febrero de 1971, la empresa “Técnicas Internacionales de Construcción, S.A. de C.V.”  (TICONSA),  cuya primera planta fue instalada en terrenos aledaños a la “Ciudad donde los Hombres se convierten en Dioses”: Teotihuacán. Ciudad milenaria que desde entonces nos identifica como empresa.",
+        "img": true
     },{
         "id": 2,
         "text": "Después de tantos años de trabajo intenso, continuo, creativo y exitoso, aunque no pocas veces desalentador, tenemos la enorme satisfacción de poder mostrar a nuestros clientes, colaboradores y amigos las realizaciones de un gran número de proyectos que marcaron, muchos de ellos, nuevas rutas en el desarrollo de la industria de la cual formamos parte: la industria del concreto prefabricado y presforzado en México."
     },{
         "id": 3,
-        "text": "En muchos aspectos hemos desarrollado nuestra propia tecnología, dentro de la cual hemos obtenido diversas patentes que nos permiten ofrecer técnicas y productos exclusivos y de vanguardia no sólo en México sino también en el extranjero. Una de dichas patentes, la que tal vez ha tenido mayor difusión es la de “mesas portátiles” para pretensar a pie de obra”, , de la cual hemos otorgado licencia temporal de uso a diversas empresas, pero cuya utilización queda limitada por los términos de la propia patente.",
-        "img": "/fig.png"
+        "text": "En muchos aspectos hemos desarrollado nuestra propia tecnología, dentro de la cual hemos obtenido diversas patentes que nos permiten ofrecer técnicas y productos exclusivos y de vanguardia no sólo en México sino también en el extranjero. Una de dichas patentes, la que tal vez ha tenido mayor difusión es la de “mesas portátiles” para pretensar a pie de obra”, de la cual hemos otorgado licencia temporal de uso a diversas empresas, pero cuya utilización queda limitada por los términos de la propia patente.",
+        "img": true
     },{
         "id": 4,
         "text": "Toda esta labor se hizo posible gracias a la participación y entrega de hombres y mujeres que fueron y son hoy parte de nuestro grupo en todos los niveles, desde socios, directivos, personal técnico y administrativo y personal obrero dentro de los que, hoy en día, se cuentan los hijos y aún los nietos de quienes fueron los iniciadores de la empresa."
     },{
         "id": 5,
-        "text": "Nuestro agradecimiento a todos ellos, pero, por encima de todo, gracias a Dios, que siempre, en todo momento, ha guiado nuestros pasos. Todo esto habla del porqué, para nuestros clientes, estamos seguros de constituir: LA MEJOR OPCIÓN",
-        "img": "/fig.png"
+        "text": "Nuestro agradecimiento a todos ellos, pero, por encima de todo, gracias a Dios, que siempre, en todo momento, ha guiado nuestros pasos. Todo esto habla del porqué, para nuestros clientes, estamos seguros de constituir: LA MEJOR OPCIÓN.",
+        "img": true
     }
 ]

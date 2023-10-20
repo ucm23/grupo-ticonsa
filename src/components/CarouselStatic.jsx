@@ -7,15 +7,16 @@ const CarouselStatic = ({names, folder}) => {
     const mobile = useBreakpointValue({ base: true, md: false });
 
     return (
-        <Carousel className="shadow">
+        <Carousel className="shadow" fade style={{ height: 600 }}>
             {
                 names.map(item =>     
-                    <Carousel.Item key={item} interval={4000}>
+                    <Carousel.Item key={`names-item-${item}`} interval={4000}>
                         <img
-                            className="d-block w-100 _img_corousel "
+                            className="d-block w-100 _img_corousel"
                             src={`/${folder}/${item}.jpg`}
                             alt="First slide"
-                            style={{ height: mobile?"23rem":"26rem", objectFit: "cover"}}
+                            //style={{ height: mobile?"23rem":"26rem", objectFit: "cover", top: 100}}
+                            style={{ height: 600, objectFit: "cover", top: 100}}
                         />
                     </Carousel.Item>
                 )

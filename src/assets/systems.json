@@ -3,17 +3,21 @@
         "id":4, 
         "img": "/systems/5.jpg",
         "title": "Sistemas Multi T",
+        "description": "Grupo Ticonsa continua inovando, ofreciendo ahora la losa “Multi T” (losa nervada con trabe portante integrada) siendo única en el mundo.",
         "newTab": true
     },{
         "id":5, 
-        "img": "/systems/6.jpg", 
-        "title": "Proceso y prod. de montaje",
+        "img": "/systems/7.jpeg",
+        "title": "Ventajas de Prefabricado",
+        "description": "Tenemos un ahorro significativo en tiempos, costos de ingeniería estructural ya que la ingeniería es desarrollada por ingenieros altamente calificados en la materia.",
         "newTab": true
     },
     {
         "id":7, 
-        "img": "/systems/7.jpeg",
-        "title": "Ventajas de Prefabricado",
+        "img": "/systems/6.jpg", 
+        "title": "Proceso y prod. de montaje",
+        "description": "Procesos Conceptual > Planeación > Ingeniería de Detalle > Fabricación > Transporte y Montaje > Conexiones",
         "newTab": true
     }
 ]
+

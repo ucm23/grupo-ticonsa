@@ -1,7 +1,15 @@
 import { Heading, Text } from "@chakra-ui/react"
 import NavBar from "../components/NavBar"
 import projects from '../assets/projects.json'
-import CardPorfolio from "../components/CardPorfolio"
+import CardPorfolio from "../components/CardPorfolio";
+
+import {
+    Accordion,
+    AccordionItem,
+    AccordionButton,
+    AccordionPanel,
+    AccordionIcon,
+} from '@chakra-ui/react'
 
 const Porfolio = () => {
     return (

@@ -1,36 +1,36 @@
 import PropTypes from 'prop-types'
-import { Link,useLocation } from "wouter"
+import { Link, useLocation } from "wouter"
 import SmallCentered from './Footer'
 import { useState } from 'react';
 import { Dropdown } from 'react-bootstrap';
 
-export default function NavBar({children}) {
+export default function NavBar({ children }) {
     const [location] = useLocation();
     const [isChecked, setIsChecked] = useState(false);
 
     const SubMenuProd = {
         name: "PRODUCTOS Y SERVICIOS",
-        options: ["INFRAESTRUCTURA","EDIFICACIÓN","TRANSPORTE","MONTAJE","SUPERVISIÓN"],
-        actions: ["infraestructura","edificacion","transporte","montaje","supervision"]
+        options: ["INFRAESTRUCTURA", "EDIFICACIÓN", "TRANSPORTE", "MONTAJE", "SUPERVISIÓN"],
+        actions: ["infraestructura", "edificacion", "transporte", "montaje", "supervision"]
     }
 
     const SubMenuInst = {
         name: "INSTALACIONES",
-        options: ["PLANTAS","INSTALACIONES"],
-        actions: ["plantas","instalaciones"]
+        options: ["PLANTAS", "INSTALACIONES"],
+        actions: ["plantas", "instalaciones"]
     }
 
     const routes = [
-        {id:1, href: "/", content: "Inicio"},
-        {id:2, href: "/historia", content: "Historia"},
-        {id:3, href: "/prefabricado", content: "Sistema de prefabricado"},
-        {id:6, href: "/contacto", content: "Contacto"},
-        {id:5, href: "/#", hasSubMenu: SubMenuInst},
-        {id:7, href: "/#", hasSubMenu: SubMenuProd }, 
+        { id: 1, href: "/", content: "Inicio" },
+        { id: 2, href: "/historia", content: "Historia" },
+        { id: 3, href: "/prefabricado", content: "Sistema de prefabricado" },
+        { id: 5, href: "/#", hasSubMenu: SubMenuInst },
+        { id: 7, href: "/#", hasSubMenu: SubMenuProd },
+        { id: 6, href: "/contacts", content: "Contacto" },
     ]
 
-    const handleCheckBoxChange = ({target}) => setIsChecked(target.checked);
-    
+    const handleCheckBoxChange = ({ target }) => setIsChecked(target.checked);
+
     if (isChecked) {
         document.body.style.overflow = 'hidden';
     } else {
@@ -42,43 +42,37 @@ export default function NavBar({children}) {
             <nav className="" >
                 <input type="checkbox" id="check" onChange={handleCheckBoxChange} />
                 <label htmlFor="check" className="checkbtn" >
-                    <i className={isChecked?"fas fa-circle":"fas fa-bars"}></i>
+                    <i className={isChecked ? "fas fa-circle" : "fas fa-bars"}></i>
                 </label>
                 <Link href="/" className="enlace d-flex justify-content-center align-items-center">
                     <img src="/222.jpg" className="logo" alt="logo ticonsa" />
-                    <h1 className="m-0"></h1>     
+                    <h1 className="m-0"></h1>
                 </Link>
-                
+
                 <ul>
-                {
-                routes.map(({ id, href, content, hasSubMenu }) => (
-                    <li key={id}>
-                        {hasSubMenu ? (
-                            <Dropdown>
-                                <Dropdown.Toggle variant="ligth" id="dropdown-basic">
-                                    {hasSubMenu.name}
-                                </Dropdown.Toggle>
-
-
-                                <Dropdown.Menu>
-                                {
-                                    hasSubMenu.options.map((item,i) => 
-                                        <Dropdown.Item key={item} href={`/${hasSubMenu.actions[i]}`}>{item}</Dropdown.Item>
-                                    )
-                                }
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        ) : (
-                            <Link href={href}>
-                            <a className={href === location ? "active" : ""}>{content}</a>
-                            </Link>
-                        )}
-                    </li>
-                ))
-                }
+                    {routes.map(({ id, href, content, hasSubMenu }) => (
+                        <li key={`routes-${id}-${href}`}>
+                            {hasSubMenu ? (
+                                <Dropdown>
+                                    <Dropdown.Toggle variant="ligth" id="dropdown-basic" size="sm" className="dropdown-basic">
+                                        {hasSubMenu.name}
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu>
+                                        {hasSubMenu.options.map((item, i) =>
+                                            <Dropdown.Item key={item} href={`/${hasSubMenu.actions[i]}`}>{item}</Dropdown.Item>
+                                        )}
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            ) : (
+                                <Link href={href}>
+                                    <a className={href === location ? "active" : ""}>{content}</a>
+                                </Link>
+                            )}
+                        </li>
+                    ))}
 
                 </ul>
-                    
+
             </nav>
             <main>
                 {children}
@@ -89,7 +83,7 @@ export default function NavBar({children}) {
 }
 
 NavBar.propTypes = {
-    children : PropTypes.node
+    children: PropTypes.node
 }
 
 /* <ul>
@@ -108,4 +102,4 @@ NavBar.propTypes = {
                             </li>
                         )
                     }
-                </ul>    */   
+                </ul>    */
