@@ -124,7 +124,7 @@ const Systems = () => {
                                 <Carousel.Item key={key}>
                                     <img
                                         src={item?.img}
-                                        style={{ width: '100%', height: '50vh', objectFit: 'cover', }}
+                                        style={{ height: '100%', objectFit: 'cover', }}
                                         alt={''}
                                     />
                                     <div className="text-modal-image">

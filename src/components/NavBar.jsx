@@ -15,10 +15,16 @@ export default function NavBar({ children }) {
     }
 
     const SubMenuInst = {
+        name: "PLANTAS",
+        options: ["Teotihuacan", "Puerto Morelos"],
+        actions: ["plant-teotihuacan", "plant-morelos"]
+    }
+
+    /*const SubMenuInst = {
         name: "INSTALACIONES",
         options: ["PLANTAS", "INSTALACIONES"],
         actions: ["plantas", "instalaciones"]
-    }
+    }*/
 
     const routes = [
         { id: 1, href: "/", content: "Inicio" },

@@ -247,6 +247,10 @@ body {
   transform: scale(1.15);
 }
 
+.col-about-info {
+  text-align: justify;
+}
+
 
 nav {
   background: var(--light-theme);

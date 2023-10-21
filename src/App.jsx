@@ -21,7 +21,8 @@ function App() {
             <Route path="/productos" component={Products} />
             <Route path="/portafolio" component={Porfolio} />
             <Route path="/prefabricado" component={Systems} />
-            <Route path="/plantas" component={Plantas} />
+            <Route path="/plant-teotihuacan" component={Plantas} />
+            <Route path="/plant-morelos" component={Plantas} />
             <Route path="/legal" component={Legal} />
             <Route path="/privacity" component={Privacity} />
             
