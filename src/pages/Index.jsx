@@ -58,7 +58,7 @@ const Index = () => {
                             <div class="col-base col-sm-6 col-md-6 col-md-offset-1">
                                 <h3 class="col-about-title">Concreto, Prefabricado y <span className="text-primary-blue">Presforzado</span></h3>
                                 <div class="col-about-info">
-                                    <p>Grupo Ticonsa<sup>®</sup> en una empresa con 40 años de experiencia desarrollando soluciones innovadoras que aportan valor agregado a los proyectos de nuestros clientes.</p>
+                                    <p>Grupo Ticonsa<sup>®</sup> en una empresa con 50 años de experiencia desarrollando soluciones innovadoras que aportan valor agregado a los proyectos de nuestros clientes.</p>
                                     <p>Cancún: (998) 892-3143 <br /> México: (55) 5484-8364<br />Teotihuacán: (594) 956-1645</p>
                                     <br />
                                     <p>👷 Grupo Ticonsa — 15 de Febrero de 1971</p>

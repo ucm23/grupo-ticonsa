@@ -53,7 +53,8 @@
   font-size: 20px;
   text-align: left;
   padding: 10px;
-  text-shadow: 2px 2px 4px #B6B6B650;
+  text-shadow: 3px 3px 5px gray;
+  box-shadow: #000000;
 }
 
 .project-title-card-2 {
@@ -97,6 +98,10 @@ figure {
   position: relative;
   text-align: center;
   z-index: 99;
+}
+
+.css-0 {
+  width: 100%;
 }
 
 .circle {
