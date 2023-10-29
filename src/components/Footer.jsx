@@ -4,14 +4,17 @@ import {
     Container,
     Stack,
     Text,
+    useBreakpointValue,
     useColorModeValue,
     VisuallyHidden,
+    Button,
 } from '@chakra-ui/react'
 import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaPhoneAlt } from 'react-icons/fa'
 import PropTypes from 'prop-types'
 import { Link } from 'wouter'
 
 import color from '../color'
+import { Fade } from 'react-awesome-reveal';
 
 const SocialButton = ({
     children,
@@ -40,7 +43,23 @@ const SocialButton = ({
     )
 }
 
-export default function SmallCentered() {
+export default function SmallCentered({ photo }) {
+    const mobile = useBreakpointValue({ base: true, md: false });
+    const styles = {
+        //backgroundColor: "#030318",
+        backgroundColor: "#B6B6B6",
+        backgroundImage: `url('/projects/1.jpg')`,
+        backgroundBlendMode: "soft-light",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        //backgroundPosition: "center",
+        overflow: "hidden",
+        padding: 100,
+        width: '100%',
+        //backgroundRepeat: "no-repeat",
+        backgroundAttachment: 'fixed'
+    }
+
     return (
         /*<Box
             bg={'#03296A'} 
@@ -104,8 +123,54 @@ export default function SmallCentered() {
           </Box>
         </Box>*/
         <div className='bg-footer'>
+            {photo &&
+
+                <Stack
+                    bg={useColorModeValue('gray.90', 'gray.800')}
+                    color="#fff"
+                    //spacing={{ base: 8, md: 10 }}
+                    align='center'
+                    direction='column'
+                    style={{ width: '100%' }}
+                >
+                    <div
+                        style={styles}
+                    >
+
+                        <section className="_main container" >
+                            <Stack
+                                direction={mobile ? 'column' : 'row'}
+                                style={{ width: '100%', justifyContent: 'space-between' }}
+
+                            >
+                                <div>
+                                    <Fade direction="down">
+                                        <strong><h3 class="col-about-title text-shadow" style={{ fontWeight: '600', textAlign: mobile ? 'center' : 'left' }}>Construye con nosotros</h3></strong>
+                                        <p class="text-shadow" style={{ color: 'white', fontWeight: '600', textAlign: mobile ? 'center' : 'left' }}>Cuéntanos más acerca de los requerimientos de tu proyecto</p>
+                                    </Fade>
+                                </div>
+                                <Stack style={{ alignContent: 'center' }}>
+                                <Link href={'/contacts'}>
+                                <Button
+                                    colorScheme="blue"
+                                    bg={color.primary}
+                                    rounded={50}
+                                    top={30}
+                                    color="white"
+                                    _hover={{ bg: 'blue.500' }}>
+                                    Enviar mensaje
+                                </Button>
+                                </Link>
+                                </Stack>
+                            </Stack>
+                        </section>
+
+                    </div>
+                </Stack>
+            }
+
             <Stack direction='row' spacing={2} marginY={5} paddingY={5} justifyContent={'space-evenly'}>
-                <Stack spacing={2} alignItems={'center'} 
+                <Stack spacing={2} alignItems={'center'}
                 >
                     <img
                         src="/logo-white.png"
@@ -178,7 +243,8 @@ export default function SmallCentered() {
                     </Link>
                 </Stack>
             </Stack>
-        </div>
+            <a href={"https://development.victum-re.online"} target="_blank" rel="noopener noreferrer">Proveedores</a>
+        </div >
     )
 }
 

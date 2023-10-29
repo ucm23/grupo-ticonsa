@@ -4,7 +4,7 @@ import SmallCentered from './Footer'
 import { useState } from 'react';
 import { Dropdown } from 'react-bootstrap';
 
-export default function NavBar({ children }) {
+const NavBar = ({ children, photo }) => {
     const [location] = useLocation();
     const [isChecked, setIsChecked] = useState(false);
 
@@ -32,23 +32,26 @@ export default function NavBar({ children }) {
         { id: 3, href: "/prefabricado", content: "Sistema de prefabricado" },
         { id: 5, href: "/#", hasSubMenu: SubMenuInst },
         { id: 7, href: "/#", hasSubMenu: SubMenuProd },
+        { id: 7, href: "https://development.victum-re.online", content: "Proveedores", onlyLink: true },
         { id: 6, href: "/contacts", content: "Contacto" },
     ]
 
     const handleCheckBoxChange = ({ target }) => setIsChecked(target.checked);
 
-    if (isChecked) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = 'auto';
-    }
+    if (isChecked) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = 'auto';
+
+    //console.log("🚀 ~ file: NavBar.jsx:45 ~ NavBar ~ props:", props)
+
+    
+    console.log("🚀 ~ file: NavBar.jsx:48 ~ NavBar ~ photo:", photo)
 
     return (
         <>
             <nav className="" >
                 <input type="checkbox" id="check" onChange={handleCheckBoxChange} />
                 <label htmlFor="check" className="checkbtn" >
-                    <i className={isChecked ? "fas fa-circle" : "fas fa-bars"}></i>
+                    <i className={isChecked ? "fa fa-times" : "fas fa-bars"}></i>
                 </label>
                 <Link href="/" className="enlace d-flex justify-content-center align-items-center">
                     <img src="/222.jpg" className="logo" alt="logo ticonsa" />
@@ -56,7 +59,7 @@ export default function NavBar({ children }) {
                 </Link>
 
                 <ul>
-                    {routes.map(({ id, href, content, hasSubMenu }) => (
+                    {routes.map(({ id, href, content, hasSubMenu, onlyLink }) => (
                         <li key={`routes-${id}-${href}`}>
                             {hasSubMenu ? (
                                 <Dropdown>
@@ -69,43 +72,29 @@ export default function NavBar({ children }) {
                                         )}
                                     </Dropdown.Menu>
                                 </Dropdown>
-                            ) : (
+                            ) : onlyLink ?
+                                <a href="https://development.victum-re.online" target="_blank">{content}</a>
+                                :
                                 <Link href={href}>
-                                    <a className={href === location ? "active" : ""}>{content}</a>
+                                    <a className={href === location ? "active" : ""} target="_blank">{content}</a>
                                 </Link>
-                            )}
+
+                            }
                         </li>
                     ))}
-
                 </ul>
-
             </nav>
             <main>
                 {children}
             </main>
-            <SmallCentered />
+            <SmallCentered photo={photo} />
         </>
     )
 }
 
-NavBar.propTypes = {
-    children: PropTypes.node
-}
+export default NavBar
 
-/* <ul>
-                    {
-                        routes.map(({id,href,content}) => 
-                            <li key={id}>
-                                <Link href={href}>
-                                    <a className={
-                                        (href===location)
-                                            ? "active"
-                                            : ""
-                                    }>
-                                        {content}
-                                    </a>
-                                </Link>
-                            </li>
-                        )
-                    }
-                </ul>    */
+/*NavBar.propTypes = {
+    children: PropTypes.node,
+    with: PropTypes.bool
+}*/

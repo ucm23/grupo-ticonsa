@@ -13,8 +13,12 @@ import Overlay from 'react-bootstrap/Overlay';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 
+import { Fade } from "react-awesome-reveal";
+
 import {
     Box,
+    Heading,
+    Stack,
     Text,
     useColorModeValue,
 } from '@chakra-ui/react';
@@ -23,6 +27,8 @@ import {
     Image,
 } from '@chakra-ui/react';
 import color from "../color";
+
+import { useBreakpointValue, } from '@chakra-ui/react'
 
 const Index = () => {
 
@@ -35,8 +41,10 @@ const Index = () => {
         setTarget(event.target);
     };
 
+
+
     return (
-        <NavBar>
+        <NavBar photo={'true'}>
             <Carousel />
             <Box
                 bgGradient={
@@ -52,7 +60,11 @@ const Index = () => {
 
                 <section className="_main container" >
                     <section className="section-5" >
-                        <h2 class="section-title"> Sobre Nosotros <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
+                        <Fade direction="down">
+                            <section className="text-center">
+                                <h2 class="section-title"> Sobre Nosotros <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
+                            </section>
+                        </Fade>
 
                         <div class="row-base row" styles='margin-top: 7.1em'>
                             <div class="col-base col-sm-6 col-md-6 col-md-offset-1">
@@ -82,9 +94,9 @@ const Index = () => {
                     </section>
 
                     <section className="text-center">
-
-                        <h3 class="col-about-title" style={{ marginTop: 30 }}>Presencia en <span className="text-primary-blue">todo México</span> y con proyectos <span className="text-primary-blue">destacados</span></h3>
-
+                        <Fade direction="down">
+                            <h3 class="col-about-title" style={{ marginTop: 30 }}>Presencia en <span className="text-primary-blue">todo México</span> y con proyectos <span className="text-primary-blue">destacados</span></h3>
+                        </Fade>
                         <div class="content-circle" ref={ref}>
                             <Image
                                 borderRadius="lg"
@@ -107,6 +119,7 @@ const Index = () => {
                                 }
                             >
                                 <div class="circle circle-01" onClick={handleClick} />
+                                <div class="circle circle-02" onClick={handleClick} />
                             </OverlayTrigger>
 
                             {/*<Overlay
@@ -128,11 +141,9 @@ const Index = () => {
                     </section>
 
                     <section className="text-center">
-                        <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1iYfuoOw92_cFiqxVBxew75qqJRsDq8KE9GZbQiETOBI&font=Default&lang=es&timenav_position=top&initial_zoom=0&height=800' width='100%' height='800' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
-                    </section>
-
-                    <section className="text-center">
-                        <h3 class="col-about-title" style={{ marginTop: 20, }}>Servicios que <span className="text-primary-blue">ofrecemos</span></h3>
+                        <Fade direction="down">
+                            <h3 class="col-about-title" style={{ marginTop: 20, }}>Servicios que <span className="text-primary-blue">ofrecemos</span></h3>
+                        </Fade>
                         <section className="d-flex justify-content-around align-items-center pb-5 flex-wrap" >
                             {
                                 items.map(item =>
@@ -149,7 +160,10 @@ const Index = () => {
 
                     {/*<CV />*/}
                 </section>
+
+
             </Box>
+
         </NavBar>
     )
 }

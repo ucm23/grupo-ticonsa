@@ -25,7 +25,6 @@ function App() {
             <Route path="/plant-morelos" component={Plantas} />
             <Route path="/legal" component={Legal} />
             <Route path="/privacity" component={Privacity} />
-            
         </Switch>
     )
 }

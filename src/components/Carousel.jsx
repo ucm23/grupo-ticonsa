@@ -93,12 +93,10 @@ export default function Carousel() {
 
             <Slider {...settings} ref={(slider) => setSlider(slider)} afterChange={handleBeforeChange} >
                 { cards.map((card, index) => (
-                        <Box
-                            key={index}
-                        >
+                        <Box key={index}>
                             <SplitMergeAnimation
                                 imageUrl={card.image}
-                                numParts={6}
+                                numParts={mobile ? 3 : 6}
                             >
                                 {/*<Container
                                     zIndex={10}

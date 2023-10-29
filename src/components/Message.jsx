@@ -27,29 +27,34 @@ export default function Message() {
             opacity="1"
             height="100%"
         >
-            <CarouselStatic names={[4,2,6]} folder='systems'  />
+            <CarouselStatic names={[4, 2, 6]} folder='systems' />
             <section className="_main container" >
                 <section>
-                    <h2 class="section-title" style={{ paddingTop: 30, }}>Mensaje</h2>
+                    <h2 class="section-title" style={{ paddingTop: 30, }}>Mensaje de nuestra <span className="text-primary-blue">Presidencia</span></h2>
+                    <center>
+                        <img
+                            src={"./logo.png"}
+                            style={{ height: 75, objectFit: 'scale-down', marginTop: 20, borderRadius: 40 }}
+                        //alt={title}
+                        //styles='filter: grayscale(100%)'
+                        //objectFit="contain"
+                        />
+                        <p >Ticonsa Inmobiliaria S.A. de C.V.</p>
+                    </center>
                     <div class="row-base row">
                         {messages.map(mess =>
-                            <div class="col-base col-md-offset-1">
+                            <div class="col-base col-md-offset-1" key={mess.id}>
                                 <div class="col-about-info">
-                                    <Text
-                                        key={mess.id}
-                                        //style={mess?.img ? styles : { color: "#000" }}
-                                        width={'100%'}
-                                        mb={0}
-                                    >
-                                        {mess.text}
-                                    </Text>
+                                    <p>{mess.text}</p>
                                 </div>
                             </div>
                         )}
+                        <div class="col-about-info">
+                            <p style={{ textAlign: 'end' }}><br /><strong>Ing. Iñaki Zugasti Zalvidea</strong><br />PRESIDENTE</p>
+                        </div>
                     </div>
                 </section>
             </section>
-
         </Box>
     )
 }

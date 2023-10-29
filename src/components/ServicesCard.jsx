@@ -76,7 +76,9 @@ export default function ServicesCard(props) {
             <Center mt={8}>
                 <Box
                     maxW='350px'
+                    //maxW='49%'
                     minW='250px'
+                    //minW='49%'
                     w='full'
                     className='card__img'
                     cursor={newTab ? 'pointer' : ''}
