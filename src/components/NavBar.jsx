@@ -41,11 +41,6 @@ const NavBar = ({ children, photo }) => {
     if (isChecked) document.body.style.overflow = 'hidden';
     else document.body.style.overflow = 'auto';
 
-    //console.log("🚀 ~ file: NavBar.jsx:45 ~ NavBar ~ props:", props)
-
-    
-    console.log("🚀 ~ file: NavBar.jsx:48 ~ NavBar ~ photo:", photo)
-
     return (
         <>
             <nav className="" >
@@ -74,9 +69,8 @@ const NavBar = ({ children, photo }) => {
                                 </Dropdown>
                             ) : onlyLink ?
                                 <a href="https://development.victum-re.online" target="_blank">{content}</a>
-                                :
-                                <Link href={href}>
-                                    <a className={href === location ? "active" : ""} target="_blank">{content}</a>
+                                : <Link href={href}>
+                                    <a className={href === location ? "active" : ""}>{content}</a>
                                 </Link>
 
                             }

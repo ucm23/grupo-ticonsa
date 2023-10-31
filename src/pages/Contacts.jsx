@@ -4,8 +4,9 @@ import NavBar from "../components/NavBar"
 import {
     Box,
     useColorModeValue,
+    useBreakpointValue,
     Image,
-    Stack
+    Stack,
 } from '@chakra-ui/react';
 import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaPhoneAlt, FaPhone } from 'react-icons/fa'
 
@@ -57,6 +58,8 @@ const SocialButton = ({
 
 const Contacts = () => {
 
+    const mobile = useBreakpointValue({ base: true, md: false });
+
     return (
         <NavBar>
             <Box
@@ -71,27 +74,24 @@ const Contacts = () => {
                 height="100%"
             >
 
-                <section className="_main container" style={{ paddingBottom: 30 }} >
+                <section className="_main container" style={{}} >
                     <section className="section-5" >
                         <h2 class="section-title" style={{ paddingTop: 130, }}>Contáctanos</h2>
                         <div class="row-base row">
                             <div class="col-base col-md-offset-1">
-                                <div class="row-base row">
-                                    <div class="col-base col-sm-6 col-md-6 col-md-offset-1">
-                                        <h3 class="col-about-title">Formulario de <span className="text-primary-blue">Contacto:</span></h3>
-                                        <div class="col-about-info">
-                                            <p>Si desea solicitar una cotización con nosotros Grupo Ticonsa<sup>®</sup>, si requiere de mayor información o tienen algún comentario, por favor escribe tus datos para atenderlo personalmente:</p>
-                                            <ContactForm />
-                                        </div>
-                                    </div>
+                                <Stack
+                                    direction={mobile ? 'column' : 'row'}
+                                    style={{ width: '100%', justifyContent: 'space-between', padding: 10 }}
+                                    align='center'
 
-                                    <div class="col-base col-sm-6 col-md-6 col-md-offset-1" style={{ justifyContent: 'center', alignContent: 'center', alignItems: 'center', display: 'flex' }}>
-                                        <Carousel fade style={{ height: 600, width: 375, }} data-bs-theme="dark">
+                                >
+                                    <div class="col-base col-sm-6 col-md-6 col-md-offset-1" style={{ justifyContent: 'center', alignContent: 'center', alignItems: 'center', display: 'flex', marginBottom: 35 }}>
+                                        <Carousel fade style={{ height: 600, width: 365, }} data-bs-theme="dark">
                                             <Carousel.Item key={`names-item`} interval={4000}>
                                                 <div style={{ borderColor: color.primary, borderWidth: 2 }}>
                                                     <iframe
                                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d316.54268364379845!2d-99.22344153808785!3d19.32975703236199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdff953ce73f7b%3A0x8cf981865a36835b!2sGrupo%20Ticonsa%2C%20S.A.%20De%20C.V.!5e0!3m2!1ses-419!2smx!4v1697838392918!5m2!1ses-419!2smx"
-                                                        width="371" height="560" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                                        width="361" height="560" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                                                     />
                                                 </div>
                                                 <div className="text-center" >
@@ -107,7 +107,7 @@ const Contacts = () => {
                                                 <div style={{ borderColor: color.primary, borderWidth: 2 }}>
                                                     <iframe
                                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1463.5016147786391!2d-98.90510361366837!3d19.68932229972236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1eb7300349b71%3A0xf1629f0f0c861260!2sPlanta%20Ticonsa!5e0!3m2!1ses-419!2smx!4v1697838617903!5m2!1ses-419!2smx"
-                                                        width="371" height="560" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                                        width="361" height="560" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                                                     />
                                                 </div>
                                                 <div className="text-center" >
@@ -123,7 +123,7 @@ const Contacts = () => {
                                                 <div style={{ borderColor: color.primary, borderWidth: 2 }}>
                                                     <iframe
                                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.8420510937453!2d-86.82315982410222!3d21.15868318330224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2923b0cabc5d%3A0x124c3a2bd2a0622a!2sTiconsa%20Cacun%20Oficinas%20centro!5e0!3m2!1ses-419!2smx!4v1697838674859!5m2!1ses-419!2smx"
-                                                        width="371" height="560" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                                        width="361" height="560" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                                                     />
                                                 </div>
                                                 <div className="text-center" >
@@ -137,7 +137,14 @@ const Contacts = () => {
                                             </Carousel.Item>
                                         </Carousel>
                                     </div>
-                                </div>
+                                    <div class="" style={{}}>
+                                        <h3 class="col-about-title">Formulario de <span className="text-primary-blue">Contacto:</span></h3>
+                                        <div class="col-about-info">
+                                            <p>Si desea solicitar una cotización con nosotros Grupo Ticonsa<sup>®</sup>, si requiere de mayor información o tienen algún comentario, por favor escribe tus datos para atenderlo personalmente:</p>
+                                            <ContactForm />
+                                        </div>
+                                    </div>
+                                </Stack>
                             </div>
                         </div>
                     </section>

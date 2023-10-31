@@ -15,6 +15,8 @@ import { Link } from 'wouter'
 
 import color from '../color'
 import { Fade } from 'react-awesome-reveal';
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 const SocialButton = ({
     children,
@@ -58,6 +60,23 @@ export default function SmallCentered({ photo }) {
         width: '100%',
         //backgroundRepeat: "no-repeat",
         backgroundAttachment: 'fixed'
+    }
+
+    const [direction, setDirection] = useState('row');
+
+    useEffect(() => {
+        const newDirection = mobile ? 'column' : 'row';
+        setDirection(newDirection);
+    }, [mobile]);
+
+    const scrollToSection = (why) => {
+        const section = document.getElementById(why);
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const redirectToPage = (url) => {
+        // Abrir una nueva pestaña o ventana con la URL especificada
+        window.open(url);
     }
 
     return (
@@ -124,7 +143,6 @@ export default function SmallCentered({ photo }) {
         </Box>*/
         <div className='bg-footer'>
             {photo &&
-
                 <Stack
                     bg={useColorModeValue('gray.90', 'gray.800')}
                     color="#fff"
@@ -139,7 +157,7 @@ export default function SmallCentered({ photo }) {
 
                         <section className="_main container" >
                             <Stack
-                                direction={mobile ? 'column' : 'row'}
+                                direction={direction}
                                 style={{ width: '100%', justifyContent: 'space-between' }}
 
                             >
@@ -150,17 +168,17 @@ export default function SmallCentered({ photo }) {
                                     </Fade>
                                 </div>
                                 <Stack style={{ alignContent: 'center' }}>
-                                <Link href={'/contacts'}>
-                                <Button
-                                    colorScheme="blue"
-                                    bg={color.primary}
-                                    rounded={50}
-                                    top={30}
-                                    color="white"
-                                    _hover={{ bg: 'blue.500' }}>
-                                    Enviar mensaje
-                                </Button>
-                                </Link>
+                                    <Link href={'/contacts'}>
+                                        <Button
+                                            colorScheme="blue"
+                                            bg={color.primary}
+                                            rounded={50}
+                                            top={30}
+                                            color="white"
+                                            _hover={{ bg: 'blue.500' }}>
+                                            Enviar mensaje
+                                        </Button>
+                                    </Link>
                                 </Stack>
                             </Stack>
                         </section>
@@ -168,82 +186,100 @@ export default function SmallCentered({ photo }) {
                     </div>
                 </Stack>
             }
+            <section className="_main container p-footer" >
+                <Stack flexDirection={direction} style={{ marginBottom: 20 }} justifyContent={'space-between'}>
+                    <Stack alignItems={'center'}>
+                        <img
+                            src="/logo-white.png"
+                            alt="logo Grupo Ticonsa"
+                            style={{ width: 123, marginBottom: mobile ? 20 : 0 }}
+                        />
 
-            <Stack direction='row' spacing={2} marginY={5} paddingY={5} justifyContent={'space-evenly'}>
-                <Stack spacing={2} alignItems={'center'}
-                >
-                    <img
-                        src="/logo-white.png"
-                        alt="logo Grupo Ticonsa"
-                        style={{ width: 123 }}
-                    />
+                    </Stack>
+                    <Stack direction={direction} justifyContent={'space-between'}>
+                        <Stack paddingRight={5}>
+                            <h3 className="footer-title">Acerca de</h3>
+                            <Stack flexDirection={'column'}>
+                                {/*<Link href={'/'} className="footer-link">
+                                    Acerca de
+                                </Link>
+                                <Link href={'/'} className="footer-link">
+                                    Servicios
+        </Link>*/}
+                                <a href="" className="footer-link" target="_blank">Acerca de</a>
+                                <a href="" className="footer-link" target="_blank">Servicios</a>
+                            </Stack>
+                        </Stack>
+                        <Stack paddingRight={5}>
+                            <h3 className="footer-title">Prefabricado</h3>
+                            <Stack flexDirection={'column'}>
+                                {/*<Link to={'/prefabricado#system'} target="_blank" className="footer-link" onClick={() => scrollToSection('system')}>
+                                    Sistema
+                                </Link>
+                                <Link href={'/prefabricado#pro'} target="_blank" className="footer-link" onClick={() => redirectToPage('/prefabricado#pro')}>
+                                    Ventaja
+        </Link>*/}
+                                <a href="/prefabricado#pro" className="footer-link" target="_blank">Sistema</a>
+                                <a href="/prefabricado#pro" className="footer-link" target="_blank">Ventajas</a>
+                            </Stack>
+                        </Stack>
+                        <Stack paddingRight={5}>
+                            <h3 className="footer-title">Contacto</h3>
+                            <Stack flexDirection={'column'}>
+                                {/*<Link href={'/contacts'} className="footer-link">
+                                    Contáctanos
+                                </Link>
+                                <Link href={'/'} className="footer-link">
+                                    Curriculum
+                                </Link>*/}
+                                <a href="/contacts" className="footer-link" target="_blank">Contáctanos</a>
+                                <a href="" className="footer-link" target="_blank">Curriculum</a>
+                            </Stack>
+                        </Stack>
 
-                </Stack>
-                <Stack direction='row' justifyContent={'space-evenly'}>
-                    <Stack spacing={2} paddingX={5}>
-                        <h3 className="footer-title">Acerca de</h3>
-                        <Stack flexDirection={'column'}>
-                            <Link href={'/'} className="footer-link">
-                                Acerca de
-                            </Link>
-                            <Link href={'/'} className="footer-link">
-                                Servicios
-                            </Link>
+                        <Stack>
+                            <h3 className="footer-title">Redes Sociales</h3>
+                            <Stack direction={'row'}>
+                                <SocialButton label={'Twitter'} href={'/'}>
+                                    <FaTwitter />
+                                </SocialButton>
+                                <SocialButton label={'YouTube'} href={'https://www.youtube.com/@grupoticonsaprefabricados9793'}>
+                                    <FaYoutube />
+                                </SocialButton>
+                                <SocialButton label={'Instagram'} href={'https://www.instagram.com/grupo_ticonsa/'}>
+                                    <FaInstagram />
+                                </SocialButton>
+                                <SocialButton label={'Facebook'} href={'https://www.facebook.com/GrupoTiconsa/?locale=es_LA'}>
+                                    <FaFacebook />
+                                </SocialButton>
+                            </Stack>
                         </Stack>
                     </Stack>
-                    <Stack spacing={2} paddingX={5}>
-                        <h3 className="footer-title">Contacto</h3>
-                        <Stack flexDirection={'column'}>
-                            <Link href={'/contacts'} className="footer-link">
-                                Contáctanos
-                            </Link>
-                            <Link href={'/'} className="footer-link">
-                                Curriculum
-                            </Link>
-                        </Stack>
-                    </Stack>
-                    <Stack spacing={2}>
-                        <h3 className="footer-title">Redes Sociales</h3>
-                        <Stack direction={'row'} spacing={1}>
-                            <SocialButton label={'Twitter'} href={'/'}>
-                                <FaTwitter />
-                            </SocialButton>
-                            <SocialButton label={'YouTube'} href={'/'}>
-                                <FaYoutube />
-                            </SocialButton>
-                            <SocialButton label={'Instagram'} href={'/'}>
-                                <FaInstagram />
-                            </SocialButton>
-                            <SocialButton label={'Facebook'} href={'https://www.facebook.com/GrupoTiconsa/?locale=es_LA'}>
-                                <FaFacebook />
-                            </SocialButton>
-                        </Stack>
-                    </Stack>
                 </Stack>
-
-                {/*
-            { id: 1, href: "/", content: "Inicio" },
-        { id: 2, href: "/historia", content: "Historia" },
-        { id: 3, href: "/prefabricado", content: "Sistema de prefabricado" },
-        { id: 6, href: "/contacto", content: "Contacto" },
-        { id: 5, href: "/#", hasSubMenu: SubMenuInst },
-        { id: 7, href: "/#", hasSubMenu: SubMenuProd },  
-  */}
-
-            </Stack>
-            <Stack direction='row' spacing={2} paddingY={6} justifyContent={'space-evenly'}>
-                <h3 className="footer-link"><strong>Ticonsa Inmobiliaria S.A. de C.V. México. 2023</strong><br></br>Derechos Reservados.</h3>
-                <Stack direction='row' spacing={2}>
-                    <Link href={'/privacity'} className="footer-link">
-                        Aviso de Privacidad
-                    </Link>
-                    <h3 className="footer-link"> | </h3>
-                    <Link href={'/legal'} className="footer-link">
-                        Aviso Legal
-                    </Link>
+                <div style={{ background: 'white', height: 1, width: '100%', }} />
+                <Stack flexDirection='row' justifyContent={'space-between'} style={{ marginTop: 20 }}>
+                    <div style={{ textAlign: 'left' }}>
+                        <h3 className="footer-link">
+                            Ticonsa Inmobiliaria S.A. de C.V. México. 2023
+                        </h3>
+                        <h3 className="footer-link">
+                            Derechos Reservados.
+                        </h3>
+                    </div>
+                    <div style={{ textAlign: 'right' }}>
+                        <Link href={'/legal'}>
+                            <h3 className="footer-link">
+                                Aviso Legal
+                            </h3>
+                        </Link>
+                        <Link href={'/privacity'}>
+                            <h3 className="footer-link">
+                                Aviso de Privacidad
+                            </h3>
+                        </Link>
+                    </div>
                 </Stack>
-            </Stack>
-            <a href={"https://development.victum-re.online"} target="_blank" rel="noopener noreferrer">Proveedores</a>
+            </section>
         </div >
     )
 }

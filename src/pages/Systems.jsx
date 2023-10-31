@@ -118,26 +118,26 @@ const Systems = () => {
                                     </div>
                                 </div>
                 </div>*/}
-
-                            <div class="row-base row" styles='margin-top: 7.1em'>
-                                <div class="" /* col-base col-sm-6 col-md-offset-1 col-md-6  */>
-                                    <Fade direction="down">
-                                        <section className="text-center">
-                                            <h3 class="col-about-title">Sistema de prefabricado <span className="text-primary-blue">y más</span></h3>
-                                        </section>
-                                    </Fade>
-                                    <div class="row-base row">
-                                        <div class="col-base col-md-offset-1">
-                                            <div class="col-about-info">
-                                                <p>A diferencia de los sistemas convencionales, en el Sistema de Prefabricado los elementos estructurales se fabrican previamente en plantas de producción. Después de un riguroso control de calidad en el proceso de fabricación,  las piezas se transportan para colocarlas en el lugar de la obra, abatiendo en forma considerable el tiempo de construcción.</p>
-                                                <p>Una característica de este sistema es que pueden salvar grandes claros con elementos ligeros. Esto se logra mediante la técnica del Presfuerzo, que consiste en aplicar una fuerza de tensión al acero de presfuerzo (cables o torones) antes de iniciar el colado, logrando incrementar la resistencia y mejorar el comportamiento estructural de los elementos.</p>
-                                                <p>Una vez montados los elementos, se cuela un firme de compresión de 5cm aproximadamente.</p>
+                            <section id="system">
+                                <div class="row-base row" styles='margin-top: 7.1em'>
+                                    <div class="" /* col-base col-sm-6 col-md-offset-1 col-md-6  */>
+                                        <Fade direction="down">
+                                            <section className="text-center">
+                                                <h3 class="col-about-title">Sistema de prefabricado <span className="text-primary-blue">y más</span></h3>
+                                            </section>
+                                        </Fade>
+                                        <div class="row-base row">
+                                            <div class="col-base col-md-offset-1">
+                                                <div class="col-about-info">
+                                                    <p>A diferencia de los sistemas convencionales, en el Sistema de Prefabricado los elementos estructurales se fabrican previamente en plantas de producción. Después de un riguroso control de calidad en el proceso de fabricación,  las piezas se transportan para colocarlas en el lugar de la obra, abatiendo en forma considerable el tiempo de construcción.</p>
+                                                    <p>Una característica de este sistema es que pueden salvar grandes claros con elementos ligeros. Esto se logra mediante la técnica del Presfuerzo, que consiste en aplicar una fuerza de tensión al acero de presfuerzo (cables o torones) antes de iniciar el colado, logrando incrementar la resistencia y mejorar el comportamiento estructural de los elementos.</p>
+                                                    <p>Una vez montados los elementos, se cuela un firme de compresión de 5cm aproximadamente.</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                {/*<div class="col-base col-about-img col-sm-6 col-md-offset-1">
+                                    {/*<div class="col-base col-about-img col-sm-6 col-md-offset-1">
                                     <p>La Prefabricación tiene muchas aplicaciones. El sistema en edificación se compone básicamente de los siguientes elementos:</p>
                                     <Image
                                         src='/prefabricado2.jpg'
@@ -145,24 +145,23 @@ const Systems = () => {
                                         style={{ height: 300, width: '100%', objectFit: 'cover', }}
                                     />
             </div>*/}
-                            </div>
+                                </div>
+                                <section className="d-flex justify-content-around align-items-center pb-5 flex-wrap" >
 
-                            <section className="d-flex justify-content-around align-items-center pb-5 flex-wrap" >
-
-                                {
-                                    items.map((item, key) =>
-                                        <ServicesCard
-                                            key={item.id}
-                                            img={item.img}
-                                            title={item.title}
-                                            newTab={item.newTab}
-                                            onPress={() => onPress(key)}
-                                        />
-                                    )
-                                }
+                                    {
+                                        items.map((item, key) =>
+                                            <ServicesCard
+                                                key={item.id}
+                                                img={item.img}
+                                                title={item.title}
+                                                newTab={item.newTab}
+                                                onPress={() => onPress(key)}
+                                            />
+                                        )
+                                    }
 
 
-                                {/*<Chart
+                                    {/*<Chart
                                     chartType="ComboChart"
                                     width="100%"
                                     height="600px"
@@ -171,73 +170,72 @@ const Systems = () => {
                             />*/}
 
 
-                            </section>
-
-                            <center>
-
-                                <section class="col-base col-about-img col-sm-6 col-md-offset-1" className="mt-4" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
-
-                                    <Fade direction="down">
-                                        <section className="text-center">
-                                            <h3 class="col-about-title">Ventajes del <span className="text-primary-blue">prefabricado</span></h3>
-                                        </section>
-                                    </Fade>
-                                    <center>
-                                        <div class="col-base col-md-offset-1" style={{ marginTop: 20 }}>
-                                            <div class="col-about-info">
-                                                <p className='h4 m-0'>Construcción in SITU</p>
-                                                <p>Tiempos estimados mediante un sistema tradicional</p>
-                                            </div>
-                                        </div>
-                                    </center>
-
-                                    <img
-                                        src={"./situ.png"}
-                                        style={{ height: 300, objectFit: 'scale-down' }}
-                                    //alt={title}
-                                    //styles='filter: grayscale(100%)'
-                                    //objectFit="contain"
-                                    />
-                                    <center>
-                                        <div class="col-base col-md-offset-1" style={{ marginTop: 20 }}>
-                                            <div class="col-about-info">
-                                                <p className='h4 m-0'>Construcción Industrializada con Estructurea y Paneles Prefabricados</p>
-                                                <p>Tiempos estimados mediante un sistema Prefabricado</p>
-                                            </div>
-                                        </div>
-                                    </center>
-                                    <img
-                                        src={"./paneles.png"}
-                                        style={{ height: 300, objectFit: 'scale-down' }}
-                                    //alt={title}
-                                    //styles='filter: grayscale(100%)'
-                                    //objectFit="contain"
-                                    />
-                                    <div class="col-base col-md-offset-1">
-                                        <div class="col-about-info">
-                                            <p className='h4 m-0'>Ventajas:</p>
-                                            <p>1. Disminución en el tiempo de construcción hasta del 50%.<br />
-                                                2. Ahorro significativo en costos de ingeniería estructural ya que la ingeniería es desarrollada por nosotros contando con ingenieros altamente calificados en la materia.<br />
-                                                3. Seguridad estructural garantizada.<br />
-                                                4. Redución del impacto ambiental en sitio ya que se requiere menor número de personal obrero comparado con los sistemas tradicionales.  Se reduce hasta un 80%.<br />
-                                                5. Se aligera la estructura permitiendo en ocasiones una reducción en costos en cimentación.<br />
-                                                6. Controles de calidad más estrictos gracias al proceso industrializado.<br />
-                                                7. Durabilidad de la estructura por uso de concretos de alta resistencia.<br />
-                                                8. Se elimina el riesgo debido a problemas obrero-patronales, es decir cuotas sindicales, seguro social, etc. ya que el personal depende directamente de nosotros.<br />
-                                                9. Se reducen costos de supervisión ya que se simplifican los procesos y control de obra.<br />
-                                                10. Versatilidad en soluciones arquitectónicas ya que se desarrolla la ingeniería adaptada al proyecto.</p>
-                                        </div>
-                                    </div>
-                                    <Chart
-                                        options={options}
-                                        series={options.series}
-                                        type='radar'
-                                        //width="1000"
-                                        height="500"
-                                    />
-
                                 </section>
-                            </center>
+                            </section>
+                            <section id="pro">
+                                <center>
+                                    <section class="col-base col-about-img col-sm-6 col-md-offset-1" className="mt-4" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
+                                        <Fade direction="down">
+                                            <section className="text-center">
+                                                <h3 class="col-about-title">Ventajes del <span className="text-primary-blue">prefabricado</span></h3>
+                                            </section>
+                                        </Fade>
+                                        <center>
+                                            <div class="col-base col-md-offset-1" style={{ marginTop: 20 }}>
+                                                <div class="col-about-info">
+                                                    <p className='h4 m-0'>Construcción in SITU</p>
+                                                    <p>Tiempos estimados mediante un sistema tradicional</p>
+                                                </div>
+                                            </div>
+                                        </center>
+                                        <img
+                                            src={"./situ.png"}
+                                            style={{ height: 300, objectFit: 'scale-down' }}
+                                        //alt={title}
+                                        //styles='filter: grayscale(100%)'
+                                        //objectFit="contain"
+                                        />
+                                        <center>
+                                            <div class="col-base col-md-offset-1" style={{ marginTop: 20 }}>
+                                                <div class="col-about-info">
+                                                    <p className='h4 m-0'>Construcción Industrializada con Estructurea y Paneles Prefabricados</p>
+                                                    <p>Tiempos estimados mediante un sistema Prefabricado</p>
+                                                </div>
+                                            </div>
+                                        </center>
+                                        <img
+                                            src={"./paneles.png"}
+                                            style={{ height: 300, objectFit: 'scale-down' }}
+                                        //alt={title}
+                                        //styles='filter: grayscale(100%)'
+                                        //objectFit="contain"
+                                        />
+                                        <div class="col-base col-md-offset-1">
+                                            <div class="col-about-info">
+                                                <p className='h4 m-0'>El sistema prefabricado tiene una gran variedad de ventajas frente a los sitemas constructivos convencionales, entre ellos se destacan:</p>
+                                                <p>1. Disminución en el tiempo de construcción hasta del 50%.<br />
+                                                    2. Ahorro significativo en costos de ingeniería estructural ya que la ingeniería es desarrollada por nosotros contando con ingenieros altamente calificados en la materia.<br />
+                                                    3. Seguridad estructural garantizada.<br />
+                                                    4. Redución del impacto ambiental en sitio ya que se requiere menor número de personal obrero comparado con los sistemas tradicionales.  Se reduce hasta un 80%.<br />
+                                                    5. Se aligera la estructura permitiendo en ocasiones una reducción en costos en cimentación.<br />
+                                                    6. Controles de calidad más estrictos gracias al proceso industrializado.<br />
+                                                    7. Durabilidad de la estructura por uso de concretos de alta resistencia.<br />
+                                                    8. Se elimina el riesgo debido a problemas obrero-patronales, es decir cuotas sindicales, seguro social, etc. ya que el personal depende directamente de nosotros.<br />
+                                                    9. Se reducen costos de supervisión ya que se simplifican los procesos y control de obra.<br />
+                                                    10. Versatilidad en soluciones arquitectónicas ya que se desarrolla la ingeniería adaptada al proyecto.</p>
+                                            </div>
+                                        </div>
+                                        <Chart
+                                            options={options}
+                                            series={options.series}
+                                            type='radar'
+                                            //width="1000"
+                                            height="500"
+                                        />
+
+                                    </section>
+                                </center>
+                            </section>
                         </section>
                     </section>
                 </Box>
@@ -260,7 +258,7 @@ const Systems = () => {
                             <Carousel.Item key={key}>
                                 <img
                                     src={item?.img}
-                                    style={{ height: 500, objectFit: 'scale-down' }}
+                                    style={{ height: 400, width: 500, objectFit: 'cover' }}
                                     alt={''}
                                 />
                                 <div className="text-modal-image">

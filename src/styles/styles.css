@@ -4,7 +4,9 @@
   --light-theme: #ffffff;
   --dark-theme: #000000;
   --color-primary: #03296A;
-  --color-primary-light: #03296A50;
+  --color-primary-light: #03296a50;
+  --color-primary-light-2: #eee;
+  --deep-sky-blue: #00a0df;
   --color-white: #ffffff;
 }
 
@@ -13,6 +15,10 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
+}
+
+html, body {
+  scroll-behavior: smooth;
 }
 
 .section-title {
@@ -28,11 +34,14 @@
   color: #000000;
   text-align: center;
   margin: 0;
-  margin-left: 0.32em;
 }
 
 .row-base.row {
   margin-top: 3em;
+}
+
+.p-footer {
+  padding: 30px 0px 30px 0px;
 }
 
 .project-title-card {
@@ -94,6 +103,25 @@ figure {
 
 .bg-footer {
   background-color: var(--color-primary);
+}
+
+.p-section-50{
+  background-color: var(--color-primary-light-2);
+}
+
+.font-50 {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 0;
+  margin-top: 10px;
+  color: var(--deep-sky-blue);
+}
+
+.font--50 {
+  font-size: 15px;
+  font-weight: 500;
+  width: 90%;
+  margin-bottom: 30px;
 }
 
 .css-141rheu {
@@ -214,12 +242,13 @@ figure {
 
 body::-webkit-scrollbar {
   width: 5px;
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar-thumb {
   background: var(--color-primary);
   border-radius: 0px;
-  font-family: "Oswald", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -361,9 +390,9 @@ li a:hover {
 }
 
 .footer-title {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--color-white);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .footer-link {
@@ -409,6 +438,12 @@ li a:hover {
   nav ul {
     float: right;
     margin-top: 33px;
+  }
+
+  li a:hover,
+  li a.active {
+    background: none;
+    color: #1d50dd;
   }
 }
 
