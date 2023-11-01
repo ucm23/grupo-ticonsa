@@ -21,8 +21,15 @@ function App() {
             <Route path="/productos" component={Products} />
             <Route path="/portafolio" component={Porfolio} />
             <Route path="/prefabricado" component={Systems} />
-            <Route path="/plant-teotihuacan" component={Plantas} />
-            <Route path="/plant-morelos" component={Plantas} />
+
+            <Route path="/plant-teotihuacan" component={Index} />
+            <Route path="/plant-morelos" component={Index} />
+            <Route path="/infraestructura" component={Index} />
+            <Route path="/edificacion" component={Index} />
+            <Route path="/transporte" component={Index} />
+            <Route path="/montaje" component={Index} />
+            <Route path="/supervision" component={Index} />
+
             <Route path="/legal" component={Legal} />
             <Route path="/privacity" component={Privacity} />
         </Switch>

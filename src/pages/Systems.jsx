@@ -77,7 +77,6 @@ const Systems = () => {
     const onPress = (key) => {
         setIndex(key);
         handleShow()
-
     }
 
     const handleSelect = (selectedIndex) => setIndex(selectedIndex);
@@ -85,8 +84,8 @@ const Systems = () => {
 
     return (
         <>
-            <NavBar>
-                <CarouselStatic names={[1, 2, 3, 4]} folder='systems' />
+            <NavBar photo={'true'}>
+                <CarouselStatic names={[1, 2, 3]} folder='img_system' />
 
                 <Box
                     bgGradient={
@@ -198,7 +197,7 @@ const Systems = () => {
                                         <center>
                                             <div class="col-base col-md-offset-1" style={{ marginTop: 20 }}>
                                                 <div class="col-about-info">
-                                                    <p className='h4 m-0'>Construcción Industrializada con Estructurea y Paneles Prefabricados</p>
+                                                    <p className='h4 m-0'>Construcción Industrializada con Estructuras y Paneles Prefabricados</p>
                                                     <p>Tiempos estimados mediante un sistema Prefabricado</p>
                                                 </div>
                                             </div>
@@ -253,18 +252,23 @@ const Systems = () => {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Carousel activeIndex={index} onSelect={handleSelect} data-bs-theme="dark">
+                    <Carousel activeIndex={index} onSelect={handleSelect} /*data-bs-theme="dark"*/>
                         {items.map((item, key) =>
                             <Carousel.Item key={key}>
-                                <img
-                                    src={item?.img}
-                                    style={{ height: 400, width: 500, objectFit: 'cover' }}
-                                    alt={''}
-                                />
-                                <div className="text-modal-image">
-                                    <h3 class="col-about-title">{item.title}</h3>
-                                    <p>{item.description}</p>
+                                <div 
+                                style={{ width: '100%', height: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                                >
+                                    <img
+                                        src={item?.img}
+                                        style={{ height: '100%', width: '100%', objectFit: 'cover', }}
+                                        alt={''}
+                                    />
+                                    <div className="text-modal-image">
+                                        <h3 class="col-about-title-system">{item.title.toUpperCase()}</h3>
+                                        <p class="col-about-title-system">{item.description}</p>
+                                    </div>
                                 </div>
+
                             </Carousel.Item>
                         )}
                     </Carousel>

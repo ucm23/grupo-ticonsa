@@ -17,7 +17,8 @@
   font-family: "Oswald", sans-serif;
 }
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
 
@@ -34,6 +35,55 @@ html, body {
   color: #000000;
   text-align: center;
   margin: 0;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  color: #777;
+}
+
+.field input {
+  min-width: 250px;
+  width: 100%;
+  line-height: 1.5;
+  font-size: 14px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  border-color: black;
+  border-width: 1px;
+  padding: 7px;
+}
+
+.field textarea {
+  min-width: 250px;
+  width: 100%;
+  line-height: 1.5;
+  font-size: 14px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  border-color: black;
+  border-width: 1px;
+  padding: 7px;
+  height: 135px;
+}
+
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--color-primary-light);
 }
 
 .row-base.row {
@@ -105,7 +155,7 @@ figure {
   background-color: var(--color-primary);
 }
 
-.p-section-50{
+.p-section-50 {
   background-color: var(--color-primary-light-2);
 }
 
@@ -125,10 +175,10 @@ figure {
 }
 
 .css-141rheu {
-  padding-bottom: 3rem!important;
+  padding-bottom: 3rem !important;
 }
 
-.content-circle{
+.content-circle {
   position: relative;
   text-align: center;
   z-index: 99;
@@ -139,20 +189,21 @@ figure {
 }
 
 .circle {
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   position: absolute;
   z-index: 100;
   background-color: var(--color-primary);
-  box-shadow: 0 0 20px 20px var(--color-primary-light);
+  box-shadow: 0 0 8px 8px var(--color-primary-light);
 }
 
-.circle-01{
+.circle-01 {
   top: 16%;
   left: 17%;
 }
-.circle-02{
+
+.circle-02 {
   top: 26%;
   left: 25%;
 }
@@ -258,13 +309,22 @@ body {
 ._main {
   color: var(--dark-theme);
 }
-.section-5{
+
+.section-5 {
   padding: 25px 0px 0px 0px;
 }
 
-.text-modal-image{
-  /*position: absolute;
-  top: 10px;*/
+.text-modal-image {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: inherit;
+}
+
+.col-about-title-system {
+  color: #ffffff;
+  text-shadow: 3px 3px 5px gray;
+
 }
 
 .card__img,
@@ -494,61 +554,13 @@ ul {
 }
 
 
-.tl-full-image-background .tl-text .tl-headline-date, .tl-full-color-background .tl-text .tl-headline-date, .tl-full-image-background .tl-text p .tl-headline-date, .tl-full-color-background .tl-text p .tl-headline-date, .tl-full-image-background .tl-text h3.tl-headline-date, .tl-full-color-background .tl-text h3.tl-headline-date, .tl-full-image-background .tl-text p h3.tl-headline-date, .tl-full-color-background .tl-text p h3.tl-headline-date {
+.tl-full-image-background .tl-text .tl-headline-date,
+.tl-full-color-background .tl-text .tl-headline-date,
+.tl-full-image-background .tl-text p .tl-headline-date,
+.tl-full-color-background .tl-text p .tl-headline-date,
+.tl-full-image-background .tl-text h3.tl-headline-date,
+.tl-full-color-background .tl-text h3.tl-headline-date,
+.tl-full-image-background .tl-text p h3.tl-headline-date,
+.tl-full-color-background .tl-text p h3.tl-headline-date {
   color: #ea1c2b;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

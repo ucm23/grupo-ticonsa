@@ -12,6 +12,13 @@
         "title": "Proceso y prod. de montaje",
         "description": "Procesos Conceptual > Planeación > Ingeniería de Detalle > Fabricación > Transporte y Montaje > Conexiones",
         "newTab": true
+    },
+    {
+        "id":7, 
+        "img": "/systems/7.jpeg", 
+        "title": "Aplicaciones",
+        "description": "Losas > Columnas > Candelero > Trabes de rigidez > Trabes portantes > Conexiones",
+        "newTab": true
     }
 ]
 

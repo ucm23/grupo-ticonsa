@@ -28,6 +28,8 @@ import { TbWorldShare, TbMailForward, TbPhoneCall } from "react-icons/tb";
 
 import { Carousel } from "react-bootstrap";
 import ContactForm from "../components/ContactForm";
+import { useEffect, useState } from "react";
+import { Fade } from "react-awesome-reveal";
 
 const SocialButton = ({
     children,
@@ -60,6 +62,13 @@ const Contacts = () => {
 
     const mobile = useBreakpointValue({ base: true, md: false });
 
+    const [width_, setWidth] = useState('50%');
+
+    useEffect(() => {
+        const newWidth = mobile ? '100%' : '50%';
+        setWidth(newWidth);
+    }, [mobile]);
+
     return (
         <NavBar>
             <Box
@@ -75,17 +84,20 @@ const Contacts = () => {
             >
 
                 <section className="_main container" style={{}} >
-                    <section className="section-5" >
-                        <h2 class="section-title" style={{ paddingTop: 130, }}>Contáctanos</h2>
+                    <section className="section-5">
+                        <Fade direction="down">
+                        <section className="text-center">
+                            <h2 class="section-title" style={{ paddingTop: 130, }}><span className="text-primary-blue">Contáctanos</span></h2>
+                        </section>
+                    </Fade>
                         <div class="row-base row">
                             <div class="col-base col-md-offset-1">
                                 <Stack
                                     direction={mobile ? 'column' : 'row'}
                                     style={{ width: '100%', justifyContent: 'space-between', padding: 10 }}
                                     align='center'
-
                                 >
-                                    <div class="col-base col-sm-6 col-md-6 col-md-offset-1" style={{ justifyContent: 'center', alignContent: 'center', alignItems: 'center', display: 'flex', marginBottom: 35 }}>
+                                    <div style={{ width: width_, justifyContent: 'center', alignContent: 'center', alignItems: 'center', display: 'flex', marginBottom: 35 }}>
                                         <Carousel fade style={{ height: 600, width: 365, }} data-bs-theme="dark">
                                             <Carousel.Item key={`names-item`} interval={4000}>
                                                 <div style={{ borderColor: color.primary, borderWidth: 2 }}>
@@ -137,7 +149,7 @@ const Contacts = () => {
                                             </Carousel.Item>
                                         </Carousel>
                                     </div>
-                                    <div class="" style={{}}>
+                                    <div style={{ width: width_, }}>
                                         <h3 class="col-about-title">Formulario de <span className="text-primary-blue">Contacto:</span></h3>
                                         <div class="col-about-info">
                                             <p>Si desea solicitar una cotización con nosotros Grupo Ticonsa<sup>®</sup>, si requiere de mayor información o tienen algún comentario, por favor escribe tus datos para atenderlo personalmente:</p>

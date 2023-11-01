@@ -1,6 +1,7 @@
 import { Heading, Stack, Text, Box, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
 import messages from "../assets/messaje.json"
 import CarouselStatic from './CarouselStatic';
+import { Fade } from 'react-awesome-reveal';
 
 export default function Message() {
 
@@ -15,7 +16,6 @@ export default function Message() {
     }
 
     return (
-
         <Box
             bgGradient={
                 useColorModeValue(
@@ -27,10 +27,15 @@ export default function Message() {
             opacity="1"
             height="100%"
         >
-            <CarouselStatic names={[4, 2, 6]} folder='systems' />
+            <CarouselStatic names={[1, 2, 3]} folder='img_maya' />
             <section className="_main container" >
                 <section>
-                    <h2 class="section-title" style={{ paddingTop: 30, }}>Mensaje de nuestra <span className="text-primary-blue">Presidencia</span></h2>
+                    <Fade direction="down">
+                        <section className="text-center">
+                            <h2 class="section-title" style={{ paddingTop: 30, }}>Mensaje de nuestra <span className="text-primary-blue">Presidencia</span></h2>
+                        </section>
+                    </Fade>
+
                     <center>
                         <img
                             src={"./logo.png"}

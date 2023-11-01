@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar"
 
 const History = () => {
     return (
-        <NavBar>
+        <NavBar photo={'true'}>
             <section className="_main" >
                 <div className="message">
                     <Message />

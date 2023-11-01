@@ -25,7 +25,7 @@ const settings = {
     slidesToScroll: 1,
 }
 
-export default function Carousel() {
+export default function Carousel_() {
 
     const [slider, setSlider] = useState(null)
 
@@ -96,7 +96,7 @@ export default function Carousel() {
                         <Box key={index}>
                             <SplitMergeAnimation
                                 imageUrl={card.image}
-                                numParts={mobile ? 3 : 6}
+                                numParts={mobile ? 4 : 8}
                             >
                                 {/*<Container
                                     zIndex={10}

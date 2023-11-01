@@ -1,4 +1,5 @@
 
+import { Fade } from "react-awesome-reveal";
 import NavBar from "../components/NavBar"
 
 import {
@@ -22,7 +23,9 @@ const Privacity = () => {
             >
                 <section className="_main container" >
                     <section className="section-5" >
-                        <h2 class="section-title" style={{ paddingTop: 130, }}>Aviso de Privacidad</h2>
+                        <Fade direction="down">
+                            <h2 class="section-title" style={{ paddingTop: 130, }}>Aviso de Privacidad</h2>
+                        </Fade>
 
                         <div class="row-base row">
                             <div class="col-base col-md-offset-1">
@@ -39,10 +42,10 @@ const Privacity = () => {
                                     <p>Los datos o información proporcionados a GRUPO TICONSA serán tratados con la estricta confidencialidad y secreto, y los que en su caso se considerasen secreto industrial serán utilizados por GRUPO TICONSA en los términos señalados por el Título Tercero de la Ley de la Propiedad Industrial. La excepción a lo anterior, se traspasara únicamente mediante mandato judicial.</p>
                                     <p>Para efectos de modificaciones, actualizaciones, aceptaciones, negativas, transferencia de datos a favor de terceros o en su caso revocaciones al presente aviso de privacidad, estarán disponibles para usted en nuestra página de internet www.grupoticonsa.com.mx , o se enviarán confirmaciones vía impresa o correo electrónico a petición de parte.</p>
                                     <p>Atentamente,
-                                    <br/>Ticonsa Inmobiliaria, S.A. de C.V. (Responsable)<br/>Dirección Jurídica Corporativa (Atención)
-                                    <br/>Calle Presa #85, Colonia San Jerónimo Lidice,
-                                    <br/>Delegación Magdalena Contreras,
-                                    <br/>México, 10200, D.F.</p>
+                                        <br />Ticonsa Inmobiliaria, S.A. de C.V. (Responsable)<br />Dirección Jurídica Corporativa (Atención)
+                                        <br />Calle Presa #85, Colonia San Jerónimo Lidice,
+                                        <br />Delegación Magdalena Contreras,
+                                        <br />México, 10200, D.F.</p>
                                 </div>
                             </div>
                         </div>

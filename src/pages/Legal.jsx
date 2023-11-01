@@ -1,4 +1,5 @@
 
+import { Fade } from "react-awesome-reveal";
 import NavBar from "../components/NavBar"
 
 import {
@@ -22,8 +23,9 @@ const Legal = () => {
             >
                 <section className="_main container" >
                     <section className="section-5" >
-                        <h2 class="section-title" style={{ paddingTop: 130, }}>Aviso Legal</h2>
-
+                        <Fade direction="down">
+                            <h2 class="section-title" style={{ paddingTop: 130, }}>Aviso Legal</h2>
+                        </Fade>
                         <div class="row-base row">
                             <div class="col-base col-md-offset-1">
                                 <div class="col-about-info">

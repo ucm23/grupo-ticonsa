@@ -2,17 +2,27 @@ import {
     Stack,
 } from '@chakra-ui/react';
 
+import { Fade } from "react-awesome-reveal";
+import CountUp from 'react-countup';
 
 export default function CardSimple(props) {
 
     const {
         title,
         descrip,
+        prefix,
+        suffix,
     } = props;
 
     return (
         <Stack style={{ width: '40%' }}>
-            <p className="font-50">{title}</p>
+            <Fade direction="down">
+                <p className="font-50">
+                    {prefix}
+                    <CountUp end={title} duration={title*0.009} enableScrollSpy={true} scrollSpyDelay={1000} />
+                    {suffix}
+                </p>
+            </Fade>
             <p className="font--50">{descrip}</p>
         </Stack>
     );
