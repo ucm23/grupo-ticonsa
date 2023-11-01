@@ -240,16 +240,16 @@ export default function SmallCentered({ photo }) {
                         <Stack>
                             <h3 className="footer-title">Redes Sociales</h3>
                             <Stack direction={'row'}>
-                                <SocialButton label={'Twitter'} href={'/'}>
+                                <SocialButton label={'Twitter'} target="_blank" href={'https://twitter.com/GRUPO_TICONSA'}>
                                     <FaTwitter />
                                 </SocialButton>
-                                <SocialButton label={'YouTube'} href={'https://www.youtube.com/@grupoticonsaprefabricados9793'}>
+                                <SocialButton label={'YouTube'} target="_blank" href={'https://www.youtube.com/@grupoticonsaprefabricados9793'}>
                                     <FaYoutube />
                                 </SocialButton>
-                                <SocialButton label={'Instagram'} href={'https://www.instagram.com/grupo_ticonsa/'}>
+                                <SocialButton label={'Instagram'} target="_blank" href={'https://www.instagram.com/grupo_ticonsa/'}>
                                     <FaInstagram />
                                 </SocialButton>
-                                <SocialButton label={'Facebook'} href={'https://www.facebook.com/GrupoTiconsa/?locale=es_LA'}>
+                                <SocialButton label={'Facebook'} target="_blank" href={'https://www.facebook.com/GrupoTiconsa/?locale=es_LA'}>
                                     <FaFacebook />
                                 </SocialButton>
                             </Stack>
