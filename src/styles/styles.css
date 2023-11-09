@@ -564,3 +564,8 @@ ul {
 .tl-full-color-background .tl-text p h3.tl-headline-date {
   color: #ea1c2b;
 }
+
+.shadow {
+  box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.1);
+  /* Otros estilos de sombra */
+}

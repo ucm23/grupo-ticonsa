@@ -268,7 +268,7 @@ export default function SmallCentered({ photo }) {
                     </div>
                     <div style={{ textAlign: 'right' }}>
                         <h3 className="footer-link">
-                            <Link href={'/legal'}>
+                            <Link href={'/portafolio'}>
                                 Aviso Legal
                             </Link>
                         </h3>

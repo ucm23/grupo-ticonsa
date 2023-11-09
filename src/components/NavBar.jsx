@@ -1,12 +1,29 @@
 import PropTypes from 'prop-types'
 import { Link, useLocation } from "wouter"
 import SmallCentered from './Footer'
-import { useState } from 'react';
+import { useState, useEffect } from "react";
 import { Dropdown } from 'react-bootstrap';
 
 const NavBar = ({ children, photo }) => {
     const [location] = useLocation();
     const [isChecked, setIsChecked] = useState(false);
+
+    const [showShadow, setShowShadow] = useState(false);
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 0) {
+          setShowShadow(true);
+        } else {
+          setShowShadow(false);
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
 
     const SubMenuProd = {
         name: "PRODUCTOS Y SERVICIOS",
@@ -43,7 +60,7 @@ const NavBar = ({ children, photo }) => {
 
     return (
         <>
-            <nav className="" >
+            <nav className={`${showShadow ? 'shadow' : ''}`}>
                 <input type="checkbox" id="check" onChange={handleCheckBoxChange} />
                 <label htmlFor="check" className="checkbtn" >
                     <i className={isChecked ? "fa fa-times" : "fas fa-bars"}></i>
