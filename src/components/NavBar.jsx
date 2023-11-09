@@ -10,19 +10,19 @@ const NavBar = ({ children, photo }) => {
 
     const [showShadow, setShowShadow] = useState(false);
     useEffect(() => {
-      const handleScroll = () => {
-        if (window.scrollY > 0) {
-          setShowShadow(true);
-        } else {
-          setShowShadow(false);
-        }
-      };
-  
-      window.addEventListener('scroll', handleScroll);
-  
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setShowShadow(true);
+            } else {
+                setShowShadow(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     const SubMenuProd = {
