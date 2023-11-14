@@ -10,6 +10,11 @@ import Plantas from "./pages/Plantas"
 import Legal from "./pages/Legal"
 import Privacity from "./pages/Privacity"
 import Contacts from "./pages/Contacts"
+import Teotihuacan from "./pages/Teotihuacan"
+import Morelos from "./pages/Morelos"
+import Campeche from "./pages/Campeche"
+import Cancun from "./pages/Cancun"
+import Yucatan from "./pages/Yucatan"
 
 function App() {
     return (
@@ -22,8 +27,12 @@ function App() {
             <Route path="/portafolio" component={Porfolio} />
             <Route path="/prefabricado" component={Systems} />
 
-            <Route path="/plant-teotihuacan" component={Index} />
-            <Route path="/plant-morelos" component={Index} />
+            <Route path="/plant-teotihuacan" component={Teotihuacan} />
+            <Route path="/plant-morelos" component={Morelos} />
+            <Route path="/plant-campeche" component={Campeche} />
+            <Route path="/plant-cancun" component={Cancun} />
+            <Route path="/plant-progreso" component={Yucatan} />
+
             <Route path="/infraestructura" component={Index} />
             <Route path="/edificacion" component={Index} />
             <Route path="/transporte" component={Index} />

@@ -255,8 +255,8 @@ const Systems = () => {
                     <Carousel activeIndex={index} onSelect={handleSelect} /*data-bs-theme="dark"*/>
                         {items.map((item, key) =>
                             <Carousel.Item key={key}>
-                                <div 
-                                style={{ width: '100%', height: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                                <div
+                                    style={{ width: '100%', height: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                                 >
                                     <img
                                         src={item?.img}

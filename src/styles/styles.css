@@ -119,7 +119,7 @@ input[type="submit"]:hover {
 
 .text-shadow {
   color: #ffffff;
-  text-shadow: 3px 3px 5px gray;
+  text-shadow: 5px 5px 10px #333333;
 }
 
 .project-title-card-2 {
@@ -420,7 +420,7 @@ li a:hover {
 
 .image-container {
   display: flex;
-  height: 100vh;
+  height: 600px;
 }
 
 
@@ -436,7 +436,7 @@ li a:hover {
 
 .image-part {
   flex: 1;
-  height: 100%;
+  height: 600px;
   background-size: calc(var(--num-parts) * 100%) 100%;
   /*transform-origin: left;
   /* Punto de origen para la transformación */
@@ -465,23 +465,15 @@ li a:hover {
 @keyframes splitAndMerge {
   0% {
     background-position: calc(var(--position, 0%) + 5%);
-    opacity: 1;
     transform: scale(1);
-    /* Tamaño original (100%) */
   }
-
   50% {
     background-position: calc(var(--position, 0%));
     transform: scale(1);
-    opacity: 1;
-    /* Zoom interno */
   }
-
   100% {
     background-position: calc(var(--new-position, 0%) + 5%);
     transform: scale(1.3);
-    opacity: 1;
-    /* Tamaño original (100%) */
   }
 }
 

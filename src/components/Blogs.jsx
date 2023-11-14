@@ -33,7 +33,7 @@ export default function Blogs() {
                     <h2 style={{ color: 'white', fontSize: 20 }}>Oficina Teotihuacan</h2>
                     <h2 style={{ color: 'white', fontSize: 15 }}>Planta</h2>
                 </div>
-                <Carousel className="shadow" fade style={{ height: 600 }}>
+                <Carousel className="shadow" fade style={{ height: 500 }}>
                     {[1, 2, 3].map(item =>
                         <Carousel.Item key={`names-item-${item}`} interval={4000}>
                             <img
@@ -41,7 +41,7 @@ export default function Blogs() {
                                 src={`/systems/${item}.jpg`}
                                 alt="First slide"
                                 //style={{ height: mobile?"23rem":"26rem", objectFit: "cover", top: 100}}
-                                style={{ height: 600, objectFit: "cover", top: 100 }}
+                                style={{ height: 500, objectFit: "cover", top: 100 }}
                             />
                         </Carousel.Item>
                     )

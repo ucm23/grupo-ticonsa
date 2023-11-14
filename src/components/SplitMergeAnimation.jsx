@@ -13,8 +13,7 @@ const SplitMergeAnimation = ({ imageUrl, numParts = 6, children }) => {
             '--position': `${position}%`,
             '--new-position': `${newPosition}%`,
             '--num-parts': numParts,
-            //'opacity': 0,
-            'transition': 'opacity 1s ease-in-out',
+            //'transition': 'opacity 1s ease-in-out',
         };
 
         imageParts.push(

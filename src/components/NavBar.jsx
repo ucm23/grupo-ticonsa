@@ -33,8 +33,8 @@ const NavBar = ({ children, photo }) => {
 
     const SubMenuInst = {
         name: "PLANTAS",
-        options: ["Teotihuacan", "Puerto Morelos"],
-        actions: ["plant-teotihuacan", "plant-morelos"]
+        options: ["Teotihuacan", "Puerto Morelos", "Campeche", "Cancún T5NF1", "Puerto Progreso"],
+        actions: ["plant-teotihuacan", "plant-morelos", "plant-campeche", "plant-cancun", "plant-progreso"]
     }
 
     /*const SubMenuInst = {
