@@ -23,6 +23,8 @@
     "chart.js": "^4.4.0",
     "framer-motion": "^10.16.1",
     "leaflet": "^1.9.4",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",
     "react-awesome-reveal": "^4.2.5",
@@ -31,7 +33,9 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-leaflet": "^4.2.1",
+    "react-router-dom": "^6.18.0",
     "react-slick": "^0.29.0",
+    "sort-by": "^1.2.0",
     "wouter": "^2.11.0"
   },
   "devDependencies": {

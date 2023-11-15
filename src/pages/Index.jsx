@@ -87,8 +87,8 @@ const Index = () => {
                     opacity="1"
                     height="100%"
                 >
-                    <section className="_main container" >
-                        <section className="section-5" >
+                    <section className="_main container" id="#id">
+                        <section className="section-5" id='about-me'>
                             <Fade direction="down">
                                 <section className="text-center">
                                     <h2 class="section-title"> Sobre Nosotros <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
@@ -152,7 +152,7 @@ const Index = () => {
                         </section>
                     </section>
 
-                    <div className='p-section-50'>
+                    <div className='p-section-50' id="services">
                         <section className="_main container" >
                             <Stack>
                                 <Stack direction={mobile ? 'column' : 'row'} >
@@ -218,7 +218,7 @@ const Index = () => {
                         </section>
                     </div>
 
-                    <section className="_main container" >
+                    <section className="_main container" id="services">
                         <section className="text-center">
                             <Fade direction="down">
                                 <h3 class="col-about-title" style={{ marginTop: 20, }}>Servicios que <span className="text-primary-blue">ofrecemos</span></h3>
@@ -249,7 +249,7 @@ const Index = () => {
             >
                 <Modal.Header closeButton >
                     <Modal.Title>
-                    Servicios que ofrecemos
+                        Servicios que ofrecemos
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>

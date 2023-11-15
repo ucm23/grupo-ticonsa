@@ -1,11 +1,16 @@
 import PropTypes from 'prop-types'
-import { Link, useLocation } from "wouter"
+import { Link,  } from "wouter"
+import { NavLink, useLocation } from "react-router-dom";
 import SmallCentered from './Footer'
 import { useState, useEffect } from "react";
 import { Dropdown } from 'react-bootstrap';
 
 const NavBar = ({ children, photo }) => {
-    const [location] = useLocation();
+    const location = useLocation();
+    
+    const {
+        pathname
+    } = location;
     const [isChecked, setIsChecked] = useState(false);
 
     const [showShadow, setShowShadow] = useState(false);
@@ -65,10 +70,10 @@ const NavBar = ({ children, photo }) => {
                 <label htmlFor="check" className="checkbtn" >
                     <i className={isChecked ? "fa fa-times" : "fas fa-bars"}></i>
                 </label>
-                <Link href="/" className="enlace d-flex justify-content-center align-items-center">
+                <a href="/" className="enlace d-flex justify-content-center align-items-center">
                     <img src="/222.jpg" className="logo" alt="logo ticonsa" />
                     <h1 className="m-0"></h1>
-                </Link>
+                </a>
 
                 <ul>
                     {routes.map(({ id, href, content, hasSubMenu, onlyLink }) => (
@@ -86,9 +91,9 @@ const NavBar = ({ children, photo }) => {
                                 </Dropdown>
                             ) : onlyLink ?
                                 <a href="https://development.victum-re.online" target="_blank">{content}</a>
-                                : <Link href={href}>
-                                    <a className={href === location ? "active" : ""}>{content}</a>
-                                </Link>
+                                : <NavLink to={href}>
+                                    <a className={href === pathname ? "active" : ""}>{content}</a>
+                                </NavLink>
 
                             }
                         </li>

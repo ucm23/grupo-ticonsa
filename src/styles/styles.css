@@ -401,7 +401,7 @@ li a.active,
 li a:hover {
   background: var(--color-primary);
   color: var(--light-theme);
-  transition: .5s;
+  /*transition: .5s;*/
 }
 
 .checkbtn {

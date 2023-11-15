@@ -107,73 +107,59 @@ const Teotihuacan = () => {
                 >
 
                     <section className="_main container">
-                        <section className="mt-4">
-                            <section id="system">
-                                <div class="row-base row" styles='margin-top: 7.1em'>
-                                    <div class="" /* col-base col-sm-6 col-md-offset-1 col-md-6  */>
-                                        <Fade direction="down">
-                                            <section className="text-center">
-                                                <h3 class="col-about-title">{title}, <span className="text-primary-blue"> Edo. de México</span></h3>
-                                            </section>
-                                        </Fade>
-                                        <div class="row-base row">
-                                            <div class="col-base col-md-offset-1">
-                                                <div class="col-about-info">
-
-                                                    <p><strong>Área y capacidad de la planta:</strong></p>
-                                                    <ol>
-                                                        <li><p>Área de planta = 60,000 m<sup>2</sup></p></li>
-                                                        <li><p>Área de producción = 30,000 m<sup>2</sup></p></li>
-                                                        <li><p>Área de almacenaje = 30,000 m<sup>2</sup></p></li>
-                                                        <li><p>Capacidad de producción semanal: 800 m<sup>3</sup></p></li>
-                                                    </ol>
-
-
-                                                    <p><strong>Elementos que se pueden fabricar:</strong></p>
-                                                    <ol>
-                                                        <li><p>Trabes AASHTO tipo I, II, III, IV, V y VI </p></li>
-                                                        <li><p>Trabes Nebraska </p></li>
-                                                        <li><p>Trabes Cajón </p></li>
-                                                        <li><p>Trabes Portantes y de rigidez </p></li>
-                                                        <li><p>Losas TT </p></li>
-                                                        <li><p>Columnas </p></li>
-                                                        <li><p>Zapatas y candeleros </p></li>
-                                                    </ol>
-                                                </div>
-                                            </div>
-                                        </div>
+                        <section className="section-5">
+                            <Fade direction="down">
+                                <section className="text-center">
+                                    <h2 class="section-title">{title}, <span className="text-primary-blue">Edo. de México<sup>®</sup></span></h2>
+                                </section>
+                            </Fade>
+                            <div class="row-base row" styles='margin-top: 7.1em'>
+                                <div class="col-base col-sm-6 col-md-6 col-md-offset-1">
+                                    <div class="col-about-info">
+                                        <p><strong>Área y capacidad de la planta:</strong></p>
+                                        <ol>
+                                            <li><p>Área de planta = 60,000 m<sup>2</sup></p></li>
+                                            <li><p>Área de producción = 30,000 m<sup>2</sup></p></li>
+                                            <li><p>Área de almacenaje = 30,000 m<sup>2</sup></p></li>
+                                            <li><p>Capacidad de producción semanal: 800 m<sup>3</sup></p></li>
+                                        </ol>
+                                        <p><strong>Elementos que se pueden fabricar:</strong></p>
+                                        <ol>
+                                            <li><p>Trabes AASHTO tipo I, II, III, IV, V y VI </p></li>
+                                            <li><p>Trabes Nebraska </p></li>
+                                            <li><p>Trabes Cajón </p></li>
+                                            <li><p>Trabes Portantes y de rigidez </p></li>
+                                            <li><p>Losas TT </p></li>
+                                            <li><p>Columnas </p></li>
+                                            <li><p>Zapatas y candeleros </p></li>
+                                        </ol>
                                     </div>
                                 </div>
-                                <center>
-                                    <section class="col-base col-about-img col-sm-6 col-md-offset-1" className="mt-4" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
-                                        <Fade direction="down">
-                                            <section className="text-center">
-                                                <h3 class="col-about-title">Layout <span className="text-primary-blue">{title}</span></h3>
-                                                <p>Almacén de elementos prefabricados</p>
-                                            </section>
-                                        </Fade>
-                                        <img
-                                            src={imgLayout}
-                                            style={{ width: '100%', objectFit: 'scale-down' }}
-                                            onClick={handleShowLayout}
-                                        />
+                                <div class="col-base col-about-img col-sm-6 col-md-offset-1">
+                                    <section className="text-center">
+                                        <h3 class="col-about-title">Layout <span className="text-primary-blue">{title}</span></h3>
+                                        <p>Almacén de elementos prefabricados</p>
                                     </section>
-                                </center>
-                                <section className="d-flex justify-content-around align-items-center pb-5 flex-wrap" >
-
-                                    {
-                                        [1, 2, 3, 4].map((item, index) =>
-                                            <ServicesCard
-                                                key={index}
-                                                img={`plants/teotihuacan/${item}.jpg`}
-                                                title={''}
-                                                newTab={false}
-                                                onPress={() => onPress(index)}
-                                            />
-                                        )
-                                    }
-
-                                </section>
+                                    <img
+                                        src={imgLayout}
+                                        style={{ width: '100%', objectFit: 'scale-down' }}
+                                        onClick={handleShowLayout}
+                                    />
+                                </div>
+                            </div>
+                        </section>
+                        <section className="mt-4">
+                            <section className="d-flex justify-content-around align-items-center pb-5 flex-wrap" >
+                                { [1, 2, 3, 4].map((item, index) =>
+                                        <ServicesCard
+                                            key={index}
+                                            img={`plants/teotihuacan/${item}.jpg`}
+                                            title={''}
+                                            newTab={false}
+                                            onPress={() => onPress(index)}
+                                        />
+                                    )
+                                }
                             </section>
                         </section>
                     </section>

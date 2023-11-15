@@ -18,6 +18,8 @@ import { Fade } from 'react-awesome-reveal';
 import { useState } from 'react'
 import { useEffect } from 'react'
 
+import { NavLink, useLocation } from "react-router-dom";
+
 const SocialButton = ({
     children,
     label,
@@ -168,7 +170,7 @@ export default function SmallCentered({ photo }) {
                                     </Fade>
                                 </div>
                                 <Stack style={{ alignContent: 'center' }}>
-                                    <Link href={'/contacts'}>
+                                    <NavLink href={'/contacts'}>
                                         <Button
                                             colorScheme="blue"
                                             bg={color.primary}
@@ -178,7 +180,7 @@ export default function SmallCentered({ photo }) {
                                             _hover={{ bg: 'blue.500' }}>
                                             Enviar mensaje
                                         </Button>
-                                    </Link>
+                                    </NavLink>
                                 </Stack>
                             </Stack>
                         </section>
@@ -206,8 +208,8 @@ export default function SmallCentered({ photo }) {
                                 <Link href={'/'} className="footer-link">
                                     Servicios
         </Link>*/}
-                                <a href="" className="footer-link" target="_blank">Acerca de</a>
-                                <a href="" className="footer-link" target="_blank">Servicios</a>
+                                <a href="/#about-me" className="footer-link">Acerca de</a>
+                                <a href="/#services" className="footer-link">Servicios</a>
                             </Stack>
                         </Stack>
                         <Stack paddingRight={5}>
@@ -219,8 +221,8 @@ export default function SmallCentered({ photo }) {
                                 <Link href={'/prefabricado#pro'} target="_blank" className="footer-link" onClick={() => redirectToPage('/prefabricado#pro')}>
                                     Ventaja
         </Link>*/}
-                                <a href="/prefabricado#pro" className="footer-link" target="_blank">Sistema</a>
-                                <a href="/prefabricado#pro" className="footer-link" target="_blank">Ventajas</a>
+                                <a href="/prefabricado#system" className="footer-link">Sistema</a>
+                                <a href="/prefabricado#pro" className="footer-link">Ventajas</a>
                             </Stack>
                         </Stack>
                         <Stack paddingRight={5}>
@@ -232,26 +234,34 @@ export default function SmallCentered({ photo }) {
                                 <Link href={'/'} className="footer-link">
                                     Curriculum
                                 </Link>*/}
-                                <a href="/contacts" className="footer-link" target="_blank">Contáctanos</a>
-                                <a href="" className="footer-link" target="_blank">Curriculum</a>
+                                <a href="/contacts" className="footer-link">Contáctanos</a>
+                                <a href="" className="footer-link" >Curriculum</a>
                             </Stack>
                         </Stack>
 
                         <Stack>
                             <h3 className="footer-title">Redes Sociales</h3>
                             <Stack direction={'row'}>
-                                <SocialButton label={'Twitter'} target="_blank" href={'https://twitter.com/GRUPO_TICONSA'}>
-                                    <FaTwitter />
-                                </SocialButton>
-                                <SocialButton label={'YouTube'} target="_blank" href={'https://www.youtube.com/@grupoticonsaprefabricados9793'}>
-                                    <FaYoutube />
-                                </SocialButton>
-                                <SocialButton label={'Instagram'} target="_blank" href={'https://www.instagram.com/grupo_ticonsa/'}>
-                                    <FaInstagram />
-                                </SocialButton>
-                                <SocialButton label={'Facebook'} target="_blank" href={'https://www.facebook.com/GrupoTiconsa/?locale=es_LA'}>
-                                    <FaFacebook />
-                                </SocialButton>
+                                <a href={'https://twitter.com/GRUPO_TICONSA'} target="_blank">
+                                    <SocialButton label={'Twitter'}>
+                                        <FaTwitter />
+                                    </SocialButton>
+                                </a>
+                                <a href={'https://www.youtube.com/@grupoticonsaprefabricados9793'} target="_blank">
+                                    <SocialButton label={'YouTube'}>
+                                        <FaYoutube />
+                                    </SocialButton>
+                                </a>
+                                <a href={'https://www.instagram.com/grupo_ticonsa/'} target="_blank">
+                                    <SocialButton label={'Instagram'}>
+                                        <FaInstagram />
+                                    </SocialButton>
+                                </a>
+                                <a href={'https://www.facebook.com/GrupoTiconsa/?locale=es_LA'} target="_blank">
+                                    <SocialButton label={'Facebook'}>
+                                        <FaFacebook />
+                                    </SocialButton>
+                                </a>
                             </Stack>
                         </Stack>
                     </Stack>
@@ -268,14 +278,14 @@ export default function SmallCentered({ photo }) {
                     </div>
                     <div style={{ textAlign: 'right' }}>
                         <h3 className="footer-link">
-                            <Link href={'/legal'}>
+                            <a href={'/legal'} target="_blank" className="footer-link">
                                 Aviso Legal
-                            </Link>
+                            </a>
                         </h3>
                         <h3 className="footer-link">
-                            <Link href={'/privacity'}>
+                            <a href={'/privacity'} target="_blank" className="footer-link">
                                 Aviso de Privacidad
-                            </Link>
+                            </a>
                         </h3>
                     </div>
                 </Stack>

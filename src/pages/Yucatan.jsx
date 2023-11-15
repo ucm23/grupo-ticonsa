@@ -92,7 +92,7 @@ const Yucatan = () => {
     return (
         <>
             <NavBar photo={'true'}>
-                <CarouselStatic names={[1, 2, 3, 4]} folder='plants/yucatan' />
+                <CarouselStatic names={[1, 2, 3]} folder='plants/yucatan' />
 
                 <Box
                     bgGradient={
