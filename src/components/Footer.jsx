@@ -170,7 +170,7 @@ export default function SmallCentered({ photo }) {
                                     </Fade>
                                 </div>
                                 <Stack style={{ alignContent: 'center' }}>
-                                    <NavLink href={'/contacts'}>
+                                    <NavLink to={'/contacts'}>
                                         <Button
                                             colorScheme="blue"
                                             bg={color.primary}
