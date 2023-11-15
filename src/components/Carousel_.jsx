@@ -50,7 +50,7 @@ export default function Carousel_() {
 
     const cards = [
         {
-            name: "Segundo Piso Periferico",
+            name: "Segundo Piso Periférico",
             place: "México, D.F.",
             description: "Obra magna de la Ciudad de México aportando soluciones de infraestructura urbano",
             image: '/periferico.jpg',
