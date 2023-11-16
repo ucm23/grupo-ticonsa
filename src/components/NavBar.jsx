@@ -91,9 +91,7 @@ const NavBar = ({ children, photo }) => {
                                 </Dropdown>
                             ) : onlyLink ?
                                 <a href="https://development.victum-re.online" target="_blank">{content}</a>
-                                : <NavLink to={href}>
-                                    <a className={href === pathname ? "active" : ""}>{content}</a>
-                                </NavLink>
+                                : <a href={href} className={href === pathname ? "active" : ""}>{content}</a>
 
                             }
                         </li>

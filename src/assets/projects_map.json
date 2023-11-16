@@ -244,22 +244,22 @@
             {
                 "name": "Puentes Carretera Córdoba - Veracruz",
                 "position": {   
-                    "top": "60%", 
+                    "top": "70%", 
                     "left": "60%" 
                 }
             },
             {
                 "name": "Puente Cotaxla",
                 "position": {   
-                    "top": "60%", 
-                    "left": "60%" 
+                    "top": "71%", 
+                    "left": "64%" 
                 }
             },
             {
                 "name": "Puente Boca del Río",
                 "position": {   
-                    "top": "60%", 
-                    "left": "60%" 
+                    "top": "71%", 
+                    "left": "65%" 
                 }
             },
             {
@@ -277,29 +277,29 @@
             {
                 "name": "Tabasco G.P.Q. Complejo",
                 "position": {   
-                    "top": "16%", 
-                    "left": "17%" 
+                    "top": "71%", 
+                    "left": "80%" 
                 }
             },
             {
                 "name": "Centro Comercial Plaza 'Las Américas'",
                 "position": {   
-                    "top": "16%", 
-                    "left": "17%" 
+                    "top": "70%", 
+                    "left": "78%" 
                 }
             },
             {
                 "name": "Hotel Viva Inn Cárdenas",
                 "position": {   
-                    "top": "16%", 
-                    "left": "17%" 
+                    "top": "71.5%", 
+                    "left": "79%" 
                 }
             },
             {
                 "name": "Taller PEMEX",
                 "position": {   
-                    "top": "16%", 
-                    "left": "17%" 
+                    "top": "72%", 
+                    "left": "81%" 
                 }
             }
         ]
@@ -310,8 +310,8 @@
             {
                 "name": "Puentes de la Autopista Huixtla Arriaga",
                 "position": {   
-                    "top": "16%", 
-                    "left": "17%" 
+                    "top": "79%", 
+                    "left": "79%" 
                 }
             }
         ]
@@ -322,8 +322,8 @@
             {
                 "name": "Puente 'El Zacatal'",
                 "position": {   
-                    "top": "16%", 
-                    "left": "17%" 
+                    "top": "72%", 
+                    "left": "82%" 
                 }
             }
         ]
@@ -334,15 +334,15 @@
             {
                 "name": "Cubierta de Aeropuerto de Querétaro",
                 "position": {   
-                    "top": "16%", 
-                    "left": "17%" 
+                    "top": "55%", 
+                    "left": "51%" 
                 }
             },
             {
                 "name": "Nave Industrial Papeles Ponderosa",
                 "position": {   
-                    "top": "16%", 
-                    "left": "17%" 
+                    "top": "55%", 
+                    "left": "50%" 
                 }
             }
         ]
@@ -353,27 +353,60 @@
             {
                 "name": "Puentes Carretera Cuacnopalan",
                 "position": {   
-                    "top": "16%", 
-                    "left": "17%" 
+                    "top": "75%", 
+                    "left": "63%" 
                 }
             },
             {
                 "name": "Auditorio para la Guelaguetza",
                 "position": {   
-                    "top": "16%", 
-                    "left": "17%" 
+                    "top": "77%", 
+                    "left": "64%" 
                 }
             }
         ]
     },
     {
-        "name": "Campeche",
+        "name": "Cuidad de México",
         "projects": [
             {
-                "name": "Puente 'El Zacatal'",
+                "name": "Foro Sol",
                 "position": {   
-                    "top": "16%", 
-                    "left": "17%" 
+                    "top": "60%", 
+                    "left": "52%" 
+                }
+            },
+            {
+                "name": "Segundo Piso Periférico",
+                "position": {   
+                    "top": "60%", 
+                    "left": "52%" 
+                }
+            },
+            {
+                "name": "Auditorio Tec de Monterrey",
+                "position": {   
+                    "top": "60%", 
+                    "left": "52%" 
+                }
+            }
+        ]
+    },
+    {
+        "name": "Cancún, Quintana Roo",
+        "projects": [
+            {
+                "name": "Hotel Moon Palace",
+                "position": {   
+                    "top": "59%", 
+                    "left": "93%" 
+                }
+            },
+            {
+                "name": "Hotel Oasis",
+                "position": {   
+                    "top": "60%", 
+                    "left": "92%"
                 }
             }
         ]

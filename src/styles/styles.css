@@ -195,7 +195,13 @@ figure {
   position: absolute;
   z-index: 100;
   background-color: var(--color-primary);
-  box-shadow: 0 0 8px 8px var(--color-primary-light);
+  /*box-shadow: 0 0 3px 3px var(--color-primary-light);*/
+}
+.circle:hover {
+  width: 15px;
+  height: 15px;
+  background-color: var(--color-primary);
+  box-shadow: 1px 1px 8px 8px var(--color-primary-light);
 }
 
 .circle-01 {

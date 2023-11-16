@@ -109,7 +109,7 @@ const Contacts = () => {
                                                 <div className="text-center" >
                                                     <p style={{ fontSize: 12 }}>
                                                         <br /><strong style={{ color: color.primary }}>
-                                                            CORPORATIVO MÉXICO D.F.
+                                                            CORPORATIVO CIUDAD DE MÉXICO
                                                         </strong><br />
                                                         (55) 5484-8364
                                                     </p>
@@ -184,7 +184,7 @@ const Contacts = () => {
                                                 </SocialButton>
                                                 <p style={{ fontSize: 12 }}>
                                                     OFICINA Cancún, Quintana Roo (998) 892-3143 <br />
-                                                    OFICINA MÉXICO D.F. (55) 5484-8364 <br />
+                                                    OFICINA CIUDAD DE MÉXICO (55) 5484-8364 <br />
                                                     Teotihuacán Estado de México (594) 956-1645<br />
                                                 </p>
                                             </Stack>
@@ -194,7 +194,7 @@ const Contacts = () => {
                                                 </SocialButton>
                                                 <p style={{ fontSize: 12 }}>
                                                     OFICINA Cancún, Quintana Roo (998) 892-3143 <br />
-                                                    OFICINA MÉXICO D.F. (55) 5484-8364 <br />
+                                                    OFICINA CIUDAD DE MÉXICO (55) 5484-8364 <br />
                                                     Teotihuacán Estado de México (594) 956-1645<br />
                                                 </p>
                                             </Stack>

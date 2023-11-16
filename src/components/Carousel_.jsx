@@ -51,7 +51,7 @@ export default function Carousel_() {
     const cards = [
         {
             name: "Segundo Piso Periférico",
-            place: "México, D.F.",
+            place: "Ciudad de México",
             description: "Obra magna de la Ciudad de México aportando soluciones de infraestructura urbano",
             image: '/periferico.jpg',
         },
@@ -69,13 +69,13 @@ export default function Carousel_() {
         },
         {
             name: "Foro Sol",
-            place: "México, D.F.",
+            place: "Ciudad de México",
             description: "Obra merecedora al Premio Nacional de la Prefabricación 1998 y al PCI Awards en 1999",
             image: '/foro-sol.jpg',
         },
         {
             name: "Auditorio Tec de Monterrey",
-            place: "México, D.F.",
+            place: "Ciudad de México",
             description: "Edificio totalmente prefabricado incluyendo estructura y fachadas",
             image: '/tec-fachada.jpg',
         },
@@ -154,8 +154,8 @@ export default function Carousel_() {
                                 >
 
                                     
-                                    <h1 class="col-about-title text-shadow">{card.name}</h1>
-                                    <h2 className="text-shadow">{card.place}</h2>
+                                    <h1 class="col-about-title text-shadow" style={{ fontWeight: 'bold' }}>{card.name}</h1>
+                                    <h2 className="text-shadow" style={{ lineHeight: 0, fontSize: 18, fontWeight: 'bold' }}>{card.place}</h2>
                                     <p className="text-shadow">{card.description}</p>
 
 

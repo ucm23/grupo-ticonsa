@@ -211,7 +211,7 @@ const Systems = () => {
                                         />
                                         <div class="col-base col-md-offset-1">
                                             <div class="col-about-info">
-                                                <p className='h4 m-0'>El sistema prefabricado tiene una gran variedad de ventajas frente a los sitemas constructivos convencionales, entre ellos se destacan:</p>
+                                                <p className='h4 m-0'>El sistema prefabricado tiene una gran variedad de ventajas frente a los sistemas constructivos convencionales, entre ellos se destacan:</p>
                                                 <p>1. Disminución en el tiempo de construcción hasta del 50%.<br />
                                                     2. Ahorro significativo en costos de ingeniería estructural ya que la ingeniería es desarrollada por nosotros contando con ingenieros altamente calificados en la materia.<br />
                                                     3. Seguridad estructural garantizada.<br />
