@@ -170,7 +170,7 @@ export default function SmallCentered({ photo }) {
                                     </Fade>
                                 </div>
                                 <Stack style={{ alignContent: 'center' }}>
-                                    <NavLink to={'/contacts'}>
+                                    <a href={'/contacts'} >
                                         <Button
                                             colorScheme="blue"
                                             bg={color.primary}
@@ -180,7 +180,7 @@ export default function SmallCentered({ photo }) {
                                             _hover={{ bg: 'blue.500' }}>
                                             Enviar mensaje
                                         </Button>
-                                    </NavLink>
+                                    </a>
                                 </Stack>
                             </Stack>
                         </section>
@@ -210,6 +210,8 @@ export default function SmallCentered({ photo }) {
         </Link>*/}
                                 <a href="/#about-me" className="footer-link">Acerca de</a>
                                 <a href="/#services" className="footer-link">Servicios</a>
+                                <a href="/document_cv" className="footer-link" >Ver Curriculum</a>
+                                <a href="/document_presencia" className="footer-link" >Ver Presencia Ticonsa</a>
                             </Stack>
                         </Stack>
                         <Stack paddingRight={5}>
@@ -235,7 +237,6 @@ export default function SmallCentered({ photo }) {
                                     Curriculum
                                 </Link>*/}
                                 <a href="/contacts" className="footer-link">Contáctanos</a>
-                                <a href="" className="footer-link" >Curriculum</a>
                             </Stack>
                         </Stack>
 

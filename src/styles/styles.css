@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');*/
 
 :root {
   --light-theme: #ffffff;
@@ -566,4 +566,52 @@ ul {
 .shadow {
   box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.1);
   /* Otros estilos de sombra */
+}
+
+.islands__video-content {
+  display: inline-flex;
+  padding: .15rem;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.islands__video-icon {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+}
+
+@media screen and (max-width: 320px) {
+  .bd-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .controls__container {
+    column-gap: .25rem;
+  }
+  .islands__popup-video {
+    width: 230px;
+    height: 100px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .islands__video {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .islands__video-icon {
+    font-size: 3rem;
+  }
+  .islands__popup-video {
+    width: 500px;
+    height: 250px;
+  }
+
+}
+
+button.ant-btn.css-dev-only-do-not-override-1adbn6x.ant-btn-primary.ant-btn-sm.ant-tour-next-btn {
+  display: none;
 }

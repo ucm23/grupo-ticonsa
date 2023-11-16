@@ -53,7 +53,7 @@ export default function ServicesCard(props) {
                                     //objectFit="contain"
                                     />
                                     <figcaption>
-                                        <h3 class="project-title-card">
+                                        <h3 class="project-title-card text-shadow">
                                             {title}
                                         </h3>
                                         <div class="project-zoom"></div>

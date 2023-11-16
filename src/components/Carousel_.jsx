@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import React, { useRef, useState } from 'react';
+import { EllipsisOutlined } from '@ant-design/icons';
+import { Divider, Tour } from 'antd';
 import {
     Box,
     IconButton,
@@ -85,14 +87,39 @@ export default function Carousel_() {
         document.querySelectorAll('.image-part').forEach((imagePart) => {
             imagePart.style.animation = 'none';
             void imagePart.offsetWidth; // Forced reflow to reset animation
-            imagePart.style.animation = 'splitAndMerge 6s linear';
+            imagePart.style.animation = 'splitAndMerge 5s linear';
         });
     };
 
+    const ref1 = useRef(null);
+    const [open, setOpen] = useState(false);
+    const steps = [
+        {
+            cover: (
+                <iframe
+                    className="islands__popup-video"
+                    src="https://www.youtube.com/embed/Nvg4CamInuA?autoplay=1"
+                    frameborder="0"
+                    //allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                />
+                /*
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/Nvg4CamInuA" title="TLALNEPANTLA - Construcción con elementos prefabricados de concreto." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                */
+            ),
+            target: () => ref1.current,
+        },
+    ];
+
+    const openLink = () => {
+        window.open('https://www.youtube.com/embed/Nvg4CamInuA', '_blank');
+      };
+
     return (
         <Box position={'relative'} height={'600px'} width={'full'} overflow={'hidden'}>
+            <Tour open={open} onClose={() => setOpen(false)} mask={false} steps={steps} />
 
-            {!mobile && (
+            {!mobile &&
                 <>
                     <IconButton
                         aria-label="left-arrow"
@@ -121,9 +148,20 @@ export default function Carousel_() {
                         <BiRightArrowAlt size="40px" />
                     </IconButton>
                 </>
-            )
             }
-
+            <div
+                style={{
+                    position: 'absolute',
+                    bottom: 75,
+                    right: 75,
+                    zIndex: 100
+                }}
+                onClick={() => mobile ? openLink() : setOpen(true)}
+            >
+                <div className="islands__video-content" ref={ref1}>
+                    <i className='bx bx-play-circle islands__video-icon'></i>
+                </div>
+            </div>
             <Slider {...settings} ref={(slider) => setSlider(slider)} afterChange={handleBeforeChange} >
                 {cards.map((card, index) => (
                     <Box key={index}>
@@ -146,19 +184,14 @@ export default function Carousel_() {
                                         ? '30px'
                                         : '123px'
                                 }
-                                
                             >
                                 <Stack
                                     w={'full'}
                                     maxW={'90%'}
                                 >
-
-                                    
                                     <h1 class="col-about-title text-shadow" style={{ fontWeight: 'bold' }}>{card.name}</h1>
                                     <h2 className="text-shadow" style={{ lineHeight: 0, fontSize: 18, fontWeight: 'bold' }}>{card.place}</h2>
                                     <p className="text-shadow">{card.description}</p>
-
-
                                 </Stack>
                             </Box>
                             {/*<Container

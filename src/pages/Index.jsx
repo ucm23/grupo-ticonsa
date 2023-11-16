@@ -7,7 +7,7 @@ import point from '../assets/projects_map.json'
 import ServicesCard from "../components/ServicesCard"
 import CV from "../components/CV";
 
-import { useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Overlay from 'react-bootstrap/Overlay';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
@@ -69,8 +69,6 @@ const Index = () => {
         a.click();
         document.body.removeChild(a);
     };
-
-
 
     return (
         <>
@@ -265,7 +263,7 @@ const Index = () => {
                                         alt={''}
                                     />
                                     <div className="text-modal-image">
-                                        <p class="col-about-title-system">{item.title.toUpperCase()}</p>
+                                        <p class="col-about-title-system text-shadow">{item.title.toUpperCase()}</p>
                                     </div>
                                 </div>
 

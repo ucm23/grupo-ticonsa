@@ -17,6 +17,7 @@ import Campeche from "./pages/Campeche"
 import Cancun from "./pages/Cancun"
 import Yucatan from "./pages/Yucatan"
 import Services from "./pages/Services";
+import Documents from "./pages/Documents";
 
 function App() {
     return (
@@ -40,6 +41,11 @@ function App() {
             <Route path="/transporte" element={<Services type={'transporte'} />} />
             <Route path="/montaje" element={<Services type={'montaje'} />} />
             <Route path="/supervision" element={<Services type={'supervision'} />} />
+
+            <Route path="/document_cv" element={<Documents type={'cv'} />} />
+            <Route path="/document_presencia" element={<Documents type={'presencia'} />} />
+
+            
 
             <Route path="/legal" element={<Legal />} />
             <Route path="/privacity" element={<Privacity />} />

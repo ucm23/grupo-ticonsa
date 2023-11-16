@@ -17,12 +17,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 )*/
 
 ReactDOM.render(
-    <StrictMode>
-      <ChakraProvider>
-          <BrowserRouter>
-            <App />
-          </BrowserRouter>
-      </ChakraProvider>
-    </StrictMode>,
-    document.getElementById('root')
-  );
+  <StrictMode>
+    <ChakraProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ChakraProvider>
+  </StrictMode>,
+  document.getElementById('root')
+);
