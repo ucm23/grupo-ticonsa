@@ -36,7 +36,7 @@
             width: 35px;
             position: absolute;
             margin-top: -98px;
-            animation: scale 1.5s infinite;
+            animation: scale 5s infinite;
         }
 
         @keyframes scale {
@@ -66,14 +66,19 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://cdn.jsdelivr.net/npm/react-apexcharts"></script>
 
-    <script>
-
-    </script>
-
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("loader").style.display = "none";
         });
+    </script>
+    <script>
+        var urlActual = window.location.href;
+        console.log('URL actual:', urlActual);
+        if (urlActual === "https://www.grupoticonsa.com.mx/produccion.php") {
+            window.location.href = 'https://www.grupoticonsa.com.mx';
+        } else {
+            console.log('else');
+        }
     </script>
 </body>
 

@@ -89,14 +89,14 @@ const Index = () => {
                         <section className="section-5" id='about-me'>
                             <Fade direction="down">
                                 <section className="text-center">
-                                    <h2 class="section-title"> Sobre Nosotros <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
+                                    <h2 class="section-title" style={{ textTransform: 'uppercase' }}>Sobre Nosotros <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
                                 </section>
                             </Fade>
                             <div class="row-base row" styles='margin-top: 7.1em'>
                                 <div class="col-base col-sm-6 col-md-6 col-md-offset-1">
-                                    <h3 class="col-about-title">Concreto, Prefabricado y <span className="text-primary-blue">Presforzado</span></h3>
+                                    <h3 class="col-about-title" style={{ textTransform: 'uppercase' }}>Concreto, Prefabricado y <span className="text-primary-blue">Presforzado</span></h3>
                                     <div class="col-about-info">
-                                        <p>Grupo Ticonsa<sup>®</sup> en una empresa con 50 años de experiencia desarrollando soluciones innovadoras que aportan valor agregado a los proyectos de nuestros clientes.</p>
+                                        <p>Ticonsa Inmobiliaria, Sociedad Anónima de Capital Variable (en lo sucesivo GRUPO TICONSA<sup>®</sup>) en una empresa con 50 años de experiencia desarrollando soluciones innovadoras que aportan valor agregado a los proyectos de nuestros clientes.</p>
                                         <p>Cancún: (998) 892-3143 <br /> México: (55) 5484-8364<br />Teotihuacán: (594) 956-1645</p>
                                         <p>👷 Grupo Ticonsa — 15 de Febrero de 1971</p>
                                     </div>
@@ -112,7 +112,7 @@ const Index = () => {
                         </section>
                         <section className="text-center">
                             <Fade direction="down">
-                                <h3 class="col-about-title" style={{ marginTop: 30 }}>Presencia en <span className="text-primary-blue">todo México</span> y con proyectos <span className="text-primary-blue">destacados</span></h3>
+                                <h3 class="col-about-title" style={{ marginTop: 30, textTransform: 'uppercase' }}>Presencia en <span className="text-primary-blue">todo México</span> y con proyectos <span className="text-primary-blue">destacados</span></h3>
                             </Fade>
                             <div class="content-circle" ref={ref}>
                                 <Image
@@ -131,7 +131,7 @@ const Index = () => {
                                                 <Popover id={`popover-positioned-bottom`}>
                                                     <Popover.Header as="h3">{item?.name}</Popover.Header>
                                                     <Popover.Body>
-                                                        {/*<strong>[Año-1999] </strong> */}
+                                                        {project_?.extra && <strong>[{project_?.extra}]<br/></strong>} 
                                                         {project_?.name}
                                                     </Popover.Body>
                                                 </Popover>
@@ -157,7 +157,7 @@ const Index = () => {
                                     <div class="col-base col-sm-6 col-md-offset-1" style={{ alignSelf: 'center' }}>
                                         <Stack style={{ justifyContent: 'center', paddingRight: 15 }}>
                                             <Stack>
-                                                <h3 class="col-about-title" style={{ marginTop: 20, }}>Nuestra experiencia expresada en <span className="text-primary-blue">números:</span></h3>
+                                                <h3 class="col-about-title" style={{ marginTop: 20, textTransform: 'uppercase' }}>Nuestra experiencia expresada en <span className="text-primary-blue">números:</span></h3>
                                                 <div class="col-about-info">
                                                     <p>Ofrecemos soluciones prácticas e innovadoras a cada uno de nuestros clientes.</p>
                                                 </div>
@@ -193,12 +193,12 @@ const Index = () => {
                                                     <p>Conoce nuestro trabajo descargando el Curriculum Vitae:</p>
                                                 </div>
                                                 <Stack
-                                                    style={{ width: '50%', justifyContent: 'flex-start' }}
+                                                    style={{ width: '50%', justifyContent: 'center' }}
                                                 >
                                                     <Button
                                                         colorScheme="blue"
                                                         bg={color.primary}
-                                                        rounded={50}
+                                                        rounded={0}
                                                         color="white"
                                                         onClick={downloadCV}
                                                         _hover={{ bg: 'blue.500' }}>
@@ -219,7 +219,7 @@ const Index = () => {
                     <section className="_main container" id="services">
                         <section className="text-center">
                             <Fade direction="down">
-                                <h3 class="col-about-title" style={{ marginTop: 20, }}>Servicios que <span className="text-primary-blue">ofrecemos</span></h3>
+                                <h3 class="col-about-title" style={{ marginTop: 20, textTransform: 'uppercase' }}>Servicios que <span className="text-primary-blue">ofrecemos</span></h3>
                             </Fade>
                             <section className="d-flex justify-content-around align-items-center pb-5 flex-wrap" >
                                 {items.map((item, key) =>

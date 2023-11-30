@@ -21,7 +21,7 @@ import {
     VStack,
 } from '@chakra-ui/react'
 import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from 'react-icons/bs'
-import { MdEmail, MdOutlineEmail, MdPhone, MdPhonelinkRing, MdAssuredWorkload } from 'react-icons/md'
+import { MdEmail, MdOutlineEmail, MdPhone, MdPhonelinkRing, MdAssuredWorkload, MdAspectRatio } from 'react-icons/md'
 import color from '../color'
 
 const confetti = {
@@ -316,7 +316,7 @@ export default function ContactForm() {
                                         <Button
                                             colorScheme="blue"
                                             bg={color.primary}
-                                            rounded={50}
+                                            rounded={0}
                                             left={0}
                                             color="white"
                                             type="submit"

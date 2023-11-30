@@ -146,8 +146,8 @@ export default function SmallCentered({ photo }) {
         <div className='bg-footer'>
             {photo &&
                 <Stack
-                    bg={useColorModeValue('gray.90', 'gray.800')}
-                    color="#fff"
+                    //bg={useColorModeValue('gray.90', 'gray.800')}
+                    //color="#fff"
                     //spacing={{ base: 8, md: 10 }}
                     align='center'
                     direction='column'
@@ -160,13 +160,13 @@ export default function SmallCentered({ photo }) {
                         <section className="_main container" >
                             <Stack
                                 direction={direction}
-                                style={{ width: '100%', justifyContent: 'space-between' }}
+                                style={{ width: '100%', justifyContent: 'space-between', alignItems: 'center', }}
 
                             >
                                 <div>
                                     <Fade direction="down">
-                                        <strong><h3 class="col-about-title text-shadow" style={{ fontWeight: '600', textAlign: mobile ? 'center' : 'left' }}>Construye con nosotros</h3></strong>
-                                        <p class="text-shadow" style={{ color: 'white', fontWeight: '600', textAlign: mobile ? 'center' : 'left' }}>Cuéntanos más acerca de los requerimientos de tu proyecto</p>
+                                        <strong><h3 class="col-about-title text-shadow" style={{ fontWeight: '600', textAlign: mobile ? 'center' : 'left', textTransform: 'uppercase' }}>Construye con nosotros</h3></strong>
+                                        <p class="text-shadow" style={{ color: 'white', fontWeight: '600', textAlign: mobile ? 'center' : 'left' }}>Cuéntanos más acerca de los requerimientos de tu proyecto y te ayudaremos a convertir en realidad tu proyecto</p>
                                     </Fade>
                                 </div>
                                 <Stack style={{ alignContent: 'center' }}>
@@ -174,8 +174,8 @@ export default function SmallCentered({ photo }) {
                                         <Button
                                             colorScheme="blue"
                                             bg={color.primary}
-                                            rounded={50}
-                                            top={30}
+                                            rounded={0}
+                                            top={mobile ? 30 : 0}
                                             color="white"
                                             _hover={{ bg: 'blue.500' }}>
                                             Enviar mensaje
@@ -190,32 +190,26 @@ export default function SmallCentered({ photo }) {
             }
             <section className="_main container p-footer" >
                 <Stack flexDirection={direction} style={{ marginBottom: 20 }} justifyContent={'space-between'}>
-                    <Stack alignItems={'center'}>
+                    <Stack alignItems={mobile ? 'center' : 'initial'}>
                         <img
                             src="/logo-white.png"
                             alt="logo Grupo Ticonsa"
-                            style={{ width: 123, marginBottom: mobile ? 20 : 0 }}
+                            style={{ width: 123, /*marginBottom: mobile ? 20 : 0*/ }}
                         />
-
+                        <h3 className="footer-title" style={{ fontWeight: 'normal', marginBottom: 20, textAlign: mobile ? 'center' : 'left' }}>Grupo Ticonsa ®, un grupo con historia y vanguardia en prefabricación.</h3>
                     </Stack>
                     <Stack direction={direction} justifyContent={'space-between'}>
                         <Stack paddingRight={5}>
-                            <h3 className="footer-title">Acerca de</h3>
+                            <h3 className="footer-title uppercase">Acerca de</h3>
                             <Stack flexDirection={'column'}>
-                                {/*<Link href={'/'} className="footer-link">
-                                    Acerca de
-                                </Link>
-                                <Link href={'/'} className="footer-link">
-                                    Servicios
-        </Link>*/}
                                 <a href="/#about-me" className="footer-link">Acerca de</a>
                                 <a href="/#services" className="footer-link">Servicios</a>
-                                <a href="/document_cv" className="footer-link" >Ver Curriculum</a>
-                                <a href="/document_presencia" className="footer-link" >Ver Presencia Ticonsa</a>
+                                <a href="/document_cv" className="footer-link">Ver Curriculum</a>
+                                <a href="/document_presencia" className="footer-link">Ver Presencia Ticonsa</a>
                             </Stack>
                         </Stack>
                         <Stack paddingRight={5}>
-                            <h3 className="footer-title">Prefabricado</h3>
+                            <h3 className="footer-title uppercase">Prefabricado</h3>
                             <Stack flexDirection={'column'}>
                                 {/*<Link to={'/prefabricado#system'} target="_blank" className="footer-link" onClick={() => scrollToSection('system')}>
                                     Sistema
@@ -228,7 +222,7 @@ export default function SmallCentered({ photo }) {
                             </Stack>
                         </Stack>
                         <Stack paddingRight={5}>
-                            <h3 className="footer-title">Contacto</h3>
+                            <h3 className="footer-title uppercase">Contacto</h3>
                             <Stack flexDirection={'column'}>
                                 {/*<Link href={'/contacts'} className="footer-link">
                                     Contáctanos
@@ -240,9 +234,9 @@ export default function SmallCentered({ photo }) {
                             </Stack>
                         </Stack>
 
-                        <Stack>
+                        {/*<Stack>
                             <h3 className="footer-title">Redes Sociales</h3>
-                            <Stack direction={'row'}>
+                            <Stack direction={'row'} style={{ paddingLeft: mobile ? 15 : 0 }}>
                                 <a href={'https://twitter.com/GRUPO_TICONSA'} target="_blank">
                                     <SocialButton label={'Twitter'}>
                                         <FaTwitter />
@@ -264,11 +258,11 @@ export default function SmallCentered({ photo }) {
                                     </SocialButton>
                                 </a>
                             </Stack>
-                        </Stack>
+                            </Stack>*/}
                     </Stack>
                 </Stack>
                 <div style={{ background: 'white', height: 1, width: '100%', }} />
-                <Stack flexDirection='row' justifyContent={'space-between'} style={{ marginTop: 20 }}>
+                {/*<Stack flexDirection='row' justifyContent={'space-between'} style={{ marginTop: 20 }}>
                     <div style={{ textAlign: 'left' }}>
                         <h3 className="footer-link">
                             Ticonsa Inmobiliaria S.A. de C.V. México. 2023
@@ -289,6 +283,42 @@ export default function SmallCentered({ photo }) {
                             </a>
                         </h3>
                     </div>
+                            </Stack>*/}
+                <Stack direction={direction} justifyContent={'space-between'} style={{ marginTop: 20, alignItems: mobile ? 'center': 'initial' }}>
+                    <Stack direction={direction} gap={4} style={{ alignItems: 'center' }}>
+                        <h3 className="footer-link" style={{ textAlign: 'center' }}>
+                            <a href={'/legal'} target="_blank" className="footer-link">
+                                Aviso Legal
+                            </a>
+                        </h3>
+                        <h3 className="footer-link" style={{ textAlign: 'center' }}>
+                            <a href={'/privacity'} target="_blank" className="footer-link">
+                                Aviso de Privacidad
+                            </a>
+                        </h3>
+                    </Stack>
+                    <Stack direction={'row'}>
+                        <a href={'https://twitter.com/GRUPO_TICONSA'} target="_blank">
+                            <SocialButton label={'Twitter'}>
+                                <FaTwitter />
+                            </SocialButton>
+                        </a>
+                        <a href={'https://www.youtube.com/@grupoticonsaprefabricados9793'} target="_blank">
+                            <SocialButton label={'YouTube'}>
+                                <FaYoutube />
+                            </SocialButton>
+                        </a>
+                        <a href={'https://www.instagram.com/grupo_ticonsa/'} target="_blank">
+                            <SocialButton label={'Instagram'}>
+                                <FaInstagram />
+                            </SocialButton>
+                        </a>
+                        <a href={'https://www.facebook.com/GrupoTiconsa/?locale=es_LA'} target="_blank">
+                            <SocialButton label={'Facebook'}>
+                                <FaFacebook />
+                            </SocialButton>
+                        </a>
+                    </Stack>
                 </Stack>
             </section>
         </div >

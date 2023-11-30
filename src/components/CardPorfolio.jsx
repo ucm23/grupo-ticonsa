@@ -35,7 +35,7 @@ const CardPorfolio = ({img,year,name}) =>
                     title={`${name} (${year||'Ticonsa'})`} 
                     placement="left"
                 >
-                    <section className="overflow-hidden rounded-3" >
+                    <section className="overflow-hidden rounded-0" >
                         <img 
                             src={img} 
                             alt={name} 

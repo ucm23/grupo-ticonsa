@@ -20,17 +20,6 @@ import { Fade } from "react-awesome-reveal";
 
 const Services = ({ type }) => {
 
-    const [show, setShow] = useState(false);
-    const handleShow = () => setShow(!show);
-
-    const [showLayout, setShowLayout] = useState(false);
-    const handleShowLayout = () => setShowLayout(!showLayout);
-
-    const [index, setIndex] = useState(0);
-
-    let imgLayout = "construccion.gif";
-    let title = "Planta Puerto Progreso";
-
     const types = {
         "infraestructura": {
             "name": "Infraestructura",
@@ -85,7 +74,7 @@ const Services = ({ type }) => {
                                             <div class="col-base col-md-offset-1">
                                                 <div class="col-about-info">
                                                     <p>
-                                                    {types[type]?.description}
+                                                        {types[type]?.description}
                                                     </p>
                                                 </div>
                                             </div>
@@ -96,11 +85,6 @@ const Services = ({ type }) => {
                                     <section class="col-base col-about-img col-sm-6 col-md-offset-1" className="mt-4" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
                                         <Fade direction="down">
                                             <center>
-                                                <img
-                                                    src={imgLayout}
-                                                    style={{ objectFit: 'scale-down' }}
-                                                    onClick={handleShowLayout}
-                                                />
                                             </center>
                                         </Fade>
                                     </section>
@@ -114,4 +98,4 @@ const Services = ({ type }) => {
     )
 }
 
-export default Services
+export default Services;

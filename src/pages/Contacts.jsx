@@ -69,6 +69,34 @@ const Contacts = () => {
         setWidth(newWidth);
     }, [mobile]);
 
+    const [direction, setDirection] = useState('row');
+
+    useEffect(() => {
+        const newDirection = mobile ? 'column' : 'row';
+        setDirection(newDirection);
+    }, [mobile]);
+
+    const styles = {
+        //backgroundColor: "#030318",
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignContent: 'center',
+        flexDirection: 'column',
+        backgroundColor: "#03296a99",
+        backgroundImage: `url('/projects/1.jpg')`,
+        backgroundBlendMode: "soft-light",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        //backgroundPosition: "center",
+        overflow: "hidden",
+        padding: 100,
+        width: '100%',
+        height: '98vh',
+        //backgroundRepeat: "no-repeat",
+        backgroundAttachment: 'fixed'
+    }
+
     return (
         <NavBar>
             <Box
@@ -86,10 +114,10 @@ const Contacts = () => {
                 <section className="_main container" style={{}} >
                     <section className="section-5">
                         <Fade direction="down">
-                        <section className="text-center">
-                            <h2 class="section-title" style={{ paddingTop: 130, }}><span className="text-primary-blue">Contáctanos</span></h2>
-                        </section>
-                    </Fade>
+                            <section className="text-center">
+                                <h2 class="section-title" style={{ paddingTop: 130, }}><span className="text-primary-blue">Contáctanos</span></h2>
+                            </section>
+                        </Fade>
                         <div class="row-base row">
                             <div class="col-base col-md-offset-1">
                                 <Stack

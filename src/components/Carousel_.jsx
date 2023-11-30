@@ -113,7 +113,7 @@ export default function Carousel_() {
 
     const openLink = () => {
         window.open('https://www.youtube.com/embed/Nvg4CamInuA', '_blank');
-      };
+    };
 
     return (
         <Box position={'relative'} height={'600px'} width={'full'} overflow={'hidden'}>
@@ -149,19 +149,19 @@ export default function Carousel_() {
                     </IconButton>
                 </>
             }
-            <div
+            {/*<div
                 style={{
                     position: 'absolute',
                     bottom: 75,
-                    right: 75,
-                    zIndex: 100
+                    left: mobile ? '30px' : '123px',
+                    zIndex: 2
                 }}
                 onClick={() => mobile ? openLink() : setOpen(true)}
             >
                 <div className="islands__video-content" ref={ref1}>
                     <i className='bx bx-play-circle islands__video-icon'></i>
                 </div>
-            </div>
+            </div>*/}
             <Slider {...settings} ref={(slider) => setSlider(slider)} afterChange={handleBeforeChange} >
                 {cards.map((card, index) => (
                     <Box key={index}>
@@ -189,9 +189,18 @@ export default function Carousel_() {
                                     w={'full'}
                                     maxW={'90%'}
                                 >
-                                    <h1 class="col-about-title text-shadow" style={{ fontWeight: 'bold' }}>{card.name}</h1>
+                                    <h1 class="col-about-title text-shadow" style={{ fontWeight: 'bold', }}>{card.name}</h1>
                                     <h2 className="text-shadow" style={{ lineHeight: 0, fontSize: 18, fontWeight: 'bold' }}>{card.place}</h2>
                                     <p className="text-shadow">{card.description}</p>
+                                    <div
+                                        style={{
+                                        }}
+                                        onClick={() => mobile ? openLink() : setOpen(true)}
+                                    >
+                                        <div className="islands__video-content" ref={ref1}>
+                                            <i className='bx bx-play islands__video-icon'></i>
+                                        </div>
+                                    </div>
                                 </Stack>
                             </Box>
                             {/*<Container

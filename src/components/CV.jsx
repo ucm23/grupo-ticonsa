@@ -67,7 +67,7 @@ export default function CV() {
               }} >
                 <img style={{ 
                   width: "100%", 
-                  borderRadius: 10,
+                  borderRadius: 0,
                   objectFit: "cover"
                 }} src="/ilus.jpeg" alt="" />
               </div>
