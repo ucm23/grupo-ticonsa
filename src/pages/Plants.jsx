@@ -26,11 +26,14 @@ import {
 
 import '../api/ZoomableImage.js';
 
+//        actions: ["plant-teotihuacan", "plant-morelos", "plant-campeche", "plant-cancun", "plant-progreso"]
+
 let plants = {
     1: {
         id: 1,
         folder: "plants/campeche/",
         layout: "0.jpg",
+        url: "plant-campeche",
         imgs: [1, 2, 3],
         title: "Planta Campeche",
         place: "Estado de Campeche",
@@ -68,6 +71,7 @@ let plants = {
         folder: "plants/yucatan/",
         layout: "0.jpg",
         imgs: [1, 2, 3],
+        url: "plant-progreso",
         title: "Planta Puerto Progreso",
         place: "Estado de Yucatán",
         info: [
@@ -100,6 +104,7 @@ let plants = {
         id: 3,
         folder: "plants/cancun/",
         layout: "0.jpg",
+        url: "plant-cancun",
         imgs: [1, 2, 3, 4],
         title: "Planta Cancún T5NF1",
         place: "Estado de Quintana Roo",
@@ -134,6 +139,7 @@ let plants = {
         id: 4,
         folder: "plants/teotihuacan/",
         layout: "0.jpg",
+        url: "plant-teotihuacan",
         imgs: [1, 2, 3, 4],
         title: "Planta Teotihuacán",
         place: "Estado de México",
@@ -168,6 +174,7 @@ let plants = {
         id: 5,
         folder: "plants/morelos/",
         layout: "0.jpg",
+        url: "plant-morelos",
         imgs: [1, 2, 3, 4],
         title: "Planta Puerto Morelos",
         place: "Estado de Quintana Roo",
@@ -318,18 +325,24 @@ const Plants = ({ id }) => {
                             style={{ width: '100%', marginBottom: '1rem' }}
                         />
                         <hr></hr>
-                        <div style={{ display: 'flex', flexDirection: !mobile ? 'row' : 'column', marginTop: 25 }}>
+                        <div style={{ display: 'flex', flexDirection: !mobile ? 'row' : 'column', marginTop: 25, justifyContent: 'space-between' }}>
                             {arrayBanner.map((item, index) => {
                                 if (item?.id !== id) {
                                     return (
-                                        <div>
-                                            <img
-                                                src={`${item?.folder}${item?.imgs[1]}.jpg`}
-                                                style={{ height: 150, objectFit: "cover", }}
-                                            />
-                                            <h3 style={{ fontSize: 12 }}>{item?.title}</h3>
-                                        </div>
-                                    ) 
+                                        <a href={`${item?.url}`}>
+                                            <div>
+                                            <center>
+                                                <img
+                                                    src={`${item?.folder}${item?.imgs[1]}.jpg`}
+                                                    style={{ height: 175, objectFit: "scale-down" }}
+                                                />
+                                                
+                                                    <h3 style={{ fontSize: 12 }}>{item?.title}</h3>
+                                                </center>
+                                            </div>
+                                        </a>
+
+                                    )
                                 }
                             })}
                         </div>
