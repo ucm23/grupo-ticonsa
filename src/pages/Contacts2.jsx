@@ -91,7 +91,7 @@ const Contacts2 = () => {
                 direction={mobile ? 'column' : 'row'}
                 style={{ width: '100%', gap: 0 }}
             >
-                <div style={{ width: width_, backgroundColor: '#ede9e9', display: 'flex', flexDirection: 'column', padding: '25px 1rem', justifyContent: 'center' }}>
+                <div style={{ width: width_, backgroundColor: '#ede9e9', display: 'flex', flexDirection: 'column', padding: mobile ? '0 40px 0 40px' : '0 9rem 0 9rem', justifyContent: 'center' }}>
                     <strong><h3 class="col-about-title" style={{ textAlign: 'center', color: color.primary, fontSize: 22, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase' }}>ESTAMOS A TUS ÓRDENES</h3></strong>
                     <strong><h3 class="col-about-title" style={{ textAlign: 'center', color: color.primary, fontSize: 52, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase', letterSpacing: -4 }}>CONVERSEMOS</h3></strong>
                     <div className="line-banner" style={{ backgroundColor: color.primary }} />
@@ -101,7 +101,7 @@ const Contacts2 = () => {
                         </div>
                     }
                 </div>
-                <div style={{ width: width_, }}>
+                <div style={{ width: width_, padding: mobile ? '0 40px 0 40px' : '0 9rem 0 9rem' }}>
                     <ContactForm2 />
                 </div>
             </Stack>
@@ -112,17 +112,17 @@ const Contacts2 = () => {
                 <Fade direction="down" delay={500}>
                     <strong><h3 class="col-about-title" style={{ color: 'white', fontSize: 52, fontWeight: '700', marginBottom: '0rem', letterSpacing: -4 }}>PRESENCIA NACIONAL</h3></strong>
                 </Fade>
-                <div style={{ display: 'flex', flexDirection: mobile ? 'row' : 'column', marginTop: 30 }}>
+                <div style={{ display: 'flex', flexDirection: !mobile ? 'row' : 'column', marginTop: 30 }}>
                     {ubications.map((item, index) => (
                         <div>
                             <h3 class="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase' }}>{item?.name}</h3>
-                            <h3 style={{ color: 'white', fontSize: 12 }}>{item?.place}<br/>{item?.direction}</h3>
+                            <h3 style={{ color: 'white', fontSize: 12 }}>{item?.place}<br />{item?.direction}</h3>
                             <h3 style={{ color: 'white', fontSize: 12 }}>VER MAPA</h3>
                             <div className="line-banner-btn" />
                         </div>
                     ))}
+                </div>
             </div>
-        </div>
         </NavBar >
     )
 }

@@ -10,10 +10,7 @@ export default function CardsInfo(props) {
 
     const {
         id,
-        img,
-        title,
         properties,
-        icon
     } = props;
 
     const icons = {
@@ -27,9 +24,15 @@ export default function CardsInfo(props) {
         2: 3,
         3: null,
     }
+    const titles = {
+        1: 'ÁREA DE SUPERFICIE',
+        2: 'CAPACIDAD',
+        3: 'ELEMENTOS DE FABRICACIÓN',
+    }
 
     const getIcon = () => icons[id]
     const getsup = () => sups[id]
+    const getTitle = () => titles[id]
 
     return (
         <Box
@@ -45,14 +48,13 @@ export default function CardsInfo(props) {
                     style={{
                         fontFamily: 'monospace',
                         color: color.primary,
-                        textTransform: 'uppercase',
                         textAlign: 'center',
                         fontWeight: 'bold',
                         fontSize: 18,
                         padding: '12px 0 8px 0'
                     }}
                 >
-                    {title}
+                    {getTitle()}
                 </h3>
 
                 {properties.map((item, index) => (

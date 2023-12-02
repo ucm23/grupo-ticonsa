@@ -35,6 +35,8 @@ const CarouselStaticBG = ({ title, place, names, folder }) => {
                 flexDirection: 'row',
                 justifyContent: 'space-around',
                 alignItems: 'center',
+                paddingLeft: 10,
+                paddingRight: 10,
             }}
         >
 

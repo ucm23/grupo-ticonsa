@@ -10,7 +10,7 @@ import { Carousel } from "react-bootstrap";
 import NavBar from "../components/NavBar"
 import ServicesCard from "../components/ServicesCard"
 import items from '../assets/systems.json'
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Chart from "react-apexcharts";
@@ -28,6 +28,7 @@ import '../api/ZoomableImage.js';
 
 let plants = {
     1: {
+        id: 1,
         folder: "plants/campeche/",
         layout: "0.jpg",
         imgs: [1, 2, 3],
@@ -36,7 +37,6 @@ let plants = {
         info: [
             {
                 id: 1,
-                name: 'ÁREA DE SUPERFICIE',
                 list: [
                     'Planta = 40,000 m',
                     'Producción = 20,000 m',
@@ -45,14 +45,12 @@ let plants = {
             },
             {
                 id: 2,
-                name: 'Capacidad',
                 list: [
                     'Producción semanal: 700m',
                 ]
             },
             {
                 id: 3,
-                name: 'Elementos que se pueden fabricar',
                 list: [
                     'Trabes AASHTO tipo I, II, III, IV, V y VI',
                     'Trabes Cajón',
@@ -66,6 +64,7 @@ let plants = {
         ]
     },
     2: {
+        id: 2,
         folder: "plants/yucatan/",
         layout: "0.jpg",
         imgs: [1, 2, 3],
@@ -74,7 +73,6 @@ let plants = {
         info: [
             {
                 id: 1,
-                name: 'ÁREA DE SUPERFICIE',
                 list: [
                     'Planta = 30,000 m',
                     'Producción = 15,000 m',
@@ -83,12 +81,10 @@ let plants = {
             },
             {
                 id: 2,
-                name: 'Capacidad',
                 list: ['Producción semanal: 350 m',]
             },
             {
                 id: 3,
-                name: 'Elementos que se pueden fabricar',
                 list: [
                     'Trabes AASHTO tipo I, II, III, IV, V y VI',
                     'Trabes Cajón',
@@ -101,6 +97,7 @@ let plants = {
         ]
     },
     3: {
+        id: 3,
         folder: "plants/cancun/",
         layout: "0.jpg",
         imgs: [1, 2, 3, 4],
@@ -109,7 +106,6 @@ let plants = {
         info: [
             {
                 id: 1,
-                name: 'ÁREA DE SUPERFICIE',
                 list: [
                     'Planta = 90,000 m',
                     'Producción = 40,000 m',
@@ -118,12 +114,10 @@ let plants = {
             },
             {
                 id: 2,
-                name: 'Capacidad',
                 list: ['Producción semanal: 1,200 m',]
             },
             {
                 id: 3,
-                name: 'Elementos que se pueden fabricar',
                 list: [
                     'Trabes AASHTO tipo I, II, III, IV, V y VI',
                     'Trabes Cajón',
@@ -137,6 +131,7 @@ let plants = {
         ]
     },
     4: {
+        id: 4,
         folder: "plants/teotihuacan/",
         layout: "0.jpg",
         imgs: [1, 2, 3, 4],
@@ -145,7 +140,6 @@ let plants = {
         info: [
             {
                 id: 1,
-                name: 'ÁREA DE SUPERFICIE',
                 list: [
                     'Planta = 60,000 m',
                     'Producción = 30,000 m',
@@ -154,12 +148,10 @@ let plants = {
             },
             {
                 id: 2,
-                name: 'Capacidad',
                 list: ['Producción semanal: 800 m',]
             },
             {
                 id: 3,
-                name: 'Elementos que se pueden fabricar',
                 list: [
                     'Trabes AASHTO tipo I, II, III, IV, V y VI',
                     'Trabes Cajón',
@@ -173,6 +165,7 @@ let plants = {
         ]
     },
     5: {
+        id: 5,
         folder: "plants/morelos/",
         layout: "0.jpg",
         imgs: [1, 2, 3, 4],
@@ -181,7 +174,6 @@ let plants = {
         info: [
             {
                 id: 1,
-                name: 'ÁREA DE SUPERFICIE',
                 list: [
                     'Planta = 25,000 m',
                     'Producción = 10,000 m',
@@ -190,12 +182,10 @@ let plants = {
             },
             {
                 id: 2,
-                name: 'Capacidad',
                 list: ['Producción semanal: 400 m',]
             },
             {
                 id: 3,
-                name: 'Elementos que se pueden fabricar',
                 list: [
                     'Trabes AASHTO tipo I, II, III, IV, V y VI',
                     'Trabes Cajón',
@@ -250,6 +240,16 @@ const Plants = ({ id }) => {
     };
 
 
+
+    const [arrayBanner, setArrayBanner] = useState(Object.values(plants))
+
+    useEffect(() => {
+        let plantsArray = Object.values(plants);
+        console.log('plantsArray: ', plantsArray);
+        setArrayBanner(plantsArray)
+    }, []);
+
+
     return (
         <>
             <NavBar photo={false}>
@@ -277,10 +277,7 @@ const Plants = ({ id }) => {
                                     <CardsInfo
                                         key={index}
                                         id={item?.id}
-                                        img={`plants/campeche/${item}.jpg`}
-                                        title={item?.name}
                                         properties={item?.list}
-                                        icon={item?.icon}
                                     />
                                 ))}
                             </section>
@@ -321,6 +318,21 @@ const Plants = ({ id }) => {
                             style={{ width: '100%', marginBottom: '1rem' }}
                         />
                         <hr></hr>
+                        <div style={{ display: 'flex', flexDirection: !mobile ? 'row' : 'column', marginTop: 25 }}>
+                            {arrayBanner.map((item, index) => {
+                                if (item?.id !== id) {
+                                    return (
+                                        <div>
+                                            <img
+                                                src={`${item?.folder}${item?.imgs[1]}.jpg`}
+                                                style={{ height: 150, objectFit: "cover", }}
+                                            />
+                                            <h3 style={{ fontSize: 12 }}>{item?.title}</h3>
+                                        </div>
+                                    ) 
+                                }
+                            })}
+                        </div>
                     </section>
                 </Box>
             </NavBar>
