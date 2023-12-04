@@ -86,7 +86,6 @@ const Contacts2 = () => {
                     <p style={{ color: 'white', fontWeight: '400', textAlign: 'center', margin: mobile ? 0 : '0 9rem 0 9rem' }}>Ya sea que estés buscando a un contratista general experto o que desees trabajar con nosotros, encuentra todo lo que necesitas para contactarte con nosotros.</p>
                 </Fade>
             </div>
-
             <Stack
                 direction={mobile ? 'column' : 'row'}
                 style={{ width: '100%', gap: 0 }}
@@ -114,12 +113,14 @@ const Contacts2 = () => {
                 </Fade>
                 <div style={{ display: 'flex', flexDirection: !mobile ? 'row' : 'column', marginTop: 30, gap: 25, flexWrap: 'wrap' }}>
                     {ubications.map((item, index) => (
-                        <div>
-                            <h3 class="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase' }}>{item?.name}</h3>
-                            <h3 style={{ color: 'white', fontSize: 12 }}>{item?.direction}<br />{item?.place}</h3>
-                            <h3 style={{ color: 'white', fontSize: 12 }}>VER MAPA</h3>
-                            <div className="line-banner-btn" />
-                        </div>
+                        <a href={item?.url} target="_blank" key={`${index}-${item?.name}`}>
+                            <div>
+                                <h3 class="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase' }}>{item?.name}</h3>
+                                <h3 style={{ color: 'white', fontSize: 12 }}>{item?.direction}<br />{item?.place}</h3>
+                                <h3 style={{ color: 'white', fontSize: 12 }}>VER MAPA</h3>
+                                <div className="line-banner-btn" />
+                            </div>
+                        </a>
                     ))}
                 </div>
             </div>

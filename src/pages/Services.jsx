@@ -64,7 +64,7 @@ const Services = ({ type }) => {
                         <section className="mt-4">
                             <section id="system">
                                 <div class="row-base row" styles='margin-top: 7.1em'>
-                                    <div class="" /* col-base col-sm-6 col-md-offset-1 col-md-6  */>
+                                    <div>
                                         <Fade direction="down">
                                             <section className="text-center">
                                                 <h3 class="col-about-title">Expertos en <span className="text-primary-blue"> {types[type]?.name}</span></h3>

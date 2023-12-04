@@ -251,9 +251,7 @@ const Plants = ({ id }) => {
     const [arrayBanner, setArrayBanner] = useState(Object.values(plants))
 
     useEffect(() => {
-        let plantsArray = Object.values(plants);
-        console.log('plantsArray: ', plantsArray);
-        setArrayBanner(plantsArray)
+        setArrayBanner(Object.values(plants))
     }, []);
 
 
@@ -282,7 +280,7 @@ const Plants = ({ id }) => {
                             <section className="d-flex justify-content-around pb-5 flex-wrap" >
                                 {plants[id].info.map((item, index) => (
                                     <CardsInfo
-                                        key={index}
+                                        key={`${index}-${item?.id}`}
                                         id={item?.id}
                                         properties={item?.list}
                                     />
@@ -329,7 +327,7 @@ const Plants = ({ id }) => {
                             {arrayBanner.map((item, index) => {
                                 if (item?.id !== id) {
                                     return (
-                                        <a href={`${item?.url}`}>
+                                        <a href={`${item?.url}`} key={`${index}-${item?.title}`}>
                                             <div>
                                             <center>
                                                 <img
