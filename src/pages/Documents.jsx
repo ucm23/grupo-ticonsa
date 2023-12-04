@@ -14,39 +14,32 @@ const Documents = ({ type }) => {
     }
 
     return (
-        <>
-            <NavBar>
+        <NavBar>
+            <Box
+                bgGradient={
+                    useColorModeValue(
+                        'radial(#B6B6B650 1px, transparent 1px)',
+                        'radial(#B6B6B650 1px, transparent 1px)'
+                    )
+                }
+                backgroundSize="20px 20px"
+                opacity="1"
+                height="100%"
+            >
 
-                <Box
-                    bgGradient={
-                        useColorModeValue(
-                            'radial(#B6B6B650 1px, transparent 1px)',
-                            'radial(#B6B6B650 1px, transparent 1px)'
-                        )
-                    }
-                    backgroundSize="20px 20px"
-                    opacity="1"
-                    height="100%"
-                >
-
-                    <section className="_main container">
-                        <section className="mt-4">
-                            <div class="row-base row" style={{ marginTop: 158 }}>
-
-                                {/*<iframe
-                                    src={`${types[type]}`}
-                                    height="1000"
-                                    frameborder="0"
-                                    allowFullScreen="false"
-                />*/}
-                                <embed src={`${types[type]}#toolbar=0&navpanes=0&scrollbar=0`} type="application/pdf" height="1000px" />
-
-                            </div>
-                        </section>
+                <section className="_main container">
+                    <section className="mt-4">
+                        <div class="row-base row" style={{ marginTop: 158 }}>
+                            <embed
+                                src={`${types[type]}#toolbar=0&navpanes=0&scrollbar=0`}
+                                type="application/pdf"
+                                height="1000px"
+                            />
+                        </div>
                     </section>
-                </Box>
-            </NavBar>
-        </>
+                </section>
+            </Box>
+        </NavBar>
     )
 }
 

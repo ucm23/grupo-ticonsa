@@ -18,11 +18,8 @@ const NavBar = ({ children, photo }) => {
     const [showShadow, setShowShadow] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 0) {
-                setShowShadow(true);
-            } else {
-                setShowShadow(false);
-            }
+            if (window.scrollY > 0) setShowShadow(true);
+            else setShowShadow(false);
         };
 
         window.addEventListener('scroll', handleScroll);

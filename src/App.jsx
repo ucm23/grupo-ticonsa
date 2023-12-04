@@ -6,7 +6,6 @@ import './styles/styles.css'
 import Systems from "./pages/Systems"
 import Products from "./pages/Products"
 import Porfolio from "./pages/Porfolio"
-import Contact from "./pages/Contact"
 import Legal from "./pages/Legal"
 import Privacity from "./pages/Privacity"
 import Contacts from "./pages/Contacts"
