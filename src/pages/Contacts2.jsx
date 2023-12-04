@@ -14,26 +14,26 @@ import ContactForm2 from "../components/ContactForm2";
 const ubications = [
     {
         id: 1,
-        name: "CIUDAD DE MÉXICO",
-        direction: "CORPORATIVO CIUDAD DE MÉXICO",
-        place: "CIUDAD DE MÉXICO",
-        url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d316.54268364379845!2d-99.22344153808785!3d19.32975703236199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdff953ce73f7b%3A0x8cf981865a36835b!2sGrupo%20Ticonsa%2C%20S.A.%20De%20C.V.!5e0!3m2!1ses-419!2smx!4v1697838392918!5m2!1ses-419!2smx"
+        name: "Grupo Ticonsa, S.A. De C.V.",
+        direction: "Presa 85, San Jerónimo Lídice, Magdalena Contreras, 10200",
+        place: "Ciudad de México, CDMX",
+        url: "https://maps.app.goo.gl/tADpi5iFEtPCVV9e6"
 
     },
     {
         id: 2,
-        name: "Estado de México",
-        direction: "CORPORATIVO CIUDAD DE MÉXICO",
+        name: "Planta Teotihuacán",
+        direction: "Teotihuacán de Arista, 55845",
         place: "Estado DE MÉXICO",
-        url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d316.54268364379845!2d-99.22344153808785!3d19.32975703236199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdff953ce73f7b%3A0x8cf981865a36835b!2sGrupo%20Ticonsa%2C%20S.A.%20De%20C.V.!5e0!3m2!1ses-419!2smx!4v1697838392918!5m2!1ses-419!2smx"
+        url: "https://maps.app.goo.gl/QE3UzXABoY49Dcah7"
 
     },
     {
         id: 3,
-        name: "Cancún",
-        direction: "CORPORATIVO CIUDAD DE MÉXICO",
-        place: "Quintana Roo",
-        url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d316.54268364379845!2d-99.22344153808785!3d19.32975703236199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdff953ce73f7b%3A0x8cf981865a36835b!2sGrupo%20Ticonsa%2C%20S.A.%20De%20C.V.!5e0!3m2!1ses-419!2smx!4v1697838392918!5m2!1ses-419!2smx"
+        name: "Oficina Cancún",
+        direction: "Kukulcan Boulevard, Zona Hotelera, 77500",
+        place: "Cancún, Quintana Roo",
+        url: "https://maps.app.goo.gl/ihhwxX88Horn6GgJ6"
 
     }
 ]
@@ -116,7 +116,7 @@ const Contacts2 = () => {
                     {ubications.map((item, index) => (
                         <div>
                             <h3 class="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase' }}>{item?.name}</h3>
-                            <h3 style={{ color: 'white', fontSize: 12 }}>{item?.place}<br />{item?.direction}</h3>
+                            <h3 style={{ color: 'white', fontSize: 12 }}>{item?.direction}<br />{item?.place}</h3>
                             <h3 style={{ color: 'white', fontSize: 12 }}>VER MAPA</h3>
                             <div className="line-banner-btn" />
                         </div>
