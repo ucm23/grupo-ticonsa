@@ -131,7 +131,7 @@ input[type="submit"]:hover {
 }
 
 .row-base.row {
-  margin-top: 3em;
+  padding-top: 3em;
 }
 
 .p-footer {
@@ -377,6 +377,10 @@ body {
   color: #ffffff;
   text-shadow: 3px 3px 5px gray;
 
+}
+
+.col-about-title {
+  text-transform: uppercase;
 }
 
 .card__img,
@@ -835,7 +839,9 @@ ul {
   transition: transform 0.3s;
 }
 
-
+.mt-4 {
+   margin-top: 0rem !important;
+}
 
 
 

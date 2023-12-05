@@ -100,7 +100,7 @@ const Systems = () => {
                 >
 
                     <section className="_main container">
-                        <section className="mt-4">
+                        <section>
                             {/*<Text as='b' fontSize='5xl'>Sistema de prefabricado y más:</Text>
 
                             <div className="row my-4">

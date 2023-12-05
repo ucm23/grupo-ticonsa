@@ -25,6 +25,7 @@ import {
 } from '@chakra-ui/react'
 
 import '../api/ZoomableImage.js';
+import BGPoints from "../components/BGPoints.jsx";
 
 //        actions: ["plant-teotihuacan", "plant-morelos", "plant-campeche", "plant-cancun", "plant-progreso"]
 
@@ -263,18 +264,7 @@ const Plants = ({ id }) => {
                         <CarouselStaticBG names={plants[id].imgs} folder={plants[id].folder} title={plants[id].title} place={plants[id].place} />
                 }
 
-                <Box
-                    bgGradient={
-                        useColorModeValue(
-                            'radial(#B6B6B650 1px, transparent 1px)',
-                            'radial(#B6B6B650 1px, transparent 1px)'
-                        )
-                    }
-                    backgroundSize="20px 20px"
-                    opacity="1"
-                    height="100%"
-                >
-
+                <BGPoints>
                     <section className="_main container">
                         <div class="row-base row">
                             <section className="d-flex justify-content-around pb-5 flex-wrap" >
@@ -288,7 +278,7 @@ const Plants = ({ id }) => {
                             </section>
                         </div>
                         <center>
-                            <section class="col-base col-about-img col-sm-6 col-md-offset-1" className="mt-4" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
+                            <section class="col-base col-about-img col-sm-6 col-md-offset-1" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
                                 <Fade direction="down">
                                     <section className="text-center">
                                         <h3 class="col-about-title" style={{ textTransform: 'uppercase' }}>Layout <span className="text-primary-blue">{plants[id].title}</span></h3>
@@ -308,7 +298,7 @@ const Plants = ({ id }) => {
                                 </div>
                             </section>
                         </center>
-                        <section class="col-base col-about-img col-sm-6 col-md-offset-1" className="mt-4" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
+                        <section class="col-base col-about-img col-sm-6 col-md-offset-1" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
                             <section>
                                 <h3 class="col-about-title" style={{ textTransform: 'uppercase' }}>{plants[id].title}</h3>
                                 <div className="line-banner-small" />
@@ -329,12 +319,12 @@ const Plants = ({ id }) => {
                                     return (
                                         <a href={`${item?.url}`} key={`${index}-${item?.title}`}>
                                             <div>
-                                            <center>
-                                                <img
-                                                    src={`${item?.folder}${item?.imgs[1]}.jpg`}
-                                                    style={{ height: 175, objectFit: "scale-down" }}
-                                                />
-                                                
+                                                <center>
+                                                    <img
+                                                        src={`${item?.folder}${item?.imgs[1]}.jpg`}
+                                                        style={{ height: 175, objectFit: "scale-down" }}
+                                                    />
+
                                                     <h3 style={{ fontSize: 12 }}>{item?.title}</h3>
                                                 </center>
                                             </div>
@@ -345,7 +335,7 @@ const Plants = ({ id }) => {
                             })}
                         </div>
                     </section>
-                </Box>
+                </BGPoints>
             </NavBar>
 
             {/*<Modal

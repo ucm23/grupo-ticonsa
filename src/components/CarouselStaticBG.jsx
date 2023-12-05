@@ -6,13 +6,6 @@ import color from "../color";
 
 const CarouselStaticBG = ({ title, place, names, folder }) => {
     return (
-        /*<img
-            className="d-block w-100 _img_corousel"
-            src={`/systems/5.jpg`}
-            alt="First slide"
-            //style={{ height: mobile?"23rem":"26rem", objectFit: "cover", top: 100}}
-            style={{ height: 500, objectFit: "cover", top: 100 }}
-        >*/
         <div
             style={{
                 //backgroundColor: "#030318",
@@ -50,21 +43,21 @@ const CarouselStaticBG = ({ title, place, names, folder }) => {
                     <h1 style={{ textTransform: 'uppercase', fontWeight: 'bold', color: color.primary + '99', fontFamily: 'monospace', fontSize: 14 }}>{place}</h1>
                 </div>
             </Fade>
-            <Carousel className="shadow" fade controls={false} indicators={false} style={{ height: 450, width: 450, top: 45 }}>
-                {names.map(item =>
-                    <Carousel.Item key={`names-item-${item}`} interval={2600}>
-                        <img
-                            className="d-block _img_corousel"
-                            src={`/${folder}/${item}.jpg`}
-                            //style={{ height: mobile?"23rem":"26rem", objectFit: "cover", top: 100}}
-                            style={{ height: 450, objectFit: "cover", }}
-                        />
-                    </Carousel.Item>
-                )}
-            </Carousel>
+            <Fade direction="down" cascade>
+                <Carousel className="shadow" fade controls={false} indicators={false} style={{ height: 450, width: 450, top: 42 }}>
+                    {names.map(item =>
+                        <Carousel.Item key={`names-item-${item}`} interval={2600}>
+                            <img
+                                className="d-block _img_corousel"
+                                src={`/${folder}/${item}.jpg`}
+                                //style={{ height: mobile?"23rem":"26rem", objectFit: "cover", top: 100}}
+                                style={{ height: 450, objectFit: "cover", }}
+                            />
+                        </Carousel.Item>
+                    )}
+                </Carousel>
+            </Fade>
         </div>
-        /*</img >*/
-
     )
 }
 

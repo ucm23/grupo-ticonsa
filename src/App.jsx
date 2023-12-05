@@ -21,7 +21,6 @@ function App() {
             <Route path="*" element={<Index />} />
             <Route path="/historia" element={<History />} />
             <Route path="/contacto" element={<Contacts2 />} />
-            <Route path="/contacts" element={<Contacts />} />
             <Route path="/productos" element={<Products />} />
             <Route path="/portafolio" element={<Porfolio />} />
             <Route path="/prefabricado" element={<Systems />} />
@@ -33,11 +32,11 @@ function App() {
             <Route path="/plant-teotihuacan" element={<Plants id={4} />} />
             <Route path="/plant-morelos" element={<Plants id={5} />} />
 
-            <Route path="/infraestructura" element={<Services type={'infraestructura'} />} />
-            <Route path="/edificacion" element={<Services type={'edificacion'} />} />
-            <Route path="/transporte" element={<Services type={'transporte'} />} />
-            <Route path="/montaje" element={<Services type={'montaje'} />} />
-            <Route path="/supervision" element={<Services type={'supervision'} />} />
+            <Route path="/infraestructura" element={<Services id={1} />} />
+            <Route path="/edificacion" element={<Services id={2} />} />
+            <Route path="/transporte" element={<Services id={3} />} />
+            <Route path="/montaje" element={<Services id={5} />} />
+            <Route path="/supervision" element={<Services id={5} />} />
 
             <Route path="/document_cv" element={<Documents type={'cv'} />} />
             <Route path="/document_presencia" element={<Documents type={'presencia'} />} />

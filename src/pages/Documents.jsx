@@ -28,7 +28,7 @@ const Documents = ({ type }) => {
             >
 
                 <section className="_main container">
-                    <section className="mt-4">
+                    <section>
                         <div class="row-base row" style={{ marginTop: 158 }}>
                             <embed
                                 src={`${types[type]}#toolbar=0&navpanes=0&scrollbar=0`}

@@ -54,8 +54,7 @@ const NavBar = ({ children, photo }) => {
         { id: 5, href: "/#", hasSubMenu: SubMenuInst },
         { id: 7, href: "/#", hasSubMenu: SubMenuProd },
         { id: 7, href: "https://development.victum-re.online", content: "Proveedores", onlyLink: true },
-        { id: 6, href: "/contacts", content: "Contacto" },
-        { id: 6, href: "/contacto", content: "Contacto 2" },
+        { id: 6, href: "/contacto", content: "Contacto" },
         
     ]
 
