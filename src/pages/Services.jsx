@@ -2,6 +2,7 @@ import CarouselStatic from "../components/CarouselStatic"
 import NavBar from "../components/NavBar"
 import { Fade } from "react-awesome-reveal";
 import BGPoints from "../components/BGPoints";
+import color from "../color";
 
 const Services = ({ id }) => {
 
@@ -106,22 +107,30 @@ const Services = ({ id }) => {
                                     <Fade direction="down">
                                         <section className="text-center">
                                             <h3 class="col-about-title">Expertos en <span className="text-primary-blue"> {types[id]?.name}</span></h3>
+                                            <div className="line-banner" style={{ backgroundColor: color.orange }} />
                                         </section>
                                     </Fade>
                                     <div class="">
                                         <div class="col-base col-md-offset-1">
                                             <div class="col-about-info">
+                                                <div>
+                                                    <p style={{ textAlign: 'center' }}>
+                                                        <div dangerouslySetInnerHTML={{ __html: types[id]?.description }} />
+                                                    </p>
+                                                </div>
+                                                <p>
+                                                    <div dangerouslySetInnerHTML={{ __html: types[id]?.content }} />
+                                                </p>
                                                 <p>
                                                     <div dangerouslySetInnerHTML={{ __html: types[id]?.header }} />
                                                 </p>
                                                 <ol type="A">
                                                     {types[id]?.word_key.map((item, index) => (
-                                                        <li key={index}>{item}</li>
+                                                        <div style={{ borderColor: '#B6B6B650', borderBottomWidth: 1, paddingTop: 8, paddingBottom: 8, /*margin-top: 8px;*/ }}>
+                                                            <li key={index}>{item}</li>
+                                                        </div>
                                                     ))}
                                                 </ol>
-                                                <p>
-                                                    <div dangerouslySetInnerHTML={{ __html: types[id]?.content }} />
-                                                </p>
                                                 <p>
                                                     <div dangerouslySetInnerHTML={{ __html: types[id]?.footer }} />
                                                 </p>
