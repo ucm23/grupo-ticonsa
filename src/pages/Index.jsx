@@ -89,7 +89,7 @@ const Index = () => {
                         <section className="section-5" id='about-me'>
                             <Fade direction="down">
                                 <section className="text-center">
-                                    <h2 class="section-title" style={{ textTransform: 'uppercase' }}>Sobre Nosotros <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
+                                    <h2 class="section-title" style={{ marginTop: 30, textTransform: 'uppercase' }}>Sobre Nosotros <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
                                 </section>
                             </Fade>
                             <div class="row-base row" styles='margin-top: 7.1em'>
@@ -102,7 +102,7 @@ const Index = () => {
                                     </div>
                                 </div>
                                 <div class="col-base col-about-img col-sm-6 col-md-offset-1">
-                                    <Image
+                                    <img
                                         src='/ticonsa1.avif'
                                         alt=""
                                         style={{ height: 300, width: 500, objectFit: 'cover', }}
@@ -131,7 +131,7 @@ const Index = () => {
                                                 <Popover id={`popover-positioned-bottom`}>
                                                     <Popover.Header as="h3">{item?.name}</Popover.Header>
                                                     <Popover.Body>
-                                                        {project_?.extra && <strong>[{project_?.extra}]<br/></strong>} 
+                                                        {project_?.extra && <strong>[{project_?.extra}]<br /></strong>}
                                                         {project_?.name}
                                                     </Popover.Body>
                                                 </Popover>
@@ -155,9 +155,9 @@ const Index = () => {
                             <Stack>
                                 <Stack direction={mobile ? 'column' : 'row'} >
                                     <div class="col-base col-sm-6 col-md-offset-1" style={{ alignSelf: 'center' }}>
-                                        <Stack style={{ justifyContent: 'center', paddingRight: 15 }}>
+                                        <Stack style={{ justifyContent: 'center', /*paddingRight: 15*/ }}>
                                             <Stack>
-                                                <h3 class="col-about-title" style={{ marginTop: 20, textTransform: 'uppercase' }}>Nuestra experiencia expresada en <span className="text-primary-blue">números:</span></h3>
+                                                <h3 class="col-about-title" style={{ marginTop: 140, textTransform: 'uppercase' }}>Nuestra experiencia expresada en <span className="text-primary-blue">números:</span></h3>
                                                 <div class="col-about-info">
                                                     <p>Ofrecemos soluciones prácticas e innovadoras a cada uno de nuestros clientes.</p>
                                                 </div>
@@ -187,7 +187,7 @@ const Index = () => {
                                                 />
                                             </Stack>
                                             <Stack
-                                                style={{ alignContent: 'center', paddingBottom: 20 }}
+                                                style={{ alignContent: 'center', paddingBottom: 140 }}
                                             >
                                                 <div class="col-about-info">
                                                     <p>Conoce nuestro trabajo descargando el Curriculum Vitae:</p>
@@ -208,7 +208,7 @@ const Index = () => {
                                             </Stack>
                                         </Stack>
                                     </div>
-                                    <div class="col-base" style={{ marginBottom: 20, marginTop: 20 }}>
+                                    <div class="col-base" style={{ marginBottom: 20, marginTop: 20, display: 'flex', alignItems: 'center' }}>
                                         <CarouselStatic_ names={[1, 2]} folder='imgs' />
                                     </div>
                                 </Stack>
@@ -219,7 +219,7 @@ const Index = () => {
                     <section className="_main container" id="services">
                         <section className="text-center">
                             <Fade direction="down">
-                                <h3 class="col-about-title" style={{ marginTop: 20, textTransform: 'uppercase' }}>Servicios que <span className="text-primary-blue">ofrecemos</span></h3>
+                                <h3 class="col-about-title" style={{ marginTop: 30, textTransform: 'uppercase' }}>Servicios que <span className="text-primary-blue">ofrecemos</span></h3>
                             </Fade>
                             <section className="d-flex justify-content-around align-items-center pb-5 flex-wrap" >
                                 {items.map((item, key) =>
@@ -251,7 +251,7 @@ const Index = () => {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Carousel activeIndex={index} onSelect={handleSelect} data-bs-theme="dark">
+                    <Carousel activeIndex={index} onSelect={handleSelect} /*data-bs-theme="dark"*/>
                         {items.map((item, key) =>
                             <Carousel.Item key={key}>
                                 <div
@@ -264,6 +264,17 @@ const Index = () => {
                                     />
                                     <div className="text-modal-image">
                                         <p class="col-about-title-system text-shadow">{item.title.toUpperCase()}</p>
+                                        <a href={`${item?.url}`}>
+                                        <Button
+                                            colorScheme="blue"
+                                            bg={color.primary}
+                                            rounded={0}
+                                            color="white"
+                                            //onClick={() => {}}
+                                            _hover={{ bg: 'blue.500' }}>
+                                            Ver más...
+                                        </Button>
+                                        </a>
                                     </div>
                                 </div>
 

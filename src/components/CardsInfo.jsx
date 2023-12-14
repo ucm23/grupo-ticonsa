@@ -6,6 +6,10 @@ import color from '../color';
 
 import { MdAspectRatio, MdEngineering, MdSquareFoot } from 'react-icons/md'
 
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Popover from 'react-bootstrap/Popover';
+import services_prefa from '../assets/services_prefa.json'
+
 export default function CardsInfo(props) {
 
     const {
@@ -22,7 +26,6 @@ export default function CardsInfo(props) {
     const sups = {
         1: 2,
         2: 3,
-        3: null,
     }
     const titles = {
         1: 'ÁREA DE SUPERFICIE',
@@ -33,6 +36,7 @@ export default function CardsInfo(props) {
     const getIcon = () => icons[id]
     const getsup = () => sups[id]
     const getTitle = () => titles[id]
+    const getText = () => id !== 3;
 
     return (
         <Box
@@ -58,19 +62,47 @@ export default function CardsInfo(props) {
                 </h3>
 
                 {properties.map((item, index) => (
-                    <h1
-                        key={`cards-info-${index}`}
-                        style={{
-                            fontFamily: 'monospace',
-                            textAlign: 'center',
-                            fontSize: 12,
-                        }}
-                    >
-                        {item}
-                        {<sup>{getsup()}</sup>}
-                    </h1>
-                )
-                )}
+                    getText() ? (
+                        <h1
+                            key={`cards-info-${index}`}
+                            style={{
+                                fontFamily: 'monospace',
+                                textAlign: 'center',
+                                fontSize: 12,
+                            }}
+                        >
+                            {item} {getsup() && <sup>{getsup()}</sup>}
+                        </h1>
+                    ) : (
+                        <OverlayTrigger
+                            key={`cards-info-${index}`}
+                            trigger='hover'
+                            placement={'bottom'}
+                            overlay={
+                                <Popover id={`popover-positioned-bottom`}>
+                                    <Popover.Header as="h1">{item}</Popover.Header>
+                                    <Popover.Body>
+                                        <img
+                                            src={services_prefa[item]?.img}
+                                            style={{ width: 'auto', objectFit: 'cover', }}
+                                        />
+                                        {services_prefa[item]?.text}
+                                    </Popover.Body>
+                                </Popover>
+                            }
+                        >
+                            <h1
+                                style={{
+                                    fontFamily: 'monospace',
+                                    textAlign: 'center',
+                                    fontSize: 12,
+                                }}
+                            >
+                                {item} ℹ️
+                            </h1>
+                        </OverlayTrigger>
+                    )
+                ))}
             </div>
         </Box>
     );

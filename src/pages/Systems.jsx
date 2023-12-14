@@ -146,9 +146,7 @@ const Systems = () => {
             </div>*/}
                                 </div>
                                 <section className="d-flex justify-content-around align-items-center pb-5 flex-wrap" >
-
-                                    {
-                                        items.map((item, key) =>
+                                    { items.map((item, key) =>
                                             <ServicesCard
                                                 key={item.id}
                                                 img={item.img}
@@ -158,17 +156,6 @@ const Systems = () => {
                                             />
                                         )
                                     }
-
-
-                                    {/*<Chart
-                                    chartType="ComboChart"
-                                    width="100%"
-                                    height="600px"
-                                    data={Dat}
-                                    options={getOptionsIncidents("Incidentes por Estándar")}
-                            />*/}
-
-
                                 </section>
                             </section>
                             <section id="pro">

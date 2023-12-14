@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 const SplitMergeAnimation = ({ imageUrl, numParts = 6, children }) => {
     const imageParts = [];
 
@@ -13,7 +11,7 @@ const SplitMergeAnimation = ({ imageUrl, numParts = 6, children }) => {
             '--position': `${position}%`,
             '--new-position': `${newPosition}%`,
             '--num-parts': numParts,
-            //'transition': 'opacity 1s ease-in-out',
+            'transition': 'opacity 1s ease-in-out',
         };
 
         imageParts.push(
@@ -21,26 +19,18 @@ const SplitMergeAnimation = ({ imageUrl, numParts = 6, children }) => {
                 key={i}
                 className="image-part"
                 style={imagePartStyle}
-            ></div>
+            />
         );
     }
 
     return (
         <>
-            <div
-                className="image-container"
-            >
+            <div className="image-container">
                 {imageParts}
             </div>
             {children}
         </>
     );
 };
-
-SplitMergeAnimation.propTypes = {
-    imageUrl: PropTypes.string.isRequired,
-    numParts: PropTypes.number,
-    children: PropTypes.node,
-}
 
 export default SplitMergeAnimation;

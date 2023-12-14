@@ -344,7 +344,7 @@ figure {
 
 
 body::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
   scroll-behavior: smooth;
 }
 
@@ -368,9 +368,13 @@ body {
 
 .text-modal-image {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  right: inherit;
+  bottom: 50px;
+  /*left: 10px;*/
+  /*right: inherit;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .col-about-title-system {
@@ -518,6 +522,7 @@ button#dropdown-basic {
   align-items: center;
   line-height: 59px;
 }
+
 button#dropdown-basic {
   border: 0px;
 }
@@ -559,7 +564,8 @@ li a:hover {
 
 .image-container {
   display: flex;
-  height: 600px;
+  /*height: 600px;*/
+  height: 98vh
 }
 
 
@@ -575,7 +581,8 @@ li a:hover {
 
 .image-part {
   flex: 1;
-  height: 600px;
+  /*height: 600px;*/
+  height: 98vh;
   background-size: calc(var(--num-parts) * 100%) 100%;
   /*transform-origin: left;
   /* Punto de origen para la transformación */
@@ -584,8 +591,8 @@ li a:hover {
 
   -webkit-text-size-adjust: 100%;
   opacity: 1;
-  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 42, 0, 1);
-  transform-origin: 50% 50% 0px;
+  /*transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 42, 0, 1);
+  transform-origin: 50% 50% 0px;*/
 }
 
 .footer-title {
@@ -613,18 +620,18 @@ ul {
 
 @keyframes splitAndMerge {
   0% {
-    background-position: calc(var(--position, 0%) + 5%);
+    background-position: calc(var(--position, 0%) + 3%);
     transform: scale(1);
   }
 
-  50% {
+  /*50% {
     background-position: calc(var(--position, 0%));
     transform: scale(1);
-  }
+  }*/
 
   100% {
-    background-position: calc(var(--new-position, 0%) + 5%);
-    transform: scale(1.3);
+    background-position: calc(var(--new-position, 0%) + 2%);
+    transform: scale(1.1);
   }
 }
 
@@ -809,8 +816,10 @@ ul {
 
 .zoomable-container {
   position: relative;
-  width: 300px; /* Ajusta el ancho según tus necesidades */
-  height: 200px; /* Ajusta la altura según tus necesidades */
+  width: 300px;
+  /* Ajusta el ancho según tus necesidades */
+  height: 200px;
+  /* Ajusta la altura según tus necesidades */
   overflow: hidden;
 }
 
@@ -818,7 +827,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s; 
+  transition: transform 0.3s;
 }
 
 .zoomable-container:hover .zoomable-image {
@@ -840,7 +849,7 @@ ul {
 }
 
 .mt-4 {
-   margin-top: 0rem !important;
+  margin-top: 0rem !important;
 }
 
 
@@ -862,3 +871,29 @@ ul {
 .nava li ul li {
   position: relative;
 }*/
+
+/*img {
+  width: 100%;
+  height: auto;
+}*/
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+img {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 25% cover 30%;
+  animation-fill-mode: both;
+}

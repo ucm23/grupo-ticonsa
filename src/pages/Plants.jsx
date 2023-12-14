@@ -27,185 +27,11 @@ import {
 import '../api/ZoomableImage.js';
 import BGPoints from "../components/BGPoints.jsx";
 
-//        actions: ["plant-teotihuacan", "plant-morelos", "plant-campeche", "plant-cancun", "plant-progreso"]
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Popover from 'react-bootstrap/Popover';
+import plants from '../assets/info_plants.json'
 
-let plants = {
-    1: {
-        id: 1,
-        folder: "plants/campeche/",
-        layout: "0.jpg",
-        url: "plant-campeche",
-        imgs: [1, 2, 3],
-        title: "Planta Campeche",
-        place: "Estado de Campeche",
-        info: [
-            {
-                id: 1,
-                list: [
-                    'Planta = 40,000 m',
-                    'Producción = 20,000 m',
-                    'Almacenaje = 20,000 m',
-                ]
-            },
-            {
-                id: 2,
-                list: [
-                    'Producción semanal: 700m',
-                ]
-            },
-            {
-                id: 3,
-                list: [
-                    'Trabes AASHTO tipo I, II, III, IV, V y VI',
-                    'Trabes Cajón',
-                    'Trabes Nebraska',
-                    'Trabes Portantes y de rigidez',
-                    'Losas TT',
-                    'Columnas',
-                    'Zapatas y candeleros',
-                ]
-            },
-        ]
-    },
-    2: {
-        id: 2,
-        folder: "plants/yucatan/",
-        layout: "0.jpg",
-        imgs: [1, 2, 3],
-        url: "plant-progreso",
-        title: "Planta Puerto Progreso",
-        place: "Estado de Yucatán",
-        info: [
-            {
-                id: 1,
-                list: [
-                    'Planta = 30,000 m',
-                    'Producción = 15,000 m',
-                    'Almacenaje = 15,000 m'
-                ]
-            },
-            {
-                id: 2,
-                list: ['Producción semanal: 350 m',]
-            },
-            {
-                id: 3,
-                list: [
-                    'Trabes AASHTO tipo I, II, III, IV, V y VI',
-                    'Trabes Cajón',
-                    'Trabes Portantes y de rigidez',
-                    'Losas TT',
-                    'Columnas',
-                    'Zapatas y candeleros',
-                ]
-            },
-        ]
-    },
-    3: {
-        id: 3,
-        folder: "plants/cancun/",
-        layout: "0.jpg",
-        url: "plant-cancun",
-        imgs: [1, 2, 3, 4],
-        title: "Planta Cancún T5NF1",
-        place: "Estado de Quintana Roo",
-        info: [
-            {
-                id: 1,
-                list: [
-                    'Planta = 90,000 m',
-                    'Producción = 40,000 m',
-                    'Almacenaje = 50,000 m'
-                ]
-            },
-            {
-                id: 2,
-                list: ['Producción semanal: 1,200 m',]
-            },
-            {
-                id: 3,
-                list: [
-                    'Trabes AASHTO tipo I, II, III, IV, V y VI',
-                    'Trabes Cajón',
-                    'Trabes Portantes y de rigidez',
-                    'Trabes Nebraska',
-                    'Losas TT',
-                    'Columnas',
-                    'Zapatas y candeleros',
-                ]
-            },
-        ]
-    },
-    4: {
-        id: 4,
-        folder: "plants/teotihuacan/",
-        layout: "0.jpg",
-        url: "plant-teotihuacan",
-        imgs: [1, 2, 3, 4],
-        title: "Planta Teotihuacán",
-        place: "Estado de México",
-        info: [
-            {
-                id: 1,
-                list: [
-                    'Planta = 60,000 m',
-                    'Producción = 30,000 m',
-                    'Almacenaje = 30,000 m'
-                ]
-            },
-            {
-                id: 2,
-                list: ['Producción semanal: 800 m',]
-            },
-            {
-                id: 3,
-                list: [
-                    'Trabes AASHTO tipo I, II, III, IV, V y VI',
-                    'Trabes Cajón',
-                    'Trabes Portantes y de rigidez',
-                    'Trabes Nebraska',
-                    'Losas TT',
-                    'Columnas',
-                    'Zapatas y candeleros',
-                ]
-            },
-        ]
-    },
-    5: {
-        id: 5,
-        folder: "plants/morelos/",
-        layout: "0.jpg",
-        url: "plant-morelos",
-        imgs: [1, 2, 3, 4],
-        title: "Planta Puerto Morelos",
-        place: "Estado de Quintana Roo",
-        info: [
-            {
-                id: 1,
-                list: [
-                    'Planta = 25,000 m',
-                    'Producción = 10,000 m',
-                    'Almacenaje = 15,000 m'
-                ]
-            },
-            {
-                id: 2,
-                list: ['Producción semanal: 400 m',]
-            },
-            {
-                id: 3,
-                list: [
-                    'Trabes AASHTO tipo I, II, III, IV, V y VI',
-                    'Trabes Cajón',
-                    'Trabes Portantes y de rigidez',
-                    'Losas TT',
-                    'Columnas',
-                    'Zapatas y candeleros',
-                ]
-            },
-        ]
-    },
-}
+//        actions: ["plant-teotihuacan", "plant-morelos", "plant-campeche", "plant-cancun", "plant-progreso"]
 
 const Plants = ({ id }) => {
 
@@ -247,8 +73,6 @@ const Plants = ({ id }) => {
         setTransform('scale(1)');
     };
 
-
-
     const [arrayBanner, setArrayBanner] = useState(Object.values(plants))
 
     useEffect(() => {
@@ -259,11 +83,9 @@ const Plants = ({ id }) => {
     return (
         <>
             <NavBar photo={false}>
-                {
-                    mobile ? <CarouselStatic names={plants[id].imgs} folder={plants[id].folder} title={plants[id].title} place={plants[id].place} logo={`logo-white.png`} /> :
+                { mobile ? <CarouselStatic names={plants[id].imgs} folder={plants[id].folder} title={plants[id].title} place={plants[id].place} logo={`logo-white.png`} /> :
                         <CarouselStaticBG names={plants[id].imgs} folder={plants[id].folder} title={plants[id].title} place={plants[id].place} />
                 }
-
                 <BGPoints>
                     <section className="_main container">
                         <div class="row-base row">
@@ -282,6 +104,7 @@ const Plants = ({ id }) => {
                                 <Fade direction="down">
                                     <section className="text-center">
                                         <h3 class="col-about-title" style={{ textTransform: 'uppercase' }}>Layout <span className="text-primary-blue">{plants[id].title}</span></h3>
+                                        <center><div className="line-banner-small" /></center>
                                         <p>Línea de prefabricados</p>
                                     </section>
                                 </Fade>
@@ -298,7 +121,7 @@ const Plants = ({ id }) => {
                                 </div>
                             </section>
                         </center>
-                        <section class="col-base col-about-img col-sm-6 col-md-offset-1" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
+                        {/*<section class="col-base col-about-img col-sm-6 col-md-offset-1" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
                             <section>
                                 <h3 class="col-about-title" style={{ textTransform: 'uppercase' }}>{plants[id].title}</h3>
                                 <div className="line-banner-small" />
@@ -311,7 +134,7 @@ const Plants = ({ id }) => {
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d316.54268364379845!2d-99.22344153808785!3d19.32975703236199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdff953ce73f7b%3A0x8cf981865a36835b!2sGrupo%20Ticonsa%2C%20S.A.%20De%20C.V.!5e0!3m2!1ses-419!2smx!4v1697838392918!5m2!1ses-419!2smx"
                             height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                             style={{ width: '100%', marginBottom: '1rem' }}
-                        />
+                                />*/}
                         <hr></hr>
                         <div style={{ display: 'flex', flexDirection: !mobile ? 'row' : 'column', marginTop: 25, justifyContent: 'space-between' }}>
                             {arrayBanner.map((item, index) => {

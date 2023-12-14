@@ -2,31 +2,37 @@
     {
         "id":4, 
         "img": "/imgs/004.jpg",
-        "title": "Sistema de pretensado y postensado"
+        "title": "Sistema de pretensado y postensado",
+        "url": "/infraestructura"
     },
     {
         "id":7, 
         "img": "/foro-sol.jpg",
-        "title": "Proyectos y Sistemas arquitectónicos"
+        "title": "Proyectos y Sistemas arquitectónicos",
+        "url": "/infraestructura"
     },
     {
         "id":5, 
         "img": "/imgs/005.jpg", 
-        "title": "Estructuración y diseño estructural"
+        "title": "Estructuración y diseño estructural",
+        "url": "/edificacion"
     },
     {
         "id":6, 
         "img": "/imgs/people.jpeg",
-        "title": "Supervisión de obras y dirección de proyectos"
+        "title": "Supervisión de obras y dirección de proyectos",
+        "url": "/supervision"
     },
     {
         "id":8,
         "img": "/services_card5.jpg", 
-        "title": "Fabricación y montaje de elementos de concreto"
+        "title": "Fabricación y montaje de elementos de concreto",
+        "url": "/montaje"
     },
     {
         "id":9,
         "img": "/imgs/002.jpg",  
-        "title": "Transporte de elementos de concreto"
+        "title": "Transporte de elementos de concreto",
+        "url": "/transporte"
     }
 ]

@@ -21,7 +21,7 @@ const settings = {
     fade: true,
     infinite: true,
     autoplay: true,
-    speed: 1000,
+    //speed: 1000,
     autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -60,15 +60,15 @@ export default function Carousel_() {
         {
             name: "Hotel Moon Palace",
             place: "Cancún, Quintana Roo",
-            description: "Tiempo récord: Se construyeron 40 mil m2 en 3.5 meses",
+            description: "Tiempo récord: Se construyeron 40 mil m² en 3.5 meses",
             image: '/moon-alace.jpg',
         },
-        {
+        /*{
             name: "Hotel Oasis",
             place: "Cancún, Quintana Roo",
             description: "Solución con marcos estructurales de concreto articulados",
             image: '/oasis.jpg',
-        },
+        },*/
         {
             name: "Foro Sol",
             place: "Ciudad de México",
@@ -85,8 +85,8 @@ export default function Carousel_() {
 
     const handleBeforeChange = () => {
         document.querySelectorAll('.image-part').forEach((imagePart) => {
-            imagePart.style.animation = 'none';
-            void imagePart.offsetWidth; // Forced reflow to reset animation
+            //imagePart.style.animation = 'none';
+            imagePart.offsetWidth; // Forced reflow to reset animation
             imagePart.style.animation = 'splitAndMerge 5s linear';
         });
     };
@@ -103,9 +103,6 @@ export default function Carousel_() {
                     //allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                 />
-                /*
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/Nvg4CamInuA" title="TLALNEPANTLA - Construcción con elementos prefabricados de concreto." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                */
             ),
             target: () => ref1.current,
         },
@@ -116,7 +113,12 @@ export default function Carousel_() {
     };
 
     return (
-        <Box position={'relative'} height={'600px'} width={'full'} overflow={'hidden'}>
+        <Box
+            position={'relative'}
+            height={'98vh'}
+            width={'full'}
+            overflow={'hidden'}
+        >
             <Tour open={open} onClose={() => setOpen(false)} mask={false} steps={steps} />
 
             {!mobile &&
@@ -149,19 +151,6 @@ export default function Carousel_() {
                     </IconButton>
                 </>
             }
-            {/*<div
-                style={{
-                    position: 'absolute',
-                    bottom: 75,
-                    left: mobile ? '30px' : '123px',
-                    zIndex: 2
-                }}
-                onClick={() => mobile ? openLink() : setOpen(true)}
-            >
-                <div className="islands__video-content" ref={ref1}>
-                    <i className='bx bx-play-circle islands__video-icon'></i>
-                </div>
-            </div>*/}
             <Slider {...settings} ref={(slider) => setSlider(slider)} afterChange={handleBeforeChange} >
                 {cards.map((card, index) => (
                     <Box key={index}>
@@ -170,24 +159,25 @@ export default function Carousel_() {
                             numParts={mobile ? 3 : 6}
                         >
                             <Box
+                                className='box-text'
                                 zIndex={10}
-                                height="600px"
+                                height='98vh'
                                 width='100%'
                                 position="relative"
-                                top={
-                                    mobile
-                                        ? '-25rem'
-                                        : '-23rem'
-                                }
-                                left={
-                                    mobile
-                                        ? '30px'
-                                        : '123px'
-                                }
+                                top={mobile ? '-25rem' : '-23rem'}
+                                //left={mobile ? '30px' : '123px'}
+                                style={{
+                                    top: "-50vh",
+                                    display: "flex",
+                                }}
                             >
                                 <Stack
                                     w={'full'}
-                                    maxW={'90%'}
+                                    maxW={'100%'}
+                                    style={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                    }}
                                 >
                                     <h1 class="col-about-title text-shadow" style={{ fontWeight: 'bold', }}>{card.name}</h1>
                                     <h2 className="text-shadow" style={{ lineHeight: 0, fontSize: 18, fontWeight: 'bold' }}>{card.place}</h2>
@@ -203,46 +193,6 @@ export default function Carousel_() {
                                     </div>
                                 </Stack>
                             </Box>
-                            {/*<Container
-                                    zIndex={10}
-                                    size="container.lg"
-                                    height="600px"
-                                    p={0}
-                                    width='100%'
-                                    position="relative"
-                                    top={
-                                        mobile
-                                            ? '-35rem'
-                                            : '-30rem'
-                                    }
-                                >
-                                    <Stack
-                                        spacing={10}
-                                        w={'full'}
-                                        maxW={'100%'}
-                                        p={5}
-                                    >
-                                        <Heading
-                                            className='text-center glass'
-                                            fontSize={{ base: '4xl', md: '5xl', lg: '6xl' }}
-                                            color='white'
-                                            mb={0}
-                                        > Grupo Ticonsa</Heading>
-
-                                        <Button
-                                            px={4}
-                                            fontSize={'2xl'}
-                                            rounded={'md'}
-                                            colorScheme='facebook'
-                                            color={'white'}
-                                            onClick={() => { }}
-                                            rightIcon={<MdCall />}
-                                        >
-                                            {card.phone}
-                                        </Button>
-
-                                    </Stack>
-                                </Container>*/}
                         </SplitMergeAnimation>
                     </Box>
                 ))

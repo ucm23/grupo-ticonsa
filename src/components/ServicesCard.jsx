@@ -28,81 +28,33 @@ export default function ServicesCard(props) {
     } = props;
 
     return (
-        <>
-
-            <Center mt={8}>
-                <Box
-                    maxW='350px'
-                    //maxW='49%'
-                    minW='250px'
-                    //minW='49%'
-                    w='full'
-                    className='card__img'
-                    cursor={newTab ? 'pointer' : ''}
-                >
-                    {
-                        img && (
-                            <div class="project" onClick={() => onPress()}>
-                                <figure>
-                                    {/*<img alt="" height="500px" src="https://www.marhnos.com.mx/public/imagenes/autopistas_slide4_638x498_color-1.jpg">*/}
-                                    <img
-                                        src={img}
-                                        style={{ height: 500, objectFit: 'cover', }}
-                                        alt={title}
-                                        styles='filter: grayscale(100%)'
-                                    //objectFit="contain"
-                                    />
-                                    <figcaption>
-                                        <h3 class="project-title-card text-shadow">
-                                            {title}
-                                        </h3>
-                                        <div class="project-zoom"></div>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            /*<Box
-                                h='500px'
-                                pos='relative'
-                                overflow='hidden'
-                            >
-                                <h3 class="project-title">
+        <Center mt={8}>
+            <Box
+                maxW='350px'
+                //maxW='49%'
+                minW='250px'
+                //minW='49%'
+                w='full'
+                className='card__img'
+                cursor={newTab ? 'pointer' : ''}
+            >
+                <div class="project" onClick={() => onPress()}>
+                        <figure>
+                            <img
+                                src={img}
+                                style={{ height: 500, objectFit: 'cover', }}
+                                alt={title}
+                            //styles='filter: grayscale(100%)'
+                            />
+                            <figcaption>
+                                <h3 class="project-title-card text-shadow">
                                     {title}
                                 </h3>
-                                <img
-                                    src={img}
-                                    style={{ width: '100%', height: '100%', objectFit: 'cover', }}
-                                    alt={title}
-                                //objectFit="contain"
-                                />
-    
-                        </Box>*/
-                        )
-                    }
-                </Box>
-            </Center>
-            {/*<Modal
-                show={show}
-                onHide={() => setShow(false)}
-                //fullscreen={true}
-                size="lg"
-            >
-                <Modal.Header closeButton />
-                <Modal.Body>
-                    <img
-                        src={img}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover', }}
-                        alt={title}
-                    />
-                </Modal.Body>
-                </Modal>*/}
-        </>
-    );
+                                <div class="project-zoom"></div>
+                            </figcaption>
+                        </figure>
+                    </div>
+            </Box>
+        </Center>
+    )
 }
-
-/*CardSimple.propTypes = {
-    img: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    newTab: PropTypes.bool,
-    onPress: PropTypes.func,
-    onPress_: PropTypes.string,
-}*/
