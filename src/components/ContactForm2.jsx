@@ -27,11 +27,11 @@ export default function ContactForm2() {
         <label>Nombre</label>
         <input type="text" name="name" placeholder='Escriba su nombre completo' required />
         <label>Nombre de tu empresa</label>
-        <input type="text" name="empresa" placeholder='Escriba el nombre de empresa' required />
+        <input type="text" name="empresa" placeholder='Escriba el nombre de empresa' />
         <label>Teléfono de oficina</label>
-        <input type="number" name="office" placeholder='Escriba el no. teléfono de oficina'/>
+        <input type="number" name="office" placeholder='Escriba el no. teléfono de oficina' />
         <label>Teléfono personal</label>
-        <input type="number" name="phone" placeholder='Escriba su no. de teléfono personal'/>
+        <input type="number" name="phone" placeholder='Escriba su no. de teléfono personal' />
         <label>correo electrónico</label>
         <input type="email" name="email" placeholder='Escriba su correo electrónico' required />
         <label>mensaje</label>
