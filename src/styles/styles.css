@@ -1,4 +1,6 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --light-theme: #ffffff;
@@ -31,12 +33,16 @@ body {
   box-sizing: border-box;
   line-height: 1.1;
   /*font-family: "Oswald", sans-serif;*/
-  font-weight: 500;
+  font-weight: 700;
   font-size: 2em;
-  letter-spacing: 0.2em;
+  /*letter-spacing: 0.2em;*/
   color: #000000;
   text-align: center;
   margin: 0;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .field {
@@ -204,18 +210,23 @@ figure {
 }
 
 .font-50 {
-  font-size: 50px;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 600;
   line-height: 0;
   margin-top: 10px;
-  color: var(--deep-sky-blue);
+  /*color: var(--deep-sky-blue);
+  /*color: var(--deep-sky-blue);*/
+  color:#777;
+  text-align: center;
 }
 
+
 .font--50 {
-  font-size: 15px;
-  font-weight: 500;
-  width: 90%;
-  margin-bottom: 30px;
+  font-size: 11px;
+  font-weight: 200;
+  width: 98%;
+  /*margin-bottom: 30px;*/
+  text-align: center;
 }
 
 .css-141rheu {
@@ -384,7 +395,7 @@ body {
 }
 
 .col-about-title {
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 .card__img,
@@ -504,7 +515,7 @@ nav ul li a {
   color: var(--color-primary);
   padding: 6px;
   /*border-radius: 3px;*/
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-size: 13px;
   font-weight: 500;
 }
@@ -512,7 +523,7 @@ nav ul li a {
 button#dropdown-basic {
   color: var(--color-primary);
   padding: 6px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-size: 13px;
   font-weight: 500;
   display: flex;
@@ -538,16 +549,28 @@ button#dropdown-basic {
   color: yellow;
 }
 
-li a.active,
+li a.active {
+  /*background: var(--color-primary);
+  color: var(--light-theme);*/
+  border-bottom-width: 2px;
+  border-bottom-color: var(--color-primary);
+  /*transition: 1s;*/
+}
+
 li a:hover {
-  background: var(--color-primary);
-  color: var(--light-theme);
-  /*transition: .5s;*/
+  /*background: var(--color-primary);
+  color: var(--light-theme);*/
+  border-bottom-width: 2px;
+  border-bottom-color: var(--color-primary-light);
+  color: var(--color-primary-light);
+  /*transition: 1s;*/
 }
 
 .checkbtn {
-  font-size: 30px;
+  font-size: 18px;
   color: var(--dark-theme);
+  font-weight: 200;
+  color: #333333;
   float: right;
   line-height: 60px;
   margin: 0px 30px 0 0;
@@ -556,6 +579,11 @@ li a:hover {
   justify-content: center;
   height: 100%;
   z-index: 30;
+}
+
+.checkbtn-icons {
+  border-width: 1px;
+  padding: 5px;
 }
 
 #check {
@@ -654,6 +682,8 @@ ul {
   li a.active {
     background: none;
     color: var(--color-primary);
+    border-width: 0;
+    font-weight: 600;
   }
 }
 
@@ -695,7 +725,7 @@ ul {
     /* margin: 50px 0; *
     line-height: 30px;*/
     padding-left: 20px;
-    border-top-width: 0.5px
+    border-bottom-width: 0.5px
   }
 
   nav ul li a {
@@ -704,7 +734,8 @@ ul {
   }
 
   li a:hover,
-  li a.active {
+  li a.active,
+  .dropdown-basic {
     background: none;
     color: #1d50dd;
   }
@@ -780,11 +811,20 @@ ul {
     width: 500px;
     height: 250px;
   }
+  .font--50, .font-50 {
+    text-align: left;
+  }
+  
 
 }
 
 button.ant-btn.css-dev-only-do-not-override-1adbn6x.ant-btn-primary.ant-btn-sm.ant-tour-next-btn {
   display: none;
+}
+
+.css-1f0wxn3 {
+  justify-content: center;
+  gap: 1;
 }
 
 .transition-enter {
@@ -896,4 +936,44 @@ img {
   animation-name: show;
   animation-range: entry 25% cover 30%;
   animation-fill-mode: both;
+}
+img:nth-child(2) {
+  animation-range: entry 40% cover 60%;
+}
+
+img:nth-child(3) {
+  animation-range: entry 35% cover 40%;
+}
+
+
+@keyframes moveUpDown {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(100%);
+  }
+}
+
+.animated-accordion {
+  animation: moveUpDown 2s linear infinite;
+  margin-top: 100px;
+}
+
+.img-round {
+  width: 30%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 100px 100px 2px;
+}
+
+.img-round:nth-child(2) {
+  border-radius: 100px 100px 2px;
+}
+
+.img-round:nth-child(3) {
+  border-radius: 100px 100px 100px 2px;
 }

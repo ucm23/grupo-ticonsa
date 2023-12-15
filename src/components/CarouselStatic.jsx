@@ -1,8 +1,6 @@
-import { useBreakpointValue } from "@chakra-ui/react";
 import { Carousel } from "react-bootstrap";
 import { Fade } from "react-awesome-reveal";
 import PropTypes from 'prop-types'
-import color from "../color";
 
 const CarouselStatic = ({ title, place, names, folder, logo }) => {
     return (
@@ -29,7 +27,6 @@ const CarouselStatic = ({ title, place, names, folder, logo }) => {
                         flexDirection: 'column'
                     }}
                 >
-
                     <img
                         src={logo}
                         style={{ height: 50, objectFit: 'cover' }}

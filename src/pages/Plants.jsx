@@ -83,8 +83,8 @@ const Plants = ({ id }) => {
     return (
         <>
             <NavBar photo={false}>
-                { mobile ? <CarouselStatic names={plants[id].imgs} folder={plants[id].folder} title={plants[id].title} place={plants[id].place} logo={`logo-white.png`} /> :
-                        <CarouselStaticBG names={plants[id].imgs} folder={plants[id].folder} title={plants[id].title} place={plants[id].place} />
+                {mobile ? <CarouselStatic names={plants[id].imgs} folder={plants[id].folder} title={plants[id].title} place={plants[id].place} logo={`logo-white.png`} /> :
+                    <CarouselStaticBG names={plants[id].imgs} folder={plants[id].folder} title={plants[id].title} place={plants[id].place} />
                 }
                 <BGPoints>
                     <section className="_main container">
@@ -135,6 +135,7 @@ const Plants = ({ id }) => {
                             height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                             style={{ width: '100%', marginBottom: '1rem' }}
                                 />*/}
+                       
                         <hr></hr>
                         <div style={{ display: 'flex', flexDirection: !mobile ? 'row' : 'column', marginTop: 25, justifyContent: 'space-between' }}>
                             {arrayBanner.map((item, index) => {

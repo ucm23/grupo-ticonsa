@@ -5,6 +5,7 @@ import {
 import { Fade } from "react-awesome-reveal";
 import CountUp from 'react-countup';
 
+
 export default function CardSimple(props) {
 
     const {
@@ -12,18 +13,25 @@ export default function CardSimple(props) {
         descrip,
         prefix,
         suffix,
+        icon,
     } = props;
 
     return (
-        <Stack style={{ width: '40%' }}>
-            <Fade direction="down">
-                <p className="font-50">
-                    {prefix}
-                    <CountUp end={title} duration={title*0.009} enableScrollSpy={true} scrollSpyDelay={1000} />
-                    {suffix}
-                </p>
-            </Fade>
-            <p className="font--50">{descrip}</p>
+        <Stack style={{ width: '45%', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+            <div style={{ marginTop: -30 }}>
+            {icon}
+            </div>
+
+            <div>
+                <Fade direction="down">
+                    <p className="font-50">
+                        {prefix}
+                        <CountUp end={title} duration={title * 0.009} enableScrollSpy={true} scrollSpyDelay={1000} />
+                        {suffix}
+                    </p>
+                </Fade>
+                <p className="font--50">{descrip}</p>
+            </div>
         </Stack>
     );
 }

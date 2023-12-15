@@ -19,33 +19,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 
 import { NavLink, useLocation } from "react-router-dom";
-
-const SocialButton = ({
-    children,
-    label,
-    href,
-}) => {
-    return (
-        <chakra.button
-            rounded={'full'}
-            w={8}
-            h={8}
-            cursor={'pointer'}
-            as={'a'}
-            href={href}
-            display={'inline-flex'}
-            color={'white'}
-            alignItems={'center'}
-            justifyContent={'center'}
-            transition={'background 0.3s ease'}
-            _hover={{
-                bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-            }}>
-            <VisuallyHidden>{label}</VisuallyHidden>
-            {children}
-        </chakra.button>
-    )
-}
+import SocialButton from './SocialButton'
 
 export default function SmallCentered({ photo }) {
     const mobile = useBreakpointValue({ base: true, md: false });
@@ -170,7 +144,7 @@ export default function SmallCentered({ photo }) {
                                     </Fade>
                                 </div>
                                 <Stack style={{ alignContent: 'center' }}>
-                                    <a href={'/contacts'} >
+                                    <a href={'/contacto'} >
                                         <Button
                                             colorScheme="blue"
                                             bg={color.primary}
@@ -323,10 +297,4 @@ export default function SmallCentered({ photo }) {
             </section>
         </div >
     )
-}
-
-SocialButton.propTypes = {
-    children: PropTypes.node,
-    label: PropTypes.string,
-    href: PropTypes.string,
 }

@@ -7,11 +7,16 @@ const SplitMergeAnimation = ({ imageUrl, numParts = 6, children }) => {
 
         const imagePartStyle = {
             objectFit: 'cover',
+            backgroundColor: "#03296a99",
             backgroundImage: `url('${imageUrl}')`,
             '--position': `${position}%`,
             '--new-position': `${newPosition}%`,
             '--num-parts': numParts,
             'transition': 'opacity 1s ease-in-out',
+            backgroundBlendMode: "soft-light",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundAttachment: 'fixed'
         };
 
         imageParts.push(

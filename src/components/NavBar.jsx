@@ -30,13 +30,13 @@ const NavBar = ({ children, photo }) => {
     }, []);
 
     const SubMenuProd = {
-        name: "PRODUCTOS Y SERVICIOS",
-        options: ["INFRAESTRUCTURA", "EDIFICACIÓN", "TRANSPORTE", "MONTAJE", "SUPERVISIÓN"],
+        name: "Productos y Servicios",
+        options: ["Infraestructura", "Edificación", "Transporte", "Montaje", "Supervisión"],
         actions: ["infraestructura", "edificacion", "transporte", "montaje", "supervision"]
     }
 
     const SubMenuInst = {
-        name: "PLANTAS",
+        name: "Plantas",
         options: ["Teotihuacán", "Puerto Morelos", "Campeche", "Cancún T5NF1", "Puerto Progreso"],
         actions: ["plant-teotihuacan", "plant-morelos", "plant-campeche", "plant-cancun", "plant-progreso"]
     }
@@ -72,7 +72,7 @@ const NavBar = ({ children, photo }) => {
                 </a>
                 <input type="checkbox" id="check" onChange={handleCheckBoxChange} />
                 <label htmlFor="check" className="checkbtn" >
-                    <i className={isChecked ? "fa fa-times" : "fas fa-bars"}></i>
+                    <i className={`${isChecked ? "fa fa-times" : "fas fa-bars"} checkbtn-icons`}></i>
                 </label>
 
                 <ul style={{ paddingLeft: 0 }}>

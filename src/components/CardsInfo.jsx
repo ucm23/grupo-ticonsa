@@ -77,15 +77,17 @@ export default function CardsInfo(props) {
                         <OverlayTrigger
                             key={`cards-info-${index}`}
                             trigger='hover'
-                            placement={'bottom'}
+                            placement={'auto-end'}
                             overlay={
                                 <Popover id={`popover-positioned-bottom`}>
                                     <Popover.Header as="h1">{item}</Popover.Header>
                                     <Popover.Body>
+                                        <div>
                                         <img
                                             src={services_prefa[item]?.img}
-                                            style={{ width: 'auto', objectFit: 'cover', }}
+                                            style={{ width: 'auto', height: 100, objectFit: 'cover', }}
                                         />
+                                        </div>
                                         {services_prefa[item]?.text}
                                     </Popover.Body>
                                 </Popover>

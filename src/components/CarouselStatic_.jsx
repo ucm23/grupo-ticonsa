@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const CarouselStatic_ = ({ names, folder }) => {
     const mobile = useBreakpointValue({ base: true, md: false });
-    return <Carousel data-bs-theme="dark">
+    return <Carousel fade data-bs-theme="dark">
         {names.map(item =>
             <Carousel.Item key={`names-item-${item}`} interval={4000}>
                 <img

@@ -15,17 +15,7 @@ const Documents = ({ type }) => {
 
     return (
         <NavBar>
-            <Box
-                bgGradient={
-                    useColorModeValue(
-                        'radial(#B6B6B650 1px, transparent 1px)',
-                        'radial(#B6B6B650 1px, transparent 1px)'
-                    )
-                }
-                backgroundSize="20px 20px"
-                opacity="1"
-                height="100%"
-            >
+
 
                 <section className="_main container">
                     <section>
@@ -38,7 +28,6 @@ const Documents = ({ type }) => {
                         </div>
                     </section>
                 </section>
-            </Box>
         </NavBar>
     )
 }

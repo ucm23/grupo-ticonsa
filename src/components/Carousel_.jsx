@@ -14,6 +14,11 @@ import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
 import { MdCall } from "react-icons/md"
 import Slider from 'react-slick'
 import SplitMergeAnimation from './SplitMergeAnimation'
+import SocialButton from './SocialButton';
+
+import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaPhoneAlt } from 'react-icons/fa'
+import { RiArrowDownSLine } from "react-icons/ri";
+import color from '../color';
 
 const settings = {
     dots: true,
@@ -63,12 +68,12 @@ export default function Carousel_() {
             description: "Tiempo récord: Se construyeron 40 mil m² en 3.5 meses",
             image: '/moon-alace.jpg',
         },
-        /*{
+        {
             name: "Hotel Oasis",
             place: "Cancún, Quintana Roo",
             description: "Solución con marcos estructurales de concreto articulados",
             image: '/oasis.jpg',
-        },*/
+        },
         {
             name: "Foro Sol",
             place: "Ciudad de México",
@@ -179,24 +184,78 @@ export default function Carousel_() {
                                         alignItems: "center",
                                     }}
                                 >
-                                    <h1 class="col-about-title text-shadow" style={{ fontWeight: 'bold', }}>{card.name}</h1>
-                                    <h2 className="text-shadow" style={{ lineHeight: 0, fontSize: 18, fontWeight: 'bold' }}>{card.place}</h2>
-                                    <p className="text-shadow">{card.description}</p>
-                                    <div
-                                        style={{
-                                        }}
+                                    <h2 className="text-shadow" style={{ lineHeight: 0, fontSize: 18, fontWeight: 'bold', textTransform: 'uppercase', textAlign: 'center' }}>{card.place}</h2>
+                                    <h1 class="col-about-title text-shadow" style={{ fontWeight: 'bold', textAlign: 'center', lineHeight: 1, textTransform: 'uppercase' }}>{card.name}</h1>
+                                    <p className="text-shadow" style={{ textAlign: 'center', lineHeight: 1 }}>{card.description}</p>
+                                    {/*<div
                                         onClick={() => mobile ? openLink() : setOpen(true)}
                                     >
                                         <div className="islands__video-content" ref={ref1}>
                                             <i className='bx bx-play islands__video-icon'></i>
                                         </div>
+                                </div>*/}
+                                    <div style={{ display: 'flex', flexDirection: mobile ? 'column' : 'row', gap: 6 }}>
+                                        <Button
+                                            colorScheme="blue"
+                                            bg={color.orange}
+                                            rounded={5}
+                                            color="white"
+                                            //onClick={downloadCV}
+                                            rightIcon={<div />}
+                                            leftIcon={<div />}
+                                            fontWeight={'bold'}
+                                            >
+                                            Introducción
+                                        </Button>
+                                        <Button
+                                            //colorScheme="blue"
+                                            bg={'transparent'}
+                                            rounded={50}
+                                            color="white"
+                                            fontWeight={'300'}
+                                            rightIcon={<div />}
+                                            leftIcon={<div />}
+                                            _hover={{ bg: 'transparent' }}
+                                            //onClick={downloadCV}
+                                            /*rightIcon={
+                                                <div className="icon flex justify-center relative">
+                                                    <RiArrowDownSLine className='text-3xl' color="white" />
+                                                </div>
+                                            }*/
+                                            >
+                                            Contáctanos
+                                        </Button>
+                                    </div>
+                                    <Stack direction={'row'}>
+                                        <a href={'https://twitter.com/GRUPO_TICONSA'} target="_blank">
+                                            <SocialButton label={'Twitter'}>
+                                                <FaTwitter />
+                                            </SocialButton>
+                                        </a>
+                                        <a href={'https://www.youtube.com/@grupoticonsaprefabricados9793'} target="_blank">
+                                            <SocialButton label={'YouTube'}>
+                                                <FaYoutube />
+                                            </SocialButton>
+                                        </a>
+                                        <a href={'https://www.instagram.com/grupo_ticonsa/'} target="_blank">
+                                            <SocialButton label={'Instagram'}>
+                                                <FaInstagram />
+                                            </SocialButton>
+                                        </a>
+                                        <a href={'https://www.facebook.com/GrupoTiconsa/?locale=es_LA'} target="_blank">
+                                            <SocialButton label={'Facebook'}>
+                                                <FaFacebook />
+                                            </SocialButton>
+                                        </a>
+                                    </Stack>
+                                    <div className="animated-accordion">
+                                        <RiArrowDownSLine className='text-3xl' color="white" />
                                     </div>
                                 </Stack>
                             </Box>
                         </SplitMergeAnimation>
                     </Box>
-                ))
-                }
+                ))}
             </Slider>
         </Box>
     )

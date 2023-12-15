@@ -44,14 +44,14 @@ const CarouselStaticBG = ({ title, place, names, folder }) => {
                 </div>
             </Fade>
           <Fade direction="down" >
-                <Carousel className="shadow" fade /*controls={false} indicators={false}*/ style={{ height: 450, width: 450, top: 42 }}>
+                <Carousel className="shadow" fade /*controls={false} indicators={false}*/ style={{ height: 450, width: 450, top: 42, borderRadius: "10px" }}>
                     {names.map(item =>
                         <Carousel.Item key={`names-item-${item}`} interval={2600}>
                             <img
                                 className="d-block _img_corousel"
                                 src={`/${folder}/${item}.jpg`}
                                 //style={{ height: mobile?"23rem":"26rem", objectFit: "cover", top: 100}}
-                                style={{ height: 450, objectFit: "cover", }}
+                                style={{ height: 450, objectFit: "cover", borderRadius: "10px" }}
                             />
                         </Carousel.Item>
                     )}

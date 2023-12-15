@@ -9,6 +9,7 @@ import color from "../color";
 
 import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
+import { RiArrowDownSLine } from "react-icons/ri";
 import ContactForm2 from "../components/ContactForm2";
 
 const ubications = [
@@ -64,7 +65,7 @@ const Contacts2 = () => {
         alignContent: 'center',
         flexDirection: 'column',
         backgroundColor: "#03296a99",
-        backgroundImage: `url('/projects/1.jpg')`,
+        backgroundImage: `url('/projects/2.jpg')`,
         backgroundBlendMode: "soft-light",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -81,10 +82,13 @@ const Contacts2 = () => {
         <NavBar photo={true}>
             <div style={styles}>
                 <Fade direction="down">
-                    <strong><h3 class="col-about-title" style={{ color: 'white', fontSize: mobile ? 40 : 80, fontWeight: '700', textAlign: 'center', textTransform: 'uppercase' }}>CONTÁCTANOS</h3></strong>
+                    <strong><h3 class="col-about-title" style={{ color: 'white', fontSize: mobile ? 38 : 75, fontWeight: '700', textAlign: 'center', textTransform: 'uppercase', marginTop: mobile ? 150 : 0 }}>CONTÁCTANOS</h3></strong>
                     <div className="line-banner" style={{ backgroundColor: 'white' }} />
-                    <p style={{ color: 'white', fontWeight: '400', textAlign: 'center', margin: mobile ? 0 : '0 9rem' }}>Ya sea que estés buscando a un contratista general experto o que desees trabajar con nosotros, encuentra todo lo que necesitas para contactarte con nosotros.</p>
+                    <p style={{ color: 'white', fontWeight: '400', textAlign: 'center', margin: mobile ? 0 : '0 9rem', fontStyle: 'italic' }}>"Ya sea que estés buscando a un contratista general experto o que desees trabajar con nosotros, {!mobile && <br/>} encontrarás todo lo que necesitas para ponerte en contacto con Grupo Ticonsa"</p>
                 </Fade>
+                <div className="animated-accordion">
+                    <RiArrowDownSLine className='text-3xl' color="white" />
+                </div>
             </div>
             <Stack
                 direction={mobile ? 'column' : 'row'}
@@ -92,7 +96,7 @@ const Contacts2 = () => {
             >
                 <div style={{ width: width_, backgroundColor: '#ede9e9', display: 'flex', flexDirection: 'column', padding: mobile ? 0 : '1rem 5rem', justifyContent: 'center', paddingTop: mobile ? 30 : '1rem' }}>
                     <strong><h3 class="col-about-title" style={{ textAlign: 'center', color: color.primary, fontSize: 22, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase' }}>ESTAMOS A TUS ÓRDENES</h3></strong>
-                    <strong><h3 class="col-about-title" style={{ textAlign: 'center', color: color.primary, fontSize: 52, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase', letterSpacing: -4 }}>CONVERSEMOS</h3></strong>
+                    <strong><h3 class="col-about-title" style={{ textAlign: 'center', color: color.primary, fontSize: mobile ? 38 : 52, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase', }}>CONVERSEMOS</h3></strong>
                     <div className="line-banner" style={{ backgroundColor: color.primary }} />
                     {!mobile &&
                         <div class="col-about-info">
@@ -109,7 +113,7 @@ const Contacts2 = () => {
                     <strong><h3 class="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', }}>NUESTRAS UBICACIONES</h3></strong>
                 </Fade>
                 <Fade direction="down" delay={500}>
-                    <strong><h3 class="col-about-title" style={{ color: 'white', fontSize: 52, fontWeight: '700', marginBottom: '0rem', letterSpacing: -4 }}>PRESENCIA NACIONAL</h3></strong>
+                    <strong><h3 class="col-about-title" style={{ color: 'white', fontSize: 52, fontWeight: '700', marginBottom: '0rem', }}>PRESENCIA NACIONAL</h3></strong>
                 </Fade>
                 <div style={{ display: 'flex', flexDirection: direction, marginTop: 30, gap: 25, flexWrap: 'wrap' }}>
                     {ubications.map((item, index) => (
