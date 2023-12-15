@@ -191,12 +191,12 @@ const Index = () => {
                                 <div className="mx-auto text-center">
                                     <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Desde la Idea hasta la Realidad</h2>
                                     <Fade direction="down">
-                                <section className="text-center">
-                                    <h2 class="section-title" style={{ /*textTransform: 'uppercase'*/ }}>Proceso Integral de  <span className="text-primary-blue">Producción de Prefabricados</span></h2>
-                                </section>
-                            </Fade>
+                                        <section className="text-center">
+                                            <h2 class="section-title" style={{ /*textTransform: 'uppercase'*/ }}>Proceso Integral de  <span className="text-primary-blue">Producción de Prefabricados</span></h2>
+                                        </section>
+                                    </Fade>
                                     <p className="mt-6 text-lg leading-8 text-gray-600">
-                                    El proceso aborda cada fase esencial en la producción de prefabricados, desde la concepción inicial del proyecto hasta la conexión final de las unidades. Sumérgete en las etapas de planificación estratégica, ingeniería precisa, fabricación eficiente, logística de transporte y montaje in situ. 
+                                        El proceso aborda cada fase esencial en la producción de prefabricados, desde la concepción inicial del proyecto hasta la conexión final de las unidades. Sumérgete en las etapas de planificación estratégica, ingeniería precisa, fabricación eficiente, logística de transporte y montaje in situ.
                                     </p>
                                 </div>
                                 <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -214,6 +214,18 @@ const Index = () => {
                                         ))}
                                     </dl>
                                 </div>
+                                <Button
+                                    colorScheme="blue"
+                                    bg={color.orange}
+                                    rounded={5}
+                                    color="white"
+                                    //onClick={downloadCV}
+                                    rightIcon={<div />}
+                                    leftIcon={<div />}
+                                    fontWeight={'bold'}
+                                >
+                                    Conozca más
+                                </Button>
                             </div>
                         </div>
                         <section className="text-center">
