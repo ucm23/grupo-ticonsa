@@ -9,7 +9,7 @@ import {
 
 const Legal = () => {
     return (
-        <NavBar>
+        <NavBar mobile={false}>
             <Box
                 bgGradient={
                     useColorModeValue(

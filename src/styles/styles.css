@@ -216,7 +216,7 @@ figure {
   margin-top: 10px;
   /*color: var(--deep-sky-blue);
   /*color: var(--deep-sky-blue);*/
-  color:#777;
+  color: #777;
   text-align: center;
 }
 
@@ -246,17 +246,30 @@ figure {
 .circle {
   width: 12px;
   height: 12px;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
+  border-radius: 50% 50% 50% 0;
+  /* Establece el radio de las esquinas para dar forma a la gota */
+  transform: rotate(325deg);
   position: absolute;
   z-index: 100;
   background-color: var(--color-primary);
   /*box-shadow: 0 0 3px 3px var(--color-primary-light);*/
 }
+.circle::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: var(--deep-sky-blue);
+  border-radius: 50%;
+  top: 5px;
+  left: 4px;
+}
 
 .circle:hover {
-  width: 15px;
-  height: 15px;
-  background-color: var(--color-primary);
+  /*width: 15px;
+  height: 15px;*/
+  /*background-color: var(--color-primary);*/
   box-shadow: 1px 1px 8px 8px var(--color-primary-light);
 }
 
@@ -422,7 +435,7 @@ body {
 }
 
 .nav {
-  background: var(--light-theme);
+  /*background: var(--light-theme);*/
   height: 130px;
   width: 100%;
   position: fixed;
@@ -523,7 +536,6 @@ nav ul li a {
 button#dropdown-basic {
   color: var(--color-primary);
   padding: 6px;
-  /*text-transform: uppercase;*/
   font-size: 13px;
   font-weight: 500;
   display: flex;
@@ -532,10 +544,25 @@ button#dropdown-basic {
   justify-content: space-between;
   align-items: center;
   line-height: 59px;
+  border: 0px;
 }
 
-button#dropdown-basic {
+button#dropdown-basic-2 {
+  color: white;
+  padding: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 59px;
   border: 0px;
+}
+
+.white {
+  color: var(--color-white);
 }
 
 .dropdown {
@@ -544,25 +571,27 @@ button#dropdown-basic {
   justify-content: space-between;
 }
 
-.dropdown-basic {
-  background: red;
-  color: yellow;
+button#dropdown-basic:hover, button#dropdown-basic-2:hover {
+  color: var(--color-orange);
 }
 
 li a.active {
   /*background: var(--color-primary);
   color: var(--light-theme);*/
-  border-bottom-width: 2px;
-  border-bottom-color: var(--color-primary);
+  border-top-width: 2px;
+  border-top-color: var(--color-primary);
+  border-top-right-radius: 1px;
   /*transition: 1s;*/
 }
 
 li a:hover {
   /*background: var(--color-primary);
   color: var(--light-theme);*/
-  border-bottom-width: 2px;
-  border-bottom-color: var(--color-primary-light);
-  color: var(--color-primary-light);
+  /*border-top-width: 2px;
+  border-top-color: var(--color-primary-light);*/
+  /*color: var(--color-primary-light);*/
+  border-top-width: 2px;
+  border-top-color: var(--color-orange);
   /*transition: 1s;*/
 }
 
@@ -594,6 +623,10 @@ li a:hover {
   display: flex;
   /*height: 600px;*/
   height: 98vh
+}
+.center {
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -811,10 +844,12 @@ ul {
     width: 500px;
     height: 250px;
   }
-  .font--50, .font-50 {
+
+  .font--50,
+  .font-50 {
     text-align: left;
   }
-  
+
 
 }
 
@@ -928,6 +963,19 @@ ul {
     scale: 100%;
   }
 }
+@keyframes show-2 {
+  from {
+    opacity: 0;
+    scale: 25%;
+    transform: rotate(0deg);
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+    transform: rotate(325deg);
+  }
+}
 
 img {
   view-timeline-name: --image;
@@ -937,14 +985,23 @@ img {
   animation-range: entry 25% cover 30%;
   animation-fill-mode: both;
 }
-img:nth-child(2) {
-  animation-range: entry 40% cover 60%;
+
+.circle {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show-2;
+  animation-range: entry 10% cover 20%;
+  animation-fill-mode: both;
 }
 
-img:nth-child(3) {
+img:nth-child(2) {
   animation-range: entry 35% cover 40%;
 }
 
+img:nth-child(3) {
+  animation-range: entry 45% cover 50%;
+}
 
 @keyframes moveUpDown {
 
@@ -960,7 +1017,7 @@ img:nth-child(3) {
 
 .animated-accordion {
   animation: moveUpDown 2s linear infinite;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 .img-round {
@@ -976,4 +1033,11 @@ img:nth-child(3) {
 
 .img-round:nth-child(3) {
   border-radius: 100px 100px 100px 2px;
+}
+
+.trapezoid {
+  width: 100vh;
+  height: 50vh;
+  background-color: #3498db;
+  clip-path: polygon(0% 0%, 50% 0%, 100% 100%, 50% 100%);
 }

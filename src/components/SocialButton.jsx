@@ -6,7 +6,6 @@ import {
 
 export default function SocialButton({
     children,
-    label,
     href,
 }) {
     return (
@@ -25,7 +24,6 @@ export default function SocialButton({
             _hover={{
                 bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
             }}>
-            <VisuallyHidden>{label}</VisuallyHidden>
             {children}
         </chakra.button>
     )

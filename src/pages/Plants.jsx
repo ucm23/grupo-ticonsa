@@ -82,7 +82,7 @@ const Plants = ({ id }) => {
 
     return (
         <>
-            <NavBar photo={false}>
+            <NavBar photo={false} mobile={mobile}>
                 {mobile ? <CarouselStatic names={plants[id].imgs} folder={plants[id].folder} title={plants[id].title} place={plants[id].place} logo={`logo-white.png`} /> :
                     <CarouselStaticBG names={plants[id].imgs} folder={plants[id].folder} title={plants[id].title} place={plants[id].place} />
                 }
@@ -112,7 +112,7 @@ const Plants = ({ id }) => {
                                     <figure>
                                         <img
                                             src={`${plants[id].folder}${plants[id].layout}`}
-                                            style={{ width: '80%', objectFit: 'scale-down' }}
+                                            style={{ width: '80%', height: 'auto', objectFit: 'scale-down' }}
                                         />
                                         <figcaption>
                                             <div class="project-zoom text-shadow"></div>
@@ -145,7 +145,7 @@ const Plants = ({ id }) => {
                                             <div>
                                                 <center>
                                                     <img
-                                                        src={`${item?.folder}${item?.imgs[1]}.jpg`}
+                                                        src={`${item?.folder}${item?.imgs[2]}.jpg`}
                                                         style={{ height: 175, objectFit: "scale-down" }}
                                                     />
 

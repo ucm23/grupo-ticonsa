@@ -16,7 +16,7 @@ import Slider from 'react-slick'
 import SplitMergeAnimation from './SplitMergeAnimation'
 import SocialButton from './SocialButton';
 
-import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaPhoneAlt } from 'react-icons/fa'
+import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaLinkedin } from 'react-icons/fa'
 import { RiArrowDownSLine } from "react-icons/ri";
 import color from '../color';
 
@@ -204,11 +204,10 @@ export default function Carousel_() {
                                             rightIcon={<div />}
                                             leftIcon={<div />}
                                             fontWeight={'bold'}
-                                            >
+                                        >
                                             Introducción
                                         </Button>
                                         <Button
-                                            //colorScheme="blue"
                                             bg={'transparent'}
                                             rounded={50}
                                             color="white"
@@ -216,41 +215,44 @@ export default function Carousel_() {
                                             rightIcon={<div />}
                                             leftIcon={<div />}
                                             _hover={{ bg: 'transparent' }}
-                                            //onClick={downloadCV}
-                                            /*rightIcon={
-                                                <div className="icon flex justify-center relative">
-                                                    <RiArrowDownSLine className='text-3xl' color="white" />
-                                                </div>
-                                            }*/
-                                            >
+                                        >
                                             Contáctanos
                                         </Button>
                                     </div>
                                     <Stack direction={'row'}>
                                         <a href={'https://twitter.com/GRUPO_TICONSA'} target="_blank">
-                                            <SocialButton label={'Twitter'}>
+                                            <SocialButton>
                                                 <FaTwitter />
                                             </SocialButton>
                                         </a>
                                         <a href={'https://www.youtube.com/@grupoticonsaprefabricados9793'} target="_blank">
-                                            <SocialButton label={'YouTube'}>
+                                            <SocialButton>
                                                 <FaYoutube />
                                             </SocialButton>
                                         </a>
                                         <a href={'https://www.instagram.com/grupo_ticonsa/'} target="_blank">
-                                            <SocialButton label={'Instagram'}>
+                                            <SocialButton>
                                                 <FaInstagram />
                                             </SocialButton>
                                         </a>
-                                        <a href={'https://www.facebook.com/GrupoTiconsa/?locale=es_LA'} target="_blank">
-                                            <SocialButton label={'Facebook'}>
+                                        <a href={'https://www.facebook.com/GrupoTiconsa/'} target="_blank">
+                                            <SocialButton>
                                                 <FaFacebook />
+                                            </SocialButton>
+                                        </a>
+                                        <a href={'https://www.linkedin.com/company/grupo-ticonsa/'} target="_blank">
+                                            <SocialButton>
+                                                <FaLinkedin />
                                             </SocialButton>
                                         </a>
                                     </Stack>
                                     <div className="animated-accordion">
                                         <RiArrowDownSLine className='text-3xl' color="white" />
+                                        <div className="mouse-icon">
+                                            <span className="mouse-wheel"></span>
+                                        </div>
                                     </div>
+
                                 </Stack>
                             </Box>
                         </SplitMergeAnimation>

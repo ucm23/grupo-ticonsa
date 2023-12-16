@@ -41,6 +41,57 @@ import Modal from 'react-bootstrap/Modal';
 import CarouselStaticIndex from "../components/CarouselStaticIndex";
 import { RiArrowDownSLine } from "react-icons/ri";
 
+const features_ = [
+    {
+        "id": 4,
+        "img": "/imgs/004.jpg",
+        "name": "Sistema de pretensado y postensado",
+        description: "Desarrollando tecnologías propias eb prefabricación de trabes para puentes y viaductos elevados de hasta más de 300 toneladas en peso.",
+        icon: RiFolderChartLine,
+        "url": "/infraestructura"
+    },
+    {
+        "id": 7,
+        "img": "/foro-sol.jpg",
+        "name": "Proyectos y Sistemas arquitectónicos",
+        "description": "Nos encargamos de la estructura base que dan fuerza a un gran número de proyectos.",
+        icon: RiFolderUserLine,
+        "url": "/infraestructura"
+    },
+    {
+        "id": 5,
+        "img": "/imgs/005.jpg",
+        "name": "Estructuración y diseño estructural",
+        "description": "Diseñamos y planificamos edificios e inmuebles de acuerdo a las necesidades.",
+        icon: RiBuilding2Line,
+        "url": "/edificacion"
+    },
+    {
+        "id": 6,
+        "img": "/imgs/people.jpeg",
+        "name": "Supervisión de obras y dirección de proyectos",
+        "description": "La supervisamos de las obras es de gran valor e importancia, cumpliendo los objetivos.",
+        icon: RiNurseLine,
+        "url": "/supervision"
+    },
+    {
+        "id": 8,
+        "img": "/services_card5.jpg",
+        "name": "Fabricación y montaje de elementos de concreto",
+        "description": "Una vez realizada la fabricación, ejecutamos el montaje de las piezas con toda precisión.",
+        icon: RiShakeHandsLine,
+        "url": "/montaje"
+    },
+    {
+        "id": 9,
+        "img": "/imgs/002.jpg",
+        "name": "Transporte de elementos de concreto",
+        "description": "Contamos con el mejor equipo de Transporte para lograr una eficaz ejecución.",
+        icon: RiThumbUpLine,
+        "url": "/transporte"
+    }
+]
+
 const features = [
     {
         name: 'Proceso Conceptual',
@@ -115,7 +166,7 @@ const Index = () => {
 
     return (
         <>
-            <NavBar photo={'true'}>
+            <NavBar photo={'true'} mobile={mobile}>
 
                 <Box
                     bgGradient={
@@ -149,7 +200,7 @@ const Index = () => {
                             </div>
                             <Fade direction="down">
                                 <section className="text-center">
-                                    <h2 class="section-title" style={{ /*textTransform: 'uppercase'*/ }}>Sobre Nosotros <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
+                                    <h2 class="section-title" >Sobre Nosotros <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
                                 </section>
                             </Fade>
                             <div class="row-base row">
@@ -157,8 +208,8 @@ const Index = () => {
                                     <h3 class="col-about-title" style={{ textAlign: 'center' }}>Concreto, Prefabricado y <span className="text-primary-blue">Presforzado</span></h3>
                                     <div class="col-about-info">
                                         <p><strong>Ticonsa Inmobiliaria</strong>, <strong>Sociedad Anónima de Capital Variable</strong> (en lo sucesivo <strong>GRUPO TICONSA<sup>®</sup></strong>) en una empresa con <strong>50 años de experiencia desarrollando soluciones innovadoras</strong> que aportan valor agregado a los proyectos de nuestros clientes.</p>
-                                        <p className={mobile && "text-center"}><strong>Cancún: </strong> (998) 892-3143 <br /> <strong>México: </strong>(55) 5484-8364<br /> <strong>Teotihuacán:</strong>(594) 956-1645</p>
-                                        <p className={mobile && "text-center"}>👷 Grupo Ticonsa — 15 de Febrero de 1971</p>
+                                        <p className={mobile && "text-center"}><strong>Cancún: </strong> (998) 892-3143 <br /> <strong>México: </strong>(55) 5484-8364<br /> <strong>Teotihuacán: </strong>(594) 956-1645</p>
+                                        <p className={mobile && "text-center"}><strong>Grupo Ticonsa </strong> - Desde 15 de Febrero de 1971</p>
                                     </div>
                                 </div>
                                 <div
@@ -192,7 +243,7 @@ const Index = () => {
                                     <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Desde la Idea hasta la Realidad</h2>
                                     <Fade direction="down">
                                         <section className="text-center">
-                                            <h2 class="section-title" style={{ /*textTransform: 'uppercase'*/ }}>Proceso Integral de  <span className="text-primary-blue">Producción de Prefabricados</span></h2>
+                                            <h2 class="section-title" >Proceso Integral de  <span className="text-primary-blue">Producción de Prefabricados</span></h2>
                                         </section>
                                     </Fade>
                                     <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -214,6 +265,7 @@ const Index = () => {
                                         ))}
                                     </dl>
                                 </div>
+                                <div className="center">
                                 <Button
                                     colorScheme="blue"
                                     bg={color.orange}
@@ -226,11 +278,19 @@ const Index = () => {
                                 >
                                     Conozca más
                                 </Button>
+                                </div>
+
                             </div>
                         </div>
                         <section className="text-center">
-                            <Fade direction="down">
+                            {/*<Fade direction="down">
                                 <h3 class="col-about-title" style={{ marginTop: 30, textTransform: 'uppercase' }}>Presencia en <span className="text-primary-blue">todo México</span> y con proyectos <span className="text-primary-blue">destacados</span></h3>
+                                        </Fade>*/}
+                            <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Llevamos nuestros proyectos destacados</h2>
+                            <Fade direction="down">
+                                <section className="text-center">
+                                    <h2 class="section-title" >Presencia en <span className="text-primary-blue">todo México</span></h2>
+                                </section>
                             </Fade>
                             <div class="content-circle" ref={ref}>
                                 <Image
@@ -352,7 +412,7 @@ const Index = () => {
 
 
 
-                    <section className="_main container" id="services">
+                    {/*<section className="_main container" id="services">
                         <section className="text-center">
                             <Fade direction="down">
                                 <h3 class="col-about-title" style={{ marginTop: 30, textTransform: 'uppercase' }}>Servicios que <span className="text-primary-blue">ofrecemos</span></h3>
@@ -369,8 +429,36 @@ const Index = () => {
                                 }
                             </section>
                         </section>
-                        {/*<CV />*/}
-                    </section>
+                            </section>*/}
+                    <div className="overflow-hidden bg-white py-24 sm:py-32">
+                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                                <div className="lg:pr-8 lg:pt-4">
+                                    <div className="lg:max-w-lg">
+                                        <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>La forma de destacarnos</h2>
+                                        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Productos y Servicios</p>
+                                        <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                                            {features_.map((feature) => (
+                                                <div key={feature.name} className="relative pl-9">
+                                                    <dt className="inline font-semibold text-gray-900">
+                                                        <feature.icon className="absolute left-1 top-1 h-5 w-5" color={color.primary} aria-hidden="true" />
+                                                        {feature.name}
+                                                    </dt><br/>
+                                                    <dd className="inline">{feature.description}</dd> <a href={feature.url} style={{ fontWeight: 'bold', color: color.primary }}>Ver más...</a>
+                                                </div>
+                                            ))}
+                                        </dl>
+                                    </div>
+                                </div>
+                                <img
+                                    src="/imgs/collage.png"
+                                    className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+                                    width={2432}
+                                    height={1442}
+                                />
+                            </div>
+                        </div>
+                    </div>
 
 
                 </Box>

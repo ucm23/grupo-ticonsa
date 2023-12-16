@@ -8,22 +8,16 @@ const CarouselStaticBG = ({ title, place, names, folder }) => {
     return (
         <div
             style={{
-                //backgroundColor: "#030318",
-                backgroundColor: "#FFFFFF99",
+                backgroundColor: "#B6B6B6",
                 backgroundImage: `url('/systems/4.jpg')`,
                 backgroundBlendMode: "soft-light",
-                //backgroundSize: 'scale-down',
                 backgroundSize: 'cover',
                 backgroundRepeat: "no-repeat",
-                //backgroundPosition: "center",
-                //overflow: "hidden",
-                //padding: 100,
                 width: '100%',
-                height: 600,
-                //top: 100,
+                height: '65vh',
                 paddingTop: 100,
-                //backgroundRepeat: "no-repeat",
-                //backgroundAttachment: 'fixed',
+                backgroundRepeat: "no-repeat",
+                backgroundAttachment: 'fixed',
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'space-around',
@@ -32,8 +26,7 @@ const CarouselStaticBG = ({ title, place, names, folder }) => {
                 paddingRight: 10,
             }}
         >
-
-            <Fade direction="down" >
+            <Fade delay={200}>
                 <div>
                     <img
                         src={`logo-white.png`}
@@ -43,14 +36,13 @@ const CarouselStaticBG = ({ title, place, names, folder }) => {
                     <h1 style={{ textTransform: 'uppercase', fontWeight: 'bold', color: color.primary + '99', fontFamily: 'monospace', fontSize: 14 }}>{place}</h1>
                 </div>
             </Fade>
-          <Fade direction="down" >
-                <Carousel className="shadow" fade /*controls={false} indicators={false}*/ style={{ height: 450, width: 450, top: 42, borderRadius: "10px" }}>
+          <Fade delay={450} >
+                <Carousel className="shadow" fade style={{ height: 450, width: 450, top: 42, borderRadius: "10px" }}>
                     {names.map(item =>
                         <Carousel.Item key={`names-item-${item}`} interval={2600}>
                             <img
                                 className="d-block _img_corousel"
                                 src={`/${folder}/${item}.jpg`}
-                                //style={{ height: mobile?"23rem":"26rem", objectFit: "cover", top: 100}}
                                 style={{ height: 450, objectFit: "cover", borderRadius: "10px" }}
                             />
                         </Carousel.Item>

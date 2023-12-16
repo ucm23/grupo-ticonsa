@@ -176,7 +176,7 @@ const Systems = () => {
                                         </center>
                                         <img
                                             src={"./situ.png"}
-                                            style={{ height: 300, objectFit: 'scale-down' }}
+                                            style={{ height: 'auto', objectFit: 'scale-down' }}
                                         //alt={title}
                                         //styles='filter: grayscale(100%)'
                                         //objectFit="contain"
@@ -191,7 +191,7 @@ const Systems = () => {
                                         </center>
                                         <img
                                             src={"./paneles.png"}
-                                            style={{ height: 300, objectFit: 'scale-down' }}
+                                            style={{ height: 'auto', objectFit: 'scale-down' }}
                                         //alt={title}
                                         //styles='filter: grayscale(100%)'
                                         //objectFit="contain"

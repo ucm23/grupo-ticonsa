@@ -4,6 +4,49 @@ import { Fade } from "react-awesome-reveal";
 import BGPoints from "../components/BGPoints";
 import color from "../color";
 
+import { RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine } from "react-icons/ri";
+
+const features = [
+    {
+        name: 'Proceso Conceptual',
+        description:
+            'En esta etapa inicial del proceso de producción de prefabricados, se desarrolla la visión y el concepto general del proyecto.',
+        icon: RiBuilding2Line,
+    },
+    {
+        name: 'Planeación',
+        description:
+            'La fase de planeación implica la elaboración detallada de un plan estratégico que abarca aspectos logísticos, financieros y temporales.',
+        icon: RiFolderUserLine,
+    },
+    {
+        name: 'Ingeniería de Detalle',
+        description:
+            'Durante esta etapa, se traducen los conceptos y planes generales en especificaciones técnicas y detalles precisos.',
+        icon: RiFolderChartLine,
+    },
+    {
+        name: 'Fabricación',
+        description:
+            'La fabricación es el proceso central donde los componentes prefabricados toman forma. ',
+        icon: RiNurseLine,
+    },
+    {
+        name: 'Transporte y Montaje',
+        description:
+            'Una vez que las unidades prefabricadas han sido fabricadas, se inicia la fase de transporte hacia el lugar de montaje.',
+        icon: RiShakeHandsLine,
+    },
+    {
+        name: 'Conexiones',
+        description:
+            'La fase de conexiones es crítica para asegurar la estabilidad y la integridad estructural del proyecto.',
+        icon: RiThumbUpLine,
+    },
+]
+
+const icons_ = [RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine]
+
 const Services = ({ id }) => {
 
     //<strong></strong>
@@ -100,16 +143,58 @@ const Services = ({ id }) => {
 
             <BGPoints>
                 <section className="_main container">
-                    <section>
+                    <div className="py-16">
+                        <div className="mx-auto max-w-7xl">
+                            <div className="mx-auto text-center">
+                                <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>{types[id]?.description}</h2>
+                                <Fade direction="down">
+                                    <section className="text-center">
+                                        <h2 class="section-title" style={{ paddingTop: 30, }}>Expertos en <span className="text-primary-blue">{types[id]?.name}</span></h2>
+                                    </section>
+                                </Fade>
+                                <div className="line-banner" style={{ backgroundColor: color.orange }} />
+                                <p className="mt-6 text-lg leading-8 text-gray-600">
+                                    <div dangerouslySetInnerHTML={{ __html: types[id]?.content }} />
+                                    <div className="line-banner" style={{ backgroundColor: color.orange }} />
+                                    <div dangerouslySetInnerHTML={{ __html: types[id]?.header }} />
+                                </p>
+                            </div>
+
+                            <div className="mx-auto mt-6 mb-16 max-w-2xl lg:max-w-4xl">
+                                <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+                                    {types[id]?.word_key.map((feature, index) => {
+                                        const Icon_ = icons_[index];
+                                        return (
+                                            <div key={`${feature.charAt()}-${index}`} className="relative pl-16">
+                                                <dt className="text-base font-semibold leading-7 text-gray-900">
+                                                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg" style={{ backgroundColor: color.primary }}>
+                                                        {Icon_ && <Icon_ className="h-6 w-6 text-white" aria-hidden="true" />}
+                                                    </div>
+                                                    {feature}
+                                                </dt>
+                                            </div>
+                                        )
+                                    })}
+                                </dl>
+                            </div>
+                            <div className="line-banner mt-6" style={{ backgroundColor: color.orange }} />
+                            <div className="mx-auto text-center">
+                                <p className="mt-6 text-lg leading-8 text-gray-600">
+                                <div dangerouslySetInnerHTML={{ __html: types[id]?.footer }} />
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {/*<section>
                         <section id="system">
                             <div class="row-base row">
                                 <div>
                                     <Fade direction="down">
                                         <section className="text-center">
-                                            <h3 class="col-about-title">Expertos en <span className="text-primary-blue"> {types[id]?.name}</span></h3>
-                                            <div className="line-banner" style={{ backgroundColor: color.orange }} />
+                                            <h2 class="section-title" style={{ paddingTop: 30, }}>Expertos en <span className="text-primary-blue">{types[id]?.name}</span></h2>
                                         </section>
                                     </Fade>
+                                    <div className="line-banner" style={{ backgroundColor: color.orange }} />
                                     <div class="">
                                         <div class="col-base col-md-offset-1">
                                             <div class="col-about-info">
@@ -126,7 +211,7 @@ const Services = ({ id }) => {
                                                 </p>
                                                 <ol type="A">
                                                     {types[id]?.word_key.map((item, index) => (
-                                                        <div style={{ borderColor: '#B6B6B650', borderBottomWidth: 1, paddingTop: 8, paddingBottom: 8, /*margin-top: 8px;*/ }}>
+                                                        <div style={{ borderColor: '#B6B6B650', borderBottomWidth: 1, paddingTop: 8, paddingBottom: 8, }}>
                                                             <li key={index}>{item}</li>
                                                         </div>
                                                     ))}
@@ -139,16 +224,8 @@ const Services = ({ id }) => {
                                     </div>
                                 </div>
                             </div>
-                            {/*<center>
-                                <section class="col-base col-about-img col-sm-6 col-md-offset-1" className="mt-4" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
-                                    <Fade direction="down">
-                                        <center>
-                                        </center>
-                                    </Fade>
-                                </section>
-    </center>*/}
                         </section>
-                    </section>
+                                                    </section>*/}
                 </section>
             </BGPoints>
         </NavBar>

@@ -79,10 +79,10 @@ const Contacts2 = () => {
     }
 
     return (
-        <NavBar photo={true}>
+        <NavBar photo={true} mobile={mobile}>
             <div style={styles}>
                 <Fade direction="down">
-                    <strong><h3 class="col-about-title" style={{ color: 'white', fontSize: mobile ? 38 : 75, fontWeight: '700', textAlign: 'center', textTransform: 'uppercase', marginTop: mobile ? 150 : 0 }}>CONTÁCTANOS</h3></strong>
+                    <strong><h3 class="col-about-title" style={{ color: 'white', fontSize: mobile ? 35 : 50, fontWeight: '700', textAlign: 'center', textTransform: 'uppercase', marginTop: mobile ? 150 : 0 }}>CONTÁCTANOS</h3></strong>
                     <div className="line-banner" style={{ backgroundColor: 'white' }} />
                     <p style={{ color: 'white', fontWeight: '400', textAlign: 'center', margin: mobile ? 0 : '0 9rem', fontStyle: 'italic' }}>"Ya sea que estés buscando a un contratista general experto o que desees trabajar con nosotros, {!mobile && <br/>} encontrarás todo lo que necesitas para ponerte en contacto con Grupo Ticonsa"</p>
                 </Fade>
@@ -96,7 +96,7 @@ const Contacts2 = () => {
             >
                 <div style={{ width: width_, backgroundColor: '#ede9e9', display: 'flex', flexDirection: 'column', padding: mobile ? 0 : '1rem 5rem', justifyContent: 'center', paddingTop: mobile ? 30 : '1rem' }}>
                     <strong><h3 class="col-about-title" style={{ textAlign: 'center', color: color.primary, fontSize: 22, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase' }}>ESTAMOS A TUS ÓRDENES</h3></strong>
-                    <strong><h3 class="col-about-title" style={{ textAlign: 'center', color: color.primary, fontSize: mobile ? 38 : 52, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase', }}>CONVERSEMOS</h3></strong>
+                    <strong><h3 class="col-about-title" style={{ textAlign: 'center', color: color.primary, fontSize: mobile ? 35 : 50, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase', }}>CONVERSEMOS</h3></strong>
                     <div className="line-banner" style={{ backgroundColor: color.primary }} />
                     {!mobile &&
                         <div class="col-about-info">
