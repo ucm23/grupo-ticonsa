@@ -31,33 +31,6 @@ import ContactForm from "../components/ContactForm";
 import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 
-const SocialButton = ({
-    children,
-    label,
-    href,
-}) => {
-    return (
-        <chakra.button
-            rounded={'full'}
-            w={8}
-            h={8}
-            cursor={'pointer'}
-            as={'a'}
-            href={href}
-            display={'inline-flex'}
-            color={color.primary}
-            alignItems={'center'}
-            justifyContent={'center'}
-            transition={'background 0.3s ease'}
-            _hover={{
-                bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-            }}>
-            <VisuallyHidden>{label}</VisuallyHidden>
-            {children}
-        </chakra.button>
-    )
-}
-
 const Contacts = () => {
 
     const mobile = useBreakpointValue({ base: true, md: false });

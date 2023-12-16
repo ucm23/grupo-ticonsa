@@ -19,9 +19,8 @@ export default function CardSimple(props) {
     return (
         <Stack style={{ width: '45%', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
             <div style={{ marginTop: -30 }}>
-            {icon}
+                {icon}
             </div>
-
             <div>
                 <Fade direction="down">
                     <p className="font-50">

@@ -43,7 +43,7 @@ export default function CardsInfo(props) {
             maxW='350px'
             minW='250px'
             w='full'
-            cursor={'pointer'}
+            cursor={'crosshair'}
             style={{ paddingTop: 20 }}
         >
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>

@@ -36,7 +36,7 @@ export default function ServicesCard(props) {
                 //minW='49%'
                 w='full'
                 className='card__img'
-                cursor={newTab ? 'pointer' : ''}
+                cursor={newTab ? 'crosshair' : ''}
             >
                 <div class="project" onClick={() => onPress()}>
                         <figure>

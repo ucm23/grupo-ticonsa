@@ -95,38 +95,32 @@ const features_ = [
 const features = [
     {
         name: 'Proceso Conceptual',
-        description:
-            'En esta etapa inicial del proceso de producción de prefabricados, se desarrolla la visión y el concepto general del proyecto.',
+        description: 'En esta etapa inicial del proceso de producción de prefabricados, se desarrolla la visión y el concepto general del proyecto.',
         icon: RiBuilding2Line,
     },
     {
         name: 'Planeación',
-        description:
-            'La fase de planeación implica la elaboración detallada de un plan estratégico que abarca aspectos logísticos, financieros y temporales.',
+        description: 'La fase de planeación implica la elaboración detallada de un plan estratégico que abarca aspectos logísticos, financieros y temporales.',
         icon: RiFolderUserLine,
     },
     {
         name: 'Ingeniería de Detalle',
-        description:
-            'Durante esta etapa, se traducen los conceptos y planes generales en especificaciones técnicas y detalles precisos.',
+        description: 'Durante esta etapa, se traducen los conceptos y planes generales en especificaciones técnicas y detalles precisos.',
         icon: RiFolderChartLine,
     },
     {
         name: 'Fabricación',
-        description:
-            'La fabricación es el proceso central donde los componentes prefabricados toman forma. ',
+        description: 'La fabricación es el proceso central donde los componentes prefabricados toman forma. ',
         icon: RiNurseLine,
     },
     {
         name: 'Transporte y Montaje',
-        description:
-            'Una vez que las unidades prefabricadas han sido fabricadas, se inicia la fase de transporte hacia el lugar de montaje.',
+        description: 'Una vez que las unidades prefabricadas han sido fabricadas, se inicia la fase de transporte hacia el lugar de montaje.',
         icon: RiShakeHandsLine,
     },
     {
         name: 'Conexiones',
-        description:
-            'La fase de conexiones es crítica para asegurar la estabilidad y la integridad estructural del proyecto.',
+        description: 'La fase de conexiones es crítica para asegurar la estabilidad y la integridad estructural del proyecto.',
         icon: RiThumbUpLine,
     },
 ]
@@ -271,7 +265,7 @@ const Index = () => {
                                     bg={color.orange}
                                     rounded={5}
                                     color="white"
-                                    //onClick={downloadCV}
+                                    onClick={() => window.location.href = '/prefabricado'}
                                     rightIcon={<div />}
                                     leftIcon={<div />}
                                     fontWeight={'bold'}

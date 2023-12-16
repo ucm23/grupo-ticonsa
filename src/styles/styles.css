@@ -224,7 +224,7 @@ figure {
 .font--50 {
   font-size: 11px;
   font-weight: 200;
-  width: 98%;
+  /*width: 100%;
   /*margin-bottom: 30px;*/
   text-align: center;
 }
@@ -603,7 +603,7 @@ li a:hover {
   float: right;
   line-height: 60px;
   margin: 0px 30px 0 0;
-  cursor: pointer;
+  cursor: crosshair;
   display: none;
   justify-content: center;
   height: 100%;
@@ -804,7 +804,7 @@ ul {
   padding: .15rem;
   background-color: white;
   border-radius: 50%;
-  cursor: pointer;
+  cursor: crosshair;
 }
 
 .islands__video-icon {
