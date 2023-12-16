@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar"
 import { Fade } from "react-awesome-reveal";
 import BGPoints from "../components/BGPoints";
 import color from "../color";
+import { useBreakpointValue } from '@chakra-ui/react';
 
 import { RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine } from "react-icons/ri";
 
@@ -137,8 +138,10 @@ const Services = ({ id }) => {
         }
     }
 
+    const mobile = useBreakpointValue({ base: true, md: false });
+
     return (
-        <NavBar photo={'true'}>
+        <NavBar photo={'true'} mobile={mobile}>
             <CarouselStatic names={[1, 2, 3]} folder='plants/yucatan' />
 
             <BGPoints>

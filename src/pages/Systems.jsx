@@ -4,13 +4,13 @@ import {
     Text,
     Image,
     useColorModeValue,
+    useBreakpointValue,
 } from "@chakra-ui/react"
 import CarouselStatic from "../components/CarouselStatic"
 import { Carousel } from "react-bootstrap";
 import NavBar from "../components/NavBar"
-import ServicesCard from "../components/ServicesCard"
-import items from '../assets/systems.json'
-
+import ServicesCard from "../components/ServicesCard";
+import items from '../assets/systems.json';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -80,11 +80,11 @@ const Systems = () => {
     }
 
     const handleSelect = (selectedIndex) => setIndex(selectedIndex);
-
+    const mobile = useBreakpointValue({ base: true, md: false });
 
     return (
         <>
-            <NavBar photo={'true'}>
+            <NavBar photo={'true'} mobile={mobile}>
                 <CarouselStatic names={[1, 2, 3]} folder='img_system' />
 
                 <Box
