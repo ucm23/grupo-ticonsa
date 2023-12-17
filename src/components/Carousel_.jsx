@@ -65,7 +65,7 @@ export default function Carousel_() {
         {
             name: "Hotel Moon Palace",
             place: "Cancún, Quintana Roo",
-            description: "Tiempo récord: Se construyeron 40 mil m² en 3.5 meses",
+            description: "Tiempo récord: Se construyeron más de 40 mil m² en 3.5 meses",
             image: '/moon-alace.jpg',
         },
         {
@@ -81,7 +81,7 @@ export default function Carousel_() {
             image: '/foro-sol.jpg',
         },
         {
-            name: "Auditorio Tec de Monterrey",
+            name: "Aud Tec de Monterrey",
             place: "Ciudad de México",
             description: "Edificio totalmente prefabricado incluyendo estructura y fachadas",
             image: '/tec-fachada.jpg',
@@ -175,7 +175,6 @@ export default function Carousel_() {
                                 width='100%'
                                 position="relative"
                                 top={mobile ? '-25rem' : '-23rem'}
-                                //left={mobile ? '30px' : '123px'}
                                 style={{
                                     top: "-50vh",
                                     display: "flex",
