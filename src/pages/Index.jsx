@@ -313,7 +313,7 @@ const Index = () => {
                                                 <CardSimple
                                                     title={'100'}
                                                     suffix="%"
-                                                    descrip={'de asociaciones satisfechas'}
+                                                    descrip={'de clientes muy satisfechos'}
                                                     icon={<RiShakeHandsLine color={color.primary} fontSize={24} />}
                                                 />
                                                 <CardSimple
