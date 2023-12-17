@@ -40,13 +40,14 @@ import Carousel_ from "../components/Carousel_"
 import Modal from 'react-bootstrap/Modal';
 import CarouselStaticIndex from "../components/CarouselStaticIndex";
 import { RiArrowDownSLine } from "react-icons/ri";
+import BGPoints from "../components/BGPoints"
 
 const features_ = [
     {
         "id": 4,
         "img": "/imgs/004.jpg",
-        "name": "Sistema de pretensado y postensado",
-        description: "Desarrollando tecnologías propias eb prefabricación de trabes para puentes y viaductos elevados de hasta más de 300 toneladas en peso.",
+        "name": "Sistema pretensado y postensado",
+        description: "Desarrollando tecnologías propias en prefabricación de trabes para puentes y viaductos elevados de hasta más de 300 toneladas.",
         icon: RiFolderChartLine,
         "url": "/infraestructura"
     },
@@ -61,7 +62,7 @@ const features_ = [
     {
         "id": 5,
         "img": "/imgs/005.jpg",
-        "name": "Estructuración y diseño estructural",
+        "name": "Estructuración y diseño",
         "description": "Diseñamos y planificamos edificios e inmuebles de acuerdo a las necesidades.",
         icon: RiBuilding2Line,
         "url": "/edificacion"
@@ -69,7 +70,7 @@ const features_ = [
     {
         "id": 6,
         "img": "/imgs/people.jpeg",
-        "name": "Supervisión de obras y dirección de proyectos",
+        "name": "Supervisión y dirección de obras",
         "description": "La supervisamos de las obras es de gran valor e importancia, cumpliendo los objetivos.",
         icon: RiNurseLine,
         "url": "/supervision"
@@ -77,7 +78,7 @@ const features_ = [
     {
         "id": 8,
         "img": "/services_card5.jpg",
-        "name": "Fabricación y montaje de elementos de concreto",
+        "name": "Fabricación y montaje de elementos",
         "description": "Una vez realizada la fabricación, ejecutamos el montaje de las piezas con toda precisión.",
         icon: RiShakeHandsLine,
         "url": "/montaje"
@@ -160,33 +161,9 @@ const Index = () => {
 
     return (
         <>
-            <NavBar photo={'true'} mobile={mobile}>
-
-                <Box
-                    bgGradient={
-                        useColorModeValue(
-                            'radial(#B6B6B650 1px, transparent 1px)',
-                            'radial(#B6B6B650 1px, transparent 1px)'
-                        )
-                    }
-                    backgroundSize="20px 20px"
-                    opacity="1"
-                    height="100%"
-                    className="bgGradient"
-                >
+            <NavBar photo={true} mobile={mobile}>
+                <BGPoints>
                     <Carousel_ />
-                    {/*<section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover">
-                    <div className="container mx-auto">
-                        <div className="flex justify-between gap-x-8">
-                            <div>text</div>
-                            <div>imagte</div>
-                        </div>
-                    <div className="icon md:flex relative left-2/4 bottom-44 xl:bottom-12 animate-bounce">
-                        <RiArrowDownSLine className='text-3xl' color="gray" />
-                    </div>
-                    </div>
-    </section>*/}
-
                     <section className="_main container" id="#id">
                         <section className="section-5" id='about-me'>
                             <div className="mx-auto max-w-2xl lg:text-center">
@@ -194,11 +171,11 @@ const Index = () => {
                             </div>
                             <Fade direction="down">
                                 <section className="text-center">
-                                    <h2 class="section-title" >Sobre Nosotros <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
+                                    <h2 class="section-title">Sobre Nosotros <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
                                 </section>
                             </Fade>
                             <div class="row-base row">
-                                <div class="col-base col-sm-4 col-md-6 col-md-offset-1" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                                <div class="col-base col-sm-6 col-md-6" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                                     <h3 class="col-about-title" style={{ textAlign: 'center' }}>Concreto, Prefabricado y <span className="text-primary-blue">Presforzado</span></h3>
                                     <div class="col-about-info">
                                         <p><strong>Ticonsa Inmobiliaria</strong>, <strong>Sociedad Anónima de Capital Variable</strong> (en lo sucesivo <strong>GRUPO TICONSA<sup>®</sup></strong>) en una empresa con <strong>50 años de experiencia desarrollando soluciones innovadoras</strong> que aportan valor agregado a los proyectos de nuestros clientes.</p>
@@ -206,27 +183,17 @@ const Index = () => {
                                         <p className={mobile && "text-center"}><strong>Grupo Ticonsa </strong> - Desde 15 de Febrero de 1971</p>
                                     </div>
                                 </div>
-                                <div
-                                    class="col-base col-about-img col-sm-6 col-md-offset-1"
-                                    style={{
+                                <div class="col-base col-sm-6 col-md-6 content-img-round"
+                                    /*style={{
                                         display: 'flex',
                                         flexDirection: 'row',
                                         justifyContent: 'space-between',
                                         gap: 0.2,
-                                    }}
+                                    }}*/
                                 >
-                                    <img
-                                        src={`/grua.jpg`}
-                                        className="img-round"
-                                    />
-                                    <img
-                                        src={`/1.jpg`}
-                                        className="img-round"
-                                    />
-                                    <img
-                                        src={`/ticonsa1.avif`}
-                                        className="img-round"
-                                    />
+                                    <img src={`/grua.jpg`} className="img-round" />
+                                    <img src={`/1.jpg`} className="img-round" />
+                                    <img src={`/ticonsa1.avif`} className="img-round" />
                                 </div>
                             </div>
                         </section>
@@ -260,18 +227,18 @@ const Index = () => {
                                     </dl>
                                 </div>
                                 <div className="center">
-                                <Button
-                                    colorScheme="blue"
-                                    bg={color.orange}
-                                    rounded={5}
-                                    color="white"
-                                    onClick={() => window.location.href = '/prefabricado'}
-                                    rightIcon={<div />}
-                                    leftIcon={<div />}
-                                    fontWeight={'bold'}
-                                >
-                                    Conozca más
-                                </Button>
+                                    <Button
+                                        colorScheme="blue"
+                                        bg={color.orange}
+                                        rounded={5}
+                                        color="white"
+                                        onClick={() => window.location.href = '/prefabricado'}
+                                        rightIcon={<div />}
+                                        leftIcon={<div />}
+                                        fontWeight={'bold'}
+                                    >
+                                        Conozca más
+                                    </Button>
                                 </div>
 
                             </div>
@@ -290,7 +257,6 @@ const Index = () => {
                                 <Image
                                     borderRadius="lg"
                                     src='/mapa.png'
-                                    alt=""
                                     className="img-responsive"
                                     style={{ /*width: '100%', objectFit: 'cover', paddingLeft: 50, paddingRight: 50, display: 'initial'*/ }}
                                 />
@@ -437,8 +403,8 @@ const Index = () => {
                                                     <dt className="inline font-semibold text-gray-900">
                                                         <feature.icon className="absolute left-1 top-1 h-5 w-5" color={color.primary} aria-hidden="true" />
                                                         {feature.name}
-                                                    </dt><br/>
-                                                    <dd className="inline">{feature.description}</dd> <a href={feature.url} style={{ fontWeight: 'bold', color: color.primary }}>Ver más...</a>
+                                                    </dt><br />
+                                                    <dd className="inline">{feature.description}</dd> <a href={feature.url} style={{ fontWeight: 'bold', color: color.orange }}>Ver más...</a>
                                                 </div>
                                             ))}
                                         </dl>
@@ -446,16 +412,15 @@ const Index = () => {
                                 </div>
                                 <img
                                     src="/imgs/collage.png"
-                                    className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+                                    className="w-[48rem] max-w-none shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
                                     width={2432}
                                     height={1442}
+                                    style={{ borderRadius: '1.5em' }}
                                 />
                             </div>
                         </div>
                     </div>
-
-
-                </Box>
+                </BGPoints>
             </NavBar>
             <Modal
                 show={show_}

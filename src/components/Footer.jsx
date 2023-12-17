@@ -54,7 +54,7 @@ export default function SmallCentered({ photo }) {
                             >
                                 <div>
                                     <Fade>
-                                        <strong><h3 class="col-about-title text-shadow" style={{ fontWeight: '600', textAlign: 'center', textTransform: 'uppercase' }}>Construye con nosotros</h3></strong>
+                                        <strong><h3 class="col-about-title text-shadow" style={{ fontWeight: '600', textAlign: 'center', }}>Construye con nosotros</h3></strong>
                                         <p class="text-shadow" style={{ color: 'white', fontWeight: '600', textAlign: 'center' }}>Cuéntanos más acerca de los requerimientos de tu proyecto y te ayudaremos a convertir en realidad tu proyecto</p>
                                     </Fade>
                                 </div>
@@ -133,7 +133,7 @@ export default function SmallCentered({ photo }) {
                                     <FaTwitter />
                                 </SocialButton>
                             </a>
-                            <a href={'https://www.youtube.com/@grupoticonsaprefabricados9793'} target="_blank">
+                            <a href={'https://www.youtube.com/@GRUPOTICONSASADECV'} target="_blank">
                                 <SocialButton>
                                     <FaYoutube />
                                 </SocialButton>

@@ -156,12 +156,17 @@ export default function Carousel_() {
                     </IconButton>
                 </>
             }
+            {/*<section className='index-carousel'>
+                {cards.map((card, index) => (
+                    <div key={index} style={{ backgroundImage: `url('${card.image}')` }} className='index-carousel-img'/>
+                ))}
+                </section>*/}
             <Slider {...settings} ref={(slider) => setSlider(slider)} afterChange={handleBeforeChange} >
                 {cards.map((card, index) => (
                     <Box key={index}>
                         <SplitMergeAnimation
                             imageUrl={card.image}
-                            numParts={mobile ? 3 : 6}
+                            numParts={mobile ? 1 : 6}
                         >
                             <Box
                                 className='box-text'
@@ -187,13 +192,7 @@ export default function Carousel_() {
                                     <h2 className="text-shadow" style={{ lineHeight: 0, fontSize: 18, fontWeight: 'bold', textTransform: 'uppercase', textAlign: 'center' }}>{card.place}</h2>
                                     <h1 class="col-about-title text-shadow" style={{ fontWeight: 'bold', textAlign: 'center', lineHeight: 1, textTransform: 'uppercase' }}>{card.name}</h1>
                                     <p className="text-shadow" style={{ textAlign: 'center', lineHeight: 1 }}>{card.description}</p>
-                                    {/*<div
-                                        onClick={() => mobile ? openLink() : setOpen(true)}
-                                    >
-                                        <div className="islands__video-content" ref={ref1}>
-                                            <i className='bx bx-play islands__video-icon'></i>
-                                        </div>
-                                </div>*/}
+
                                     <div style={{ display: 'flex', flexDirection: mobile ? 'column' : 'row', gap: 6 }}>
                                         <Button
                                             colorScheme="blue"
@@ -215,6 +214,7 @@ export default function Carousel_() {
                                             rightIcon={<div />}
                                             leftIcon={<div />}
                                             _hover={{ bg: 'transparent' }}
+                                            onClick={() => window.location.href = '/contacto'}
                                         >
                                             Contáctanos
                                         </Button>
@@ -225,7 +225,7 @@ export default function Carousel_() {
                                                 <FaTwitter />
                                             </SocialButton>
                                         </a>
-                                        <a href={'https://www.youtube.com/@grupoticonsaprefabricados9793'} target="_blank">
+                                        <a href={'https://www.youtube.com/@GRUPOTICONSASADECV'} target="_blank">
                                             <SocialButton>
                                                 <FaYoutube />
                                             </SocialButton>
@@ -248,9 +248,6 @@ export default function Carousel_() {
                                     </Stack>
                                     <div className="animated-accordion">
                                         <RiArrowDownSLine className='text-3xl' color="white" />
-                                        <div className="mouse-icon">
-                                            <span className="mouse-wheel"></span>
-                                        </div>
                                     </div>
 
                                 </Stack>

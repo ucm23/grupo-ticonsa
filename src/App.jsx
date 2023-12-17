@@ -1,5 +1,4 @@
-//import { Switch,Route } from "wouter"
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Index from "./pages/Index"
 import History from "./pages/History"
 import './styles/styles.css'
@@ -8,7 +7,6 @@ import Products from "./pages/Products"
 import Porfolio from "./pages/Porfolio"
 import Legal from "./pages/Legal"
 import Privacity from "./pages/Privacity"
-import Contacts from "./pages/Contacts"
 import Services from "./pages/Services";
 import Documents from "./pages/Documents";
 import Plants from "./pages/Plants";

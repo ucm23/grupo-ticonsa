@@ -1,9 +1,4 @@
 import {
-    Accordion,
-    Box,
-    Text,
-    Image,
-    useColorModeValue,
     useBreakpointValue,
 } from "@chakra-ui/react"
 import CarouselStatic from "../components/CarouselStatic"
@@ -17,6 +12,7 @@ import Modal from 'react-bootstrap/Modal';
 import Chart from "react-apexcharts";
 
 import { Fade } from "react-awesome-reveal";
+import BGPoints from "../components/BGPoints";
 
 const options = {
     series: [
@@ -84,39 +80,13 @@ const Systems = () => {
 
     return (
         <>
-            <NavBar photo={'true'} mobile={mobile}>
-                <CarouselStatic names={[1, 2, 3]} folder='img_system' />
+            <NavBar photo={true} mobile={mobile}>
 
-                <Box
-                    bgGradient={
-                        useColorModeValue(
-                            'radial(#B6B6B650 1px, transparent 1px)',
-                            'radial(#B6B6B650 1px, transparent 1px)'
-                        )
-                    }
-                    backgroundSize="20px 20px"
-                    opacity="1"
-                    height="100%"
-                >
 
+                <BGPoints>
+                    <CarouselStatic names={[1, 2, 3]} folder='img_system' />
                     <section className="_main container">
                         <section>
-                            {/*<Text as='b' fontSize='5xl'>Sistema de prefabricado y más:</Text>
-
-                            <div className="row my-4">
-                                <div className="col-md-4 p-0 overflow-hidden">
-                                    <img src="/systems/8.jpeg" className="px-3" />
-                                </div>
-                                <div className="col-md-8 p-4" style={{ backgroundColor: "#023896" }} >
-                                    <div className="text-white" >
-                                        A diferencia de los sistemas convencionales, en el Sistema de Prefabricado los elementos estructurales se fabrican previamente en plantas de producción. Después de un riguroso control de calidad en el proceso de fabricación,  las piezas se transportan para colocarlas en el lugar de la obra, abatiendo en forma considerable el tiempo de construcción.
-
-                                        Una característica de este sistema es que pueden salvar grandes claros con elementos ligeros. Esto se logra mediante la técnica del Presfuerzo, que consiste en aplicar una fuerza de tensión al acero de presfuerzo (cables o torones) antes de iniciar el colado, logrando incrementar la resistencia y mejorar el comportamiento estructural de los elementos.
-
-                                        Una vez montados los elementos, se cuela un firme de compresión de 5cm aproximadamente.
-                                    </div>
-                                </div>
-                </div>*/}
                             <section id="system">
                                 <div class="row-base row" styles='margin-top: 7.1em'>
                                     <div class="" /* col-base col-sm-6 col-md-offset-1 col-md-6  */>
@@ -135,26 +105,17 @@ const Systems = () => {
                                             </div>
                                         </div>
                                     </div>
-
-                                    {/*<div class="col-base col-about-img col-sm-6 col-md-offset-1">
-                                    <p>La Prefabricación tiene muchas aplicaciones. El sistema en edificación se compone básicamente de los siguientes elementos:</p>
-                                    <Image
-                                        src='/prefabricado2.jpg'
-                                        alt=""
-                                        style={{ height: 300, width: '100%', objectFit: 'cover', }}
-                                    />
-            </div>*/}
                                 </div>
                                 <section className="d-flex justify-content-around align-items-center pb-5 flex-wrap" >
-                                    { items.map((item, key) =>
-                                            <ServicesCard
-                                                key={item.id}
-                                                img={item.img}
-                                                title={item.title}
-                                                newTab={item.newTab}
-                                                onPress={() => onPress(key)}
-                                            />
-                                        )
+                                    {items.map((item, key) =>
+                                        <ServicesCard
+                                            key={item.id}
+                                            img={item.img}
+                                            title={item.title}
+                                            newTab={item.newTab}
+                                            onPress={() => onPress(key)}
+                                        />
+                                    )
                                     }
                                 </section>
                             </section>
@@ -177,9 +138,6 @@ const Systems = () => {
                                         <img
                                             src={"./situ.png"}
                                             style={{ height: 'auto', objectFit: 'scale-down' }}
-                                        //alt={title}
-                                        //styles='filter: grayscale(100%)'
-                                        //objectFit="contain"
                                         />
                                         <center>
                                             <div class="col-base col-md-offset-1" style={{ marginTop: 20 }}>
@@ -192,9 +150,6 @@ const Systems = () => {
                                         <img
                                             src={"./paneles.png"}
                                             style={{ height: 'auto', objectFit: 'scale-down' }}
-                                        //alt={title}
-                                        //styles='filter: grayscale(100%)'
-                                        //objectFit="contain"
                                         />
                                         <div class="col-base col-md-offset-1">
                                             <div class="col-about-info">
@@ -215,16 +170,14 @@ const Systems = () => {
                                             options={options}
                                             series={options.series}
                                             type='radar'
-                                            //width="1000"
                                             height="500"
                                         />
-
                                     </section>
                                 </center>
                             </section>
                         </section>
                     </section>
-                </Box>
+                </BGPoints>
             </NavBar>
 
             <Modal
@@ -242,9 +195,7 @@ const Systems = () => {
                     <Carousel activeIndex={index} onSelect={handleSelect} /*data-bs-theme="dark"*/>
                         {items.map((item, key) =>
                             <Carousel.Item key={key}>
-                                <div
-                                    style={{ width: '100%', height: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                                >
+                                <div style={{ width: '100%', height: '50vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                     <img
                                         src={item?.img}
                                         style={{ height: '100%', width: '100%', objectFit: 'cover', }}

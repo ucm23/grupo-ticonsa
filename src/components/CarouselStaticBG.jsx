@@ -16,7 +16,6 @@ const CarouselStaticBG = ({ title, place, names, folder }) => {
                 width: '100%',
                 height: '65vh',
                 paddingTop: 100,
-                backgroundRepeat: "no-repeat",
                 backgroundAttachment: 'fixed',
                 display: 'flex',
                 flexDirection: 'row',

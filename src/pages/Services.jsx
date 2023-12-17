@@ -141,7 +141,7 @@ const Services = ({ id }) => {
     const mobile = useBreakpointValue({ base: true, md: false });
 
     return (
-        <NavBar photo={'true'} mobile={mobile}>
+        <NavBar photo={true} mobile={mobile}>
             <CarouselStatic names={[1, 2, 3]} folder='plants/yucatan' />
 
             <BGPoints>

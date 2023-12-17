@@ -15,19 +15,17 @@ const Documents = ({ type }) => {
 
     return (
         <NavBar>
-
-
-                <section className="_main container">
-                    <section>
-                        <div class="row-base row" style={{ marginTop: 158 }}>
-                            <embed
-                                src={`${types[type]}#toolbar=0&navpanes=0&scrollbar=0`}
-                                type="application/pdf"
-                                height="1000px"
-                            />
-                        </div>
-                    </section>
+            <section className="_main container">
+                <section>
+                    <div class="row-base row" style={{ marginTop: 158 }}>
+                        <embed
+                            src={`${types[type]}#toolbar=0&navpanes=0&scrollbar=0`}
+                            type="application/pdf"
+                            height="1000px"
+                        />
+                    </div>
                 </section>
+            </section>
         </NavBar>
     )
 }

@@ -5,7 +5,7 @@ import { Heading, Stack, Text, Box, useBreakpointValue, useColorModeValue } from
 const History = () => {
     const mobile = useBreakpointValue({ base: true, md: false });
     return (
-        <NavBar photo={'true'} mobile={mobile}>
+        <NavBar photo={true} mobile={mobile}>
             <section className="_main" >
                 <div className="message">
                     <Message mobile={mobile}/>

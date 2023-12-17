@@ -36,7 +36,6 @@ export default function ContactForm2() {
         <input type="email" name="email" placeholder='Escriba su correo electrónico' required />
         <label>mensaje</label>
         <textarea name="message" placeholder='Escribe un mensaje' required />
-        {/*<input type="submit" value="Enviar formulario" />*/}
         <input type="submit" value="Enviar" />
       </div>
     </form>
