@@ -34,9 +34,12 @@ export default function ContactForm2() {
                 <input type="email" name="email" placeholder='Escriba su correo electrónico' required />
                 <label>mensaje</label>
                 <textarea name="message" placeholder='Escribe un mensaje' required />
-                <input type="submit" value="Enviar" />
+                <input type="submit" value="Enviar" style={{ fontWeight: 'bold' }}/>
                 <p style={{ fontSize: 11, textAlign: 'justify' }}>
-                Grupo Ticonsa te informa que los datos de carácter personal que proporciones rellenando este formulario serán tratados por Grupo Ticonsa como responsable de esta web. La finalidad de la recogida y tratamiento de los datos personales que te solicitamos serán utilizados para contactar contigo para atender tu mensaje. La legitimación se realiza a través del consentimiento del interesado. El hecho de que no introduzcas los datos de carácter personal que te solicitamos como obligatorios en este formulario, puede implicar que no podamos atender tu petición. Puedes consultar información adicional en nuestra <a href={'/privacity'} target="_blank" style={{ color: color.primary }}> Aviso de Privacidad</a>.
+                Grupo Ticonsa®️ te informa que los datos de carácter personal que proporciones rellenando este formulario serán tratados por Grupo Ticonsa®️ como responsable de esta web. 
+                La finalidad de pedir y tratar los datos personales que te solicitamos serán utilizados para contactar contigo para atender tu mensaje. 
+                El hecho de que no introduzcas los datos de carácter personal que te solicitamos como obligatorios en este formulario, puede implicar que no podamos atender tu petición. 
+                Puedes consultar información adicional en nuestro <a href={'/privacity'} target="_blank" style={{ color: color.primary }}> Aviso de Privacidad</a>.
                 </p>
             </div>
         </form>

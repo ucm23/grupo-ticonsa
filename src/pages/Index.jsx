@@ -200,7 +200,7 @@ const Index = () => {
                                         El proceso aborda cada fase esencial en la producción de prefabricados, desde la concepción inicial del proyecto hasta la conexión final de las unidades. Sumérgete en las etapas de planificación estratégica, ingeniería precisa, fabricación eficiente, logística de transporte y montaje in situ.
                                     </p>
                                 </div>
-                                <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+                                <div className="mx-auto mt-10 max-w-2xl lg:max-w-4xl">
                                     <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
                                         {features.map((feature) => (
                                             <div key={feature.name} className="relative pl-16">

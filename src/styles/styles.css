@@ -73,7 +73,6 @@ body {
   width: 100%;
   line-height: 1.5;
   font-size: 14px;
-  margin-bottom: 5px;
   border-radius: 0px;
   border-color: black;
   border-bottom-width: 1px;
@@ -91,7 +90,7 @@ body {
   color: var(--color-primary);
   text-transform: uppercase;
   font-weight: 700;
-  padding-top: 20px;
+  padding-top: 18px;
 }
 
 .form input {
@@ -99,7 +98,6 @@ body {
   width: 100%;
   line-height: 1.5;
   font-size: 14px;
-  margin-bottom: 5px;
   border-radius: 0px;
   border-color: black;
   border-bottom-width: 1px;
@@ -112,7 +110,6 @@ body {
   width: 100%;
   line-height: 1.5;
   font-size: 14px;
-  margin-bottom: 5px;
   border-radius: 0px;
   border-color: black;
   border-bottom-width: 1px;

@@ -43,8 +43,8 @@ const Privacity = () => {
                                     <p>Para efectos de modificaciones, actualizaciones, aceptaciones, negativas, transferencia de datos a favor de terceros o en su caso revocaciones al presente aviso de privacidad, estarán disponibles para usted en nuestra página de internet <a>www.grupoticonsa.com.mx</a>, o se enviarán confirmaciones vía impresa o correo electrónico a petición de parte.</p>
                                     <p><strong>Atentamente</strong>
                                         <br />Ticonsa Inmobiliaria, S.A. de C.V. (Responsable)<br />Dirección Jurídica Corporativa (Atención)
-                                        <br />Calle Presa #85, Colonia San Jerónimo Lidice,
-                                        <br />Delegación Magdalena Contreras,
+                                        <br />Calle Presa #85, Colonia San Jerónimo Lidice
+                                        <br />Delegación Magdalena Contreras
                                         <br />México, 10200, D.F.</p>
                                 </div>
                             </div>
