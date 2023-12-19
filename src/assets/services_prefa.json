@@ -1,29 +1,36 @@
 {
     "Trabes AASHTO tipo I, II, III, IV, V y VI": {
+        "name": "Trabes AASHTO tipo I, II, III, IV, V y VI",
         "img": "/prefabricados/trabes-i-de-aashto.png",
         "text": "Es un elemento estructural de concreto presforzado; ideales para soportar cargas de puentes en claros de hasta 33 metros. Su longitud es variable de acuerdo a las necesidades del proyecto. En nuestras plantas de producción contamos con instalaciones fijas para tensado de torones con capacidad de 700 toneladas de fuerza."
     },
     "Trabes Cajón": {
+        "name": "Trabes Cajón",
         "img": "/prefabricados/trabes-cajon.png",
         "text": "Es un elemento de concreto presforzado que puede fabricarse en peralte constante o variable, presentando un aspecto agradable a la vista. Puede fabricarse en planta o bien, colarse directamente en el sitio."
     },
     "Trabes Nebraska": {
+        "name": "Trabes Nebraska",
         "img": "/prefabricados/trabes-nebraska.png",
         "text": "PUENTES vehiculares PRETENSADOS o POSTENSADOS. La trabe tiene un ancho patín inferior lo permitiendo la colocación de un mayor número de torones lo que genera excentricidades de presfuerzo más altas siendo un elemento ideal para utilizarse en claros grandes."
     },
     "Trabes Portantes y de rigidez": {
+        "name": "Trabes Portantes y de rigidez",
         "img": "/prefabricados/columnas.png",
         "text": "La integración de un sistema de losa se complementa en consideración de las trabes o vigas portantes y rigidizantes. Al ser prefabricadas, cuentan con la posibilidad de introducirles presfuerzo y por lo tanto, lograr un mejor comportamiento estructural del sistema."
     },
     "Losas TT": {
+        "name": "Losas TT",
         "img": "/prefabricados/columnas.png",
         "text": "Son losas nervadas pretensadas de gran flexibilidad de uso, debido a sus características geométricas que le permiten salvar grandes claros con diversas capacidades de carga. Las losa doble T se utilizan como sistemas de entrepisos, techos y muros para la edificación de edificios industriales, comerciales, habitacionales, centros deportivos, escuelas, etc."
     },
     "Columnas": {
+        "name": "Columnas",
         "img": "/prefabricados/columnas.png",
         "text": "Es un elemento principal de carga de toda la estructura. Las secciones son diversas dependiendo del proyecto, eficientando los procesos constructivos en comparación a otros elementos estéticos aparentes."
     },
     "Zapatas y candeleros": {
+        "name": "Zapatas y candeleros",
         "img": "/prefabricados/columnas.png",
         "text": "Son componentes cruciales de la cimentación estructural. Mientras que las zapatas distribuyen cargas y brindan estabilidad a las columnas, los candeleros elevan secciones de la edificación, cumpliendo funciones específicas según el diseño y los requisitos del proyecto. La prefabricación de estos elementos no solo optimiza la eficiencia constructiva, sino que también asegura la consistencia y calidad de la cimentación en el proceso edificatorio."
     }

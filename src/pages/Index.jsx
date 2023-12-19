@@ -1,25 +1,16 @@
-
-import CardNew from "../components/Blog"
 import NavBar from "../components/NavBar"
-import info from "../assets/info.json"
 import items from '../assets/services_card.json'
 import point from '../assets/projects_map.json'
-import ServicesCard from "../components/ServicesCard"
-import CV from "../components/CV";
 
-import { useEffect, useState, useRef } from 'react';
-import Overlay from 'react-bootstrap/Overlay';
+import { useState, useRef } from 'react';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 
 import { Fade } from "react-awesome-reveal";
 
 import {
-    Box,
-    Heading,
     Stack,
     Text,
-    useColorModeValue,
     useBreakpointValue,
     Button
 } from '@chakra-ui/react';
@@ -29,18 +20,14 @@ import {
 } from '@chakra-ui/react';
 import color from "../color";
 import CardSimple from "../components/CardSimple"
-import { Link } from "wouter"
-import CarouselStatic_ from "../components/CarouselStatic_"
-
 import { Carousel } from "react-bootstrap";
 
 import { RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine } from "react-icons/ri";
 
 import Carousel_ from "../components/Carousel_"
 import Modal from 'react-bootstrap/Modal';
-import CarouselStaticIndex from "../components/CarouselStaticIndex";
-import { RiArrowDownSLine } from "react-icons/ri";
 import BGPoints from "../components/BGPoints"
+import ModalCenter from "../components/ModalCenter";
 
 const features_ = [
     {
@@ -96,17 +83,17 @@ const features_ = [
 const features = [
     {
         name: 'Proceso Conceptual',
-        description: 'En esta etapa inicial del proceso de producción de prefabricados, se desarrolla la visión y el concepto general del proyecto.',
+        description: 'Se desarrolla la visión detallada y el concepto general del proyecto.',
         icon: RiBuilding2Line,
     },
     {
         name: 'Planeación',
-        description: 'La fase de planeación implica la elaboración detallada de un plan estratégico que abarca aspectos logísticos, financieros y temporales.',
+        description: 'Implica la elaboración de un plan estratégico que abarca aspectos logísticos, financieros y temporales.',
         icon: RiFolderUserLine,
     },
     {
         name: 'Ingeniería de Detalle',
-        description: 'Durante esta etapa, se traducen los conceptos y planes generales en especificaciones técnicas y detalles precisos.',
+        description: 'Se traducen los conceptos y planes generales en especificaciones técnicas y detalles precisos.',
         icon: RiFolderChartLine,
     },
     {
@@ -129,6 +116,8 @@ const features = [
 const Index = () => {
 
     const [show, setShow] = useState(false);
+    const [modalShow, setModalShow] = useState(false);
+    const handleVideo = () => setModalShow(!modalShow)
     const [target, setTarget] = useState(null);
     const ref = useRef(null);
 
@@ -163,7 +152,7 @@ const Index = () => {
         <>
             <NavBar photo={true} mobile={mobile}>
                 <BGPoints>
-                    <Carousel_ />
+                    <Carousel_ handleVideo={handleVideo}/>
                     <section className="_main container" id="#id">
                         <section className="section-5" id='about-me'>
                             <div className="mx-auto max-w-2xl lg:text-center">
@@ -184,12 +173,12 @@ const Index = () => {
                                     </div>
                                 </div>
                                 <div class="col-base col-sm-6 col-md-6 content-img-round"
-                                    /*style={{
-                                        display: 'flex',
-                                        flexDirection: 'row',
-                                        justifyContent: 'space-between',
-                                        gap: 0.2,
-                                    }}*/
+                                /*style={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    justifyContent: 'space-between',
+                                    gap: 0.2,
+                                }}*/
                                 >
                                     <img src={`/grua.jpg`} className="img-round" />
                                     <img src={`/1.jpg`} className="img-round" />
@@ -240,14 +229,10 @@ const Index = () => {
                                         Conozca más
                                     </Button>
                                 </div>
-
                             </div>
                         </div>
                         <section className="text-center">
-                            {/*<Fade direction="down">
-                                <h3 class="col-about-title" style={{ marginTop: 30, textTransform: 'uppercase' }}>Presencia en <span className="text-primary-blue">todo México</span> y con proyectos <span className="text-primary-blue">destacados</span></h3>
-                                        </Fade>*/}
-                            <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Llevamos nuestros proyectos destacados</h2>
+                            <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Llevamos nuestros proyectos destacados a una</h2>
                             <Fade direction="down">
                                 <section className="text-center">
                                     <h2 class="section-title" >Presencia en <span className="text-primary-blue">todo México</span></h2>
@@ -390,7 +375,7 @@ const Index = () => {
                             </section>
                         </section>
                             </section>*/}
-                    <div className="overflow-hidden bg-white py-24 sm:py-32">
+                    <div className="overflow-hidden py-24 sm:py-32">
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
                             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                                 <div className="lg:pr-8 lg:pt-4">
@@ -466,6 +451,10 @@ const Index = () => {
                     </Carousel>
                 </Modal.Body>
             </Modal>
+            <ModalCenter
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+            />
         </>
     )
 }

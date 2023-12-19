@@ -17,7 +17,9 @@ import SplitMergeAnimation from './SplitMergeAnimation'
 import SocialButton from './SocialButton';
 
 import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaLinkedin } from 'react-icons/fa'
-import { RiArrowDownSLine } from "react-icons/ri";
+import { RiArrowDownSLine, } from "react-icons/ri";
+import { BsArrowRight } from "react-icons/bs";
+import { PiArrowRightThin } from "react-icons/pi";
 import color from '../color';
 
 const settings = {
@@ -32,7 +34,7 @@ const settings = {
     slidesToScroll: 1,
 }
 
-export default function Carousel_() {
+export default function Carousel_({ handleVideo }) {
 
     const [slider, setSlider] = useState(null)
 
@@ -90,7 +92,7 @@ export default function Carousel_() {
 
     const handleBeforeChange = () => {
         document.querySelectorAll('.image-part').forEach((imagePart) => {
-            //imagePart.style.animation = 'none';
+            imagePart.style.animation = 'none';
             imagePart.offsetWidth; // Forced reflow to reset animation
             imagePart.style.animation = 'splitAndMerge 5s linear';
         });
@@ -166,7 +168,7 @@ export default function Carousel_() {
                     <Box key={index}>
                         <SplitMergeAnimation
                             imageUrl={card.image}
-                            numParts={mobile ? 1 : 6}
+                            numParts={mobile ? 1 : 5}
                         >
                             <Box
                                 className='box-text'
@@ -198,10 +200,12 @@ export default function Carousel_() {
                                             bg={color.orange}
                                             rounded={5}
                                             color="white"
-                                            //onClick={downloadCV}
+                                            onClick={() => mobile ? openLink() : handleVideo()}
                                             rightIcon={<div />}
                                             leftIcon={<div />}
                                             fontWeight={'bold'}
+                                            aria-label="Ver video de Introducción"
+                                            title="Ver video de Introducción"
                                         >
                                             Introducción
                                         </Button>
@@ -210,10 +214,13 @@ export default function Carousel_() {
                                             rounded={50}
                                             color="white"
                                             fontWeight={'300'}
-                                            rightIcon={<div />}
                                             leftIcon={<div />}
-                                            _hover={{ bg: 'transparent' }}
+                                            rightIcon={<PiArrowRightThin className='text-3xl' color="white" />}
+                                            //_hover={{ bg: 'transparent' }}
+                                            _hover={"none"}
                                             onClick={() => window.location.href = '/contacto'}
+                                            aria-label="Redirigir a Contacto"
+                                            title="Redirigir a Contacto"
                                         >
                                             Contáctanos
                                         </Button>

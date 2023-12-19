@@ -136,7 +136,7 @@ const Plants = ({ id }) => {
                             style={{ width: '100%', marginBottom: '1rem' }}
                                 />*/}
                        
-                        <hr></hr>
+                        <hr />
                         <div style={{ display: 'flex', flexDirection: !mobile ? 'row' : 'column', marginTop: 25, justifyContent: 'space-between' }}>
                             {arrayBanner.map((item, index) => {
                                 if (item?.id !== id) {

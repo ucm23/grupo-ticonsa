@@ -54,8 +54,8 @@ export default function SmallCentered({ photo }) {
                             >
                                 <div>
                                     <Fade>
-                                        <strong><h3 class="col-about-title text-shadow" style={{ fontWeight: '600', textAlign: 'center', }}>Construye con nosotros</h3></strong>
-                                        <p class="text-shadow" style={{ color: 'white', fontWeight: '600', textAlign: 'center' }}>Cuéntanos más acerca de los requerimientos de tu proyecto y te ayudaremos a convertir en realidad tu proyecto</p>
+                                        <strong><h3 className="col-about-title text-shadow" style={{ fontWeight: '600', textAlign: 'center', }}>Construye con nosotros</h3></strong>
+                                        <p className="text-shadow" style={{ color: 'white', fontWeight: '600', textAlign: 'center' }}>Cuéntanos más acerca de los requerimientos de tu proyecto y te ayudaremos a convertirlo en realidad</p>
                                     </Fade>
                                 </div>
                                 <Stack style={{ alignContent: 'center' }}>

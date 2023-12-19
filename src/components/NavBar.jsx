@@ -58,7 +58,7 @@ const NavBar = ({ children, photo, mobile }) => {
     return (
         <>
             <nav className={`${showShadow ? 'shadow nav-small' : 'nav'}`} style={{ backgroundColor: (showShadow || isChecked) ? 'white' : 'transparent' }}>
-                <a href="/" className="enlace d-flex justify-content-center align-items-center">
+                <a href="/" className={`enlace d-flex justify-content-center align-items-center ${(mobile && showShadow) && "center-logo"}`}>
                     <img src={(showShadow || isChecked) ? "/logo-removebg.png" : "/logo-white.png"} className={showShadow ? 'logo-small' : 'logo'} />
                     <h1 className="m-0"></h1>
                 </a>
