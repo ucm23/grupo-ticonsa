@@ -452,7 +452,6 @@ const Systems = () => {
                                         <p class="col-about-title-system">{item.description}</p>
                                     </div>
                                 </div>
-
                             </Carousel.Item>
                         )}
                     </Carousel>
