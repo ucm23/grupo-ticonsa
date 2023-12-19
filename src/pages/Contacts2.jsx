@@ -81,11 +81,11 @@ const Contacts2 = () => {
     return (
         <NavBar photo={true} mobile={mobile}>
             <div style={styles}>
-                <Fade direction="down">
+                <Fade>
                     <strong><h3 class="col-about-title" style={{ color: 'white', fontSize: mobile ? 35 : 50, fontWeight: '700', textAlign: 'center', textTransform: 'uppercase', marginTop: mobile ? 150 : 0 }}>CONTÁCTANOS</h3></strong>
-                    <div className="line-banner" style={{ backgroundColor: 'white' }} />
-                    <p style={{ color: 'white', fontWeight: '400', textAlign: 'center', margin: mobile ? 0 : '0 9rem', fontStyle: 'italic' }}>"Ya sea que estés buscando a un contratista general experto o que desees trabajar con nosotros, {!mobile && <br/>} encontrarás todo lo que necesitas para ponerte en contacto con Grupo Ticonsa"</p>
                 </Fade>
+                <div className="line-banner" style={{ backgroundColor: 'white' }} />
+                <p style={{ color: 'white', fontWeight: '400', textAlign: 'center', margin: mobile ? 0 : '0 9rem', fontStyle: 'italic' }}>"Ya sea que estés buscando a un contratista general experto o que deseas trabajar con nosotros, {!mobile && <br />} encontrarás todo lo que necesitas para ponerte en contacto con Grupo Ticonsa"</p>
                 <div className="animated-accordion">
                     <RiArrowDownSLine className='text-3xl' color="white" />
                 </div>
@@ -95,8 +95,14 @@ const Contacts2 = () => {
                 style={{ width: '100%', gap: 0 }}
             >
                 <div style={{ width: width_, backgroundColor: '#ede9e9', display: 'flex', flexDirection: 'column', padding: mobile ? 0 : '1rem 5rem', justifyContent: 'center', paddingTop: mobile ? 30 : '1rem' }}>
-                    <strong><h3 class="col-about-title" style={{ textAlign: 'center', color: color.primary, fontSize: 22, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase' }}>ESTAMOS A TUS ÓRDENES</h3></strong>
-                    <strong><h3 class="col-about-title" style={{ textAlign: 'center', color: color.primary, fontSize: mobile ? 35 : 50, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase', }}>CONVERSEMOS</h3></strong>
+                    <div className="mx-auto max-w-2xl lg:text-center">
+                        <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Estamos a tus órdenes</h2>
+                    </div>
+                    <Fade>
+                        <section className="text-center">
+                            <h2 class="section-title">Conversa con <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
+                        </section>
+                    </Fade>
                     <div className="line-banner" style={{ backgroundColor: color.primary }} />
                     {!mobile &&
                         <div class="col-about-info">
@@ -104,7 +110,7 @@ const Contacts2 = () => {
                         </div>
                     }
                 </div>
-                <div style={{ width: width_, padding: mobile ? '0 40px' : '1rem 9rem' }}>
+                <div style={{ width: width_, padding: mobile ? '0 38px' : '1rem 8rem' }}>
                     <ContactForm2 />
                 </div>
             </Stack>

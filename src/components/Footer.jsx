@@ -10,6 +10,8 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import SocialButton from './SocialButton'
 
+import { PiArrowRightThin } from "react-icons/pi";
+
 export default function SmallCentered({ photo }) {
     const mobile = useBreakpointValue({ base: true, md: false });
     const styles = {
@@ -66,6 +68,8 @@ export default function SmallCentered({ photo }) {
                                             rounded={0}
                                             top={mobile ? 30 : 0}
                                             color="white"
+                                            leftIcon={<div />}
+                                            rightIcon={<PiArrowRightThin className='text-3xl' color="white" />}
                                             _hover={{ bg: 'blue.500' }}>
                                             Enviar mensaje
                                         </Button>
