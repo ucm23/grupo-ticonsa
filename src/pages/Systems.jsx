@@ -259,8 +259,8 @@ const Systems = () => {
                             </div>
                             <div className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
                                 {process.map((item, index) => {
-                                    const index_ = index % 2
-                                    const six = index !== 5
+                                    const index_ = index % 2;
+                                    const six = index !== 5;
                                     return (
                                         <li>
                                             <div className="timeline-middle">

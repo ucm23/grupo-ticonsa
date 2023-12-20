@@ -1206,3 +1206,11 @@ button.ytp-fullscreen-button.ytp-button {
   width: 40px;
   height: 40px;
 }
+
+a.dropdown-item {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 48px;
+}
