@@ -229,10 +229,10 @@ const Systems = () => {
                                 <div>
                                     <div className="diff aspect-[16/8] w-[48rem] max-w-none ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" style={{ borderRadius: '8px' }}>
                                         <div className="diff-item-1">
-                                            <img alt="daisy" src="/metro-plano.jpg" />
+                                            <img alt="daisy" src="/361.jpg" />
                                         </div>
                                         <div className="diff-item-2">
-                                            <img alt="daisy" src="/metro-real.jpg" />
+                                            <img alt="daisy" src="/362.jpg" />
                                         </div>
                                         <div className="diff-resizer"></div>
                                     </div>
