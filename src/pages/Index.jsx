@@ -169,7 +169,7 @@ const Index = () => {
                                     <div class="col-about-info">
                                         <p><strong>Ticonsa Inmobiliaria</strong>, <strong>Sociedad Anónima de Capital Variable</strong> (en lo sucesivo <strong>GRUPO TICONSA<sup>®</sup></strong>) en una empresa con <strong>50 años de experiencia desarrollando soluciones innovadoras</strong> que aportan valor agregado a los proyectos de nuestros clientes.</p>
                                         <p className={mobile && "text-center"}><strong>Cancún: </strong> (998) 892-3143 <br /> <strong>México: </strong>(55) 5484-8364<br /> <strong>Teotihuacán: </strong>(594) 956-1645</p>
-                                        <p className={mobile && "text-center"}><strong>Grupo Ticonsa </strong> - Desde 15 de Febrero de 1971</p>
+                                        <p className={mobile && "text-center"}><strong>Grupo Ticonsa </strong> - Desde el 15 de febrero de 1971</p>
                                     </div>
                                 </div>
                                 <div class="col-base col-sm-6 col-md-6 content-img-round"
