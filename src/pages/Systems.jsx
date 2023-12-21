@@ -213,7 +213,7 @@ const Systems = () => {
                                                         <feature.icon className="absolute left-1 top-1 h-5 w-5" color={color.primary} aria-hidden="true" />
                                                         {feature.name}
                                                     </dt><br />
-                                                    <dd className="inline">{feature.description}</dd> {feature.url && <a href={feature.url} style={{ fontWeight: 'bold', color: color.orange }}>Leer más...</a>}
+                                                    <dd className="inline">{feature.description}</dd> {feature.url && <a href={feature.url} style={{ fontWeight: 'bold', color: color.orange }} title="Leer ventajas de un Sistema de prefabricado">Leer más...</a>}
                                                 </div>
                                             ))}
                                         </dl>

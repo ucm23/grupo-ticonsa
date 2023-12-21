@@ -132,6 +132,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: var(--color-primary-light);
+  cursor: crosshair;
 }
 
 .row-base.row {
@@ -299,14 +300,17 @@ figure {
   background-repeat: no-repeat;
   scale: 0.1;
 }
+
 .iframe-maya {
   margin: -1rem;
   margin-bottom: 1rem;
 }
+
 .path-web {
   top: 15%;
   left: 50%;
 }
+
 .path-mov {
   top: 48%;
   left: 75%;
@@ -603,6 +607,7 @@ button#dropdown-basic-2 {
 button#dropdown-basic:hover,
 button#dropdown-basic-2:hover {
   color: var(--color-orange);
+  cursor: crosshair;
 }
 
 li a.active {
@@ -622,7 +627,11 @@ li a:hover {
   /*color: var(--color-primary-light);*/
   border-top-width: 2px;
   border-top-color: var(--color-orange);
+  cursor: crosshair;
   /*transition: 1s;*/
+}
+.cursor-crosshair:hover {
+  cursor: crosshair;
 }
 
 .checkbtn {
@@ -735,6 +744,8 @@ ul {
 
   nav ul li a {
     font-size: 16px;
+    display: inline-flex;
+    width: 100%;
   }
 
   nav ul {
@@ -742,12 +753,21 @@ ul {
     /*margin-top: 72px;*/
   }
 
-  li a:hover,
-  li a.active {
+  li a:hover, li a.active {
     background: none;
     color: var(--color-primary);
     border-width: 0;
     font-weight: 600;
+  }
+
+  .white {
+    color: var(--color-primary);
+  }
+  .white:hover {
+    color: var(--color-orange);
+  }
+  button#dropdown-basic-2 {
+    color: var(--color-primary);
   }
 }
 
@@ -795,6 +815,8 @@ ul {
   nav ul li a {
     font-size: 12px;
     /*font-weight: 600;*/
+    display: inline-flex;
+    width: 100%;
   }
 
   li a:hover,
@@ -806,6 +828,16 @@ ul {
 
   #check:checked~ul {
     left: 0;
+  }
+
+  .white {
+    color: var(--color-primary);
+  }
+  .white:hover {
+    color: var(--color-orange);
+  }
+  button#dropdown-basic-2 {
+    color: var(--color-primary);
   }
 }
 
@@ -957,6 +989,7 @@ ul {
 
 .zoomable-container:hover .zoomable-image {
   transform: scale(2);
+  cursor: crosshair;
 }
 
 .zoomable-container {
@@ -1055,6 +1088,7 @@ img:nth-child(3) {
 }
 
 @keyframes moveUpDown {
+
   0%,
   100% {
     transform: translateY(0);
@@ -1216,7 +1250,7 @@ button.ytp-fullscreen-button.ytp-button {
   margin: 0rem;
 }
 
-.timeline-vertical > li > hr {
+.timeline-vertical>li>hr {
   background-color: var(--color-primary);
 }
 

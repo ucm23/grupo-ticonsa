@@ -4,6 +4,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import SmallCentered from './Footer'
 import { useState, useEffect } from "react";
 import { Dropdown } from 'react-bootstrap';
+import color from '../color';
 
 const NavBar = ({ children, photo, mobile }) => {
     const location = useLocation();

@@ -227,6 +227,7 @@ const Index = () => {
                                         rightIcon={<div />}
                                         leftIcon={<div />}
                                         fontWeight={'bold'}
+                                        title="Redirigir a Sección de Prefabricado"
                                     >
                                         Conozca más
                                     </Button>
@@ -458,7 +459,9 @@ const Index = () => {
                                                 rounded={0}
                                                 color="white"
                                                 //onClick={() => {}}
-                                                _hover={{ bg: 'blue.500' }}>
+                                                _hover={{ bg: 'blue.500' }}
+                                                title="Redirigir a Sección de Prefabricado"
+                                            >
                                                 Ver más...
                                             </Button>
                                         </a>

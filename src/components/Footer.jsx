@@ -70,7 +70,9 @@ export default function SmallCentered({ photo }) {
                                             color="white"
                                             leftIcon={<div />}
                                             rightIcon={<PiArrowRightThin className='text-3xl' color="white" />}
-                                            _hover={{ bg: 'blue.500' }}>
+                                            _hover={{ bg: 'blue.500' }}
+                                            title='Redirigir a Contacto y Enviar Mensaje'
+                                        >
                                             Enviar mensaje
                                         </Button>
                                     </a>

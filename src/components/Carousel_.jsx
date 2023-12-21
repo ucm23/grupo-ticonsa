@@ -191,7 +191,7 @@ export default function Carousel_({ handleVideo }) {
                                     }}
                                 >
                                     <h2 className="text-shadow" style={{ lineHeight: 0, fontSize: 18, fontWeight: 'bold', textTransform: 'uppercase', textAlign: 'center' }}>{card.place}</h2>
-                                    <h1 class="col-about-title text-shadow" style={{ fontWeight: 'bold', textAlign: 'center', lineHeight: 1, textTransform: 'uppercase' }}>{card.name}</h1>
+                                    <h1 className="col-about-title text-shadow" style={{ fontWeight: 'bold', textAlign: 'center', lineHeight: 1, textTransform: 'uppercase' }}>{card.name}</h1>
                                     <p className="text-shadow" style={{ textAlign: 'center', lineHeight: 1 }}>{card.description}</p>
 
                                     <div style={{ display: 'flex', flexDirection: mobile ? 'column' : 'row', gap: 6 }}>
@@ -204,8 +204,8 @@ export default function Carousel_({ handleVideo }) {
                                             rightIcon={<div />}
                                             leftIcon={<div />}
                                             fontWeight={'bold'}
-                                            aria-label="Ver video de Introducción"
                                             title="Ver video de Introducción"
+                                            className='cursor-crosshair'
                                         >
                                             Introducción
                                         </Button>
@@ -219,8 +219,9 @@ export default function Carousel_({ handleVideo }) {
                                             //_hover={{ bg: 'transparent' }}
                                             _hover={"none"}
                                             onClick={() => window.location.href = '/contacto'}
-                                            aria-label="Redirigir a Contacto"
+                                            //aria-label="Redirigir a Contacto"
                                             title="Redirigir a Contacto"
+                                            className='cursor-crosshair'
                                         >
                                             Contáctanos
                                         </Button>
