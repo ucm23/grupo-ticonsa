@@ -8,12 +8,15 @@ export default function ContactForm2() {
     const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_efyydcu', 'template_964rrxd', form.current, 'AzggVpZhykvOB3v_z')
+        //emailjs.sendForm('service_efyydcu', 'template_964rrxd', form.current, 'AzggVpZhykvOB3v_z')
+        //emailjs.sendForm('service_aznjq9k', 'template_k8ifo1h', form.current, 'uCLd36X7LmCXPA65d')
+        emailjs.sendForm('service_wuss6dp', 'template_k8ifo1h', form.current, 'uCLd36X7LmCXPA65d')
             .then((result) => {
                 console.log(result.text);
                 alert('Hemos enviado un correo, en breve le estaremos respondiendo en el correo que nos adjunto')
             }, (error) => {
                 console.log(error.text);
+                console.log(error);
                 alert('No hemos podido enviar, favor de intenarlo más tarde')
             });
     };
