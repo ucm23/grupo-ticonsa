@@ -18,12 +18,12 @@ import { MdOutlinePhoneInTalk } from "react-icons/md";
 const ubications = [
     {
         id: 1,
-        name: "Grupo Ticonsa, S.A. De C.V.",
+        name: "Oficina Central, Grupo Ticonsa",
         direction: "Presa 85, San Jerónimo Lídice, Magdalena Contreras, CP. 10200.",
         place: "Ciudad de México, CDMX",
         url: "https://maps.app.goo.gl/tADpi5iFEtPCVV9e6",
-        phone: "(55) 5484-8364"
-
+        phone: "(55) 5484 8355"
+        
     },
     {
         id: 2,

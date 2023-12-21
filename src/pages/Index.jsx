@@ -1,6 +1,8 @@
 import NavBar from "../components/NavBar"
 import items from '../assets/services_card.json'
 import point from '../assets/projects_map.json'
+import paths from '../assets/path_map.json'
+
 
 import { useState, useRef } from 'react';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
@@ -152,7 +154,7 @@ const Index = () => {
         <>
             <NavBar photo={true} mobile={mobile}>
                 <BGPoints>
-                    <Carousel_ handleVideo={handleVideo}/>
+                    <Carousel_ handleVideo={handleVideo} />
                     <section className="_main container" id="#id">
                         <section className="section-5" id='about-me'>
                             <div className="mx-auto max-w-2xl lg:text-center">
@@ -168,7 +170,7 @@ const Index = () => {
                                     <h3 class="col-about-title" style={{ textAlign: 'center' }}>Concreto, Prefabricado y <span className="text-primary-blue">Presforzado</span></h3>
                                     <div class="col-about-info">
                                         <p><strong>Ticonsa Inmobiliaria</strong>, <strong>Sociedad Anónima de Capital Variable</strong> (en lo sucesivo <strong>GRUPO TICONSA<sup>®</sup></strong>) en una empresa con <strong>50 años de experiencia desarrollando soluciones innovadoras</strong> que aportan valor agregado a los proyectos de nuestros clientes.</p>
-                                        <p className={mobile && "text-center"}><strong>Cancún: </strong> (998) 892-3143 <br /> <strong>México: </strong>(55) 5484-8364<br /> <strong>Teotihuacán: </strong>(594) 956-1645</p>
+                                        <p className={mobile && "text-center"}><strong>Cancún: </strong> (998) 892-3143 <br /> <strong>México: </strong>(55) 5484-8355<br /> <strong>Teotihuacán: </strong>(594) 956-1645</p>
                                         <p className={mobile && "text-center"}><strong>Grupo Ticonsa </strong> - Desde el 15 de febrero de 1971</p>
                                     </div>
                                 </div>
@@ -231,6 +233,8 @@ const Index = () => {
                                 </div>
                             </div>
                         </div>
+                    </section>
+                    <section className={`${mobile ? "" : "_main container"}`}>
                         <section className="text-center">
                             <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Llevamos nuestros proyectos destacados a una</h2>
                             <Fade direction="down">
@@ -260,15 +264,30 @@ const Index = () => {
                                                 </Popover>
                                             }
                                         >
-                                            <div
-                                                class="circle"
-                                                style={{ position: 'absolute', top: project_?.position?.top, left: project_?.position?.left, }}
-                                                onClick={handleClick}
-                                            />
+                                            <div className="circle" style={{ top: project_?.position?.top, left: project_?.position?.left, }} onClick={handleClick} />
                                         </OverlayTrigger>
                                     ))
-                                )
-                                }
+                                )}
+                                {paths.map((item) =>
+                                    item?.projects.map((project_) => (
+                                        <OverlayTrigger
+                                            trigger='click'
+                                            placement={'bottom'}
+                                            overlay={
+                                                <Popover id={`popover-positioned-bottom`}>
+                                                    <Popover.Header as="h3">{item?.name}</Popover.Header>
+                                                    <Popover.Body>
+                                                        <iframe width="274" height="155" className="iframe-maya" src="https://www.youtube.com/embed/h-tEedJL6Dc" title="Estación Edzna Tren Maya Grupo Ticonsa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                        <strong>{project_?.name}<br /></strong>
+                                                        {project_?.extra}
+                                                    </Popover.Body>
+                                                </Popover>
+                                            }
+                                        >
+                                            <div className={`path ${mobile ? "path-web" : "path-mov"}`} onClick={handleClick} />
+                                        </OverlayTrigger>
+                                    ))
+                                )}
                             </div>
                         </section>
                     </section>

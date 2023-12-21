@@ -246,11 +246,11 @@ export default function Carousel_({ handleVideo }) {
                                                 <FaFacebook />
                                             </SocialButton>
                                         </a>
-                                        <a href={'https://www.linkedin.com/company/grupo-ticonsa/'} target="_blank">
+                                        {/*<a href={'https://www.linkedin.com/company/grupo-ticonsa/'} target="_blank">
                                             <SocialButton>
                                                 <FaLinkedin />
                                             </SocialButton>
-                                        </a>
+                                </a>*/}
                                     </Stack>
                                     <div className="animated-accordion">
                                         <RiArrowDownSLine className='text-3xl' color="white" />
