@@ -439,7 +439,7 @@ const Index = () => {
                                     </div>
                                 </div>
                                 <img
-                                    src="/imgs/collage.png"
+                                    src={"/imgs/collage.png"}
                                     className="w-[48rem] max-w-none shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
                                     width={2432}
                                     height={1442}
@@ -449,7 +449,7 @@ const Index = () => {
                         </div>
                     </div>
 
-                    <main className="main-area">
+                    {/*<main className="main-area">
                         <div className="centered">
                             <h4 className="cards-title">Descubre nuestras iniciativas</h4>
                             <section className="cards">
@@ -470,12 +470,10 @@ const Index = () => {
                                         </a>
                                     </article>
                                 ))
-
                                 }
-
                             </section>
                         </div>
-                    </main>
+                            </main>*/}
                 </BGPoints>
             </NavBar>
             <Modal

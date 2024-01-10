@@ -3,13 +3,14 @@ import messages from "../assets/messaje.json"
 import CarouselStatic from './CarouselStatic';
 import { Fade } from 'react-awesome-reveal';
 import BGPoints from './BGPoints';
+import color from '../color';
 
-import { useState } from 'react'
+/*import { useState } from 'react'
 import { Tab } from '@headlessui/react'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
-}
+}*/
 
 
 export default function Message() {
@@ -20,8 +21,7 @@ export default function Message() {
         <BGPoints>
             <CarouselStatic names={[1, 2, 3]} folder='img_maya' />
             <section className="_main container" >
-                <section>
-                    <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Desde la Idea hasta la Realidad</h2>
+                <section style={{ padding: '25px 0px' }}>
                     <Fade direction="down">
                         <section className="text-center">
                             <h2 className="section-title">Mensaje de nuestra <span className="text-primary-blue">Presidencia</span></h2>
