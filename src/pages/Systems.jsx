@@ -107,16 +107,16 @@ const process = [
 ]
 
 const pros = [
-    "1. Disminución en el tiempo de construcción hasta del 50%.",
-    "2. Ahorro significativo en costos de ingeniería estructural ya que la ingeniería es desarrollada por nosotros contando con ingenieros altamente calificados en la materia.",
-    "3. Seguridad en infraestructura y estructura garantizada.",
-    "4. Redución del impacto ambiental en sitio ya que se requiere menor número de personal obrero comparado con los sistemas tradicionales.  Se reduce hasta un 80%.",
-    "5. Se aligera la estructura permitiendo en ocasiones una reducción en costos en cimentación.",
-    "6. Controles de calidad más estrictos gracias al proceso industrializado.",
-    "7. Durabilidad de la estructura por uso de concretos de alta resistencia.",
-    "8. Se elimina el riesgo debido a problemas obrero-patronales, es decir cuotas sindicales, seguro social, etc. ya que el personal depende directamente de nosotros.",
-    "9. Se reducen costos de supervisión ya que se simplifican los procesos y control de obra.",
-    "10. Versatilidad en soluciones arquitectónicas ya que se desarrolla la ingeniería adaptada al proyecto."
+    "Disminución en el tiempo de construcción hasta del 50%.",
+    "Ahorro significativo en costos de ingeniería estructural ya que la ingeniería es desarrollada por nosotros contando con ingenieros altamente calificados en la materia.",
+    "Seguridad en infraestructura y estructura garantizada.",
+    "Redución del impacto ambiental en sitio ya que se requiere menor número de personal obrero comparado con los sistemas tradicionales.  Se reduce hasta un 80%.",
+    "Se aligera la estructura permitiendo en ocasiones una reducción en costos en cimentación.",
+    "Controles de calidad más estrictos gracias al proceso industrializado.",
+    "Durabilidad de la estructura por uso de concretos de alta resistencia.",
+    "Se elimina el riesgo debido a problemas obrero-patronales, es decir cuotas sindicales, seguro social, etc. ya que el personal depende directamente de nosotros.",
+    "Se reducen costos de supervisión ya que se simplifican los procesos y control de obra.",
+    "Versatilidad en soluciones arquitectónicas ya que se desarrolla la ingeniería adaptada al proyecto."
 ]
 
 
@@ -250,7 +250,7 @@ const Systems = () => {
                                 <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Desde una idea conceptual hasta la vasta realidad</h2>
                                 <Fade direction="down">
                                     <section className="text-center">
-                                        <h2 class="section-title" >Proceso Integral de  <span className="text-primary-blue">Producción de Prefabricados</span></h2>
+                                        <h2 className="section-title" >Proceso Integral de  <span className="text-primary-blue">Producción de Prefabricados</span></h2>
                                     </section>
                                 </Fade>
                                 <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -308,7 +308,7 @@ const Systems = () => {
                             </div>
                             <Fade direction="down">
                                 <section className="text-center">
-                                    <h2 class="section-title">Ventajes del <span className="text-primary-blue">Prefabricado</span></h2>
+                                    <h2 className="section-title">Ventajes del <span className="text-primary-blue">Prefabricado</span></h2>
                                 </section>
                             </Fade>
                         </section>
@@ -334,20 +334,20 @@ const Systems = () => {
                     <section className="_main container">
                         <section>
                             {/*<section id="system">
-                                <div class="row-base row" styles='margin-top: 7.1em'>
-                                    <div class="">
+                                <div className="row-base row" styles='margin-top: 7.1em'>
+                                    <div className="">
                                         <Fade direction="down">
                                             <section className="text-center">
-                                                <h3 class="col-about-title">Sistema de prefabricado <span className="text-primary-blue">y más</span></h3>
+                                                <h3 className="col-about-title">Sistema de prefabricado <span className="text-primary-blue">y más</span></h3>
                                             </section>
                                         </Fade>
                                         <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Llevamos nuestros proyectos destacados</h2>
                                         <Fade direction="down">
                                             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Sistema de prefabricado y Multi T</p>
                                         </Fade>
-                                        <div class="row-base row">
-                                            <div class="col-base col-md-offset-1">
-                                                <div class="col-about-info">
+                                        <div className="row-base row">
+                                            <div className="col-base col-md-offset-1">
+                                                <div className="col-about-info">
                                                     <p>A diferencia de los sistemas convencionales, en el Sistema de Prefabricado los elementos estructurales se fabrican previamente en plantas de producción. Después de un riguroso control de calidad en el proceso de fabricación,  las piezas se transportan para colocarlas en el lugar de la obra, abatiendo en forma considerable el tiempo de construcción.</p>
                                                     <p>Una característica de este sistema es que pueden salvar grandes claros con elementos ligeros. Esto se logra mediante la técnica del Presfuerzo, que consiste en aplicar una fuerza de tensión al acero de presfuerzo (cables o torones) antes de iniciar el colado, logrando incrementar la resistencia y mejorar el comportamiento estructural de los elementos.</p>
                                                     <p>Una vez montados los elementos, se cuela un firme de compresión de 5cm aproximadamente.</p>
@@ -372,10 +372,10 @@ const Systems = () => {
 
                             <section id="pro">
                                 <center>
-                                    <section class="col-base col-about-img col-sm-6 col-md-offset-1" className="mt-4" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
+                                    <section className="col-base col-about-img col-sm-6 col-md-offset-1 mt-4" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
                                         <center>
-                                            <div class="col-base col-md-offset-1" style={{ marginTop: 20 }}>
-                                                <div class="col-about-info">
+                                            <div className="col-base col-md-offset-1" style={{ marginTop: 20 }}>
+                                                <div className="col-about-info">
                                                     <p className='h4 m-0'>Construcción in SITU</p>
                                                     <p>Tiempos estimados mediante un sistema tradicional</p>
                                                 </div>
@@ -386,8 +386,8 @@ const Systems = () => {
                                             style={{ height: 'auto', objectFit: 'scale-down' }}
                                         />
                                         <center>
-                                            <div class="col-base col-md-offset-1" style={{ marginTop: 20 }}>
-                                                <div class="col-about-info">
+                                            <div className="col-base col-md-offset-1" style={{ marginTop: 20 }}>
+                                                <div className="col-about-info">
                                                     <p className='h4 m-0'>Construcción Industrializada con Estructuras y Paneles Prefabricados</p>
                                                     <p>Tiempos estimados mediante un sistema Prefabricado</p>
                                                 </div>
@@ -397,8 +397,8 @@ const Systems = () => {
                                             src={"./paneles.png"}
                                             style={{ height: 'auto', objectFit: 'scale-down', paddingBottom: 25 }}
                                         />
-                                        {/*<div class="col-base col-md-offset-1">
-                                            <div class="col-about-info">
+                                        {/*<div className="col-base col-md-offset-1">
+                                            <div className="col-about-info">
                                                 <p className='h4 m-0'>El sistema prefabricado tiene una gran variedad de ventajas frente a los sistemas constructivos convencionales, entre ellos se destacan:</p>
                                                 <p>1. Disminución en el tiempo de construcción hasta del 50%.<br />
                                                     2. Ahorro significativo en costos de ingeniería estructural ya que la ingeniería es desarrollada por nosotros contando con ingenieros altamente calificados en la materia.<br />
@@ -448,8 +448,8 @@ const Systems = () => {
                                         alt={''}
                                     />
                                     <div className="text-modal-image">
-                                        <h3 class="col-about-title-system">{item.title.toUpperCase()}</h3>
-                                        <p class="col-about-title-system">{item.description}</p>
+                                        <h3 className="col-about-title-system">{item.title.toUpperCase()}</h3>
+                                        <p className="col-about-title-system">{item.description}</p>
                                     </div>
                                 </div>
                             </Carousel.Item>

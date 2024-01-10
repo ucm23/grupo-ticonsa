@@ -17,7 +17,7 @@ const Documents = ({ type }) => {
         <NavBar>
             <section className="_main container">
                 <section>
-                    <div class="row-base row" style={{ marginTop: 158 }}>
+                    <div className="row-base row" style={{ marginTop: 158 }}>
                         <embed
                             src={`${types[type]}#toolbar=0&navpanes=0&scrollbar=0`}
                             type="application/pdf"

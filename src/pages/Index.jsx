@@ -115,6 +115,29 @@ const features = [
     },
 ]
 
+const success = [
+    {
+        name: 'Tren Maya',
+        description: 'Pruebas del Tren Maya en la Estación Edzna',
+        img: 'imgs/005.jpg',
+    },
+    {
+        name: 'Más proyectos',
+        description: 'Descubre nuestros proyectos',
+        img: 'img_maya/2.jpg',
+    },
+    {
+        name: 'Soluciones',
+        description: 'Elementos de un Sistema de edificación',
+        img: 'projects/1.jpg',
+    },
+    {
+        name: 'Videos',
+        description: 'Conoce el potencial de nuestra oferta',
+        img: 'imgs/people.jpeg',
+    }
+]
+
 const Index = () => {
 
     const [show, setShow] = useState(false);
@@ -162,19 +185,19 @@ const Index = () => {
                             </div>
                             <Fade direction="down">
                                 <section className="text-center">
-                                    <h2 class="section-title">Sobre Nosotros <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
+                                    <h2 className="section-title">Sobre Nosotros <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
                                 </section>
                             </Fade>
-                            <div class="row-base row">
-                                <div class="col-base col-sm-6 col-md-6" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                    <h3 class="col-about-title" style={{ textAlign: 'center' }}>Concreto, Prefabricado y <span className="text-primary-blue">Presforzado</span></h3>
-                                    <div class="col-about-info">
+                            <div className="row-base row">
+                                <div className="col-base col-sm-6 col-md-6" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                                    <h3 className="col-about-title" style={{ textAlign: 'center' }}>Concreto, Prefabricado y <span className="text-primary-blue">Presforzado</span></h3>
+                                    <div className="col-about-info">
                                         <p><strong>Ticonsa Inmobiliaria</strong>, <strong>Sociedad Anónima de Capital Variable</strong> (en lo sucesivo <strong>GRUPO TICONSA<sup>®</sup></strong>) en una empresa con <strong>50 años de experiencia desarrollando soluciones innovadoras</strong> que aportan valor agregado a los proyectos de nuestros clientes.</p>
                                         <p className={mobile && "text-center"}><strong>Cancún: </strong> (998) 892-3143 <br /> <strong>México: </strong>(55) 5484-8355<br /> <strong>Teotihuacán: </strong>(594) 956-1645</p>
                                         <p className={mobile && "text-center"}><strong>Grupo Ticonsa </strong> - Desde el 15 de febrero de 1971</p>
                                     </div>
                                 </div>
-                                <div class="col-base col-sm-6 col-md-6 content-img-round"
+                                <div className="col-base col-sm-6 col-md-6 content-img-round"
                                 /*style={{
                                     display: 'flex',
                                     flexDirection: 'row',
@@ -195,7 +218,7 @@ const Index = () => {
                                     <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Desde la Idea hasta la Realidad</h2>
                                     <Fade direction="down">
                                         <section className="text-center">
-                                            <h2 class="section-title" >Proceso Integral de  <span className="text-primary-blue">Producción de Prefabricados</span></h2>
+                                            <h2 className="section-title" >Proceso Integral de  <span className="text-primary-blue">Producción de Prefabricados</span></h2>
                                         </section>
                                     </Fade>
                                     <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -240,10 +263,10 @@ const Index = () => {
                             <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Llevamos nuestros proyectos destacados a una</h2>
                             <Fade direction="down">
                                 <section className="text-center">
-                                    <h2 class="section-title" >Presencia en <span className="text-primary-blue">todo México</span></h2>
+                                    <h2 className="section-title" >Presencia en <span className="text-primary-blue">todo México</span></h2>
                                 </section>
                             </Fade>
-                            <div class="content-circle" ref={ref}>
+                            <div className="content-circle" ref={ref}>
                                 <Image
                                     borderRadius="lg"
                                     src='/mapa.png'
@@ -297,7 +320,7 @@ const Index = () => {
                         <section className="_main container" >
                             <Stack>
                                 <Stack direction={mobile ? 'column-reverse' : 'row-reverse'} style={{ paddingBottom: 40, paddingTop: 55 }}>
-                                    <div class="col-base col-sm-6 col-md-offset-1" style={{ alignSelf: 'center', }}>
+                                    <div className="col-base col-sm-6 col-md-offset-1" style={{ alignSelf: 'center', }}>
                                         <Stack style={{ justifyContent: 'center', /*paddingRight: 15*/ }}>
 
                                             <Stack flexDirection={'row'} alignItems={'center'} display={'flex'} justifyContent={'center'}>
@@ -331,7 +354,7 @@ const Index = () => {
                                             {/*<Stack
                                                 style={{ alignContent: 'center', paddingBottom: mobile ? 20 : 140, }}
                                             >
-                                                <div class="col-about-info" style={{ textAlign: 'center' }}>
+                                                <div className="col-about-info" style={{ textAlign: 'center' }}>
                                                     <p>Conoce nuestro trabajo descargando el Curriculum Vitae:</p>
                                                 </div>
                                                 <Stack
@@ -359,12 +382,12 @@ const Index = () => {
                                         </Stack>
                                     </div>
                                     <Stack justifyContent={'center'}>
-                                        <h3 class="col-about-title" style={{ textAlign: mobile ? 'center' : 'left' /*marginTop: mobile ? 15 : 140,*/, marginBottom: 0 }}>Nuestra experiencia {!mobile && <br />} <span className="text-primary-blue">expresada en números</span></h3>
-                                        <div class="col-about-info" style={{ textAlign: mobile ? 'center' : 'left' }}>
+                                        <h3 className="col-about-title" style={{ textAlign: mobile ? 'center' : 'left' /*marginTop: mobile ? 15 : 140,*/, marginBottom: 0 }}>Nuestra experiencia {!mobile && <br />} <span className="text-primary-blue">expresada en números</span></h3>
+                                        <div className="col-about-info" style={{ textAlign: mobile ? 'center' : 'left' }}>
                                             <p>Ofrecemos soluciones prácticas e innovadoras a cada uno de nuestros clientes</p>
                                         </div>
                                     </Stack>
-                                    {/*<div class="col-base" style={{ marginBottom: 20, marginTop: 20, display: 'flex', alignItems: 'center' }}>
+                                    {/*<div className="col-base" style={{ marginBottom: 20, marginTop: 20, display: 'flex', alignItems: 'center' }}>
                                         <img
                                             src={`/imgs/1.jpg`}
                                             style={{ width: 500, height: mobile ? 350 : 500, objectFit: 'cover', }}
@@ -380,7 +403,7 @@ const Index = () => {
                     {/*<section className="_main container" id="services">
                         <section className="text-center">
                             <Fade direction="down">
-                                <h3 class="col-about-title" style={{ marginTop: 30, textTransform: 'uppercase' }}>Servicios que <span className="text-primary-blue">ofrecemos</span></h3>
+                                <h3 className="col-about-title" style={{ marginTop: 30, textTransform: 'uppercase' }}>Servicios que <span className="text-primary-blue">ofrecemos</span></h3>
                             </Fade>
                             <section className="d-flex justify-content-around align-items-center pb-5 flex-wrap" >
                                 {items.map((item, key) =>
@@ -425,6 +448,34 @@ const Index = () => {
                             </div>
                         </div>
                     </div>
+
+                    <main className="main-area">
+                        <div className="centered">
+                            <h4 className="cards-title">Descubre nuestras iniciativas</h4>
+                            <section className="cards">
+                                {success.map((item, index) => (
+                                    <article className="card" key={`${item.name}-success-${index}`}>
+                                        <a href="#">
+                                            <picture className="thumbnail">
+                                                <img
+                                                    className="img-cards"
+                                                    src={item.img}
+                                                    alt={item.name}
+                                                />
+                                            </picture>
+                                            <div className="card-content">
+                                                <h2>{item.name}</h2>
+                                                <p>{item.description}</p>
+                                            </div>
+                                        </a>
+                                    </article>
+                                ))
+
+                                }
+
+                            </section>
+                        </div>
+                    </main>
                 </BGPoints>
             </NavBar>
             <Modal
@@ -451,7 +502,7 @@ const Index = () => {
                                         alt={''}
                                     />
                                     <div className="text-modal-image">
-                                        <p class="col-about-title-system text-shadow">{item.title.toUpperCase()}</p>
+                                        <p className="col-about-title-system text-shadow">{item.title.toUpperCase()}</p>
                                         <a href={`${item?.url}`}>
                                             <Button
                                                 colorScheme="blue"

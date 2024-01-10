@@ -38,7 +38,7 @@ export default function ServicesCard(props) {
                 className='card__img'
                 cursor={newTab ? 'crosshair' : ''}
             >
-                <div class="project" onClick={() => onPress()}>
+                <div className="project" onClick={() => onPress()}>
                         <figure>
                             <img
                                 src={img}
@@ -47,10 +47,10 @@ export default function ServicesCard(props) {
                             //styles='filter: grayscale(100%)'
                             />
                             <figcaption>
-                                <h3 class="project-title-card text-shadow">
+                                <h3 className="project-title-card text-shadow">
                                     {title}
                                 </h3>
-                                <div class="project-zoom"></div>
+                                <div className="project-zoom"></div>
                             </figcaption>
                         </figure>
                     </div>

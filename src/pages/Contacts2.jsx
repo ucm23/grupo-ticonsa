@@ -88,7 +88,7 @@ const Contacts2 = () => {
         <NavBar photo={true} mobile={mobile}>
             <div style={styles}>
                 <Fade>
-                    <strong><h3 class="col-about-title" style={{ color: 'white', fontSize: mobile ? 35 : 50, fontWeight: '700', textAlign: 'center', textTransform: 'uppercase', marginTop: mobile ? 150 : 0 }}>CONTÁCTANOS</h3></strong>
+                    <strong><h3 className="col-about-title" style={{ color: 'white', fontSize: mobile ? 35 : 50, fontWeight: '700', textAlign: 'center', textTransform: 'uppercase', marginTop: mobile ? 150 : 0 }}>CONTÁCTANOS</h3></strong>
                 </Fade>
                 <div className="line-banner" style={{ backgroundColor: 'white' }} />
                 <p style={{ color: 'white', fontWeight: '400', textAlign: 'center', margin: mobile ? 0 : '0 9rem', fontStyle: 'italic' }}>"Ya sea que estés buscando a un contratista general experto o que deseas trabajar con nosotros, {!mobile && <br />} encontrarás todo lo que necesitas para ponerte en contacto con Grupo Ticonsa"</p>
@@ -106,12 +106,12 @@ const Contacts2 = () => {
                     </div>
                     <Fade>
                         <section className="text-center">
-                            <h2 class="section-title">Conversa con <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
+                            <h2 className="section-title">Conversa con <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
                         </section>
                     </Fade>
                     <div className="line-banner" style={{ backgroundColor: color.primary }} />
                     {!mobile &&
-                        <div class="col-about-info">
+                        <div className="col-about-info">
                             <p>Nuestra dedicación al cliente empieza antes incluso de que se conciba el proyecto. Con entusiasmo ofrecemos nuestra visión y asesoramiento a todos aquellos que aspiran a <span style={{ color: color.orange }}>EDIFICAR EN MÉXICO.</span></p>
                         </div>
                     }
@@ -122,16 +122,16 @@ const Contacts2 = () => {
             </Stack>
             <div style={{ backgroundColor: color.primary, padding: mobile ? 20 : 80 }}>
                 <Fade direction="down">
-                    <strong><h3 class="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', }}>NUESTRAS UBICACIONES</h3></strong>
+                    <strong><h3 className="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', }}>NUESTRAS UBICACIONES</h3></strong>
                 </Fade>
                 <Fade direction="down" delay={0.5}>
-                    <strong><h3 class="col-about-title" style={{ color: 'white', fontSize: 52, fontWeight: '700', marginBottom: '0rem', }}>PRESENCIA NACIONAL</h3></strong>
+                    <strong><h3 className="col-about-title" style={{ color: 'white', fontSize: 52, fontWeight: '700', marginBottom: '0rem', }}>PRESENCIA NACIONAL</h3></strong>
                 </Fade>
                 <div style={{ display: 'flex', flexDirection: direction, marginTop: 30, gap: 25, flexWrap: 'wrap' }}>
                     {ubications.map((item, index) => (
                         <a href={item?.url} target="_blank" key={`${index}-${item?.name}`}>
                             <div>
-                                <h3 class="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase' }}>{item?.name}</h3>
+                                <h3 className="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase' }}>{item?.name}</h3>
                                 <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }}>
                                     <FaDirections color="white" />
                                     <h3 style={{ color: 'white', fontSize: 12, marginTop: '0.5rem' }}>{item?.direction}<br />{item?.place}</h3>

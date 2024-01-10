@@ -88,7 +88,7 @@ const Plants = ({ id }) => {
                 }
                 <BGPoints>
                     <section className="_main container">
-                        <div class="row-base row">
+                        <div className="row-base row">
                             <section className="d-flex justify-content-around pb-5 flex-wrap" >
                                 {plants[id].info.map((item, index) => (
                                     <CardsInfo
@@ -100,30 +100,30 @@ const Plants = ({ id }) => {
                             </section>
                         </div>
                         <center>
-                            <section class="col-base col-about-img col-sm-6 col-md-offset-1" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
+                            <section className="col-base col-about-img col-sm-6 col-md-offset-1" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
                                 <Fade direction="down">
                                     <section className="text-center">
-                                        <h3 class="col-about-title" style={{ textTransform: 'uppercase' }}>Layout <span className="text-primary-blue">{plants[id].title}</span></h3>
+                                        <h3 className="col-about-title" style={{ textTransform: 'uppercase' }}>Layout <span className="text-primary-blue">{plants[id].title}</span></h3>
                                         <center><div className="line-banner-small" /></center>
                                         <p>Línea de prefabricados</p>
                                     </section>
                                 </Fade>
-                                <div class="project" onClick={handleShowLayout}>
+                                <div className="project" onClick={handleShowLayout}>
                                     <figure>
                                         <img
                                             src={`${plants[id].folder}${plants[id].layout}`}
                                             style={{ width: '80%', height: 'auto', objectFit: 'scale-down' }}
                                         />
                                         <figcaption>
-                                            <div class="project-zoom text-shadow"></div>
+                                            <div className="project-zoom text-shadow"></div>
                                         </figcaption>
                                     </figure>
                                 </div>
                             </section>
                         </center>
-                        {/*<section class="col-base col-about-img col-sm-6 col-md-offset-1" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
+                        {/*<section className="col-base col-about-img col-sm-6 col-md-offset-1" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
                             <section>
-                                <h3 class="col-about-title" style={{ textTransform: 'uppercase' }}>{plants[id].title}</h3>
+                                <h3 className="col-about-title" style={{ textTransform: 'uppercase' }}>{plants[id].title}</h3>
                                 <div className="line-banner-small" />
                                 <p>{plants[id].place}<br /><strong>{plants[id].place}</strong></p>
                                 <p>Planta ubicada en los linderos entre el estado de Puebla y el estado de Tlaxcala, en la que se cuenta con las líneas de producción para Durmientes de Concreto con un área de metalmecánica para elaboración de moldes y una bloquera que produce adoquines. En este centro también se localiza la planta Spancrete para producción de losas y muros alveolares.</p>

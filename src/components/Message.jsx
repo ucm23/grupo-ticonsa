@@ -21,9 +21,10 @@ export default function Message() {
             <CarouselStatic names={[1, 2, 3]} folder='img_maya' />
             <section className="_main container" >
                 <section>
+                    <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Desde la Idea hasta la Realidad</h2>
                     <Fade direction="down">
                         <section className="text-center">
-                            <h2 class="section-title" style={{ paddingTop: 30, }}>Mensaje de nuestra <span className="text-primary-blue">Presidencia</span></h2>
+                            <h2 className="section-title">Mensaje de nuestra <span className="text-primary-blue">Presidencia</span></h2>
                         </section>
                     </Fade>
                     <center>
@@ -33,15 +34,15 @@ export default function Message() {
                         />
                         <p>Ticonsa Inmobiliaria S.A. de C.V.</p>
                     </center>
-                    <div class="row-base row">
+                    <div className="row-base row">
                         {messages.map(mess =>
-                            <div class="col-base col-md-offset-1" key={mess.id}>
-                                <div class="col-about-info">
+                            <div className="col-base col-md-offset-1" key={mess.id}>
+                                <div className="col-about-info">
                                     <p>{mess.text}</p>
                                 </div>
                             </div>
                         )}
-                        <div class="col-about-info">
+                        <div className="col-about-info">
                             <p style={{ textAlign: 'end' }}><br /><strong>Ing. Iñaki Zugasti Zalvidea</strong><br />PRESIDENTE</p>
                         </div>
                     </div>

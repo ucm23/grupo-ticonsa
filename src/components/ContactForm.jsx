@@ -81,7 +81,7 @@ export default function ContactForm() {
 
     return (
         <form ref={form} onSubmit={sendEmail}>
-            <div class="field">
+            <div className="field">
             <input type="text" name="name" placeholder='Nombre completo' required />
             <input type="text" name="empresa" placeholder='Nombre de tu empresa' required />
             <input type="number" name="office" placeholder='Teléfono de oficina' required />

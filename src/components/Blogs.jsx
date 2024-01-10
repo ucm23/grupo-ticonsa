@@ -59,10 +59,10 @@ export default function Blogs() {
                         //style={{ height: mobile?"23rem":"26rem", objectFit: "cover", top: 100}}
                         style={{ objectFit: "cover", top: 100 }}
                     />
-                    <div class="row-base row">
+                    <div className="row-base row">
                         {messages.map(mess =>
-                            <div class="col-base col-md-offset-1">
-                                <div class="col-about-info">
+                            <div className="col-base col-md-offset-1">
+                                <div className="col-about-info">
                                     <Text
                                         key={mess.id}
                                         //style={mess?.img ? styles : { color: "#000" }}

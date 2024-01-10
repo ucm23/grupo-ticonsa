@@ -5,7 +5,7 @@ import BGPoints from "../components/BGPoints";
 import color from "../color";
 import { useBreakpointValue } from '@chakra-ui/react';
 
-import { RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine } from "react-icons/ri";
+import { RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine, RiBuildingLine, RiPencilRuler2Line, RiPageSeparator, RiP2PLine, } from "react-icons/ri";
 
 const features = [
     {
@@ -46,7 +46,7 @@ const features = [
     },
 ]
 
-const icons_ = [RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine]
+const icons_ = [RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine, RiBuildingLine, RiPencilRuler2Line, RiPageSeparator, RiP2PLine,]
 
 const Services = ({ id }) => {
 
@@ -142,7 +142,7 @@ const Services = ({ id }) => {
 
     return (
         <NavBar photo={true} mobile={mobile}>
-            <CarouselStatic names={[1, 2, 3]} folder='plants/yucatan' />
+            <CarouselStatic names={[10, 11, 12]} folder='systems/' />
 
             <BGPoints>
                 <section className="_main container">
@@ -152,7 +152,7 @@ const Services = ({ id }) => {
                                 <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>{types[id]?.description}</h2>
                                 <Fade direction="down">
                                     <section className="text-center">
-                                        <h2 class="section-title" style={{ paddingTop: 30, }}>Expertos en <span className="text-primary-blue">{types[id]?.name}</span></h2>
+                                        <h2 className="section-title" style={{ paddingTop: 30, }}>Expertos en <span className="text-primary-blue">{types[id]?.name}</span></h2>
                                     </section>
                                 </Fade>
                                 <div className="line-banner" style={{ backgroundColor: color.orange }} />
@@ -190,17 +190,17 @@ const Services = ({ id }) => {
                     </div>
                     {/*<section>
                         <section id="system">
-                            <div class="row-base row">
+                            <div className="row-base row">
                                 <div>
                                     <Fade direction="down">
                                         <section className="text-center">
-                                            <h2 class="section-title" style={{ paddingTop: 30, }}>Expertos en <span className="text-primary-blue">{types[id]?.name}</span></h2>
+                                            <h2 className="section-title" style={{ paddingTop: 30, }}>Expertos en <span className="text-primary-blue">{types[id]?.name}</span></h2>
                                         </section>
                                     </Fade>
                                     <div className="line-banner" style={{ backgroundColor: color.orange }} />
-                                    <div class="">
-                                        <div class="col-base col-md-offset-1">
-                                            <div class="col-about-info">
+                                    <div className="">
+                                        <div className="col-base col-md-offset-1">
+                                            <div className="col-about-info">
                                                 <div>
                                                     <p style={{ textAlign: 'center' }}>
                                                         <div dangerouslySetInnerHTML={{ __html: types[id]?.description }} />

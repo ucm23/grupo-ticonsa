@@ -24,17 +24,17 @@ const Privacity = () => {
                 <section className="_main container" >
                     <section className="section-5" >
                         <Fade direction="down">
-                            <h2 class="section-title" style={{ paddingTop: 130, }}>Aviso de Privacidad</h2>
+                            <h2 className="section-title" style={{ paddingTop: 130, }}>Aviso de Privacidad</h2>
                         </Fade>
 
-                        <div class="row-base row">
-                            <div class="col-base col-md-offset-1">
-                                <div class="col-about-info">
+                        <div className="row-base row">
+                            <div className="col-base col-md-offset-1">
+                                <div className="col-about-info">
                                     <strong><p>Físico / Electrónico</p></strong>
                                 </div>
                             </div>
-                            <div class="col-base col-md-offset-1">
-                                <div class="col-about-info">
+                            <div className="col-base col-md-offset-1">
+                                <div className="col-about-info">
                                     <p>En debido cumplimiento a lo dispuesto por la Ley Federal de Protección de Datos Personales en Posesión de Particulares, se genera el presente “Aviso de Privacidad” por parte de Ticonsa Inmobiliaria, Sociedad Anónima de Capital Variable (en lo sucesivo GRUPO TICONSA), misma que es responsable de la recopilación y tratamiento de datos de clientes y proveedores.</p>
                                     <p>Por lo anterior, GRUPO TICONSA reconoce los procesos legales y otorga derechos de Acceso, Rectificación, Cancelación y/o Oposición denominados ARCO, respecto del contenido o forma de manejo de los datos que nuestros clientes y proveedores pone en conocimiento de GRUPO TICONSA, para que sus datos personales sean debidamente protegidos tanto en su almacenamiento y en su caso de transmisión.</p>
                                     <p>La información respecto de los datos personales que GRUPO TICONSA recopilará, son enunciativamente; nombre(s) o denominación social, teléfono fijo y/o móvil, direcciones postales y/o de correo electrónico, Registros fiscales y patronales en su caso. No recolectamos ninguna información financiera ni datos sensibles que puedan vulnerar la intimidad de nuestros usuarios, clientes o proveedores.</p>
