@@ -107,16 +107,16 @@ const process = [
 ]
 
 const pros = [
-    "Disminución en el tiempo de construcción hasta del 50%.",
-    "Ahorro significativo en costos de ingeniería estructural ya que la ingeniería es desarrollada por nosotros contando con ingenieros altamente calificados en la materia.",
     "Seguridad en infraestructura y estructura garantizada.",
-    "Redución del impacto ambiental en sitio ya que se requiere menor número de personal obrero comparado con los sistemas tradicionales.  Se reduce hasta un 80%.",
-    "Se aligera la estructura permitiendo en ocasiones una reducción en costos en cimentación.",
+    "Disminución en el tiempo de construcción hasta del 50%.",
     "Controles de calidad más estrictos gracias al proceso industrializado.",
     "Durabilidad de la estructura por uso de concretos de alta resistencia.",
-    "Se elimina el riesgo debido a problemas obrero-patronales, es decir cuotas sindicales, seguro social, etc. ya que el personal depende directamente de nosotros.",
     "Se reducen costos de supervisión ya que se simplifican los procesos y control de obra.",
-    "Versatilidad en soluciones arquitectónicas ya que se desarrolla la ingeniería adaptada al proyecto."
+    "Se aligera la estructura permitiendo en ocasiones una reducción en costos en cimentación.",
+    "Versatilidad en soluciones arquitectónicas ya que se desarrolla la ingeniería adaptada al proyecto.",
+    "Redución del impacto ambiental en sitio ya que se requiere menor número de personal obrero comparado con los sistemas tradicionales.  Se reduce hasta un 80%.",
+    "Se elimina el riesgo debido a problemas obrero-patronales, es decir cuotas sindicales, seguro social, etc. ya que el personal depende directamente de nosotros.",
+    "Ahorro significativo en costos de ingeniería estructural ya que la ingeniería es desarrollada por nosotros contando con ingenieros altamente calificados en la materia."
 ]
 
 

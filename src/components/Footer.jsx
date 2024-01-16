@@ -112,9 +112,10 @@ export default function SmallCentered({ photo }) {
                                 </Stack>
                             </Stack>
                             <Stack paddingRight={5}>
-                                <h3 className="footer-title uppercase">Contacto</h3>
+                                <h3 className="footer-title uppercase">Ayuda</h3>
                                 <Stack flexDirection={'column'}>
                                     <a href="/contacts" className="footer-link">Contáctanos</a>
+                                    <a href="https://help-victum-repse.vercel.app/" className="footer-link" target="_blank">Ayuda digital</a>
                                 </Stack>
                             </Stack>
                         </Stack>

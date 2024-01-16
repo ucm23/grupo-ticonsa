@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="es-MX">
-
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo-remove.png" />
@@ -11,7 +10,6 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <style>
         #loader {
@@ -20,7 +18,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255);
+            background: rgb(255, 255, 255);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -40,17 +38,9 @@
         }
 
         @keyframes scale {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.2);
-            }
-
-            100% {
-                transform: scale(1);
-            }
+            0% { transform: scale(1) }
+            50% { transform: scale(1.2) }
+            100% { transform: scale(1) }
         }
     </style>
 
@@ -75,11 +65,11 @@
         var urlActual = window.location.href;
         console.log('URL actual:', urlActual);
         if (urlActual === "https://www.grupoticonsa.com.mx/produccion.php") {
+            console.log('https://www.grupoticonsa.com.mx/produccion.php');
             window.location.href = 'https://www.grupoticonsa.com.mx';
         } else {
-            console.log('else');
+            console.log('No /produccion.php');
         }
     </script>
 </body>
-
 </html>
