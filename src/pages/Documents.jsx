@@ -7,12 +7,12 @@ import NavBar from "../components/NavBar"
 
 const Documents = ({ type }) => {
 
-
     const types = {
         "cv": "cv_.pdf",
         "presencia": "presencia.pdf",
     }
 
+    //https://issuu.com/ticonsa_documents/docs/cv_
     return (
         <NavBar>
             <section className="_main container">

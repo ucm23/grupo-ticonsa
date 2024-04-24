@@ -1,6 +1,6 @@
 import Message from "../components/Message"
 import NavBar from "../components/NavBar"
-import { Heading, Stack, Text, Box, useBreakpointValue, useColorModeValue } from '@chakra-ui/react'
+import { useBreakpointValue } from '@chakra-ui/react'
 
 const History = () => {
     const mobile = useBreakpointValue({ base: true, md: false });

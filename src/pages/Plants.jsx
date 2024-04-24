@@ -1,37 +1,18 @@
-import {
-    Accordion,
-    Box,
-    Text,
-    Image,
-    useColorModeValue,
-} from "@chakra-ui/react"
 import CarouselStatic from "../components/CarouselStatic"
-import { Carousel } from "react-bootstrap";
 import NavBar from "../components/NavBar"
-import ServicesCard from "../components/ServicesCard"
-import items from '../assets/systems.json'
 import React, { useCallback, useEffect, useState } from 'react'
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import Chart from "react-apexcharts";
 
 import { Fade } from "react-awesome-reveal";
 import CarouselStaticBG from "../components/CarouselStaticBG";
 import CardsInfo from "../components/CardsInfo";
-import { MdEmail, MdOutlineEmail, MdPhone, MdPhonelinkRing, MdAssuredWorkload, MdAspectRatio, MdEngineering, MdSquareFoot } from 'react-icons/md';
-import ReactImageZoom from 'react-image-zoom';
 import {
     useBreakpointValue,
 } from '@chakra-ui/react'
 
 import '../api/ZoomableImage.js';
 import BGPoints from "../components/BGPoints.jsx";
-
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Popover from 'react-bootstrap/Popover';
 import plants from '../assets/info_plants.json'
-
-//        actions: ["plant-teotihuacan", "plant-morelos", "plant-campeche", "plant-cancun", "plant-progreso"]
 
 const Plants = ({ id }) => {
 
@@ -42,21 +23,6 @@ const Plants = ({ id }) => {
     const handleShowLayout = () => setShowLayout(!showLayout);
 
     const mobile = useBreakpointValue({ base: true, md: false });
-
-    const [index, setIndex] = useState(0)
-
-    const onPress = (key) => {
-        setIndex(key);
-        handleShow()
-    }
-
-    const handleSelect = (selectedIndex) => setIndex(selectedIndex);
-
-    const [isZoomed, setIsZoomed] = useState(false)
-
-    const handleZoomChange = useCallback(shouldZoom => {
-        setIsZoomed(shouldZoom)
-    }, []);
 
     const [transform, setTransform] = useState('scale(1)');
 

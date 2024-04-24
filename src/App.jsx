@@ -11,12 +11,14 @@ import Services from "./pages/Services";
 import Documents from "./pages/Documents";
 import Plants from "./pages/Plants";
 import Contacts2 from "./pages/Contacts2";
+import Index_ from "./pages/Index_";
 
 function App() {
     return (
         <Routes>
-            <Route index element={<Index />} />
-            <Route path="*" element={<Index />} />
+            <Route index element={<Index_ />} />
+            <Route path="*" element={<Index_ />} />
+            {/*
             <Route path="/historia" element={<History />} />
             <Route path="/contacto" element={<Contacts2 />} />
             <Route path="/productos" element={<Products />} />
@@ -41,8 +43,8 @@ function App() {
 
             <Route path="/legal" element={<Legal />} />
             <Route path="/privacity" element={<Privacity />} />
+    */}
         </Routes>
     )
 }
-
 export default App

@@ -4,13 +4,9 @@ import {
 import CarouselStatic from "../components/CarouselStatic"
 import { Carousel } from "react-bootstrap";
 import NavBar from "../components/NavBar"
-import ServicesCard from "../components/ServicesCard";
 import items from '../assets/systems.json';
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import Chart from "react-apexcharts";
-
 import { Fade } from "react-awesome-reveal";
 import BGPoints from "../components/BGPoints";
 import color from "../color";

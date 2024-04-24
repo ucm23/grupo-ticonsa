@@ -2,30 +2,22 @@ import NavBar from "../components/NavBar"
 import items from '../assets/services_card.json'
 import point from '../assets/projects_map.json'
 import paths from '../assets/path_map.json'
-
-
 import { useState, useRef } from 'react';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
-
 import { Fade } from "react-awesome-reveal";
-
 import {
     Stack,
-    Text,
     useBreakpointValue,
     Button
 } from '@chakra-ui/react';
-
 import {
     Image,
 } from '@chakra-ui/react';
 import color from "../color";
 import CardSimple from "../components/CardSimple"
 import { Carousel } from "react-bootstrap";
-
 import { RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine } from "react-icons/ri";
-
 import Carousel_ from "../components/Carousel_"
 import Modal from 'react-bootstrap/Modal';
 import BGPoints from "../components/BGPoints"

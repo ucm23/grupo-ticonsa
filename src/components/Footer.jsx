@@ -2,14 +2,13 @@ import {
     Stack,
     useBreakpointValue,
     Button,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
 import { FaInstagram, FaTwitter, FaYoutube, FaFacebook, FaLinkedin } from 'react-icons/fa';
 import color from '../color'
 import { Fade } from 'react-awesome-reveal';
 import { useState } from 'react'
 import { useEffect } from 'react'
 import SocialButton from './SocialButton'
-
 import { PiArrowRightThin } from "react-icons/pi";
 
 export default function SmallCentered({ photo }) {
@@ -47,7 +46,6 @@ export default function SmallCentered({ photo }) {
                     <div
                         style={styles}
                     >
-
                         <section className="_main container" >
                             <Stack
                                 direction={'column'}
@@ -79,7 +77,6 @@ export default function SmallCentered({ photo }) {
                                 </Stack>
                             </Stack>
                         </section>
-
                     </div>
                 </Stack>
             }
