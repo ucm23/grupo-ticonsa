@@ -16,8 +16,9 @@ export default function NavBar_({ photo }) {
     const styles = {
         //backgroundColor: "#030318",
         // backgroundColor: "#B6B6B6",
-        backgroundColor: 'rgb(23 39 47 / 16%)',
-        backgroundImage: `url('/projects/bg_up.jpeg')`,
+        //backgroundColor: 'rgb(23 39 47 / 16%)',
+        backgroundColor: 'rgb(18 44 124 / 50%)',
+        backgroundImage: `url('/projects/bg_up_.jpeg')`,
         backgroundBlendMode: "soft-light",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
