@@ -16,15 +16,14 @@ import Index_ from "./pages/Index_";
 function App() {
     return (
         <Routes>
-            <Route index element={<Index_ />} />
-            <Route path="*" element={<Index_ />} />
-            {/*
+            <Route index element={<Index />} />
+            <Route path="*" element={<Index />} />
+            
             <Route path="/historia" element={<History />} />
             <Route path="/contacto" element={<Contacts2 />} />
             <Route path="/productos" element={<Products />} />
             <Route path="/portafolio" element={<Porfolio />} />
             <Route path="/prefabricado" element={<Systems />} />
-
 
             <Route path="/plant-campeche" element={<Plants id={1} />} />            
             <Route path="/plant-progreso" element={<Plants id={2} />} />
@@ -43,7 +42,7 @@ function App() {
 
             <Route path="/legal" element={<Legal />} />
             <Route path="/privacity" element={<Privacity />} />
-    */}
+    
         </Routes>
     )
 }

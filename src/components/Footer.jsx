@@ -161,6 +161,6 @@ export default function SmallCentered({ photo }) {
                     </Stack>
                 </Fade>
             </section>
-        </div >
+        </div>
     )
 }
