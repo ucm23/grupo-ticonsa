@@ -25,17 +25,17 @@ const CarouselStaticBG = ({ title, place, names, folder }) => {
                 paddingRight: 10,
             }}
         >
-            <Fade delay={200}>
-                <div>
-                    <img
-                        src={`logo-white.png`}
-                        style={{ height: 50, objectFit: 'cover' }}
-                    />
+            <div>
+                <img
+                    src={`logo-white.png`}
+                    style={{ height: 50, objectFit: 'cover' }}
+                />
+                <Fade delay={200}>
                     <h1 style={{ textTransform: 'uppercase', fontWeight: 'bold', color: color.primary, fontFamily: 'monospace', padding: '12px 0 4px 0' }}>{title}</h1>
                     <h1 style={{ textTransform: 'uppercase', fontWeight: 'bold', color: color.primary + '99', fontFamily: 'monospace', fontSize: 14 }}>{place}</h1>
-                </div>
-            </Fade>
-          <Fade delay={450} >
+                </Fade>
+            </div>
+            <Fade delay={450} >
                 <Carousel className="shadow" fade style={{ height: 450, width: 450, top: 42, borderRadius: "10px" }}>
                     {names.map(item =>
                         <Carousel.Item key={`names-item-${item}`} interval={2600}>
@@ -47,7 +47,7 @@ const CarouselStaticBG = ({ title, place, names, folder }) => {
                         </Carousel.Item>
                     )}
                 </Carousel>
-          </Fade>
+            </Fade>
         </div>
     )
 }

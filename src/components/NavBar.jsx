@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { Dropdown } from 'react-bootstrap';
 import color from '../color';
 
-const NavBar = ({ children, photo, mobile }) => {
+const NavBar = ({ children, photo, certificates, mobile }) => {
     const location = useLocation();
 
     const {
@@ -23,15 +23,21 @@ const NavBar = ({ children, photo, mobile }) => {
     }, []);
 
     const SubMenuProd = {
-        name: "Productos y Servicios",
-        options: ["Infraestructura", "Edificación", "Transporte", "Montaje", "Supervisión"],
-        actions: ["infraestructura", "edificacion", "transporte", "montaje", "supervision"]
+        name: "Servicios",
+        options: ["Desarrollo de Ingeniería", "Fabricación", "Transporte", "Montaje", "Supervisión"],
+        actions: ["ingenieria", "fabricacion", "transporte", "montaje", "supervision"]
     }
 
     const SubMenuInst = {
         name: "Plantas",
         options: ["Teotihuacán", "Puerto Morelos", "Campeche", "Cancún T5NF1", "Puerto Progreso"],
         actions: ["plant-teotihuacan", "plant-morelos", "plant-campeche", "plant-cancun", "plant-progreso"]
+    }
+
+    const menuprojects = {
+        name: "Proyectos",
+        options: ["Infraestructura", "Edificación", "Especiales",],
+        actions: ["infraestructura", "edificacion", "especiales",]
     }
 
     /*const SubMenuInst = {
@@ -42,13 +48,14 @@ const NavBar = ({ children, photo, mobile }) => {
 
     const routes = [
         { id: 1, href: "/", content: "Inicio" },
-        { id: 2, href: "/historia", content: "Historia" },
-        { id: 3, href: "/prefabricado", content: "Prefabricado" },
-        { id: 5, href: "/#", hasSubMenu: SubMenuInst },
-        { id: 7, href: "/#", hasSubMenu: SubMenuProd },
+        { id: 2, href: "/prefabricado", content: "Sistema Prefabricado" },
+        { id: 3, href: "/#", hasSubMenu: SubMenuInst },
+        { id: 4, href: "/productos", content: "Productos" },
+        { id: 5, href: "/#", hasSubMenu: SubMenuProd },
+        { id: 6, href: "/#", hasSubMenu: menuprojects },
         { id: 7, href: "https://development.victum-re.online", content: "Proveedores", onlyLink: true },
-        { id: 6, href: "/contacto", content: "Contacto" },
-        
+        { id: 8, href: "/contacto", content: "Contacto" },
+
     ]
 
     const handleCheckBoxChange = ({ target }) => setIsChecked(target.checked);
@@ -95,7 +102,7 @@ const NavBar = ({ children, photo, mobile }) => {
             <main>
                 {children}
             </main>
-            <SmallCentered photo={photo} />
+            <SmallCentered photo={photo} certificates={certificates} />
         </>
     )
 }

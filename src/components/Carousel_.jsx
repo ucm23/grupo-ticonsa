@@ -168,7 +168,7 @@ export default function Carousel_({ handleVideo }) {
                     <Box key={index}>
                         <SplitMergeAnimation
                             imageUrl={card.image}
-                            numParts={mobile ? 1 : 5}
+                            numParts={1}
                         >
                             <Box
                                 className='box-text'

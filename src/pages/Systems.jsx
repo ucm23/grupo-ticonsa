@@ -215,13 +215,6 @@ const Systems = () => {
                                         </dl>
                                     </div>
                                 </div>
-                                {/*<img
-                                    src="/imgs/collage.png"
-                                    className="w-[48rem] max-w-none shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-                                    width={2432}
-                                    height={1442}
-                                    style={{ borderRadius: '1.5em' }}
-                                            />*/}
                                 <div>
                                     <div className="diff aspect-[16/8] w-[48rem] max-w-none ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" style={{ borderRadius: '8px' }}>
                                         <div className="diff-item-1">
@@ -265,7 +258,6 @@ const Systems = () => {
                                             <div className={`${!index_ ? "timeline-start md:text-end" : "timeline-end"} mb-10`}>
                                                 <div className={index_ ? "timeline-img-start" : "timeline-img-end"}>
                                                     <img
-                                                        //src="//www.spcdn.org/images/landing-page-builder/ic-lpb-step-02.png" 
                                                         src={item.icon}
                                                         className="img-step"
                                                     />
@@ -278,6 +270,56 @@ const Systems = () => {
                                     )
                                 })}
                                 <div id="features"></div>
+
+                                <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+                                    <li>
+                                        <div className="timeline-middle">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20"
+                                                fill="currentColor"
+                                                className="h-5 w-5">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                                    clipRule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <div className="timeline-start mb-10 md:text-end">
+                                            <time className="font-mono italic">1984</time>
+                                            <div className="text-lg font-black">First Macintosh computer</div>
+                                            The Apple Macintosh—later rebranded as the Macintosh 128K—is the original Apple Macintosh
+                                            personal computer. It played a pivotal role in establishing desktop publishing as a general
+                                            office function. The motherboard, a 9 in (23 cm) CRT monitor, and a floppy drive were housed
+                                            in a beige case with integrated carrying handle; it came with a keyboard and single-button
+                                            mouse.
+                                        </div>
+                                        <hr />
+                                    </li>
+                                    <li>
+                                        <hr />
+                                        <div className="timeline-middle">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20"
+                                                fill="currentColor"
+                                                className="h-5 w-5">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                                                    clipRule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <div className="timeline-end md:mb-10">
+                                            <time className="font-mono italic">1998</time>
+                                            <div className="text-lg font-black">iMac</div>
+                                            iMac is a family of all-in-one Mac desktop computers designed and built by Apple Inc. It has
+                                            been the primary part of Apple's consumer desktop offerings since its debut in August 1998,
+                                            and has evolved through seven distinct forms
+                                        </div>
+                                        <hr />
+                                    </li>
+                                </ul>
                             </div>
                             {/*<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
                                 <dl className="grid grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
