@@ -310,13 +310,13 @@ const Index = () => {
                                     item?.projects.map((project_) => (
                                         <OverlayTrigger
                                             trigger='hover'
-                                            placement={'bottom'}
+                                            placement={'auto'}
                                             overlay={
                                                 <Popover id={`popover-positioned-bottom`}>
                                                     <Popover.Header as="h3">{item?.name}</Popover.Header>
                                                     <Popover.Body>
                                                         {project_?.extra && <strong>[{project_?.extra}]<br /></strong>}
-                                                        {project_?.name}
+                                                        <div dangerouslySetInnerHTML={{ __html: project_?.name }} />
                                                     </Popover.Body>
                                                 </Popover>
                                             }

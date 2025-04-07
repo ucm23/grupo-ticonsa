@@ -81,47 +81,7 @@
         "name": "Tamaulipas",
         "projects": [
             {
-                "name": "Gradas de Campos Deportivos, Cd. Madero",
-                "extra": "",
-                "position": {
-                    "top": "40%",
-                    "left": "55%"
-                }
-            },
-            {
-                "name": "Gradas de Campos Deportivos, Laredo",
-                "extra": "",
-                "position": {
-                    "top": "41%",
-                    "left": "60%"
-                }
-            },
-            {
-                "name": "Construcción del Puente del Río Guayalejos en Crt. Cd. Victoria - Tampico",
-                "extra": "",
-                "position": {
-                    "top": "42%",
-                    "left": "57%"
-                }
-            },
-            {
-                "name": "Construcción de los Puentes de la Crt. Reynosa - Matamoros",
-                "extra": "",
-                "position": {
-                    "top": "39%",
-                    "left": "61%"
-                }
-            },
-            {
-                "name": "Construcción de los Puentes de la Crt. Victoria - Zaragosa",
-                "extra": "",
-                "position": {
-                    "top": "48%",
-                    "left": "58%"
-                }
-            },
-            {
-                "name": "Plaza Acceso y vialidades complementarias del Puente Laredo III",
+                "name": "Gradas de Campos Deportivos, Cd. Madero<br/><br/>Gradas de Campos Deportivos, Laredo<br/><br/>Construcción del Puente del Río Guayalejos en Crt. Cd. Victoria - Tampico<br/><br/>Construcción de los Puentes de la Crt. Reynosa - Matamoros<br/><br/>Construcción de los Puentes de la Crt. Victoria - Zaragosa<br/><br/>Plaza Acceso y vialidades complementarias del Puente Laredo III",
                 "extra": "",
                 "position": {
                     "top": "50%",
@@ -134,15 +94,7 @@
         "name": "Jalisco",
         "projects": [
             {
-                "name": "Puentes Carretera Maravatio",
-                "extra": "",
-                "position": {
-                    "top": "60%",
-                    "left": "33%"
-                }
-            },
-            {
-                "name": "Estacionamiento Grupo Modelo",
+                "name": "Puentes Carretera Maravatio<br/><br/>Estacionamiento Grupo Modelo",
                 "extra": "",
                 "position": {
                     "top": "58%",
@@ -168,23 +120,7 @@
         "name": "Michoacán",
         "projects": [
             {
-                "name": "Almacenes Complejo Fosforados. Lázara Cárdenas",
-                "extra": "",
-                "position": {
-                    "top": "63%",
-                    "left": "39%"
-                }
-            },
-            {
-                "name": "Almacenes DAP/NPK. FERTIMEX",
-                "extra": "",
-                "position": {
-                    "top": "64%",
-                    "left": "40%"
-                }
-            },
-            {
-                "name": "Edificio de Paletizado y Despaletizado. FERTIMEX",
+                "name": "Almacenes Complejo Fosforados. Lázara Cárdenas<br/><br/>Almacenes DAP/NPK. FERTIMEX<br/><br/>Edificio de Paletizado y Despaletizado. FERTIMEX",
                 "extra": "",
                 "position": {
                     "top": "64%",
@@ -192,31 +128,7 @@
                 }
             },
             {
-                "name": "Proyecto 1291 Instalaciones Navales Marina PEMEX",
-                "extra": "",
-                "position": {
-                    "top": "65%",
-                    "left": "42%"
-                }
-            },
-            {
-                "name": "Construcción Del Puente Vehicular del Acceso a la PEMEX. Morelia",
-                "extra": "",
-                "position": {
-                    "top": "66%",
-                    "left": "38%"
-                }
-            },
-            {
-                "name": "Puente Yurécuaro",
-                "extra": "",
-                "position": {
-                    "top": "63%",
-                    "left": "38%"
-                }
-            },
-            {
-                "name": "Fabricación de estacionamientos. Morelia",
+                "name": "Proyecto 1291 Instalaciones Navales Marina PEMEX<br/><br/>Construcción Del Puente Vehicular del Acceso a la PEMEX. Morelia<br/><br/>Puente Yurécuaro<br/><br/>Fabricación de estacionamientos. Morelia",
                 "extra": "",
                 "position": {
                     "top": "67%",
@@ -229,15 +141,7 @@
         "name": "Guerrero",
         "projects": [
             {
-                "name": "Centro Comercial Costera Miguel Alemán Acapulco",
-                "extra": "1978 - Ing. Raúl Figueroa",
-                "position": {
-                    "top": "70%",
-                    "left": "45%"
-                }
-            },
-            {
-                "name": "Centro Comercial Ixtapa",
+                "name": "Centro Comercial Costera Miguel Alemán Acapulco<br/><br/>Centro Comercial Ixtapa",
                 "extra": "1983 - Icor, S.A. de C.V.",
                 "position": {
                     "top": "72%",
@@ -250,71 +154,7 @@
         "name": "Veracruz",
         "projects": [
             {
-                "name": "Reconstrucción de Estructuras y Techumbres para Estadio de Béisbol",
-                "extra": "",
-                "position": {
-                    "top": "60%",
-                    "left": "60%"
-                }
-            },
-            {
-                "name": "Escuela Primaria Luis Farallón",
-                "extra": "",
-                "position": {
-                    "top": "62%",
-                    "left": "62%"
-                }
-            },
-            {
-                "name": "Bodegas Y Talleres Laguna Farallón",
-                "extra": "",
-                "position": {
-                    "top": "61%",
-                    "left": "62%"
-                }
-            },
-            {
-                "name": "Estructura de 4 niveles Hotel Laguna Farallón",
-                "extra": "",
-                "position": {
-                    "top": "60%",
-                    "left": "63%"
-                }
-            },
-            {
-                "name": "Cubierta Nave de 20 m. y oficinas",
-                "extra": "",
-                "position": {
-                    "top": "68%",
-                    "left": "63%"
-                }
-            },
-            {
-                "name": "Puentes Carretera Córdoba - Veracruz",
-                "extra": "",
-                "position": {
-                    "top": "70%",
-                    "left": "60%"
-                }
-            },
-            {
-                "name": "Puente Cotaxla",
-                "extra": "",
-                "position": {
-                    "top": "71%",
-                    "left": "64%"
-                }
-            },
-            {
-                "name": "Puente Boca del Río",
-                "extra": "",
-                "position": {
-                    "top": "71%",
-                    "left": "65%"
-                }
-            },
-            {
-                "name": "Centro de Exposiciones del World Trade Center",
+                "name": "Reconstrucción de Estructuras y Techumbres para Estadio de Béisbol<br/><br/>Escuela Primaria Luis Farallón<br/><br/>Bodegas Y Talleres Laguna Farallón <br/><br/>Estructura de 4 niveles Hotel Laguna Farallón<br/><br/>Cubierta Nave de 20 m. y oficinas<br/><br/>Puentes Carretera Córdoba - Veracruz<br/><br/>Puente Cotaxla<br/><br/>Puente Boca del Río<br/><br/>Centro de Exposiciones del World Trade Center",
                 "extra": "",
                 "position": {
                     "top": "60%",
@@ -327,31 +167,7 @@
         "name": "Tabasco",
         "projects": [
             {
-                "name": "Tabasco G.P.Q. Complejo",
-                "extra": "",
-                "position": {
-                    "top": "71%",
-                    "left": "80%"
-                }
-            },
-            {
-                "name": "Centro Comercial Plaza 'Las Américas'",
-                "extra": "1981 - Grupo Mar, S.A.",
-                "position": {
-                    "top": "70%",
-                    "left": "78%"
-                }
-            },
-            {
-                "name": "Hotel Viva Inn Cárdenas",
-                "extra": "",
-                "position": {
-                    "top": "71.5%",
-                    "left": "79%"
-                }
-            },
-            {
-                "name": "Taller PEMEX",
+                "name": "Tabasco G.P.Q. Complejo<br/><br/>Centro Comercial Plaza 'Las Américas'<br/><br/>Hotel Viva Inn Cárdenas<br/><br/>Taller PEMEX",
                 "extra": "",
                 "position": {
                     "top": "72%",
@@ -390,15 +206,7 @@
         "name": "Querétaro",
         "projects": [
             {
-                "name": "Cubierta de Aeropuerto de Querétaro",
-                "extra": "",
-                "position": {
-                    "top": "55%",
-                    "left": "51%"
-                }
-            },
-            {
-                "name": "Nave Industrial Papeles Ponderosa",
+                "name": "Cubierta de Aeropuerto de Querétaro<br/><br/>Nave Industrial Papeles Ponderosa",
                 "extra": "",
                 "position": {
                     "top": "55%",
@@ -411,15 +219,7 @@
         "name": "Oaxaca",
         "projects": [
             {
-                "name": "Puentes Carretera Cuacnopalan",
-                "extra": "",
-                "position": {
-                    "top": "75%",
-                    "left": "63%"
-                }
-            },
-            {
-                "name": "Auditorio para la Guelaguetza",
+                "name": "Puentes Carretera Cuacnopalan<br/><br/>Auditorio para la Guelaguetza",
                 "extra": "",
                 "position": {
                     "top": "77%",
@@ -432,47 +232,7 @@
         "name": "Cuidad de México",
         "projects": [
             {
-                "name": "Foro Sol",
-                "extra": "",
-                "position": {
-                    "top": "60%",
-                    "left": "52%"
-                }
-            },
-            {
-                "name": "Segundo Piso Periférico",
-                "extra": "",
-                "position": {
-                    "top": "60%",
-                    "left": "52%"
-                }
-            },
-            {
-                "name": "Auditorio Tec de Monterrey",
-                "extra": "",
-                "position": {
-                    "top": "60%",
-                    "left": "52%"
-                }
-            },
-            {
-                "name": "Edificio Comercial San Cosme",
-                "extra": "1974 - Arq. Enrique Ramírez",
-                "position": {
-                    "top": "59%",
-                    "left": "54%"
-                }
-            },
-            {
-                "name": "Centro Comercial “Plaza Imagen”, Jardines de la Montaña",
-                "extra": "",
-                "position": {
-                    "top": "60%",
-                    "left": "53%"
-                }
-            },
-            {
-                "name": "Centro Comercial “Plaza Zapato” o “Plaza Gran Sur”",
+                "name": "Foro Sol<br/><br/>Segundo Piso Periférico<br/><br/>Auditorio Tec de Monterrey<br/><br/>Edificio Comercial San Cosme<br/><br/>Centro Comercial “Plaza Imagen”, Jardines de la Montaña<br/><br/>Centro Comercial “Plaza Zapato” o “Plaza Gran Sur”",
                 "extra": "",
                 "position": {
                     "top": "61%",
@@ -485,75 +245,11 @@
         "name": "Cancún, Quintana Roo",
         "projects": [
             {
-                "name": "`Hotel Moon \n Palace`",
+                "name": "Hotel Moon Palace<br/><br/> Hotel Oasis<br/><br/> Sears San Luis Potosí, Grupo Sanborns<br/><br/>Centro Comercial “Las Palmas“ <br/><br/>Centro Comercial Galería Infinity Grupo Isla<br/><br/>Royal Parking<br/><br/>Estacionamiento Ultramar, Ruta Naútica<br/><br/>Fachadas IMSS, Ingenieros Civiles Asociados <br/><br/>Fachadas Base Naval, Ingenieros Civiles Asociados",
                 "extra": "",
                 "position": {
-                    "top": "59%",
-                    "left": "93%"
-                }
-            },
-            {
-                "name": "Hotel Oasis",
-                "extra": "",
-                "position": {
-                    "top": "61%",
-                    "left": "92%"
-                }
-            },
-            {
-                "name": "Sears San Luis Potosí, Grupo Sanborns",
-                "extra": "",
-                "position": {
-                    "top": "61%",
-                    "left": "93%"
-                }
-            },
-            {
-                "name": "Centro Comercial “Las Palmas”",
-                "extra": "",
-                "position": {
-                    "top": "57%",
-                    "left": "90%"
-                }
-            },
-            {
-                "name": "Centro Comercial Galería Infinity Grupo Isla",
-                "extra": "",
-                "position": {
-                    "top": "59%",
-                    "left": "91%"
-                }
-            },
-            {
-                "name": "Royal Parking",
-                "extra": "",
-                "position": {
-                    "top": "58%",
-                    "left": "92%"
-                }
-            },
-            {
-                "name": "Estacionamiento Ultramar, Ruta Naútica",
-                "extra": "",
-                "position": {
-                    "top": "58%",
-                    "left": "91%"
-                }
-            },
-            {
-                "name": "Fachadas IMSS, Ingenieros Civiles Asociados",
-                "extra": "",
-                "position": {
-                    "top": "58%",
-                    "left": "91%"
-                }
-            },
-            {
-                "name": "Fachadas Base Naval, Ingenieros Civiles Asociados",
-                "extra": "",
-                "position": {
-                    "top": "59.5%",
-                    "left": "92%"
+                    "top": "56%",
+                    "left": "92.5%"
                 }
             }
         ]
