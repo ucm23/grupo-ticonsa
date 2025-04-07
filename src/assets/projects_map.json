@@ -32,8 +32,8 @@
                 "name": "Centro Regional BANCOMER, Ciudad Juárez",
                 "extra": "",
                 "position": {
-                    "top": "16%",
-                    "left": "17%"
+                    "top": "24%",
+                    "left": "32%"
                 }
             }
         ]
@@ -45,8 +45,8 @@
                 "name": "Puentes Carretera, Saltillo",
                 "extra": "",
                 "position": {
-                    "top": "20%",
-                    "left": "20%"
+                    "top": "30%",
+                    "left": "47%"
                 }
             }
         ]
@@ -58,8 +58,8 @@
                 "name": "Gran Túnel de la Gran Plaza (Macroplaza)",
                 "extra": "",
                 "position": {
-                    "top": "28%",
-                    "left": "30%"
+                    "top": "35%",
+                    "left": "50%"
                 }
             }
         ]
@@ -71,8 +71,8 @@
                 "name": "Puentes Carretera, Culiacán",
                 "extra": "",
                 "position": {
-                    "top": "29%",
-                    "left": "40%"
+                    "top": "42%",
+                    "left": "34%"
                 }
             }
         ]
@@ -110,8 +110,8 @@
                 "name": "Postes para bardas y limite de Aeropuerto de Manzanillo",
                 "extra": "",
                 "position": {
-                    "top": "63%",
-                    "left": "38%"
+                    "top": "68%",
+                    "left": "39%"
                 }
             }
         ]
@@ -120,19 +120,11 @@
         "name": "Michoacán",
         "projects": [
             {
-                "name": "Almacenes Complejo Fosforados. Lázara Cárdenas<br/><br/>Almacenes DAP/NPK. FERTIMEX<br/><br/>Edificio de Paletizado y Despaletizado. FERTIMEX",
-                "extra": "",
-                "position": {
-                    "top": "64%",
-                    "left": "41%"
-                }
-            },
-            {
-                "name": "Proyecto 1291 Instalaciones Navales Marina PEMEX<br/><br/>Construcción Del Puente Vehicular del Acceso a la PEMEX. Morelia<br/><br/>Puente Yurécuaro<br/><br/>Fabricación de estacionamientos. Morelia",
+                "name": "Almacenes Complejo Fosforados. Lázara Cárdenas<br/><br/>Almacenes DAP/NPK. FERTIMEX<br/><br/>Edificio de Paletizado y Despaletizado. <br/><br/>FERTIMEX Proyecto 1291 Instalaciones Navales Marina PEMEX<br/><br/>Construcción Del Puente Vehicular del Acceso a la PEMEX. Morelia<br/><br/>Puente Yurécuaro<br/><br/>Fabricación de estacionamientos. Morelia",
                 "extra": "",
                 "position": {
                     "top": "67%",
-                    "left": "35%"
+                    "left": "42%"
                 }
             }
         ]
