@@ -69,7 +69,7 @@ export default function SmallCentered({ photo, certificates }) {
                         </div>
 
                         <div class="relative bg-[#1a1a1a] pt-20 mt-14 px-6 rounded-[10px] text-center max-w-md w-full">
-                            <img src="/certificates/once.jpg"
+                            <img src="/certificates/onnce-color.png"
                                 alt="nPerf"
                                 class="absolute -top-16 left-1/2 transform -translate-x-1/2 h-40 w-40 object-cover rounded-full" />
                             <p class="text-white mt-4">

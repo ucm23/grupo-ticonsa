@@ -8,7 +8,7 @@ import NavBar from "../components/NavBar"
 const Documents = ({ type }) => {
 
     const types = {
-        "cv": "cv_.pdf",
+        "cv": "cv-grupo-ticonsa.pdf",
         "presencia": "presencia.pdf",
     }
 
