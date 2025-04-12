@@ -14,19 +14,15 @@ const Documents = ({ type }) => {
 
     //https://issuu.com/ticonsa_documents/docs/cv_
     return (
-        <NavBar>
+        <NavBar doc={true}>
             <section className="_main container">
                 <section>
-                    <div className="row-base row" style={{ marginTop: 158 }}>
+                    <div className="row-base row" style={{ marginTop: 158, marginBottom: 100}}>
                         <embed
-                            src={`${types[type]}#toolbar=0&navpanes=0&scrollbar=0`}
+                            src={`${types[type]}`}
+                            //src={`${types[type]}#toolbar=0&navpanes=0&scrollbar=0`}
                             type="application/pdf"
                             height="1000px"
-                            style={{
-                                width: '100%',
-                                height: 'calc(100vh - 200px)', // Ajusta según necesidades
-                                minHeight: '500px' // Altura mínima para móviles
-                            }}
                         />
                     </div>
                 </section>
