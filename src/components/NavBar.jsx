@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { Dropdown } from 'react-bootstrap';
 import color from '../color';
 
-const NavBar = ({ children, photo, certificates, mobile, doc}) => {
+const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) => {
     const location = useLocation();
 
     const {
@@ -14,7 +14,7 @@ const NavBar = ({ children, photo, certificates, mobile, doc}) => {
     } = location;
 
     const [isChecked, setIsChecked] = useState(false);
-    const [showShadow, setShowShadow] = useState(false);
+    const [showShadow, setShowShadow] = useState(shadow);
 
     useEffect(() => {
         const handleScroll = () => window.scrollY > 0 ? setShowShadow(true) : setShowShadow(false)
