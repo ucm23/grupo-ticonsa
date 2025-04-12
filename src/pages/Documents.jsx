@@ -22,6 +22,11 @@ const Documents = ({ type }) => {
                             src={`${types[type]}#toolbar=0&navpanes=0&scrollbar=0`}
                             type="application/pdf"
                             height="1000px"
+                            style={{
+                                width: '100%',
+                                height: 'calc(100vh - 200px)', // Ajusta según necesidades
+                                minHeight: '500px' // Altura mínima para móviles
+                            }}
                         />
                     </div>
                 </section>
