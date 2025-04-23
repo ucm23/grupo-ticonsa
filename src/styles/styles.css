@@ -691,7 +691,7 @@ li a:hover {
   background-size: calc(var(--num-parts) * 100%) 100%;
   /*transform-origin: left;
   /* Punto de origen para la transformación */
-  animation: splitAndMerge 5s ease-in-out;
+  animation: splitAndMerge 10s ease-in-out;
   background-position: var(--position, 0%);
 
   -webkit-text-size-adjust: 100%;
@@ -725,7 +725,7 @@ ul {
 
 @keyframes splitAndMerge {
   0% {
-    background-position: calc(var(--position, 0%) + 3%);
+    background-position: calc(var(--position, 0%) + 1%);
     transform: scale(1);
   }
 

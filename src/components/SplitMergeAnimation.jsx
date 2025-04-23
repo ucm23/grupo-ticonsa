@@ -3,7 +3,7 @@ const SplitMergeAnimation = ({ imageUrl, numParts = 6, children }) => {
 
     for (let i = 0; i < numParts; i++) {
         const position = (i / numParts) * 100;
-        const newPosition = ((i + 1) / numParts) * 100;
+        const newPosition = ((i + 0.4) / numParts) * 100;
 
         const imagePartStyle = {
             objectFit: 'cover',
