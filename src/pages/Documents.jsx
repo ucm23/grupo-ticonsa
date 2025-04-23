@@ -18,7 +18,7 @@ const Documents = ({ type }) => {
         <NavBar doc={true} shadow={true}>
             <section className="_main container">
                 <section>
-                    <div className="row-base row w-full md:w-[100%] h-screen flex flex-col" role="main" style={{ marginTop: 158, marginBottom: 100 }}>
+                    <div className="row-base row w-full md:w-[100%] flex flex-col" role="main" style={{ marginTop: 158, marginBottom: 100 }}>
                         {/*<embed
                             src={`${types[type]}#toolbar=0&navpanes=0&scrollbar=0`}
                             type="application/pdf"
@@ -28,13 +28,24 @@ const Documents = ({ type }) => {
                                 height: 'calc(100vh - 200px)', // Ajusta según necesidades
                                 minHeight: '500px' // Altura mínima para móviles
                             }}
-                        />*/}
+                        />
                         <iframe
                             src={types[type]}
                             className="w-full h-full"
                             style={{ transform: `scale(1)`, transformOrigin: "top left" }}
                             title="PDF Document Viewer"
                             allowFullScreen
+                        />*/}
+                        <iframe
+                            allowFullScreen={true}
+                            scrolling="no"
+                            className="fp-iframe"
+                            style={{
+                                border: '0px',
+                                width: '100%',
+                                height: '600px'
+                            }}
+                            src="https://heyzine.com/flip-book/71cd5ce9ca.html"
                         />
                     </div>
                 </section>
