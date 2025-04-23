@@ -18,7 +18,7 @@ const Documents = ({ type }) => {
         <NavBar doc={true} shadow={true}>
             <section className="_main container">
                 <section>
-                    <div className="row-base row w-full md:w-[100%] flex flex-col" role="main" style={{ marginTop: 158, marginBottom: 100 }}>
+                    <div className="row-base row w-full md:w-[100%] flex flex-col" role="main" style={{ marginTop: 25, marginBottom: 50 }}>
                         {/*<embed
                             src={`${types[type]}#toolbar=0&navpanes=0&scrollbar=0`}
                             type="application/pdf"
@@ -36,17 +36,30 @@ const Documents = ({ type }) => {
                             title="PDF Document Viewer"
                             allowFullScreen
                         />*/}
-                        <iframe
-                            allowFullScreen={true}
-                            scrolling="no"
-                            className="fp-iframe"
-                            style={{
-                                border: '0px',
+                        <div style={{ position: 'relative', width: '100%', height: '900px' }}>
+                            <iframe
+                                allowFullScreen={true}
+                                scrolling="no"
+                                className="fp-iframe"
+                                style={{
+                                    border: '0px',
+                                    width: '100%',
+                                    height: '910px'
+                                }}
+                                src="https://heyzine.com/flip-book/71cd5ce9ca.html"
+                            />
+
+                            {/* Rectángulo blanco en la parte inferior */}
+                            <div style={{
+                                position: 'absolute',
+                                bottom: 0,
+                                left: 0,
                                 width: '100%',
-                                height: '600px'
-                            }}
-                            src="https://heyzine.com/flip-book/71cd5ce9ca.html"
-                        />
+                                height: '110px',
+                                backgroundColor: 'white',
+                                zIndex: 10
+                            }}></div>
+                        </div>
                     </div>
                 </section>
             </section>
