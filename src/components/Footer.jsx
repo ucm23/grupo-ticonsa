@@ -35,6 +35,18 @@ export default function SmallCentered({ photo, certificates }) {
         setDirection(newDirection);
     }, [mobile]);
 
+    const handleLinkClick = (e) => {
+        if (mobile) {
+            e.preventDefault();
+            const link = document.createElement('a');
+            link.href = '/cv-grupo-ticonsa.pdf';
+            link.download = 'cv-grupo-ticonsa.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    };
+
     return (
         <>
             {certificates &&
@@ -152,7 +164,7 @@ export default function SmallCentered({ photo, certificates }) {
                                     <Stack flexDirection={'column'}>
                                         <a href="/#about-me" className="footer-link">Acerca de</a>
                                         <a href="/#services" className="footer-link">Servicios</a>
-                                        <a href="/document_cv" className="footer-link">Ver Curriculum</a>
+                                        <a href="/document_cv" className="footer-link" onClick={(e) => handleLinkClick(e)}>Ver Curriculum</a>
                                         {/*<a href="/document_presencia" className="footer-link">Ver Presencia Ticonsa</a>*/}
                                     </Stack>
                                 </Stack>
@@ -166,7 +178,7 @@ export default function SmallCentered({ photo, certificates }) {
                                 <Stack paddingRight={5}>
                                     <h3 className="footer-title uppercase">Ayuda</h3>
                                     <Stack flexDirection={'column'}>
-                                        <a href="/contacts" className="footer-link">Contáctanos</a>
+                                        <a href="/contacto" className="footer-link">Contáctanos</a>
                                         <a href="https://help-victum-repse.vercel.app/" className="footer-link" target="_blank">Ayuda digital</a>
                                     </Stack>
                                 </Stack>
