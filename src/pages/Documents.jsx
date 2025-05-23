@@ -48,6 +48,7 @@ const Documents = ({ type }) => {
                                 }}
                                 src="https://heyzine.com/flip-book/71cd5ce9ca.html"
                             />
+                            https://es.pornhub.com/channels/letsdoeit
 
                             {/* Rectángulo blanco en la parte inferior */}
                             <div style={{
