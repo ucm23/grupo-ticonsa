@@ -17,9 +17,9 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import NavBar from "../components/NavBar";
 
 const carouselImages = [
-  "/productos/producto1.jpg",
+  "/productos/producto1.jpeg",
   "/productos/producto2.jpg",
-  "/productos/producto3.jpg",
+  "/productos/producto3.jpeg",
 ];
 
 const productsData = [
