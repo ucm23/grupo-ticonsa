@@ -10,11 +10,14 @@ import {
   VStack,
   Flex,
   IconButton,
+  Button,
+  useDisclosure,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { CheckCircleIcon, StarIcon, SettingsIcon } from "@chakra-ui/icons";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import NavBar from "../components/NavBar";
+import ProductModal from "../components/ProductModal"; // Importamos el modal
 
 const carouselImages = [
   "/productos/producto1.jpeg",
@@ -68,7 +71,10 @@ const productsData = [
 const Products = () => {
   const mobile = useBreakpointValue({ base: true, md: false });
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
   const arrowStyles = {
     position: "absolute",
     top: "50%",
@@ -85,6 +91,11 @@ const Products = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  const handleOpenModal = (product) => {
+    setSelectedProduct(product);
+    onOpen();
+  };
 
   return (
     <NavBar photo={true} mobile={mobile}>
@@ -204,9 +215,9 @@ const Products = () => {
 
         <Box px={mobile ? 4 : 20} py={10} w="100%">
           <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
-            {productsData.map(({ id, name, image }) => (
+            {productsData.map((product) => (
               <Box
-                key={id}
+                key={product.id}
                 bg="white"
                 borderRadius="md"
                 overflow="hidden"
@@ -216,8 +227,8 @@ const Products = () => {
               >
                 <Box position="relative" width="100%" paddingTop="56.25%" borderTopRadius="md" overflow="hidden" bg="white">
                   <Image
-                    src={image}
-                    alt={name}
+                    src={product.image}
+                    alt={product.name}
                     position="absolute"
                     top="0"
                     left="0"
@@ -227,14 +238,23 @@ const Products = () => {
                     bg="white"
                   />
                 </Box>
-                <VStack align="start" p={4}>
-                  <Heading size="md">{name}</Heading>
+                <VStack align="start" p={4} spacing={3}>
+                  <Heading size="md">{product.name}</Heading>
+                  <Button
+                    colorScheme="blue"
+                    size="sm"
+                    onClick={() => handleOpenModal(product)}
+                  >
+                    Ver más
+                  </Button>
                 </VStack>
               </Box>
             ))}
           </SimpleGrid>
         </Box>
       </Box>
+
+      <ProductModal isOpen={isOpen} onClose={onClose} product={selectedProduct} />
     </NavBar>
   );
 };

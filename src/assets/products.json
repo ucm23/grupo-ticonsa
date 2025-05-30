@@ -1,0 +1,71 @@
+[
+  {
+    "id": 0,
+    "nombre": "LOSA “T”",
+    "descripcion": " un elemento estructural de concreto \npresforzado diseñado para salvar claros con \ncapacidad para soportar diversas \nsobrecargas.\n Por sus características de utilización, la \nsección TI le permite salvar una gran libertad \nen el diseño de sus obras. La sección TI se \nutiliza comúnmente en : Cubiertas \nindustriales con claros de hasta 32 metros.\n La sección TI se fabrica en moldes metálicos \nque pueden ser o no presforzantes, se curan \na vapor, por lo que permite ciclos de colado \ndiario, en beneficio de un incremento en la \nproductividad.\n Estas piezas se fabrican en diferentes anchos \nhasta 3 metros y tanto su peralte como su \nlongitud pueden variar de acuerdo a sus \nrequerimientos. En la Fabricación de la \nsección TI se emplean los siguientes \nmateriales:\n Concreto F'C=Kg/Cm2.\n Acero de refuerzo f'y=4,000 Kg/Cm2.\n Acero de Preesfuerzo FSU=18,000 Kg/Cm2.\n Generalmente se cuenta con un equipo y \npersonal especializado para realizar el \ntransporte y montaje de los elementos."
+  },
+  {
+    "id": 1,
+    "nombre": "LOSA DOBLE “T”",
+    "descripcion": "Losas nervadas pretensadas de gran \nflexibilidad de uso debido a sus \ncaracterísticas geométricas que le \npermiten salvar claros con diversas \ncapacidades de carga.\n Las losas TT se utilizan como sistemas \nde entrepisos, techos y muros, para la \nedificación de edificios industriales, \ncomerciales, habitacionales, centros \ndeportivos, escuelas, \nestacionamientos, etc...\n Se fabrican en diferentes peraltes con \nanchos de patín de 250 y 300 cm. y \nlongitud de acuerdo al requerimiento \nde proyecto.\n Las losas TT se fabrican en moldes \nmetálicos bajo el mas estricto control \nde calidad."
+  },
+  {
+    "id": 2,
+    "nombre": "LOSA T-PV",
+    "descripcion": "‣ Las losas TT de peralte variable son \nelementos estructurales de concreto \npresforzado pretensado, que dado que la \nlosa superior tiene pendiente a dos aguas, se \nproduce el escurrimiento de aguas pluviales \nde manera natural; esto es, sin necesidad de \nrellenos para provocar pendientes, ni de \ncolocar los apoyos a diferentes niveles. En las \naletas llevan unos accesorios metálicos que \nfuncionan como conectores sísmicos, para \nlograr el efecto de diafragma. \n‣ Su forma racional, que tiende a seguir en \nforma aproximada el diafragma de los \nmomentos flexionantes (máximo en el centro \ndel claro y nulo en los apoyos) da como \nresultado piezas con menor volumen de \nconcreto, que tienen menor peso y que \nredundan en un beneficio económico. \n‣ Las losas TT de peralte variable se emplean \nventajosamente como losas de cubierta de \nnaves industriales, centros comerciales, \ngimnasios, clínicas, escuelas, etc... y colocadas \nen posición invertida se han empleado en \nandenes y andadores de centrales de \nautobuses, en áreas donde transitan vehículos \nfácilmente estacionándose en zonas \nsombreadas y en gasolineras."
+  },
+  {
+    "id": 3,
+    "nombre": "DOBLE “TT-PV”",
+    "descripcion": "Las losas TT de peralte variable son \nelementos estructurales de concreto \npresforzado pretensado, que dado que la \nlosa superior tiene pendiente a dos aguas, se \nproduce el escurrimiento de aguas pluviales \nde manera natural; esto es, sin necesidad de \nrellenos para provocar pendientes, ni de \ncolocar los apoyos a diferentes niveles. En las \naletas llevan unos accesorios metálicos que \nfuncionan como conectores sísmicos, para \nlograr el efecto de diafragma. \n‣ Su forma racional, que tiende a seguir en \nforma aproximada el diafragma de los \nmomentos flexionantes (máximo en el centro \ndel claro y nulo en los apoyos) da como \nresultado piezas con menor volumen de \nconcreto, que tienen menor peso y que \nredundan en un beneficio económico. \n‣ Las losas TT de peralte variable se emplean \nventajosamente como losas de cubierta de \nnaves industriales, centros comerciales, \ngimnasios, clínicas, escuelas, etc... y colocadas \nen posición invertida se han empleado en \nandenes y andadores de centrales de \nautobuses, en áreas donde transitan vehículos \nfácilmente estacionándose en zonas \nsombreadas y en gasolineras."
+  },
+  {
+  "id": 4,
+  "nombre": "LOSA -U",
+  "descripcion": "▸Son losas pretensadas que permiten \nsalvar claros con diversas capacidades \nde carga y debido a su geometría \npermiten reducir la sección de entrepiso \ncon respecto a otros sistemas de piso. \n▸Las losas U se utilizan como sistemas de \nentrepisos a techos para edificios \nindustriales, comerciales, habitacionales, \ncentros deportivos, escuelas, etc... \n▸Por ser aligerados en la parte central, \ntienen la ventaja de tener poco peso, \nfacilitando su manejo, transporte y \ncolocación, además de reducir las \ncargas que el edificio transfiere a la \ncimentación. \n▸Se fabrican en diferentes peraltes con \nanchos de alero distintos y su longitud \nde acuerdo al requerimiento del \nproyecto. \n▸Las losas U se fabrican en moldes \nmetálicos bajo el mas estricto control de \ncalidad."
+  },
+  {
+  "id": 5,
+  "nombre": "LOSA PLANA",
+  "descripcion": "La losa plana es una losa alveolar \npretensada con nervaduras \nintermedias y aligeramientos \ncentrales, con doble acabado liso \naparente que permite aplicar pintura \ndirectamente, en la parte superior un \nacabado rugoso para permitir la \nadherencia con el colado del firme \nde compresión en obra \n‣ Las losas planas se utilizan como \nsistemas entrepisos, techos y muros, \npara cualquier tipo de edificación, \nconstrucción de bardas perimetrales \ny otros. \n‣ La sección, peralte, distancia de \nnervaduras y espesor de losas se \ndefine en cada proyecto."
+},
+{
+  "id": 6,
+  "nombre": "LOSA MULTI “T”",
+  "descripcion": "Al día de hoy, Grupo Ticonsa continua innovando, \nofreciendo ahora la losa Multi T (Losa nervada con \ntrabe portante integrada) siendo única en el \nmundo. Es utilizada en proyectos de hotelería (Mas \nde 2,000 Cuartos construidos hasta el momento), \nobras viales (Viaductos elevados), escuelas y \nedificios, entre otros. \n‣ Ventajas del sistema Multi T: \n‣ 1.- Es una pieza integral que incluye el sistema de \npiso y de trabes portantes. \n‣ 2.- Proporciona la mejor altura de entrepiso \nposible. \n‣ 3.- Reduce costos de montaje, ya que no se \nfabrican trabes ni losas, si no únicamente una \npieza. \n‣ 4.- No necesita firme de compresión. \n‣ 5.- Permite el ensamble rápido y eficiente. \n‣ 6.- Cuenta con apoyos que forman marcos rígidos \ncon las columnas. \n‣ 7.- Ofrece un acabado estético, ya que simula vigas \nde madera. \n‣ 8.- Puede incluir trabe intermedia para reducir \nperalte. \n‣ 9.- Se puede integrar en la pieza las instalaciones."
+},
+{
+  "id": 7,
+  "nombre": "PRELOSA",
+  "descripcion": "La prelosa es una placa de concreto \npresforzado pretensado, que se coloca sobre \nla estructura cubriendo el área deseada y \nsobre la cual se cuela un firme para integrar el \nperalte total de la losa para que trabaje como \nsección compuesta. \n‣ La prelosa se fabrica en un espesor estándar \nde 5.4 cm., en un ancho máximo de 6.00 \nmetros ( de acuerdo a requerimientos del \nproyecto). requiere de un firme de 4.6 cm. de \nespesor colado en obra. \n‣ El acabado en la cara superior de la prelosa \nse deja rugoso para asegurar una junta \nperfecta entre el concreto prefabricado y el \nconcreto colado en sitio. \n‣ En la cara interior de la losa, su acabado es en \nconcreto aparente lo que permite aplicar la \npintura directamente. \n‣ Su uso le brinda las siguientes ventajas: \neliminación de cimbras. Rapidez de \nconstrucción, Ya que en una sola operación se \nmonta la losa de un cuarto y no requiere de \nfalso plafond. \n‣ Se utiliza comúnmente en unidades \nhabitacionales de interés social, escuelas, \netc..."
+},
+
+{
+  "id": 8,
+  "nombre": "TABLETA",
+  "descripcion": "Son losas nervadas pretensadas \nque junto con el colado en sitio \nde un firme de compresión \nsuperior completan un sistema \nde piso ligero, de fácil manejo y \ncon un doble acabado plano, el \nacabado de la parte superior es \nel que se requiera en obra. \n‣ Las tabletas se utilizan como \nsistemas de entrepisos y techos \npara edificios industriales, \ncomerciales, habitacionales, \nescuelas, etc... Especialmente \ndonde se desee no colocar \nplafón falso en el entrepiso. \n‣ Se fabrican en diferentes \nperaltes, dependiendo del \nclaro que se librará y con \nanchos variables, dependiendo \nde las necesidades de cada \nproyecto."
+},
+{
+  "id": 9,
+  "nombre": "TRABE CAJON",
+  "descripcion": "Es un elemento de concreto \npresforzado que puede fabricarse en \nperalte constante o en peralte \nvariable y que presenta un aspecto \nmuy agradable a la vista. \n▸Puede fabricarse en planta o bien, \ncolarse directamente en la obra. En \neste ultimo caso, cuando se trata de \npuentes de grandes claros, suele \nprocederse a colar dovelas \nsimultáneamente en ambos extremos \nen voladizo con respecto a la pila, \ngeneralmente se utilizan moldes de \nmetal aunque se tienen ciertas \nsecciones tipificadas. De hecho \npueden fabricarse estos elementos \nconforme al proyecto especifico. \n▸Entre las ventajas principales de estos \nelementos, podemos citar su ligereza. \nVolumen total de concreto , dada la \neficiencia de la sección y su buena \ncapacidad para resistir las torsiones \nprovocadas por la simetría en la \naplicación de la carga viva. En el caso \nde esta pieza al utilizar el \nprocedimiento constructivo en doble \nvoladizo se elimina la cimbra, Se \naplica en la construcción de puentes \ncarreteras y pasos peatonales, \ndebido a su gran capacidad de carga."
+},
+
+{
+  "id": 10,
+  "nombre": "TRABE AASHTO",
+  "descripcion": "▸Son elementos de concreto preesforzado, \nideales para soportar cargas para puentes \nen claros de hasta 30 Metros. \n▸Su longitud es variable de acuerdo a las \nnecesidades del proyecto. \n▸En nuestra planta tenemos instalaciones \nfijas para tensado de torones con \ncapacidad de 700 TONELADAS de fuerza \npresforzante. Las trabes AASHTO pueden \nser pretensadas, postensadas o \ncombinadas. \n▸Nosotros recomendamos utilizar el \npretensado en trabes no mayores de 30 \nmetros de longitud, ya que su fabricación \nse realiza en planta con un proceso \nindustrial, donde se fabrica en moldes \nmetálicos y se cura el concreto a base de \nvapor, lo que permite ciclos de colado \ndiario; su producción se realiza bajo \nestricto control de calidad. \n▸Las trabes AASHTO se utilizan \ncomúnmente en puentes de caminos y \npasos a desnivel, salvando vías de \nferrocarril, barrancas, ríos, etc... \n▸Debido a sus dimensiones se pueden \ntransportar prácticamente a cualquier \nsitio, una de sus ventajas es el ahorro del \ntiempo total de ejecución de la obra."
+},
+{
+  "id": 11,
+  "nombre": "TRABE NEBRASKA",
+  "descripcion": "Los diseñadores han experimentado las limitaciones en el uso de las trabes existentes de concreto presforzado en trechos continuos. La serie de trabes de la Universidad de Nebraska (NU) se desarrolló recientemente para superar estas limitaciones y aprovechar los adelantos en preesfuerzo de concreto y tecnología de producción para librar grandes claros.\n‣ Las trabes NU se desarrollaron en unidades métricas para el mejor diseño de puentes con continuidad de largo metraje postensados, desempeñándose bien con la continuidad lograda por el refuerzo del acero.\n‣ La trabe cuenta con una gran aleta superior para mejorar la resistencia al momento negativo en trechos continuos y está diseñada para permitir la colocación de un gran número de torones, lo cual es especialmente útil con concretos de alta resistencia.\n‣ Es una alternativa económica en situaciones anteriormente reservadas para vigas estructurales de acero.\n‣ Las trabes NU se utilizan comúnmente en puentes de caminos y pasos a desnivel, salvando vías férreas, barrancas, ríos, etc.\n‣ Debido a sus dimensiones se pueden transportar prácticamente a cualquier sitio, siendo una de sus ventajas el ahorro en tiempo total de ejecución de obra."
+},
+{
+  "id": 12,
+  "nombre": "TRABE TY",
+  "descripcion": "Son elementos de concreto presforzado de sección TY. Se fabrican en moldes metálicos que permiten variar el ángulo de las aletas respecto al nervio central, generalmente de 20º y en algunos casos hasta 35º respecto a la horizontal. Se curan a vapor para incrementar su productividad y pueden fabricarse en diferentes anchos, peraltes y longitudes según lo requiera el proyecto.\n‣ Se emplean como elementos de cubierta para claros de hasta 30 metros. Una de sus aplicaciones consiste en colocarlas una junto a otra para obtener una apariencia similar a la de una trabelosa o placa plegada, o bien, separándolas a diferentes niveles y colocando a los extremos de las aletas lámina estructural de asbesto o metal, permitiendo el escurrimiento pluvial.\n‣ Se utilizan en industrias, centros comerciales, bodegas, talleres, laboratorios, entre otros.\n‣ Destacan por su rapidez de ejecución, especialmente en cubiertas asociadas con lámina estructural, ya que su montaje en obra es simple y rápido.\n‣ Su perfil transversal en forma de 'Y' proporciona de manera natural una sección tipo canalón, que por sus dimensiones satisface cualquier requerimiento de área hidráulica."
+}
+
+
+]
