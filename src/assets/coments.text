@@ -1,0 +1,83 @@
+[
+    "1": {
+        "id": 1,
+        "folder": "plants/campeche/",
+        "layout": "0.jpg",
+        "url": "plant-campeche",
+        "imgs": [
+            1,
+            2,
+            3
+        ],
+        "title": "Planta Campeche",
+        "place": "Estado de Campeche",
+        "info": [
+            {
+                "id": 1,
+                "list": [
+                    "Planta = 40,000 m",
+                    "Producción = 20,000 m",
+                    "Almacenaje = 20,000 m"
+                ]
+            },
+            {
+                "id": 2,
+                "list": [
+                    "Producción semanal: 700m"
+                ]
+            },
+            {
+                "id": 3,
+                "list": [
+                    "Trabes AASHTO tipo I, II, III, IV, V y VI",
+                    "Trabes Cajón",
+                    "Trabes Nebraska",
+                    "Trabes Portantes y de rigidez",
+                    "Losas TT",
+                    "Columnas",
+                    "Zapatas y candeleros"
+                ]
+            }
+        ]
+    },
+    "2": {
+        "id": 2,
+        "folder": "plants/yucatan/",
+        "layout": "0.jpg",
+        "imgs": [
+            1,
+            2,
+            3
+        ],
+        "url": "plant-progreso",
+        "title": "Planta Puerto Progreso",
+        "place": "Estado de Yucatán",
+        "info": [
+            {
+                "id": 1,
+                "list": [
+                    "Planta = 30,000 m",
+                    "Producción = 15,000 m",
+                    "Almacenaje = 15,000 m"
+                ]
+            },
+            {
+                "id": 2,
+                "list": [
+                    "Producción semanal: 350 m"
+                ]
+            },
+            {
+                "id": 3,
+                "list": [
+                    "Trabes AASHTO tipo I, II, III, IV, V y VI",
+                    "Trabes Cajón",
+                    "Trabes Portantes y de rigidez",
+                    "Losas TT",
+                    "Columnas",
+                    "Zapatas y candeleros"
+                ]
+            }
+        ]
+    }
+]

@@ -12,30 +12,11 @@ const Documents = ({ type }) => {
         "presencia": "presencia.pdf",
     }
 
-    //https://issuu.com/ticonsa_documents/docs/cv_
-
     return (
         <NavBar doc={true} shadow={true}>
             <section className="_main container">
                 <section>
                     <div className="row-base row w-full md:w-[100%] flex flex-col" role="main" style={{ marginTop: 25, marginBottom: 50 }}>
-                        {/*<embed
-                            src={`${types[type]}#toolbar=0&navpanes=0&scrollbar=0`}
-                            type="application/pdf"
-                            height="1000px"
-                            style={{
-                                width: '100%',
-                                height: 'calc(100vh - 200px)', // Ajusta según necesidades
-                                minHeight: '500px' // Altura mínima para móviles
-                            }}
-                        />
-                        <iframe
-                            src={types[type]}
-                            className="w-full h-full"
-                            style={{ transform: `scale(1)`, transformOrigin: "top left" }}
-                            title="PDF Document Viewer"
-                            allowFullScreen
-                        />*/}
                         <div style={{ position: 'relative', width: '100%', height: '900px' }}>
                             <iframe
                                 allowFullScreen={true}
@@ -48,8 +29,6 @@ const Documents = ({ type }) => {
                                 }}
                                 src="https://heyzine.com/flip-book/71cd5ce9ca.html"
                             />
-
-                            {/* Rectángulo blanco en la parte inferior */}
                             <div style={{
                                 position: 'absolute',
                                 bottom: 0,
