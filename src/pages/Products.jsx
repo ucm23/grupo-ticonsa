@@ -13,11 +13,13 @@ import {
   Button,
   useDisclosure,
   useColorModeValue,
+  Skeleton,
 } from "@chakra-ui/react";
 import { CheckCircleIcon, StarIcon, SettingsIcon } from "@chakra-ui/icons";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import NavBar from "../components/NavBar";
-import ProductModal from "../components/ProductModal"; // Importamos el modal
+import ProductModal from "../components/ProductModal";
+import productsData from "../assets/products.json";
 
 const carouselImages = [
   "/productos/producto1.jpeg",
@@ -25,52 +27,11 @@ const carouselImages = [
   "/productos/producto3.jpeg",
 ];
 
-const productsData = [
-  {
-    id: 1,
-    name: "RENDER LOSA TT ESBELTA",
-    image: "/productos/Productos_ticonsa/RENDER LOSA TT ESBELTA.png",
-  },
-  {
-    id: 2,
-    name: "RENDER LOSA TT ROBUSTA",
-    image: "/productos/Productos_ticonsa/RENDER LOSA TT ROBUSTA.png",
-  },
-  {
-    id: 3,
-    name: "RENDER TRABE AASHTO",
-    image: "/productos/Productos_ticonsa/RENDER TRABE AASHTO.png",
-  },
-  {
-    id: 4,
-    name: "RENDER TRABE CAJON DEL LIBRAMIENTO PUEBLA",
-    image: "/productos/Productos_ticonsa/RENDER TRABE CAJON DEL LIBRAMIENTO PUEBLA.png",
-  },
-  {
-    id: 5,
-    name: "RENDER TRABE CAJON DEL VIADUCTO BICENTENARIO",
-    image: "/productos/Productos_ticonsa/Render TRABE CAJON DEL VIADUCTO BICENTENARIO.png",
-  },
-  {
-    id: 6,
-    name: "RENDER TRABE CAJON",
-    image: "/productos/Productos_ticonsa/RENDER TRABE CAJÓN.png",
-  },
-  {
-    id: 7,
-    name: "RENDER TRABE NEBRASKA",
-    image: "/productos/Productos_ticonsa/RENDER TRABE NEBRASKA.png",
-  },
-  {
-    id: 8,
-    name: "TETRAT",
-    image: "/productos/Productos_ticonsa/TETRAT.png",
-  },
-];
-
 const Products = () => {
   const mobile = useBreakpointValue({ base: true, md: false });
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [loadingImages, setLoadingImages] = useState(true);
+  const [imageErrors, setImageErrors] = useState({});
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -95,6 +56,10 @@ const Products = () => {
   const handleOpenModal = (product) => {
     setSelectedProduct(product);
     onOpen();
+  };
+
+  const handleImageError = (productId) => {
+    setImageErrors((prev) => ({ ...prev, [productId]: true }));
   };
 
   return (
@@ -123,18 +88,42 @@ const Products = () => {
                 objectFit="cover"
                 filter="brightness(0.8)"
               />
-              <Box position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)" textAlign="center" color="white">
-                <Heading fontSize={mobile ? "3xl" : "5xl"} fontWeight="bold" textShadow="2px 2px 8px rgba(0,0,0,0.7)" mb={6}>
-                  Nuestros Productos Destacados
+              <Box
+                position="absolute"
+                top="50%"
+                left="50%"
+                transform="translate(-50%, -50%)"
+                textAlign="center"
+                color="white"
+              >
+                <Heading
+                  fontSize={mobile ? "3xl" : "5xl"}
+                  fontWeight="bold"
+                  textShadow="2px 2px 8px rgba(0,0,0,0.7)"
+                  mb={6}
+                >
+                  Soluciones Estructurales de Vanguardia
                 </Heading>
-                <Text maxW="600px" fontSize={mobile ? "md" : "lg"} fontStyle="italic" textShadow="1px 1px 6px rgba(0,0,0,0.6)">
-                  Explora la calidad y variedad que Grupo Ticonsa ofrece para tus proyectos
+                <Text
+                  maxW="600px"
+                  fontSize={mobile ? "md" : "lg"}
+                  fontStyle="italic"
+                  textShadow="1px 1px 6px rgba(0,0,0,0.6)"
+                >
+                  Elementos prefabricados de máxima calidad para proyectos exigentes
                 </Text>
               </Box>
             </Box>
           ))}
 
-          <Flex position="absolute" bottom="4" left="50%" transform="translateX(-50%)" zIndex="1" gap="2">
+          <Flex
+            position="absolute"
+            bottom="4"
+            left="50%"
+            transform="translateX(-50%)"
+            zIndex="1"
+            gap="2"
+          >
             {carouselImages.map((_, index) => (
               <Box
                 key={index}
@@ -156,7 +145,11 @@ const Products = () => {
             aria-label="Anterior"
             icon={<FiChevronLeft size={24} />}
             borderRadius="full"
-            onClick={() => setCurrentSlide((prev) => (prev === 0 ? carouselImages.length - 1 : prev - 1))}
+            onClick={() =>
+              setCurrentSlide((prev) =>
+                prev === 0 ? carouselImages.length - 1 : prev - 1
+              )
+            }
           />
           <IconButton
             {...arrowStyles}
@@ -164,48 +157,74 @@ const Products = () => {
             aria-label="Siguiente"
             icon={<FiChevronRight size={24} />}
             borderRadius="full"
-            onClick={() => setCurrentSlide((prev) => (prev + 1) % carouselImages.length)}
+            onClick={() =>
+              setCurrentSlide((prev) => (prev + 1) % carouselImages.length)
+            }
           />
         </Box>
 
         <Box px={mobile ? 4 : 20} py={10}>
           <Flex direction={mobile ? "column" : "row"} align="center" gap={10} mb={10}>
             <Box flex="1" maxW={mobile ? "100%" : "40%"}>
-              <Image src={productsData[0].image} alt={productsData[0].name} borderRadius="2xl" w="full" />
+              {productsData[0] && (
+                <Skeleton isLoaded={!loadingImages}>
+                  <Image
+                    src={productsData[0].url}
+                    alt={productsData[0].nombre}
+                    borderRadius="2xl"
+                    w="full"
+                    onError={() => handleImageError(productsData[0].id)}
+                    onLoad={() => setLoadingImages(false)}
+                    fallbackSrc="/productos/placeholder.png"
+                  />
+                </Skeleton>
+              )}
             </Box>
             <Box flex="1">
-              <Heading as="h2" size="xl" fontWeight="bold" color="gray.800" mb={4}>
-                Soluciones de calidad para tus proyectos estructurales
+              <Heading
+                as="h2"
+                fontSize="3xl"
+                fontWeight="bold"
+                color="gray.800"
+                mb={4}
+              >
+                Ingeniería Precisión para Construcciones de Excelencia
               </Heading>
-              <Text color="gray.600" mb={6}>
-                En Grupo Ticonsa ofrecemos productos diseñados para asegurar resistencia, durabilidad y eficiencia
+              <Text fontSize="md" color="gray.600" mb={6}>
+                Productos prefabricados diseñados para maximizar resistencia, durabilidad y eficiencia en cada proyecto.
               </Text>
               <Stack spacing={6}>
                 <Flex align="start" gap={3}>
                   <CheckCircleIcon color="green.400" boxSize={6} />
                   <Box>
-                    <Heading as="h3" size="md" fontWeight="semibold" color="gray.800" mb={1}>
-                      Garantía de Calidad
+                    <Heading as="h3" fontSize="xl" fontWeight="semibold" color="gray.800" mb={1}>
+                      Control de Calidad Riguroso
                     </Heading>
-                    <Text color="gray.500">Rigurosos controles de calidad en todos nuestros productos</Text>
+                    <Text fontSize="sm" color="gray.500">
+                      Inspección en cada fase de producción.
+                    </Text>
                   </Box>
                 </Flex>
                 <Flex align="start" gap={3}>
                   <SettingsIcon color="blue.400" boxSize={6} />
                   <Box>
-                    <Heading as="h3" size="md" fontWeight="semibold" color="gray.800" mb={1}>
-                      Soporte Técnico
+                    <Heading as="h3" fontSize="xl" fontWeight="semibold" color="gray.800" mb={1}>
+                      Soporte Técnico Especializado
                     </Heading>
-                    <Text color="gray.500">Asesoramiento especializado para cada proyecto</Text>
+                    <Text fontSize="sm" color="gray.500">
+                      Asesoramiento para proyectos complejos.
+                    </Text>
                   </Box>
                 </Flex>
                 <Flex align="start" gap={3}>
                   <StarIcon color="yellow.400" boxSize={6} />
                   <Box>
-                    <Heading as="h3" size="md" fontWeight="semibold" color="gray.800" mb={1}>
-                      Innovación Continua
+                    <Heading as="h3" fontSize="xl" fontWeight="semibold" color="gray.800" mb={1}>
+                      Innovación Constante
                     </Heading>
-                    <Text color="gray.500">Tecnologías avanzadas en desarrollo constante</Text>
+                    <Text fontSize="sm" color="gray.500">
+                      Desarrollo de nuevas soluciones estructurales.
+                    </Text>
                   </Box>
                 </Flex>
               </Stack>
@@ -214,6 +233,9 @@ const Products = () => {
         </Box>
 
         <Box px={mobile ? 4 : 20} py={10} w="100%">
+          <Heading fontSize="4xl" mb={8} textAlign="center" color="gray.800">
+            Catálogo de Productos
+          </Heading>
           <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
             {productsData.map((product) => (
               <Box
@@ -223,29 +245,72 @@ const Products = () => {
                 overflow="hidden"
                 cursor="pointer"
                 border="1px solid #e2e8f0"
-                _hover={{ transform: "translateY(-5px)", transition: "transform 0.3s" }}
+                _hover={{
+                  transform: "translateY(-5px)",
+                  transition: "transform 0.3s",
+                  boxShadow: "lg",
+                }}
               >
-                <Box position="relative" width="100%" paddingTop="56.25%" borderTopRadius="md" overflow="hidden" bg="white">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    position="absolute"
-                    top="0"
-                    left="0"
-                    width="100%"
-                    height="100%"
-                    objectFit="contain"
-                    bg="white"
-                  />
+                <Box
+                  position="relative"
+                  width="100%"
+                  paddingTop="56.25%"
+                  borderTopRadius="md"
+                  overflow="hidden"
+                  bg="white"
+                >
+                  <Skeleton isLoaded={!loadingImages}>
+                    {imageErrors[product.id] ? (
+                      <Flex
+                        position="absolute"
+                        top="0"
+                        left="0"
+                        width="100%"
+                        height="100%"
+                        bg="gray.100"
+                        align="center"
+                        justify="center"
+                        flexDirection="column"
+                      >
+                        <Text color="gray.500" textAlign="center" px={2}>
+                          Imagen no disponible
+                        </Text>
+                        <Text fontSize="sm" color="gray.400" mt={2}>
+                          {product.nombre}
+                        </Text>
+                      </Flex>
+                    ) : (
+                      <Image
+                        src={product.url}
+                        alt={product.nombre}
+                        position="absolute"
+                        top="0"
+                        left="0"
+                        width="100%"
+                        height="100%"
+                        objectFit="cover"
+                        bg="white"
+                        onError={() => handleImageError(product.id)}
+                        onLoad={() => setLoadingImages(false)}
+                        fallbackSrc="/productos/placeholder.png"
+                      />
+                    )}
+                  </Skeleton>
                 </Box>
-                <VStack align="start" p={4} spacing={3}>
-                  <Heading size="md">{product.name}</Heading>
+                <VStack align="start" p={4} spacing={2}>
+                  <Heading fontSize="xl" fontWeight="semibold" color="gray.800">
+                    {product.nombre}
+                  </Heading>
+                  <Text fontSize="sm" color="gray.600" noOfLines={2}>
+                    {product.descripcion || "Descripción no disponible."}
+                  </Text>
                   <Button
-                    colorScheme="blue"
+                    colorScheme="orange"
                     size="sm"
                     onClick={() => handleOpenModal(product)}
+                    px={6}
                   >
-                    Ver más
+                    Ver detalles
                   </Button>
                 </VStack>
               </Box>
