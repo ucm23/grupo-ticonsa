@@ -6,6 +6,10 @@ import { useState, useEffect } from "react";
 import { Dropdown } from 'react-bootstrap';
 import color from '../color';
 
+import {
+    Button,
+} from '@chakra-ui/react'
+
 const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) => {
     const location = useLocation();
 
@@ -53,15 +57,27 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
         { id: 4, href: "/productos", content: "Productos" },
         { id: 5, href: "/#", hasSubMenu: SubMenuProd },
         { id: 6, href: "/#", hasSubMenu: menuprojects },
-        { id: 7, href: "https://development.victum-re.online", content: "Proveedores", onlyLink: true },
-        { id: 8, href: "/contacto", content: "Contacto" },
-
+        { id: 7, href: "/contacto", content: "Contacto" },
+        { id: 8, href: "/document_cv", content: "Proveedores", onlyLink: true },
     ]
 
     const handleCheckBoxChange = ({ target }) => setIsChecked(target.checked);
 
     if (isChecked) document.body.style.overflow = 'hidden';
     else document.body.style.overflow = 'auto';
+
+    const openLink = () => {
+        window.open('https://www.youtube.com/embed/Nvg4CamInuA', '_blank');
+        if (mobile) {
+            //e.preventDefault();
+            const link = document.createElement('a');
+            link.href = '/cv-grupo-ticonsa.pdf';
+            link.download = 'cv-grupo-ticonsa.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    };
 
     return (
         <>
@@ -91,14 +107,28 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
                                 </Dropdown>
 
                             ) : onlyLink ?
-                                <a href="https://development.victum-re.online" target="_blank" className={`${(!showShadow && !mobile) && "white"}`}>{content}</a>
+                                /*<a href="https://development.victum-re.online" target="_blank" className={`${(!showShadow && !mobile) && "white"}`}>{content}</a>*/
+                                <Button
+                                    colorScheme="blue"
+                                    bg={color?.orange}
+                                    rounded={5}
+                                    color="white"
+                                    onClick={() => openLink()}
+                                    rightIcon={<div />}
+                                    leftIcon={<div />}
+                                    fontWeight={'bold'}
+                                    title="Ver currículum de Grupo Ticonsa"
+                                    className='cursor-crosshair'
+                                >
+                                    Ver Currículum
+                                </Button>
                                 : <a href={href} className={`${href === pathname && "active"} ${(!showShadow && !mobile) && "white"}`}>{content}</a>
 
                             }
                         </li>
                     ))}
                 </ul>
-            </nav>
+            </nav >
             <main>
                 {children}
             </main>

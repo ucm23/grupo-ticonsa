@@ -176,19 +176,10 @@ export default function SmallCentered({ photo, certificates }) {
                                     </Stack>
                                 </Stack>
                                 <Stack paddingRight={5}>
-  <h3 className="footer-title uppercase">Administración</h3>
-  <Stack flexDirection={'column'}>
-    <p className="footer-link" style={{ cursor: 'default' }}>Lic. José Manuel Bravo Valencia</p>
-    <a href="mailto:jmbravo@grupoticonsa.com.mx" className="footer-link">jmbravo@grupoticonsa.com.mx</a>
-    <p className="footer-link" style={{ cursor: 'default' }}>55-5484-8364 ext 114</p>
-  </Stack>
-</Stack>
-
-                                <Stack paddingRight={5}>
                                     <h3 className="footer-title uppercase">Ayuda</h3>
                                     <Stack flexDirection={'column'}>
                                         <a href="/contacto" className="footer-link">Contáctanos</a>
-                                        <a href="https://help-victum-repse.vercel.app/" className="footer-link" target="_blank">Ayuda digital</a>
+                                        {/*<a href="https://help-victum-repse.vercel.app/" className="footer-link" target="_blank">Ayuda digital</a>*/}
                                     </Stack>
                                 </Stack>
                             </Stack>
