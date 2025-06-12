@@ -19,18 +19,26 @@ import {
   Tr,
   Th,
   Td,
+  TableContainer,
 } from "@chakra-ui/react";
 import { FiCheckCircle } from "react-icons/fi";
+
+const color = "#0056A4";
 
 const ProductModal = ({ isOpen, onClose, product }) => {
   if (!product) return null;
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} isCentered size="5xl" motionPreset="scale">
-      <ModalOverlay bg="rgba(0, 0, 0, 0.7)" backdropFilter="blur(6px)" />
+    <Modal
+      isOpen={isOpen}
+      onClose={onClose}
+      isCentered
+      size="5xl"
+      motionPreset="scale"
+    >
+      <ModalOverlay bg="rgba(0, 0, 0, 0.6)" backdropFilter="blur(4px)" />
       <ModalContent
-        bg="#2D3748"
-        position="relative"
+        bg="#FFFFFF"
         borderRadius="2xl"
         overflow="hidden"
         boxShadow="2xl"
@@ -39,53 +47,77 @@ const ProductModal = ({ isOpen, onClose, product }) => {
         <ModalCloseButton
           size="lg"
           borderRadius="full"
-          bg="blackAlpha.600"
-          color="white"
-          _hover={{ bg: "blackAlpha.800" }}
+          bg="gray.100"
+          color="gray.800"
+          _hover={{ bg: "gray.200" }}
           top={4}
           right={4}
           zIndex={2}
         />
         <ModalBody p={8} position="relative" zIndex={1}>
-          <Heading as="h2" fontSize="3xl" fontWeight="bold" textAlign="center" color="#F0F0F0" mb={6}>
+          <Heading
+            as="h2"
+            fontSize="3xl"
+            fontWeight="extrabold"
+            textAlign="center"
+            color={color}
+            mb={6}
+            letterSpacing="wider"
+          >
             {product.nombre}
           </Heading>
-          <Divider borderColor="blue.300" borderWidth="2px" borderRadius="full" mb={6} />
+
+          <Divider
+            borderColor={color}
+            borderWidth="2px"
+            borderRadius="full"
+            mb={6}
+          />
+
           <Flex direction={{ base: "column", md: "row" }} gap={6}>
-            <Box flex="0.7" color="#F0F0F0">
-              {/* Descripción sin espacio entre párrafos */}
+            <Box flex="0.7" color="#333">
               <VStack align="start" spacing={0} mb={0}>
-                {product.descripcion.split('\n').map((paragraph, idx) =>
+                {product.descripcion.split("\n").map((paragraph, idx) =>
                   paragraph.trim() ? (
                     <Text
                       key={idx}
                       fontSize="md"
-                      lineHeight="1.8"
+                      lineHeight="1.7"
                       textAlign="justify"
-                      color="#F0F0F0"
+                      color="#333"
                       mb={0}
                       dangerouslySetInnerHTML={{
                         __html: paragraph.replace(
                           /(prefabricados|estructura|estructurales|resistencia|capacidad de carga|maniobras|montaje|seguridad estructural|cargas extraordinarias|trabes|losas|trabe|elementos|longitudes|peralte|autoportante|presforzado|postensado|viaductos|infraestructura|cimbra|flexión|torsión)/gi,
-                          (match) => `<strong>${match}</strong>`
-                        )
+                          (match) =>
+                            `<strong style="color:${color}">${match}</strong>`
+                        ),
                       }}
                     />
                   ) : null
                 )}
               </VStack>
 
-              {/* Principales usos */}
               {product.usos && (
                 <Box mt={6}>
-                  <Heading fontSize="lg" mb={2} color="blue.300">
+                  <Heading
+                    fontSize="lg"
+                    mb={2}
+                    color={color}
+                    letterSpacing="wider"
+                  >
                     Principales usos:
                   </Heading>
                   <VStack align="start" spacing={0.5}>
                     {product.usos.map((uso, idx) => (
                       <HStack key={idx} spacing={2} align="start">
-                        <Icon as={FiCheckCircle} color="green.300" boxSize={4} mt={0.5} />
-                        <Text fontSize="sm" color="#E0E0E0" lineHeight="1.3">
+                        <Icon
+                          as={FiCheckCircle}
+                          color={color}
+                          boxSize={4}
+                          mt={0.5}
+                        />
+                        <Text fontSize="sm" color="#333" lineHeight="1.4">
                           {uso}
                         </Text>
                       </HStack>
@@ -96,39 +128,66 @@ const ProductModal = ({ isOpen, onClose, product }) => {
 
               {product.dimensiones && (
                 <Box mt={8}>
-                  <Heading fontSize="lg" mb={3} color="blue.300">
+                  <Heading
+                    fontSize="lg"
+                    mb={3}
+                    color={color}
+                    letterSpacing="wider"
+                  >
                     Dimensiones disponibles:
                   </Heading>
-                  <Table variant="simple" size="sm" colorScheme="blue" borderRadius="md" overflow="hidden">
-                    <Thead>
-                      <Tr>
-                        <Th color="blue.200">Tipo</Th>
-                        <Th color="blue.200">Peralte</Th>
-                        <Th color="blue.200">Longitud común</Th>
-                      </Tr>
-                    </Thead>
-                    <Tbody>
-                      {product.dimensiones.map((dim, idx) => (
-                        <Tr key={idx}>
-                          <Td color="gray.100">{dim.tipo}</Td>
-                          <Td color="gray.100">{dim.peralte}</Td>
-                          <Td color="gray.100">{dim.longitud}</Td>
+                  <TableContainer
+                    borderRadius="md"
+                    overflow="hidden"
+                    boxShadow="md"
+                    border={`1px solid ${color}`}
+                  >
+                    <Table variant="simple" size="sm" minWidth="600px">
+                      <Thead bg={color}>
+                        <Tr>
+                          <Th color="white" fontWeight="bold" width="40%">
+                            Tipo
+                          </Th>
+                          <Th color="white" fontWeight="bold" width="30%">
+                            Peralte
+                          </Th>
+                          <Th color="white" fontWeight="bold" width="30%">
+                            Longitud común
+                          </Th>
                         </Tr>
-                      ))}
-                    </Tbody>
-                  </Table>
+                      </Thead>
+                      <Tbody>
+                        {product.dimensiones.map((dim, idx) => (
+                          <Tr
+                            key={idx}
+                            bg={idx % 2 === 0 ? "gray.50" : "white"}
+                            _hover={{ bg: "gray.100" }}
+                          >
+                            <Td color="#333" fontSize="sm" py={3}>
+                              {dim.tipo}
+                            </Td>
+                            <Td color="#333" fontSize="sm" py={3}>
+                              {dim.peralte}
+                            </Td>
+                            <Td color="#333" fontSize="sm" py={3}>
+                              {dim.longitud}
+                            </Td>
+                          </Tr>
+                        ))}
+                      </Tbody>
+                    </Table>
+                  </TableContainer>
                 </Box>
               )}
             </Box>
+
             <Box
               flex="1.3"
               display="flex"
               alignItems="center"
               justifyContent="center"
-              borderRadius="xl"
-              overflow="hidden"
-              boxShadow="xl"
               p={2}
+              bg="#FFFFFF"
             >
               <Image
                 src={product.url}
