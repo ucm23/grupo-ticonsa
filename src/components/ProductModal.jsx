@@ -35,8 +35,6 @@ const ProductModal = ({ isOpen, onClose, product }) => {
         overflow="hidden"
         boxShadow="2xl"
         maxW="1200px"
-        border="2px solid"
-        borderColor="blue.700"
       >
         <ModalCloseButton
           size="lg"
@@ -55,7 +53,8 @@ const ProductModal = ({ isOpen, onClose, product }) => {
           <Divider borderColor="blue.300" borderWidth="2px" borderRadius="full" mb={6} />
           <Flex direction={{ base: "column", md: "row" }} gap={6}>
             <Box flex="0.7" color="#F0F0F0">
-              <VStack align="start" spacing={4} mb={4}>
+              {/* Descripción sin espacio entre párrafos */}
+              <VStack align="start" spacing={0} mb={0}>
                 {product.descripcion.split('\n').map((paragraph, idx) =>
                   paragraph.trim() ? (
                     <Text
@@ -64,6 +63,7 @@ const ProductModal = ({ isOpen, onClose, product }) => {
                       lineHeight="1.8"
                       textAlign="justify"
                       color="#F0F0F0"
+                      mb={0}
                       dangerouslySetInnerHTML={{
                         __html: paragraph.replace(
                           /(prefabricados|estructura|estructurales|resistencia|capacidad de carga|maniobras|montaje|seguridad estructural|cargas extraordinarias|trabes|losas|trabe|elementos|longitudes|peralte|autoportante|presforzado|postensado|viaductos|infraestructura|cimbra|flexión|torsión)/gi,
@@ -74,16 +74,18 @@ const ProductModal = ({ isOpen, onClose, product }) => {
                   ) : null
                 )}
               </VStack>
+
+              {/* Principales usos */}
               {product.usos && (
                 <Box mt={6}>
-                  <Heading fontSize="lg" mb={3} color="blue.300">
+                  <Heading fontSize="lg" mb={2} color="blue.300">
                     Principales usos:
                   </Heading>
-                  <VStack align="start" spacing={2}>
+                  <VStack align="start" spacing={0.5}>
                     {product.usos.map((uso, idx) => (
                       <HStack key={idx} spacing={2} align="start">
                         <Icon as={FiCheckCircle} color="green.300" boxSize={4} mt={0.5} />
-                        <Text fontSize="sm" color="#E0E0E0">
+                        <Text fontSize="sm" color="#E0E0E0" lineHeight="1.3">
                           {uso}
                         </Text>
                       </HStack>
@@ -91,6 +93,7 @@ const ProductModal = ({ isOpen, onClose, product }) => {
                   </VStack>
                 </Box>
               )}
+
               {product.dimensiones && (
                 <Box mt={8}>
                   <Heading fontSize="lg" mb={3} color="blue.300">

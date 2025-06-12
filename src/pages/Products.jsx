@@ -158,6 +158,7 @@ const consdata = [
   },
 ];
 
+
 const Products = () => {
   const mobile = useBreakpointValue({ base: true, md: false });
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -176,6 +177,7 @@ const Products = () => {
     bg: useColorModeValue("blackAlpha.600", "whiteAlpha.600"),
     _hover: { bg: useColorModeValue("blackAlpha.800", "whiteAlpha.800") },
   };
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
