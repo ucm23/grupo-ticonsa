@@ -175,12 +175,11 @@ export default function SmallCentered({ photo, certificates }) {
                                         <a href="/prefabricado#pro" className="footer-link">Ventajas</a>
                                     </Stack>
                                 </Stack>
-
                                 <Stack paddingRight={5}>
                                     <h3 className="footer-title uppercase">Ayuda</h3>
                                     <Stack flexDirection={'column'}>
                                         <a href="/contacto" className="footer-link">Contáctanos</a>
-                                        <a href="https://help-victum-repse.vercel.app/" className="footer-link" target="_blank">Ayuda digital</a>
+                                        {/*<a href="https://help-victum-repse.vercel.app/" className="footer-link" target="_blank">Ayuda digital</a>*/}
                                     </Stack>
                                 </Stack>
                             </Stack>
