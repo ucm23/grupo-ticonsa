@@ -67,7 +67,7 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
     else document.body.style.overflow = 'auto';
 
     const openLink = () => {
-        window.open('https://www.youtube.com/embed/Nvg4CamInuA', '_blank');
+        window.open('/document_cv', '_blank');
         if (mobile) {
             //e.preventDefault();
             const link = document.createElement('a');

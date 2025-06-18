@@ -255,12 +255,12 @@ const Systems = () => {
                                             <div className="timeline-middle">
                                                 <time className="font-mono">{index + 1}</time>
                                             </div>
-                                            <div className={`${!index_ ? "timeline-start md:text-end" : "timeline-end"} mb-10`}>
-                                                <div className={index_ ? "timeline-img-start" : "timeline-img-end"}>
-                                                    <img
+                                            <div className={`${"timeline-end"} mb-10`}>
+                                                <div className={"timeline-img-start"}>
+                                                    {/*<img
                                                         src={item.icon}
                                                         className="img-step"
-                                                    />
+                                                    />*/}
                                                 </div>
                                                 <div className="feature-title">{item.name}</div>
                                                 <dd className="mt-2 text-base leading-7 text-gray-600">{item.description}</dd>
@@ -271,7 +271,7 @@ const Systems = () => {
                                 })}
                                 <div id="features"></div>
 
-                                <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+                                {/*<ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
                                     <li>
                                         <div className="timeline-middle">
                                             <svg
@@ -319,7 +319,7 @@ const Systems = () => {
                                         </div>
                                         <hr />
                                     </li>
-                                </ul>
+                                </ul>*/}
                             </div>
                             {/*<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
                                 <dl className="grid grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
