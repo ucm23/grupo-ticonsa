@@ -109,16 +109,25 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
                             ) : onlyLink ?
                                 /*<a href="https://development.victum-re.online" target="_blank" className={`${(!showShadow && !mobile) && "white"}`}>{content}</a>*/
                                 <Button
-                                    colorScheme="blue"
-                                    bg={color?.orange}
-                                    rounded={5}
-                                    color="white"
+                                    //colorScheme="red"
+                                    variant="outline"
+                                    //bg={color?.orange}
+                                    rounded={'full'}
+                                    borderWidth={"1.5px"}
+                                    size="md"
+                                    color={showShadow ? "#03296A" : "white"}
                                     onClick={() => openLink()}
-                                    rightIcon={<div />}
-                                    leftIcon={<div />}
-                                    fontWeight={'bold'}
+                                    //rightIcon={<div />}
+                                    //leftIcon={<div />}
+                                    //fontWeight={'bold'}
                                     title="Ver currículum de Grupo Ticonsa"
                                     className='cursor-crosshair'
+                                    //colorPalette="red" 
+                                    fontSize={13}
+                                    _hover={{ bg: '#e25a28' }}
+                                    _active={{
+                                        transform: 'scale(0.98)'
+                                    }}
                                 >
                                     Ver Currículum
                                 </Button>
