@@ -23,15 +23,15 @@ const ubications = [
         place: "Ciudad de México, CDMX",
         url: "https://maps.app.goo.gl/tADpi5iFEtPCVV9e6",
         phone: "(55) 5484 8355"
-        
+
     },
     {
         id: 2,
         name: "Planta Teotihuacán",
-        direction: "Teotihuacán de Arista, CP. 55845.",
+        direction: "Camino a San Isidro del Progreso, San Juan Teotihuacán de Arista, CP 55800.",
         place: "Estado DE MÉXICO",
         url: "https://maps.app.goo.gl/QE3UzXABoY49Dcah7",
-        phone: "(594) 956-1645"
+        phone: ""
 
     },
     {
@@ -129,24 +129,24 @@ const Contacts2 = () => {
                 </Fade>
                 <div style={{ display: 'flex', flexDirection: direction, marginTop: 30, gap: 25, flexWrap: 'wrap' }}>
                     {ubications.map((item, index) => (
-                        <a href={item?.url} target="_blank" key={`${index}-${item?.name}`}>
+                        <div key={`${index}-${item?.name}`}>
                             <div>
                                 <h3 className="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase' }}>{item?.name}</h3>
-                                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                                    <FaDirections color="white" />
-                                    <h3 style={{ color: 'white', fontSize: 12, marginTop: '0.5rem' }}>{item?.direction}<br />{item?.place}</h3>
-                                </div>
-                                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                                    <MdOutlinePhoneInTalk color="white" />
-                                    <h3 style={{ color: 'white', fontSize: 12, marginTop: '0.5rem' }}>{item?.phone}</h3>
-                                </div>
-                                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                                    <TbMapShare color="white" />
-                                    <h3 style={{ color: 'white', fontSize: 12, marginTop: '0.5rem' }}>VER MAPA</h3>
-                                </div>
+                                <a href={item?.url} target="_blank" >
+                                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                                        <FaDirections color="white" />
+                                        <h3 style={{ color: 'white', fontSize: 12, marginTop: '0.5rem' }}>{item?.direction}<br />{item?.place}</h3>
+                                    </div>
+                                </a>
+                                <a href={`tel:+52${item?.phone}`} target="_blank" >
+                                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                                        <MdOutlinePhoneInTalk color="white" />
+                                        <h3 style={{ color: 'white', fontSize: 12, marginTop: '0.5rem' }}>{item?.phone}</h3>
+                                    </div>
+                                </a>
                                 <div className="line-banner-btn" />
                             </div>
-                        </a>
+                        </div>
                     ))}
                 </div>
             </div>

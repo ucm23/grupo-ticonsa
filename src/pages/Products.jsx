@@ -15,7 +15,7 @@ import {
     useColorModeValue,
     Skeleton,
 } from "@chakra-ui/react";
-import { CheckCircleIcon, StarIcon, SettingsIcon, SearchIcon } from "@chakra-ui/icons";
+import { CheckCircleIcon, StarIcon, SettingsIcon, Search2Icon } from "@chakra-ui/icons";
 
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import NavBar from "../components/NavBar";
@@ -266,7 +266,7 @@ const Products = () => {
                                     textShadow="2px 2px 8px rgba(0,0,0,0.7)"
                                     mb={6}
                                 >
-                                    Soluciones Estructurales de Vanguardia
+                                    Soluciones Estructurales
                                 </Heading>
                                 <Text
                                     maxW="600px"
@@ -331,14 +331,15 @@ const Products = () => {
 
                 <Box px={mobile ? 4 : 20} my={'145px'}>
                     <Flex direction={mobile ? "column" : "row"} align="center" gap={10} mb={10}>
-                        <Box flex="1" maxW={mobile ? "100%" : "50%"}>
+                        <Box flex="1" maxW={mobile ? "100%" : "40%"}>
                             {consdata[0] && (
                                 <Skeleton isLoaded={!loadingImages}>
                                     <Image
-                                        src={`productos/renders/legos.webp`}
+                                        src={`productos/renders/inges.png`}
                                         alt={consdata[0].nombre}
                                         borderRadius="2xl"
-                                        w="full"
+                                        //w="full"
+                                        className="w-[90%]"
                                         onLoad={() => setLoadingImages(false)}
                                         fallbackSrc="/productos/placeholder.png"
                                     />
@@ -360,18 +361,18 @@ const Products = () => {
                             </Text>
                             <Stack spacing={6}>
                                 <Flex align="center" gap={5}>
-                                    <CheckCircleIcon color="green.400" boxSize={30} />
+                                    <CheckCircleIcon color="green.400" boxSize={30} pb={1.5}/>
                                     <Box>
                                         <Heading as="h3" fontSize="xl" fontWeight="semibold" color="black" mb={1}>
-                                            Ingeniería de Precisión en Cada Componente
+                                            Certificaciones ONNCCE / ANIPPAC
                                         </Heading>
                                         <Text fontSize="sm" color="gray.500">
-                                            Contamos con diversas Certificaciones en todos nuestros procesos. Garantizamos tolerancias milimétricas y cero defectos mediante protocolos de verificación en todas las etapas de producción.
+                                            Contamos con diversas Certificaciones en todos nuestros procesos y productos, mediante protocolos de verificación en todas las etapas de producción.
                                         </Text>
                                     </Box>
                                 </Flex>
                                 <Flex align="center" gap={5}>
-                                    <SettingsIcon color="blue.400" boxSize={30} />
+                                    <SettingsIcon color="blue.400" boxSize={30} pb={1.5}/>
                                     <Box>
                                         <Heading as="h3" fontSize="xl" fontWeight="semibold" color="black" mb={1}>
                                             Expertos en Soluciones Complejas
@@ -382,10 +383,10 @@ const Products = () => {
                                     </Box>
                                 </Flex>
                                 <Flex align="center" gap={5}>
-                                    <StarIcon color="yellow.400" boxSize={30} />
+                                    <StarIcon color="yellow.400" boxSize={30} pb={1.5}/>
                                     <Box>
                                         <Heading as="h3" fontSize="xl" fontWeight="semibold" color="black" mb={1}>
-                                            Prefabricados de Vanguardia
+                                            Prefabricados de la más alta calidad en el mercado
                                         </Heading>
                                         <Text fontSize="sm" color="gray.500">
                                             Materiales ecoeficientes, diseños modulares inteligentes y tecnología Multi T que reducen plazos y costos sin comprometer la resistencia estructural.
@@ -413,7 +414,7 @@ const Products = () => {
                             >
                                 <div className="image-container-2">
                                     <div className="overlay-content">
-                                        <SearchIcon size={24} style={{ margin: '8px' }} />
+                                        <Search2Icon size={24} style={{ margin: '8px' }} />
                                         <span style={{ fontSize: '0.875rem', fontWeight: '600' }}>Ver más</span>
                                     </div>
                                     <Image

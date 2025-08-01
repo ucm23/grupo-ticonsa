@@ -180,8 +180,8 @@ const Index = () => {
                                         class="w-full h-full object-cover"
                                     />
                                 </div>
-                                <div class="md:w-2/3 p-4 self-center">
-                                    <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Mensaje de nuestro presidente</h2>
+                                <div class="md:w-2/3 p-4 self-center cursor-crosshair" onClick={handleShow_}>
+                                    <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Mensaje de nuestro Socio Fundador</h2>
                                     <div className="flex flex-row gap-1">
                                         <span class="flex items-center text-white text-xs font-semibold p-1 px-2 rounded-full" style={{ backgroundColor: color.primary }}>
                                             Trabajo intenso
@@ -200,34 +200,37 @@ const Index = () => {
                                         la industria del concreto prefabricado y presforzado en México."
                                     </p>
                                     <p class="text-gray-700 font-bold leading-[0px] mt-5">
-                                        Ing. Aurelio Zugasti De la Muela
+                                        Ing. Aurelio Zugasti De la Muela †
                                     </p>
                                     <p class="text-gray-500">
-                                        Presidente de Grupo Ticonsa<sup>®</sup>
+                                        Socio Fundador de Grupo Ticonsa<sup>®</sup>
                                     </p>
-                                    <p class="underline decoration-gray-500 text-gray-500" onClick={handleShow_}>
+                                    <p class="underline decoration-gray-500 text-gray-500 cursor-crosshair" onClick={handleShow_}>
                                         Lee la nota completa
                                     </p>
                                 </div>
                             </div>
                         </section>
 
-                        <section className="section-5 mt-5" id='about-me'>
-                            <div className="mx-auto max-w-2xl lg:text-center">
+                        <section className="section-5" id='about-me'>
+                            <div className="mx-auto max-w-2xl lg:text-center mt-10">
                                 <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Construimos experiencia, solidez y confianza</h2>
                             </div>
                             <Fade direction="down">
                                 <section className="text-center">
-                                    <h2 className="section-title">Sobre Nosotros <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
+                                    <h2 className="section-title">Sobre Nosotros</h2>
                                 </section>
                             </Fade>
                             <div className="row-base row">
                                 <div className="col-base col-sm-6 col-md-6" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                    <h3 className="col-about-title" style={{ textAlign: 'center' }}>Concreto, Prefabricado y <span className="text-primary-blue">Presforzado</span></h3>
+                                    <h3 className="col-about-title" style={{ textAlign: 'center' }}> Estructuras prefabricadas y <span className="text-primary-blue">presforzadas</span></h3>
                                     <div className="col-about-info">
-                                        <p><strong>Ticonsa Inmobiliaria</strong>, <strong>Sociedad Anónima de Capital Variable</strong> (en lo sucesivo <strong>GRUPO TICONSA<sup>®</sup></strong>) en una empresa con <strong>50 años de experiencia desarrollando soluciones innovadoras</strong> que aportan valor agregado a los proyectos de nuestros clientes.</p>
-                                        <p className={mobile && "text-center"}><strong>Cancún: </strong> (998) 892-3143 <br /> <strong>México: </strong>(55) 5484-8355<br /> <strong>Teotihuacán: </strong>(594) 956-1645</p>
-                                        <p className={mobile && "text-center"}><strong>Grupo Ticonsa </strong> - Desde el 15 de febrero de 1971</p>
+                                        <p><strong>Grupo TICONSA<sup>®</sup></strong>es un grupo de empresas cuyo origen se remonta al
+                                            15 de febrero de 1971, y que durante todos sus años de existencia ha
+                                            desarrollado soluciones innovadoras que aportan valor agregado a
+                                            los proyectos de sus clientes.
+                                        </p>
+                                        <p className={mobile && "text-center"}><strong>CDMX – Teotihuacán – Cancún</strong></p>
                                     </div>
                                 </div>
                                 <div className="col-base col-sm-6 col-md-6 content-img-round"
@@ -245,7 +248,7 @@ const Index = () => {
                             </div>
                         </section>
 
-                        <div className="py-16 sm:py-24">
+                        {/*<div className="py-16 sm:py-24">
                             <div className="mx-auto max-w-7xl">
                                 <div className="mx-auto text-center">
                                     <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Desde la Idea hasta la Realidad</h2>
@@ -289,69 +292,12 @@ const Index = () => {
                                     </Button>
                                 </div>
                             </div>
-                        </div>
-                    </section>
-                    <section className={`${mobile ? "" : "_main container"}`}>
-                        <section className="text-center">
-                            <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Llevamos nuestros proyectos destacados a una</h2>
-                            <Fade direction="down">
-                                <section className="text-center">
-                                    <h2 className="section-title">Presencia en <span className="text-primary-blue">todo México</span></h2>
-                                </section>
-                            </Fade>
-                            <div className="content-circle" ref={ref}>
-                                <Image
-                                    borderRadius="lg"
-                                    src='/mapa.png'
-                                    className="img-responsive"
-                                    style={{ /*width: '100%', objectFit: 'cover', paddingLeft: 50, paddingRight: 50, display: 'initial'*/ }}
-                                />
-                                {point.map((item) =>
-                                    item?.projects.map((project_) => (
-                                        <OverlayTrigger
-                                            trigger='hover'
-                                            placement={'auto'}
-                                            overlay={
-                                                <Popover id={`popover-positioned-bottom`}>
-                                                    <Popover.Header as="h3">{item?.name}</Popover.Header>
-                                                    <Popover.Body>
-                                                        {project_?.extra && <strong>[{project_?.extra}]<br /></strong>}
-                                                        <div dangerouslySetInnerHTML={{ __html: project_?.name }} />
-                                                    </Popover.Body>
-                                                </Popover>
-                                            }
-                                        >
-                                            <div className="circle" style={{ top: project_?.position?.top, left: project_?.position?.left, }} onClick={handleClick} />
-                                        </OverlayTrigger>
-                                    ))
-                                )}
-                                {paths.map((item) =>
-                                    item?.projects.map((project_) => (
-                                        <OverlayTrigger
-                                            trigger='click'
-                                            placement={'bottom'}
-                                            overlay={
-                                                <Popover id={`popover-positioned-bottom`}>
-                                                    <Popover.Header as="h3">{item?.name}</Popover.Header>
-                                                    <Popover.Body>
-                                                        <iframe width="274" height="155" className="iframe-maya" src="https://www.youtube.com/embed/h-tEedJL6Dc" title="Estación Edzna Tren Maya Grupo Ticonsa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                                        <strong>{project_?.name}<br /></strong>
-                                                        {project_?.extra}
-                                                    </Popover.Body>
-                                                </Popover>
-                                            }
-                                        >
-                                            <div className={`path ${mobile ? "path-web" : "path-mov"}`} onClick={handleClick} />
-                                        </OverlayTrigger>
-                                    ))
-                                )}
-                            </div>
-                        </section>
+                        </div>*/}
                     </section>
 
-                    <div className='p-section-50' id="services">
+                    <div class='p-section-50 pt-15' id="services">
                         <section className="_main container" >
-                            <Stack>
+                            <Stack style={{ marginTop: 55 }}>
                                 <Stack direction={mobile ? 'column-reverse' : 'row-reverse'} style={{ paddingBottom: 40, paddingTop: 55 }}>
                                     <div className="col-base col-sm-6 col-md-offset-1" style={{ alignSelf: 'center', }}>
                                         <Stack style={{ justifyContent: 'center', /*paddingRight: 15*/ }}>
@@ -431,6 +377,76 @@ const Index = () => {
                         </section>
                     </div>
 
+                    <section className={`mt-20 ${mobile ? "" : "_main container"}`}>
+                        <section className="text-center">
+                            <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Llevamos nuestros proyectos destacados a una</h2>
+                            <Fade direction="down">
+                                <section className="text-center">
+                                    <h2 className="section-title">Presencia en <span className="text-primary-blue">todo México</span></h2>
+                                </section>
+                            </Fade>
+                            <div className="content-circle" ref={ref}>
+                                <Image
+                                    borderRadius="lg"
+                                    src='/mapa.png'
+                                    className="img-responsive"
+                                    style={{ /*width: '100%', objectFit: 'cover', paddingLeft: 50, paddingRight: 50, display: 'initial'*/ }}
+                                />
+                                {point.map((item) =>
+                                    item?.projects.map((project_) => (
+                                        <OverlayTrigger
+                                            trigger='hover'
+                                            placement={'auto'}
+                                            overlay={
+                                                <Popover id={`popover-positioned-bottom`}>
+                                                    <Popover.Header as="h3">{item?.name}</Popover.Header>
+                                                    <Popover.Body>
+                                                        {project_?.extra && <strong>[{project_?.extra}]<br /></strong>}
+                                                        <div dangerouslySetInnerHTML={{ __html: project_?.name }} />
+                                                    </Popover.Body>
+                                                </Popover>
+                                            }
+                                        >
+                                            {/*<div className="circle" style={{ top: project_?.position?.top, left: project_?.position?.left, }} onClick={handleClick} />*/}
+                                            <img
+                                                src="/logo-round.png"  // Reemplaza con la ruta correcta de tu imagen
+                                                alt="Ícono del proyecto"
+                                                className="absolute w-6 h-6 rounded-full cursor-pointer"
+                                                style={{
+                                                    top: project_?.position?.top,
+                                                    left: project_?.position?.left
+                                                }}
+                                                onClick={handleClick}
+                                            />
+                                        </OverlayTrigger>
+                                    ))
+                                )}
+                                {paths.map((item) =>
+                                    item?.projects.map((project_) => (
+                                        <OverlayTrigger
+                                            trigger='click'
+                                            placement={'auto'}
+                                            overlay={
+                                                <Popover id={`popover-positioned-bottom`}>
+                                                    <Popover.Header as="h3">{item?.name}</Popover.Header>
+                                                    <Popover.Body>
+                                                        <iframe width="274" height="155" className="iframe-maya" src="https://www.youtube.com/embed/h-tEedJL6Dc" title="Estación Edzna Tren Maya Grupo Ticonsa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                        <strong>{project_?.name}<br /></strong>
+                                                        {project_?.extra}
+                                                    </Popover.Body>
+                                                </Popover>
+                                            }
+                                        >
+                                            <div className={`path ${mobile ? "path-web" : "path-mov"}`} onClick={handleClick} />
+                                        </OverlayTrigger>
+                                    ))
+                                )}
+                            </div>
+                        </section>
+                    </section>
+
+
+
 
 
                     {/*<section className="_main container" id="services">
@@ -451,7 +467,7 @@ const Index = () => {
                             </section>
                         </section>
                             </section>*/}
-                    <div className="overflow-hidden py-24 sm:py-32">
+                    {/*<div className="overflow-hidden py-24 sm:py-32">
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
                             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                                 <div className="lg:pr-8 lg:pt-4">
@@ -480,7 +496,7 @@ const Index = () => {
                                 />
                             </div>
                         </div>
-                    </div>
+                    </div>*/}
                 </BGPoints>
             </NavBar>
             <ModalCenter
@@ -503,22 +519,18 @@ const Index = () => {
                         <div class="relative">
                             <img
                                 src={`/ceo-2.png`}
-                                alt="Presidente"
+                                alt="Socio Fundador"
                                 class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-white shadow-xl object-cover"
                             />
                             <div class="absolute inset-0 rounded-full border-2 border-gray-300 -m-1.5"></div>
                         </div>
                     </div>
 
-                    <div class="bg-white p-8 pt-20 ">
-                        <div class="text-gray-500/20 text-[25rem] font-serif leading-none absolute top-[125px] left-16 transform">
+                    <div class="bg-white p-8 pt-0">
+                        <div class="text-gray-700 text-[15rem] font-serif leading-none -mb-0">
                             <span>“</span>
                         </div>
-                        <div class="text-gray-500/20 text-[25rem] font-serif leading-none absolute bottom-[-150px] right-12 transform">
-                            <span>”</span>
-                        </div>
-
-                        <div class="text-gray-700 leading-relaxed text-justify">
+                        <div class="text-gray-700 leading-relaxed text-justify relative -mt-[9rem]">
                             <p>&nbsp; &nbsp; &nbsp; &nbsp; Hoy, al echar la vista atrás para recorrer nuevamente nuestra historia, <span class="underline decoration-blue-400">
                                 sentimos el legítimo orgullo</span> de quien está plenamente satisfecho por haber cumplido a cabalidad, como hombres y mujeres, como
                                 profesionistas y como mexicanos con los propósitos que nos llevaron a constituir, el 15 de febrero de
@@ -540,16 +552,18 @@ const Index = () => {
                                 técnico, administrativo y operativo dentro de los que, hoy en día, se cuentan los hijos y aún los nietos de
                                 quienes fueron los iniciadores de la empresa.</p>
                             <p>Nuestro agradecimiento a todos ellos, pero, por encima de todo, gracias a Dios, que siempre, en todo
-                                momento, ha guiado nuestros pasos.</p>
+                                momento, ha guiado nuestros pasos.<span className="font-serif leading-none font-bold">”</span>
+                            </p>
+
                         </div>
 
                         <div class="mt-12 text-right">
-                            <p class="text-gray-800 font-bold text-xl leading-[0]">Ing. Aurelio Zugasti De la Muela</p>
-                            <p class="text-gray-500">Presidente</p>
+                            <p class="text-gray-800 font-bold text-xl leading-[0]">Ing. Aurelio Zugasti De la Muela †</p>
+                            <p class="text-gray-500">Socio Fundador</p>
                         </div>
                     </div>
                 </div>
-            </ModalCenter>
+            </ModalCenter >
 
             <ModalCenter
                 show={modalShow}

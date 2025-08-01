@@ -1209,6 +1209,20 @@ button.ytp-fullscreen-button.ytp-button {
   font-weight: bold;
 }
 
+.number-step-bg {
+  font-size: 150px;
+    line-height: 1;
+    background: linear-gradient(160deg, #05286a 36.53%, #0aeb8b 89.05%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    color: transparent;
+    width: 90px;
+    font-variant-numeric: tabular-nums;
+}
+
 .feature-title {
   font-size: 23px;
   font-weight: 700;

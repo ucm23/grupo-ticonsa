@@ -46,31 +46,45 @@
         "place": "Estado de México",
         "info": [
             {
+                "id": 4,
+                "list": [
+                    "Losas T, TT y Multi-T",
+                    "Losas planas aligeradas",
+                    "Candeleros",
+                    "Columnas",
+                    "Trabes portantes y rigidizantes",
+                    "Muros"
+
+                ]
+            },
+            {
                 "id": 1,
                 "list": [
-                    "Planta = 60,000 m",
                     "Producción = 30,000 m",
-                    "Almacenaje = 30,000 m"
+                    "Almacenaje = 30,000 m",
+                    "Planta = 60,000 m"
+                ]
+            },
+            
+            {
+                "id": 3,
+                "list": [
+                    "Trabes Tipo Nebraska",
+                    "Trabes Tipo AASHTO",
+                    "Trabes Tipo Cajón",
+                    "Trabes Tipo Artesa",
+                    "Columnas con o sin zapata integrada",
+                    "Cabezales",
+                    "Barreras centrales, prelosas, guarniciones, faldones, parapetos, etc."
                 ]
             },
             {
                 "id": 2,
                 "list": [
-                    "Producción semanal: 800 m"
-                ]
-            },
-            {
-                "id": 3,
-                "list": [
-                    "Trabes AASHTO tipo I, II, III, IV, V y VI",
-                    "Trabes Cajón",
-                    "Trabes Portantes y de rigidez",
-                    "Trabes Nebraska",
-                    "Losas TT",
-                    "Columnas",
-                    "Zapatas y candeleros"
+                    "Producción semanal: 600 m"
                 ]
             }
+            
         ]
     },
     "5": {

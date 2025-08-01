@@ -21,6 +21,7 @@ export default function CardsInfo(props) {
         1: <MdAspectRatio color={color.primaryLight} size="70px" />,
         2: <MdEngineering color={color.primaryLight} size="70px" />,
         3: <MdSquareFoot color={color.primaryLight} size="70px" />,
+        4: <MdSquareFoot color={color.primaryLight} size="70px" />,
     }
 
     const sups = {
@@ -30,7 +31,8 @@ export default function CardsInfo(props) {
     const titles = {
         1: 'ÁREA DE SUPERFICIE',
         2: 'CAPACIDAD',
-        3: 'ELEMENTOS DE FABRICACIÓN',
+        3: 'Elementos para Infraestructura Producibles',
+        4: 'Elementos para Edificación Producibles',
     }
 
     const getIcon = () => icons[id]
@@ -62,7 +64,7 @@ export default function CardsInfo(props) {
                 </h3>
 
                 {properties.map((item, index) => (
-                    getText() ? (
+                    //getText() ? (
                         <h1
                             key={`cards-info-${index}`}
                             style={{
@@ -73,7 +75,7 @@ export default function CardsInfo(props) {
                         >
                             {item} {getsup() && <sup>{getsup()}</sup>}
                         </h1>
-                    ) : (
+                    /*) : (
                         <OverlayTrigger
                             key={`cards-info-${index}`}
                             trigger='hover'
@@ -103,7 +105,7 @@ export default function CardsInfo(props) {
                                 {item} ℹ️
                             </h1>
                         </OverlayTrigger>
-                    )
+                    )*/
                 ))}
             </div>
         </Box>

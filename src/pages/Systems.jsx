@@ -18,13 +18,13 @@ const features_ = [
     {
         "id": 4,
         "name": "A diferencia de los sistemas convencionales",
-        description: "En el Sistema de Prefabricado los elementos estructurales se fabrican previamente en plantas de producción. Después de un riguroso control de calidad en el proceso de fabricación, las piezas se transportan para colocarlas en el lugar de la obra, abatiendo en forma considerable el tiempo de construcción.",
+        description: "Los elementos estructurales de concreto se prefabrican en una planta de producción mientras trabajos preliminares se llevan a cabo en el sitio de la obra, abatiendo considerablemente el tiempo total de ejecución de la estructura. La producción en planta se rige por un meticuloso control de calidad, y tras ser transportadas a la obra las piezas se ensamblan   de manera ordenada y cuidadosa.",
         icon: RiFolderChartLine,
     },
     {
         "id": 7,
-        "name": "Técnicas de Presfuerzo",
-        "description": "Una característica de este sistema es que pueden salvar grandes claros con elementos ligeros. Esto se logra mediante la técnica del Presfuerzo, que consiste en aplicar una fuerza de tensión al acero de presfuerzo (cables o torones) antes de iniciar el colado, logrando incrementar la resistencia y mejorar el comportamiento estructural de los elementos.",
+        "name": "Uso del presfuerzo",
+        "description": "Una característica que nos diferencia en gran manera es que gracias al uso del presfuerzo, con nuestros elementos se pueden cubrir grandes claros con elementos esbeltos. El presfuerzo incrementa la capacidad de carga y resistencia del elemento, lo cual, mejora su comportamiento estructural en general.",
         icon: RiFolderUserLine,
     },
     {
@@ -71,48 +71,52 @@ const features = [
 
 const process = [
     {
-        name: 'Proceso Conceptual',
-        description: 'En esta etapa inicial del proceso de producción de prefabricados, se desarrolla la visión y el concepto general del proyecto. Se definen los objetivos, requisitos y especificaciones básicas. Aquí, los equipos de diseño y planificación colaboran para establecer la viabilidad del proyecto y explorar diversas opciones creativas y técnicas.',
+        name: 'Proyecto conceptual',
+        description: 'En esta etapa se desarrolla la visión y el concepto general del proyecto. Se definen los objetivos, requisitos y especificaciones básicas que se deben cumplir. Aquí el equipo de diseño y el equipo de ejecución colaboran para establecer la viabilidad de cada propuesta y explorar tantas opciones creativas y técnicas como sean posibles.',
         icon: '/icons/concepto.png',
     },
     {
         name: 'Planeación',
-        description: 'La fase de planeación implica la elaboración detallada de un plan estratégico que abarca aspectos logísticos, financieros y temporales. Se determinan los recursos necesarios, se establecen los plazos y se definen los hitos clave. Además, se lleva a cabo una evaluación de riesgos para anticipar posibles desafíos y se elabora un plan de contingencia.',
+        description: 'En esta fase se elabora un plan detallado y estratégico que incluye la logística, el flujo de recursos y la duración del proyecto. Se calculan los recursos necesarios, se fijan plazos y se definen los hitos clave para cada etapa. Además, se lleva a cabo una evaluación de riesgos y se elaboran planes de contingencia para cada caso detectado.',
         icon: '/icons/plan.png',
     },
     {
-        name: 'Ingeniería de Detalle',
-        description: 'Durante esta etapa, se traducen los conceptos y planes generales en especificaciones técnicas y detalles precisos. Los ingenieros elaboran planos detallados, calculan las cargas estructurales, diseñan conexiones y seleccionan los materiales específicos que se utilizarán en la fabricación. La precisión en esta fase es crucial para garantizar la calidad y la seguridad del producto final.',
+        name: 'Proyecto ejecutivo',
+        description: 'Durante esta etapa los objetivos, requisitos y especificaciones básicas se convierten en especificaciones técnicas y detalles precisos. Los ingenieros calculan los esfuerzos estructurales a los que será sometido cada elemento, diseñan las conexiones necesarias, y seleccionan los materiales que se usarán; todo ello queda plasmado en planos detallados de cada pieza. La precisión en esta etapa es crucial para garantizar la calidad y la seguridad de la estructura final.',
         icon: '/icons/ingenieria.png',
     },
     {
-        name: 'Fabricación',
-        description: 'La fabricación es el proceso central donde los componentes prefabricados toman forma. Se utilizan los materiales seleccionados según las especificaciones de ingeniería para construir las unidades prefabricadas. La maquinaria especializada y el personal altamente capacitado trabajan en conjunto para garantizar la precisión y la calidad del producto, mientras se siguen estrictamente los estándares y normativas establecidos.',
+        name: 'Producción',
+        description: 'Es la etapa en la que se materializan los planos. Se utilizan los materiales previamente definidos en la ingeniería y con el uso de maquinaria y equipo especializado, personal altamente capacitado y las condiciones controladas de una planta de producción, se trabaja en conjunto para garantizar la calidad y precisión de cada elemento, siempre atendiendo los estándares y normas aplicables en cada paso de la etapa de producción.',
         icon: '/icons/fabricacion.png',
     },
     {
-        name: 'Transporte y Montaje',
-        description: 'Una vez que las unidades prefabricadas han sido fabricadas, se inicia la fase de transporte hacia el lugar de montaje. Este paso implica la logística de movilizar las unidades desde la planta de fabricación hasta el sitio de construcción. La coordinación precisa y eficiente es esencial para garantizar que todas las piezas lleguen en el momento adecuado y en condiciones óptimas. El montaje en el lugar implica ensamblar las unidades prefabricadas según el diseño previamente establecido.',
+        name: 'Transporte',
+        description: 'Una vez que los elementos están listos y las condiciones en la obra son las adecuadas, se inicia el transporte de las piezas hasta el sitio de la obra. Se ejecuta de manera ordenada y controlada de acuerdo con el plan de logística previamente definido. Una coordinación precisa y eficiente entre el personal de la obra y el de la planta es esencial para garantizar que cada pieza llega en condiciones óptimas y en el momento adecuado.',
+        icon: '/icons/montaje.png',
+    },
+        {
+        name: 'Montaje',
+        description: 'Esta es la etapa más observada y representativa de la obra, por lo que una planeación minuciosa y verificación de las condiciones de seguridad son imprescindibles, tanto como una ejecución cuidadosa y orden de todo el personal que participa en el montaje.',
         icon: '/icons/montaje.png',
     },
     {
         name: 'Conexiones',
-        description: 'La fase de conexiones es crítica para asegurar la estabilidad y la integridad estructural del proyecto. Aquí, se lleva a cabo la unión de las diferentes unidades prefabricadas para formar la estructura completa. Las conexiones pueden incluir soldaduras, pernos u otros métodos según las especificaciones de ingeniería. Se realizan pruebas de carga y verificaciones de calidad para asegurar que todas las conexiones sean sólidas y cumplan con los estándares requeridos.',
+        description: 'La ejecución de las conexiones estructurales entre los elementos prefabricados es una labor crítica que determina la estabilidad y la integridad de la estructura. Los elementos pueden unirse mediante soldadura, pernos, anclajes mecánicos, conexiones postensadas, entre otros; pero siempre de acuerdo con las especificaciones del proyecto ejecutivo estructural. Durante esta etapa las conexiones pueden ser sometidas a verificaciones de calidad y pruebas de carga para asegurar su correcta ejecución.',
         icon: '/icons/conexion.png',
     },
 ]
 
 const pros = [
-    "Seguridad en infraestructura y estructura garantizada.",
-    "Disminución en el tiempo de construcción hasta del 50%.",
-    "Controles de calidad más estrictos gracias al proceso industrializado.",
-    "Durabilidad de la estructura por uso de concretos de alta resistencia.",
-    "Se reducen costos de supervisión ya que se simplifican los procesos y control de obra.",
-    "Se aligera la estructura permitiendo en ocasiones una reducción en costos en cimentación.",
-    "Versatilidad en soluciones arquitectónicas ya que se desarrolla la ingeniería adaptada al proyecto.",
-    "Redución del impacto ambiental en sitio ya que se requiere menor número de personal obrero comparado con los sistemas tradicionales.  Se reduce hasta un 80%.",
-    "Se elimina el riesgo debido a problemas obrero-patronales, es decir cuotas sindicales, seguro social, etc. ya que el personal depende directamente de nosotros.",
-    "Ahorro significativo en costos de ingeniería estructural ya que la ingeniería es desarrollada por nosotros contando con ingenieros altamente calificados en la materia."
+    "Calidad y seguridad estructural garantizada.",
+    "Disminución en el tiempo de construcción de la estructura hasta en un 50%.",
+    "Fabricación industrializada regida por el control de la calidad en cada proceso.",
+    "Mayor durabilidad de la estructura por el uso de concreto de alta resistencia.",
+    "Mejores costos de supervisión al tener procesos más simples de controlar.",
+    "Estructura más ligera que puede representar ahorros en cimentación.",
+    "Menor impacto ambiental en el sitio de la obra gracias a la reducción de hasta un 80% de la mano de obra necesaria para la construcción de la estructura.",
+    "Se reduce el riesgo de problemas obrero-patronales ya que el personal de producción, transporte y montaje de la estructura depende directamente de Grupo TICONSA.",
+    "Versatilidad de adaptación a cualquier proyecto arquitectónico.",
 ]
 
 
@@ -217,18 +221,18 @@ const Systems = () => {
                                 </div>
                                 <div>
                                     <div className="diff aspect-[16/8] w-[48rem] max-w-none ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" style={{ borderRadius: '8px' }}>
-                                        <div className="diff-item-1">
+                                        {/*<div className="diff-item-1">
                                             <img alt="daisy" src="/361.jpg" />
-                                        </div>
+                                        </div>*/}
                                         <div className="diff-item-2">
                                             <img alt="daisy" src="/362.jpg" />
                                         </div>
                                         <div className="diff-resizer"></div>
                                     </div>
-                                    <div className="" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                    {/*<div className="" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                                         <img src="/icons/swipe.gif" className="swipe" />
                                         <p style={{ fontWeight: '300', color: color.orange, fontSize: 12 }}>Desplaza der / izq</p>
-                                    </div>
+                                    </div>*/}
                                 </div>
                             </div>
                         </div>
@@ -246,27 +250,18 @@ const Systems = () => {
                                     El proceso aborda cada fase esencial en la producción de prefabricados, desde la concepción inicial del proyecto hasta la conexión final de las unidades. Sumérgete en las etapas de planificación estratégica, ingeniería precisa, fabricación eficiente, logística de transporte y montaje in situ (en sitio).
                                 </p>
                             </div>
-                            <div className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+                            <div className="timeline-snap-icon max-md:timeline-compact timeline-vertical">
                                 {process.map((item, index) => {
-                                    const index_ = index % 2;
-                                    const six = index !== 5;
                                     return (
-                                        <li>
-                                            <div className="timeline-middle">
-                                                <time className="font-mono">{index + 1}</time>
-                                            </div>
-                                            <div className={`${"timeline-end"} mb-10`}>
-                                                <div className={"timeline-img-start"}>
-                                                    {/*<img
-                                                        src={item.icon}
-                                                        className="img-step"
-                                                    />*/}
-                                                </div>
+                                        <div className="flex flex-row items-center" key={index}>
+                                            <h1 className="number-step-bg">
+                                                {index + 1}
+                                            </h1>
+                                            <div className={` mb-10`}>
                                                 <div className="feature-title">{item.name}</div>
                                                 <dd className="mt-2 text-base leading-7 text-gray-600">{item.description}</dd>
                                             </div>
-                                            {six && <hr />}
-                                        </li>
+                                        </div>
                                     )
                                 })}
                                 <div id="features"></div>
@@ -346,16 +341,16 @@ const Systems = () => {
                             </div>
                             <Fade direction="down">
                                 <section className="text-center">
-                                    <h2 className="section-title">Ventajes del <span className="text-primary-blue">Prefabricado</span></h2>
+                                    <h2 className="section-title">Ventajas del <span className="text-primary-blue">Prefabricado</span></h2>
                                 </section>
                             </Fade>
                         </section>
 
-                        <div className="mx-auto max-w-7xl">
+                        <div className="mx-auto max-w-7xl pb-[5rem]">
                             <div className="mx-auto mt-10 max-w-2xl lg:max-w-4xl">
                                 <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
                                     {pros.map((feature) => (
-                                        <div key={feature} className="relative pl-16">
+                                        <div key={feature} className="relative pl-16 flex items-center">
                                             <dt className="">
                                                 <div className="absolute left-0 top-1.5 flex h-10 w-10 items-center justify-center rounded-lg" style={{ backgroundColor: color.primary }}>
                                                     <RiThumbUpLine className="h-6 w-6 text-white" aria-hidden="true" />
@@ -410,8 +405,8 @@ const Systems = () => {
 
                             <section id="pro">
                                 <center>
-                                    <section className="col-base col-about-img col-sm-6 col-md-offset-1 mt-4" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
-                                        <center>
+                                    <section className="col-base col-about-img col-sm-6 col-md-offset-1 pt-4" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
+                                        {/*<center>
                                             <div className="col-base col-md-offset-1" style={{ marginTop: 20 }}>
                                                 <div className="col-about-info">
                                                     <p className='h4 m-0'>Construcción in SITU</p>
@@ -435,7 +430,7 @@ const Systems = () => {
                                             src={"./paneles.png"}
                                             style={{ height: 'auto', objectFit: 'scale-down', paddingBottom: 25 }}
                                         />
-                                        {/*<div className="col-base col-md-offset-1">
+                                        <div className="col-base col-md-offset-1">
                                             <div className="col-about-info">
                                                 <p className='h4 m-0'>El sistema prefabricado tiene una gran variedad de ventajas frente a los sistemas constructivos convencionales, entre ellos se destacan:</p>
                                                 <p>1. Disminución en el tiempo de construcción hasta del 50%.<br />

@@ -76,7 +76,15 @@ export default function SmallCentered({ photo, certificates }) {
                                 alt="Ookla"
                                 class="absolute -top-16 left-1/2 transform -translate-x-1/2 h-40 w-40 object-contain" />
                             <p class="text-white mt-4">
-                                Sistema de construcción industrializada certificado Avalado por ANIPPAC<span class="text-blue-400">®</span> *
+                                Sistema de construcción industrializada <br/> certificado Avalado por <br/> ANIPPAC<span class="text-blue-400">®</span> *
+                            </p>
+                        </div>
+                        <div class="relative bg-[#1a1a1a] pt-20 mt-14 px-6 rounded-[10px] text-center max-w-md w-full">
+                            <img src="/certificates/ani.png"
+                                alt="Ookla"
+                                class="absolute -top-16 left-1/2 transform -translate-x-1/2 h-40 w-40 object-contain" />
+                            <p class="text-white mt-4">
+                                Asociación Nacional de Industriales <br/> del Presfuerzo y la Prefabricación A.C.
                             </p>
                         </div>
 
@@ -85,7 +93,7 @@ export default function SmallCentered({ photo, certificates }) {
                                 alt="nPerf"
                                 class="absolute -top-16 left-1/2 transform -translate-x-1/2 h-40 w-40 object-cover rounded-full" />
                             <p class="text-white mt-4">
-                                Excelencia en seguridad y accesibilidad Certificación ONNCCE<span class="text-blue-400">®</span> **
+                                Excelencia en seguridad <br/> y accesibilidad Certificación <br/> ONNCCE<span class="text-blue-400">®</span> **
                             </p>
                         </div>
                     </div>
@@ -156,16 +164,15 @@ export default function SmallCentered({ photo, certificates }) {
                                     alt="logo Grupo Ticonsa"
                                     style={{ width: 123 }}
                                 />
-                                <h3 className="footer-title" style={{ fontWeight: 'normal', marginBottom: 20, textAlign: mobile ? 'center' : 'left' }}>Grupo Ticonsa ®, un grupo con historia y vanguardia en prefabricación.</h3>
+                                <h3 className="footer-title" style={{ fontWeight: 'normal', marginBottom: 20, textAlign: mobile ? 'center' : 'left' }}>Grupo Ticonsa ®, un grupo con historia</h3>
                             </Stack>
                             <Stack direction={direction} justifyContent={'space-between'}>
-                                <Stack paddingRight={5}>
+                                {/*<Stack paddingRight={5}>
                                     <h3 className="footer-title uppercase">Acerca de</h3>
                                     <Stack flexDirection={'column'}>
                                         <a href="/#about-me" className="footer-link">Acerca de</a>
                                         <a href="/#services" className="footer-link">Servicios</a>
                                         <a href="/document_cv" className="footer-link" onClick={(e) => handleLinkClick(e)}>Ver Curriculum</a>
-                                        {/*<a href="/document_presencia" className="footer-link">Ver Presencia Ticonsa</a>*/}
                                     </Stack>
                                 </Stack>
                                 <Stack paddingRight={5}>
@@ -174,7 +181,7 @@ export default function SmallCentered({ photo, certificates }) {
                                         <a href="/prefabricado#system" className="footer-link">Sistema</a>
                                         <a href="/prefabricado#pro" className="footer-link">Ventajas</a>
                                     </Stack>
-                                </Stack>
+                                </Stack>*/}
                                 <Stack paddingRight={5}>
                                     <h3 className="footer-title uppercase">Ayuda</h3>
                                     <Stack flexDirection={'column'}>
