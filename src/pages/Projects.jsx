@@ -8,31 +8,47 @@ import { FiZoomIn } from "react-icons/fi";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
+const fullWidthPositions = [3, 8, 11, 16, 23];
 
 const ImageGrid = ({ images }) => {
     return (
         <div className="grid grid-cols-2 gap-2">
-            {images.map((image, index) => (
-                <div
-                    key={index}
-                    className="relative"
-                >
-                    {/* Imagen principal */}
-                    <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="gallery-image"
-                    />
+            {images.map((image, index) => {
+                const position = index + 1;
+                const isFullWidth = fullWidthPositions.includes(position);
+                return (
+                    <div
+                        key={index}
+                        className={`relative ${isFullWidth ? 'col-span-2' : ''}`}
+                    >
+                        <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="gallery-image"
+                        />
 
-                    {/* Overlay en hover */}
-                    <div className="gallery-overlay">
-                        <p className="text-white font-medium text-lg mb-2">
-                            {image.title}
-                        </p>
+                        {/* Overlay en hover */}
+                        <div className="gallery-overlay">
+                            <p className="text-white font-flama-light tracking-wider font-light leading-[0px]">
+                                {image?.years}
+                            </p>
+                            <p className="text-white font-flama uppercase text-2xl font-extrabold mb-1.5">
+                                <div dangerouslySetInnerHTML={{ __html: image?.title }} />
+                            </p>
+                            {
+                                image?.extra1 && <p className="text-white font-flama font-medium text-[16px] leading-[8px]">
+                                    {image?.extra1}
+                                </p>
+                            }
+                            <div className="line-banner-white" style={{ backgroundColor: 'white' }} />
+                            <p className="text-white font-flama-light text-[14px] tracking-wider font-light">
+                                <div dangerouslySetInnerHTML={{ __html: image?.estado }} />
+                            </p>
+                        </div>
+
                     </div>
-
-                </div>
-            ))}
+                )
+            })}
         </div>
     );
 };
@@ -41,24 +57,179 @@ const images = [
     {
         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
         alt: "Naturaleza",
-        title: "Paisaje natural"
+        title: "Gradas para Campos Deportivos en Ciudad Madero",
+        years: 1973,
+        estado: "Tamaulipas",
+        extra1: "Instituto Tecnológico Regional"
     },
     {
         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
         alt: "Ciudad",
-        title: "Urbano"
+        title: "Garitas para la Secretaría de Hacienda Ing. Boilard C",
+        years: 1973,
+        estado: "Quintana Roo",
+        extra1: ""
     },
     {
         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Animal",
-        title: "Fauna"
+        alt: "Naturaleza",
+        title: "Fosas Prefabricadas para panteones 'Los Cipreses'",
+        years: 1974,
+        estado: "Estado de México",
+        extra1: "Ciprés del Bosque"
     },
     {
         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Tecnología",
-        title: "Innovación"
+        alt: "Ciudad",
+        title: "Auditorio para la Guelaguetza",
+        years: 1974,
+        estado: "Oaxaca",
+        extra1: "Gobierno del Estado de Oaxaca"
     },
-    // Añade más imágenes para completar la cuadrícula...
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Naturaleza",
+        title: "Reconstrucción de estructuras y techumbres para estadio de béisbol",
+        years: 1975,
+        estado: "Veracruz",
+        extra1: "Gobierno de Veracruz"
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Gradas para Campos Deportivos Escuelas de Maestros",
+        years: 1975,
+        estado: "México, CDMX",
+        extra1: ""
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Gradas para Campos Deportivos Laredo Instituto Tecnológico",
+        years: 1975,
+        estado: "Tamaulipas",
+        extra1: ""
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Ampliación de Centro de Convenciones Acapulco Ing. Raúl Figueroa",
+        years: 1976,
+        estado: "Guerrero",
+        extra1: ""
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Auditorio de varios usos Sosa",
+        years: 1980,
+        estado: "Estado de México",
+        extra1: ""
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Tabasco G.P.Q. Complejo OMNI",
+        years: 1981,
+        estado: "Tabasco",
+        extra1: ""
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Tabasco G.P.Q. Complejo Tabasco 1 Colema, S.A.",
+        years: 1981,
+        estado: "Tabasco",
+        extra1: ""
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Tabasco G.P.Q. Complejo Tabasco 1 C.C. y P.",
+        years: 1981,
+        estado: "Tabasco",
+        extra1: ""
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Tabasco G.P.Q. Complejo Tabasco 1 RECSA",
+        years: 1981,
+        estado: "Tabasco",
+        extra1: "RECSA"
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Parapetos del puente Fortuna",
+        years: 1982,
+        estado: "México. CDMX",
+        extra1: "COMETRO"
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: `Tanque de Almacenamiento de agua`,
+        years: 1984,
+        estado: "Estado de México<br/>1500 m³",
+        extra1: "Constructora y Fraccionadora las Quintanas"
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Estadio Foro Sol del Autódromo Hermanos Rodríguez ICA",
+        years: 1997,
+        estado: "México. CDMX",
+        extra1: "Construcción Urbana"
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Estadio de Fútbol 'Miguel Alemán Valdez' ",
+        years: 1997,
+        estado: "Guanajuato",
+        extra1: "Club Deportivo Celaya AC"
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Centro de Exposiciones Banamex, Hipódromo de las Américas AMH - CIE",
+        years: 1999,
+        estado: "México. CDMX",
+        extra1: ""
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Cubierta para Estufa Industrial ESGO Construcciones, S.A. de C.V.",
+        years: 2018,
+        estado: "Estado de México",
+        extra1: ""
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Departamentos y Hotel Amaná Live & Enjoy Tulum",
+        years: 2022,
+        estado: "Quintana Roo",
+        extra1: "Grupo TYPSA"
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Tren Maya tramo 2, Estación Edzná",
+        years: 2023,
+        estado: "Campeche",
+        extra1: "GRUPO CARSO"
+    },
+    {
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        alt: "Ciudad",
+        title: "Tren Maya tramo 2, Paradero Tenabo",
+        years: 2023,
+        estado: "Campeche",
+        extra1: "GRUPO CARSO"
+    },
 ];
 
 import { RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine, RiBuildingLine, RiPencilRuler2Line, RiPageSeparator, RiP2PLine, } from "react-icons/ri";
@@ -113,7 +284,7 @@ function imageLink(path, width, height, size, extension) {
 }
 
 
-const Services = ({ id }) => {
+const Projects = ({ id }) => {
 
 
     const types = {
@@ -199,6 +370,23 @@ const Services = ({ id }) => {
             ],
             "content": "Nuestro equipo de supervisores, <strong>con una vasta experiencia en roles de dirección y técnica</strong>, imparte conferencias que combinan conocimientos prácticos con enfoques motivadores. Nos destacamos como líderes en el sector, aplicando nuestra experiencia en proyectos de instalación de estructuras prefabricadas en diversos contextos y escalas.",
             "footer": "En cada presentación, <strong>nos esforzamos por comunicar de manera clara y accesible los principios esenciales de la supervisión en la instalación de estructuras prefabricadas</strong>, inspirando a nuestra audiencia a implementar prácticas avanzadas que generen eficiencia y un valor añadido en esta fase crítica de la construcción."
+        },
+
+        6: {
+            "name": "Especiales",
+            "description": "La supervisión de las obras forma parte de las funciones administrativas de gran valor e importancia que realizamos para que se cumplan efectiva y puntualmente los objetivos del proyecto de forma legal, en tiempo y calidad.",
+            "header": "En <strong>Grupo Ticonsa Inmobiliaria</strong>, transformamos desafíos en soluciones. <br/> Desde <strong>centros de espectáculos</strong> hasta <strong>viviendas modulares</strong>, cada proyecto lleva nuestro sello de calidad, seguridad y dedicación. Aplicamos experticia y mejores prácticas de la industria para superar tus expectativas.",
+            "word_key": [
+                "Supervisión técnica especializada en instalación de prefabricados",
+                "Gestión de la seguridad en el sitio de construcción",
+                "Innovación en métodos de instalación",
+                "Liderazgo en la coordinación de equipos de trabajo",
+                "Planificación y ejecución de procesos de montaje",
+                "Estrategias para la optimización de recursos",
+                "Eficiencia en la integración de estructuras prefabricadas",
+            ],
+            "content": "Nuestro equipo de supervisores, <strong>con una vasta experiencia en roles de dirección y técnica</strong>, imparte conferencias que combinan conocimientos prácticos con enfoques motivadores. Nos destacamos como líderes en el sector, aplicando nuestra experiencia en proyectos de instalación de estructuras prefabricadas en diversos contextos y escalas.",
+            "footer": "En cada presentación, <strong>nos esforzamos por comunicar de manera clara y accesible los principios esenciales de la supervisión en la instalación de estructuras prefabricadas</strong>, inspirando a nuestra audiencia a implementar prácticas avanzadas que generen eficiencia y un valor añadido en esta fase crítica de la construcción."
         }
     }
 
@@ -206,49 +394,25 @@ const Services = ({ id }) => {
 
     return (
         <NavBar photo={true} mobile={mobile}>
-            <CarouselStatic names={[10, 11, 12]} folder='systems/' />
+            <CarouselStatic
+                names={[10, 11, 12]}
+                folder='systems/'
+                title={`Nuestros proyectos ${types[id]?.name}`}
+                place={'Innovación y Precisión en Cada Obra'}
+            />
 
             <BGPoints>
                 <section className="_main container">
                     <div className="py-16">
                         <div className="mx-auto max-w-7xl">
                             <div className="mx-auto text-center">
-                                <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>{types[id]?.description}</h2>
-                                <Fade direction="down">
-                                    <section className="text-center">
-                                        <h2 className="section-title" style={{ paddingTop: 30, }}>Expertos en <span className="text-primary-blue">{types[id]?.name}</span></h2>
-                                    </section>
-                                </Fade>
-                                <div className="line-banner" style={{ backgroundColor: color.orange }} />
-                                <p className="mt-6 text-lg leading-8 text-gray-600">
-                                    <div dangerouslySetInnerHTML={{ __html: types[id]?.content }} />
-                                    <div className="line-banner" style={{ backgroundColor: color.orange }} />
+                                <p className="mt-5 text-lg leading-8 text-gray-600">
                                     <div dangerouslySetInnerHTML={{ __html: types[id]?.header }} />
+                                    <div className="line-banner" style={{ backgroundColor: color.orange }} />
                                 </p>
-                            </div>
-
-                            <div className="mx-auto mt-6 mb-16 max-w-2xl lg:max-w-4xl">
-                                <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-                                    {types[id]?.word_key.map((feature, index) => {
-                                        const Icon_ = icons_[index];
-                                        return (
-                                            <div key={`${feature.charAt()}-${index}`} className="relative pl-16">
-                                                <dt className="text-base font-semibold leading-7 text-gray-900">
-                                                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg" style={{ backgroundColor: color.primary }}>
-                                                        {Icon_ && <Icon_ className="h-6 w-6 text-white" aria-hidden="true" />}
-                                                    </div>
-                                                    {feature}
-                                                </dt>
-                                            </div>
-                                        )
-                                    })}
-                                </dl>
-                            </div>
-                            <div className="line-banner mt-6" style={{ backgroundColor: color.orange }} />
-                            <div className="mx-auto text-center">
-                                <p className="mt-6 text-lg leading-8 text-gray-600">
-                                    <div dangerouslySetInnerHTML={{ __html: types[id]?.footer }} />
-                                </p>
+                                <Fade direction="down">
+                                    <h2 className="section-title uppercase" style={{ paddingTop: 30, }}>Nuestra experiencia en</h2>
+                                </Fade>
                             </div>
                         </div>
                     </div>
@@ -258,7 +422,7 @@ const Services = ({ id }) => {
                         showFullscreenButton={false}
                     />*/}
 
-                    <div className="container mx-auto p-1">
+                    <div className="container mx-auto pb-16 p-1.5 ">
                         <ImageGrid images={images} />
                     </div>
 
@@ -309,4 +473,4 @@ const Services = ({ id }) => {
     )
 }
 
-export default Services;
+export default Projects;

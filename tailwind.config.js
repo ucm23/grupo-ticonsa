@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'flama-light': ['Flama Light', 'sans-serif'],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },

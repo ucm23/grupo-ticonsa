@@ -115,7 +115,7 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
                                     rounded={'full'}
                                     borderWidth={"1.5px"}
                                     size="md"
-                                    color={showShadow ? "#03296A" : "white"}
+                                    color={showShadow || isChecked ? "#03296A" : "white"}
                                     onClick={() => openLink()}
                                     //rightIcon={<div />}
                                     //leftIcon={<div />}

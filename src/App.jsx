@@ -12,6 +12,7 @@ import Documents from "./pages/Documents";
 import Plants from "./pages/Plants";
 import Contacts2 from "./pages/Contacts2";
 import Index_ from "./pages/Index_";
+import Projects from "./pages/Projects";
 
 function App() {
     return (
@@ -36,6 +37,7 @@ function App() {
             <Route path="/transporte" element={<Services id={3} />} />
             <Route path="/montaje" element={<Services id={5} />} />
             <Route path="/supervision" element={<Services id={5} />} />
+            <Route path="/especiales" element={<Projects id={6} />} />
 
             <Route path="/document_cv" element={<Documents type={'cv'} />} />
             <Route path="/document_presencia" element={<Documents type={'presencia'} />} />

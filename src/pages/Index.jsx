@@ -407,9 +407,9 @@ const Index = () => {
                                                 </Popover>
                                             }
                                         >
-                                            {/*<div className="circle" style={{ top: project_?.position?.top, left: project_?.position?.left, }} onClick={handleClick} />*/}
-                                            <img
-                                                src="/logo-round.png"  // Reemplaza con la ruta correcta de tu imagen
+                                            <div className="circle" style={{ top: project_?.position?.top, left: project_?.position?.left, }} onClick={handleClick} />
+                                            {/*<img
+                                                src="/logo-round.png" 
                                                 alt="Ícono del proyecto"
                                                 className="absolute w-6 h-6 rounded-full cursor-pointer"
                                                 style={{
@@ -417,7 +417,7 @@ const Index = () => {
                                                     left: project_?.position?.left
                                                 }}
                                                 onClick={handleClick}
-                                            />
+                                            />*/}
                                         </OverlayTrigger>
                                     ))
                                 )}

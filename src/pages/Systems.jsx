@@ -240,14 +240,14 @@ const Systems = () => {
                     <div className="py-10">
                         <div className="mx-auto max-w-7xl">
                             <div className="mx-auto text-center">
-                                <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Desde una idea conceptual hasta la vasta realidad</h2>
+                                <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>De la idea al Concreto</h2>
                                 <Fade direction="down">
                                     <section className="text-center">
-                                        <h2 className="section-title" >Proceso Integral de  <span className="text-primary-blue">Producción de Prefabricados</span></h2>
+                                        <h2 className="section-title">Método Constructivo Prefabricado<span className="text-primary-blue">Prefabricado</span></h2>
                                     </section>
                                 </Fade>
                                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                                    El proceso aborda cada fase esencial en la producción de prefabricados, desde la concepción inicial del proyecto hasta la conexión final de las unidades. Sumérgete en las etapas de planificación estratégica, ingeniería precisa, fabricación eficiente, logística de transporte y montaje in situ (en sitio).
+                                    Este método abarca cada fase esencial en la ejecución de un proyecto con elementos prefabricados, desde la concepción inicial hasta la conclusión del montaje de la estructura.
                                 </p>
                             </div>
                             <div className="timeline-snap-icon max-md:timeline-compact timeline-vertical">

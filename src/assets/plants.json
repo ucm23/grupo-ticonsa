@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Cuidad de México",
+        "projects": [
+            {
+                "name": "Foro Sol<br/><br/>Segundo Piso Periférico<br/><br/>Auditorio Tec de Monterrey<br/><br/>Edificio Comercial San Cosme<br/><br/>Centro Comercial “Plaza Imagen”, Jardines de la Montaña<br/><br/>Centro Comercial “Plaza Zapato” o “Plaza Gran Sur”",
+                "extra": "",
+                "position": {
+                    "top": "61%",
+                    "left": "53%"
+                }
+            }
+        ]
+    },
+    {
+        "name": "Cancún, Quintana Roo",
+        "projects": [
+            {
+                "name": "Hotel Moon Palace<br/><br/> Hotel Oasis<br/><br/> Sears San Luis Potosí, Grupo Sanborns<br/><br/>Centro Comercial “Las Palmas“ <br/><br/>Centro Comercial Galería Infinity Grupo Isla<br/><br/>Royal Parking<br/><br/>Estacionamiento Ultramar, Ruta Naútica<br/><br/>Fachadas IMSS, Ingenieros Civiles Asociados <br/><br/>Fachadas Base Naval, Ingenieros Civiles Asociados",
+                "extra": "",
+                "position": {
+                    "top": "56%",
+                    "left": "92.5%"
+                }
+            }
+        ]
+    }
+]
