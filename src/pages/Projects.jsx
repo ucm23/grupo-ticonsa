@@ -13,7 +13,7 @@ const fullWidthPositions = [3, 8, 11, 16, 23];
 const ImageGrid = ({ images }) => {
     return (
         <div className="grid grid-cols-2 gap-2">
-            {images.map((image, index) => {
+            {images.map((item, index) => {
                 const position = index + 1;
                 const isFullWidth = fullWidthPositions.includes(position);
                 return (
@@ -22,27 +22,27 @@ const ImageGrid = ({ images }) => {
                         className={`relative ${isFullWidth ? 'col-span-2' : ''}`}
                     >
                         <img
-                            src={image.src}
-                            alt={image.alt}
+                            src={item?.route_img ? `/projects/especiales/${item?.route_img}/${item?.imgs[0]}.png` : item?.src}
+                            alt={item.alt}
                             className="gallery-image"
                         />
 
                         {/* Overlay en hover */}
                         <div className="gallery-overlay">
                             <p className="text-white font-flama-light tracking-wider font-light leading-[0px]">
-                                {image?.years}
+                                {item?.years}
                             </p>
                             <p className="text-white font-flama uppercase text-2xl font-extrabold mb-1.5">
-                                <div dangerouslySetInnerHTML={{ __html: image?.title }} />
+                                <div dangerouslySetInnerHTML={{ __html: item?.title }} />
                             </p>
                             {
-                                image?.extra1 && <p className="text-white font-flama font-medium text-[16px] leading-[8px]">
-                                    {image?.extra1}
+                                item?.extra1 && <p className="text-white font-flama font-medium text-[16px] leading-[8px]">
+                                    {item?.extra1}
                                 </p>
                             }
                             <div className="line-banner-white" style={{ backgroundColor: 'white' }} />
                             <p className="text-white font-flama-light text-[14px] tracking-wider font-light">
-                                <div dangerouslySetInnerHTML={{ __html: image?.estado }} />
+                                <div dangerouslySetInnerHTML={{ __html: item?.estado }} />
                             </p>
                         </div>
 
@@ -57,9 +57,9 @@ const images = [
     {
         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
         alt: "Naturaleza",
-        title: "Gradas para Campos Deportivos en Ciudad Madero",
+        title: "Gradas para Campos Deportivos",
         years: 1973,
-        estado: "Tamaulipas",
+        estado: "Ciudad Madero, Tamaulipas",
         extra1: "Instituto Tecnológico Regional"
     },
     {
@@ -180,7 +180,9 @@ const images = [
         title: "Estadio Foro Sol del Autódromo Hermanos Rodríguez ICA",
         years: 1997,
         estado: "México. CDMX",
-        extra1: "Construcción Urbana"
+        extra1: "Construcción Urbana",
+        route_img: "ForoSol",
+        imgs: [1, 2, 3, 4]
     },
     {
         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
@@ -188,7 +190,9 @@ const images = [
         title: "Estadio de Fútbol 'Miguel Alemán Valdez' ",
         years: 1997,
         estado: "Guanajuato",
-        extra1: "Club Deportivo Celaya AC"
+        extra1: "Club Deportivo Celaya AC",
+        route_img: "MiguelAleman",
+        imgs: [1, 2, 3, 4]
     },
     {
         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
@@ -196,7 +200,9 @@ const images = [
         title: "Centro de Exposiciones Banamex, Hipódromo de las Américas AMH - CIE",
         years: 1999,
         estado: "México. CDMX",
-        extra1: ""
+        extra1: "",
+        route_img: "CentroBanamex",
+        imgs: [1, 2,]
     },
     {
         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
@@ -212,23 +218,29 @@ const images = [
         title: "Departamentos y Hotel Amaná Live & Enjoy Tulum",
         years: 2022,
         estado: "Quintana Roo",
-        extra1: "Grupo TYPSA"
+        extra1: "Grupo TYPSA",
+        route_img: "HotelAmana",
+        imgs: [1, 2,]
     },
     {
         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
         alt: "Ciudad",
-        title: "Tren Maya tramo 2, Estación Edzná",
+        title: "Tren Maya tramo 2 - Estación Edzná",
         years: 2023,
         estado: "Campeche",
-        extra1: "GRUPO CARSO"
+        extra1: "GRUPO CARSO",
+        route_img: "TMEdzna",
+        imgs: [1, 2, 3, 4]
     },
     {
         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
         alt: "Ciudad",
-        title: "Tren Maya tramo 2, Paradero Tenabo",
+        title: "Tren Maya tramo 2 - Paradero Tenabo",
         years: 2023,
         estado: "Campeche",
-        extra1: "GRUPO CARSO"
+        extra1: "GRUPO CARSO",
+        route_img: "TMF1T5N",
+        imgs: [1, 2, 3, 4]
     },
 ];
 
