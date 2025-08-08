@@ -84,7 +84,9 @@ const images = [
         title: "Auditorio para la Guelaguetza",
         years: 1974,
         estado: "Oaxaca",
-        extra1: "Gobierno del Estado de Oaxaca"
+        extra1: "Gobierno del Estado de Oaxaca",
+        route_img: "Guelaguetza",
+        imgs: [1, 2,]
     },
     {
         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
