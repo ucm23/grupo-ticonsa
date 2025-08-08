@@ -27,7 +27,7 @@ const features_ = [
     {
         "id": 4,
         "img": "/imgs/004.jpg",
-        "name": "Sistema pretensado y postensado",
+        "name": "SISTEMA PRETENSADO Y POSTENSADO",
         description: "Desarrollando tecnologías propias en prefabricación de trabes para puentes y viaductos elevados de hasta más de 300 toneladas.",
         icon: RiFolderChartLine,
         "url": "/infraestructura"
@@ -35,7 +35,7 @@ const features_ = [
     {
         "id": 7,
         "img": "/foro-sol.jpg",
-        "name": "Proyectos y Sistemas arquitectónicos",
+        "name": "PROYECTOS Y SISTEMAS ARQUITECTÓNICOS",
         "description": "Nos encargamos de la estructura base que dan fuerza a un gran número de proyectos.",
         icon: RiFolderUserLine,
         "url": "/infraestructura"
@@ -43,32 +43,32 @@ const features_ = [
     {
         "id": 5,
         "img": "/imgs/005.jpg",
-        "name": "Estructuración y diseño",
-        "description": "Diseñamos y planificamos edificios e inmuebles de acuerdo a las necesidades.",
+        "name": "DISEÑO ESTRUCTURAL",
+        "description": "Planeamos y diseñamos las soluciones estructurales que nuestros clientes necesitan.",
         icon: RiBuilding2Line,
         "url": "/edificacion"
     },
     {
         "id": 6,
         "img": "/imgs/people.jpeg",
-        "name": "Supervisión y dirección de obras",
-        "description": "La supervisamos de las obras es de gran valor e importancia, cumpliendo los objetivos.",
+        "name": "DIRECCIÓN Y SUPERVISIÓN DE OBRAS",
+        "description": "La supervisión es una de las funciones administrativas de gran valor e importancia que realizamos para que se cumplan en tiempo y forma los objetivos del proyecto. ",
         icon: RiNurseLine,
         "url": "/supervision"
     },
     {
         "id": 8,
         "img": "/services_card5.jpg",
-        "name": "Fabricación y montaje de elementos",
-        "description": "Una vez realizada la fabricación, ejecutamos el montaje de las piezas con toda precisión.",
+        "name": "FABRICACIÓN DE ELEMENTOS DE CONCRETO",
+        "description": "Nuestros procesos de fabricación cuentan con el Certificado nivel Oro de Calidad y Sustentabilidad que el ONNCCE avala. ",
         icon: RiShakeHandsLine,
         "url": "/montaje"
     },
     {
         "id": 9,
         "img": "/imgs/002.jpg",
-        "name": "Transporte de elementos de concreto",
-        "description": "Contamos con el mejor equipo de Transporte para lograr una eficaz ejecución.",
+        "name": "TRANSPORTE Y MONTAJE DE ELEMENTOS DE CONCRETO",
+        "description": "Nuestros procedimientos para el transporte y montaje de los elementos de concreto cuentan con el Certificado Nivel Oro de Calidad Seguridad que el ONNCCE avala.",
         icon: RiThumbUpLine,
         "url": "/transporte"
     }
@@ -377,7 +377,7 @@ const Index = () => {
                         </section>
                     </div>
 
-                    <section className={`mt-20 ${mobile ? "" : "_main container"}`}>
+                    <section className={`mt-20 ${mobile ? "" : "_main container"}`}  id="map">
                         <section className="text-center">
                             <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Llevamos nuestros proyectos destacados a una</h2>
                             <Fade direction="down">
@@ -467,36 +467,39 @@ const Index = () => {
                             </section>
                         </section>
                             </section>*/}
-                    {/*<div className="overflow-hidden py-24 sm:py-32">
-                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                                <div className="lg:pr-8 lg:pt-4">
-                                    <div className="lg:max-w-lg">
-                                        <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>La forma de destacarnos</h2>
-                                        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Productos y Servicios</p>
-                                        <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
-                                            {features_.map((feature) => (
-                                                <div key={feature.name} className="relative pl-9">
-                                                    <dt className="inline font-semibold text-gray-900">
-                                                        <feature.icon className="absolute left-1 top-1 h-5 w-5" color={color.primary} aria-hidden="true" />
-                                                        {feature.name}
-                                                    </dt><br />
-                                                    <dd className="inline">{feature.description}</dd> <a href={feature.url} style={{ fontWeight: 'bold', color: color.orange }}>Ver más...</a>
-                                                </div>
-                                            ))}
-                                        </dl>
+                    <section id="features">
+                        <div className="overflow-hidden py-24 sm:py-32">
+                            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                                <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                                    <div className="lg:pr-8 lg:pt-4">
+                                        <div className="lg:max-w-lg">
+                                            <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>La forma de destacarnos</h2>
+                                            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Productos y Servicios</p>
+                                            <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                                                {features_.map((feature) => (
+                                                    <div key={feature.name} className="relative pl-9">
+                                                        <dt className="inline font-semibold text-gray-900">
+                                                            <feature.icon className="absolute left-1 top-1 h-5 w-5" color={color.primary} aria-hidden="true" />
+                                                            {feature.name}
+                                                        </dt><br />
+                                                        <dd className="inline">{feature.description}</dd> <a href={feature.url} style={{ fontWeight: 'bold', color: color.orange }}>Ver más...</a>
+                                                    </div>
+                                                ))}
+                                            </dl>
+                                        </div>
                                     </div>
+                                    <img
+                                        src={"/imgs/collage.png"}
+                                        className="w-[48rem] max-w-none shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+                                        width={2432}
+                                        height={1442}
+                                        style={{ borderRadius: '1.5em' }}
+                                    />
                                 </div>
-                                <img
-                                    src={"/imgs/collage.png"}
-                                    className="w-[48rem] max-w-none shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-                                    width={2432}
-                                    height={1442}
-                                    style={{ borderRadius: '1.5em' }}
-                                />
                             </div>
                         </div>
-                    </div>*/}
+                    </section>
+
                 </BGPoints>
             </NavBar>
             <ModalCenter
@@ -563,7 +566,7 @@ const Index = () => {
                         </div>
                     </div>
                 </div>
-            </ModalCenter >
+            </ModalCenter>
 
             <ModalCenter
                 show={modalShow}
