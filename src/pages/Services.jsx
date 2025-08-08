@@ -4,113 +4,9 @@ import { Fade } from "react-awesome-reveal";
 import BGPoints from "../components/BGPoints";
 import color from "../color";
 import { useBreakpointValue } from '@chakra-ui/react';
-import { FiZoomIn } from "react-icons/fi";
-import ImageGallery from "react-image-gallery";
-import "react-image-gallery/styles/css/image-gallery.css";
-
-
-const ImageGrid = ({ images }) => {
-    return (
-        <div className="grid grid-cols-2 gap-2">
-            {images.map((image, index) => (
-                <div
-                    key={index}
-                    className="relative"
-                >
-                    {/* Imagen principal */}
-                    <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="gallery-image"
-                    />
-
-                    {/* Overlay en hover */}
-                    <div className="gallery-overlay">
-                        <p className="text-white font-medium text-lg mb-2">
-                            {image.title}
-                        </p>
-                    </div>
-
-                </div>
-            ))}
-        </div>
-    );
-};
-
-const images = [
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Naturaleza",
-        title: "Paisaje natural"
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Urbano"
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Animal",
-        title: "Fauna"
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Tecnología",
-        title: "Innovación"
-    },
-    // Añade más imágenes para completar la cuadrícula...
-];
-
 import { RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine, RiBuildingLine, RiPencilRuler2Line, RiPageSeparator, RiP2PLine, } from "react-icons/ri";
 
-const features = [
-    {
-        name: 'Proceso Conceptual',
-        description:
-            'En esta etapa inicial del proceso de producción de prefabricados, se desarrolla la visión y el concepto general del proyecto.',
-        icon: RiBuilding2Line,
-    },
-    {
-        name: 'Planeación',
-        description:
-            'La fase de planeación implica la elaboración detallada de un plan estratégico que abarca aspectos logísticos, financieros y temporales.',
-        icon: RiFolderUserLine,
-    },
-    {
-        name: 'Ingeniería de Detalle',
-        description:
-            'Durante esta etapa, se traducen los conceptos y planes generales en especificaciones técnicas y detalles precisos.',
-        icon: RiFolderChartLine,
-    },
-    {
-        name: 'Fabricación',
-        description:
-            'La fabricación es el proceso central donde los componentes prefabricados toman forma. ',
-        icon: RiNurseLine,
-    },
-    {
-        name: 'Transporte y Montaje',
-        description:
-            'Una vez que las unidades prefabricadas han sido fabricadas, se inicia la fase de transporte hacia el lugar de montaje.',
-        icon: RiShakeHandsLine,
-    },
-    {
-        name: 'Conexiones',
-        description:
-            'La fase de conexiones es crítica para asegurar la estabilidad y la integridad estructural del proyecto.',
-        icon: RiThumbUpLine,
-    },
-]
-
 const icons_ = [RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine, RiBuildingLine, RiPencilRuler2Line, RiPageSeparator, RiP2PLine,]
-
-
-
-const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
-
-function imageLink(path, width, height, size, extension) {
-    return `https://images.react-photo-album.com/hiking/${path}.${width}x${height}.${size}w.${extension}`;
-}
 
 
 const Services = ({ id }) => {
@@ -251,15 +147,6 @@ const Services = ({ id }) => {
                                 </p>
                             </div>
                         </div>
-                    </div>
-                    {/*<ImageGallery
-                        items={images}
-                        showPlayButton={false}
-                        showFullscreenButton={false}
-                    />*/}
-
-                    <div className="container mx-auto p-1">
-                        <ImageGrid images={images} />
                     </div>
 
                     {/*<section>
