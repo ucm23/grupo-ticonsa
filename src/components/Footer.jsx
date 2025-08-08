@@ -54,7 +54,7 @@ export default function SmallCentered({ photo, certificates }) {
                     style={{
                         //background: `url(https://hermosillo.com/wp-content/uploads/2017/10/steel-structure-about-bg.png) top right / cover no-repeat`,
                         backgroundColor: '#03296A90',
-                        backgroundImage: `url(https://hermosillo.com/wp-content/uploads/2017/10/steel-structure-about-bg.png)`,
+                        backgroundImage: `url(/steel-structure-about-bg.png)`,
                         backgroundBlendMode: "soft-light",
                         backgroundSize: "cover",
                         backgroundRepeat: "no-repeat",
