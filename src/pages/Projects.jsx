@@ -24,6 +24,7 @@ const ImageGrid = ({ images }) => {
                             src={item?.route_img ? `/projects/especiales/${item?.route_img}/${item?.imgs[0]}.png` : item?.src}
                             alt={item.alt}
                             className="gallery-image"
+                            loading="lazy"
                         />
 
                         <div className="gallery-overlay">

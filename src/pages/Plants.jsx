@@ -80,6 +80,7 @@ const Plants = ({ id }) => {
                                             <img
                                                 src={`${plants[id].folder}${plants[id].layout}`}
                                                 style={{ width: '80%', height: 'auto', objectFit: 'scale-down' }}
+                                                loading="lazy"
                                             />
                                             <figcaption>
                                                 <div className="project-zoom text-shadow"></div>
@@ -116,6 +117,7 @@ const Plants = ({ id }) => {
                                                     <img
                                                         src={`${item?.folder}${item?.imgs[2]}.jpg`}
                                                         style={{ height: 175, objectFit: "scale-down" }}
+                                                        loading="lazy"
                                                     />
 
                                                     <h3 style={{ fontSize: 12 }}>{item?.title}</h3>

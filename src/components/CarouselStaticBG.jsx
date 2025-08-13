@@ -43,6 +43,7 @@ const CarouselStaticBG = ({ title, place, names, folder }) => {
                                 className="d-block _img_corousel"
                                 src={`/${folder}/${item}.jpg`}
                                 style={{ height: 450, objectFit: "cover", borderRadius: "10px" }}
+                                loading="lazy"
                             />
                         </Carousel.Item>
                     )}

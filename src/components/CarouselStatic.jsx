@@ -45,6 +45,7 @@ const CarouselStatic = ({ title, place, names, folder, logo }) => {
                             alt="First slide"
                             //style={{ height: mobile?"23rem":"26rem", objectFit: "cover", top: 100}}
                             style={{ height: 600, width: '100%', objectFit: "cover", /*top: 100 */ }}
+                            loading="lazy"
                         />
                     </Carousel.Item>
                 )}
