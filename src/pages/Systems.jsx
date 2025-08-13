@@ -225,7 +225,7 @@ const Systems = () => {
                                             <img alt="daisy" src="/361.jpg" />
                                         </div>*/}
                                         <div className="diff-item-2">
-                                            <img alt="daisy" src="/362.jpg" />
+                                            <img alt="daisy" src="/foro-sol.png" />
                                         </div>
                                         <div className="diff-resizer"></div>
                                     </div>

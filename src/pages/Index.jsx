@@ -446,7 +446,8 @@ const Index = () => {
                                                     top: project_?.position?.top,
                                                     left: project_?.position?.left
                                                 }}
-                                                onClick={handleClick}
+                                                //onClick={handleClick}
+                                                loading="lazy"
                                             />
                                         </OverlayTrigger>
                                     ))

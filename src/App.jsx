@@ -38,6 +38,8 @@ function App() {
             <Route path="/transporte" element={<Services id={3} />} />
             <Route path="/montaje" element={<Services id={5} />} />
             <Route path="/supervision" element={<Services id={5} />} />
+            <Route path="/desarrollo" element={<Services id={6} />} />
+
             <Route path="/especiales" element={<Projects id={6} />} />
 
             <Route path="/document_cv" element={<Documents type={'cv'} />} />
