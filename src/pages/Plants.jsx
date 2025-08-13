@@ -65,28 +65,31 @@ const Plants = ({ id }) => {
                                 ))}
                             </section>
                         </div>
-                        <center>
-                            <section className="col-base col-about-img col-sm-6 col-md-offset-1" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
-                                <Fade direction="down">
-                                    <section className="text-center">
-                                        <h3 className="col-about-title" style={{ textTransform: 'uppercase' }}>Layout <span className="text-primary-blue">{plants[id].title}</span></h3>
-                                        <center><div className="line-banner-small" /></center>
-                                        <p>Línea de prefabricados</p>
-                                    </section>
-                                </Fade>
-                                <div className="project" onClick={handleShowLayout}>
-                                    <figure>
-                                        <img
-                                            src={`${plants[id].folder}${plants[id].layout}`}
-                                            style={{ width: '80%', height: 'auto', objectFit: 'scale-down' }}
-                                        />
-                                        <figcaption>
-                                            <div className="project-zoom text-shadow"></div>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </section>
-                        </center>
+                        {plants[id].layout &&
+                            <center>
+                                <section className="col-base col-about-img col-sm-6 col-md-offset-1" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
+                                    <Fade direction="down">
+                                        <section className="text-center">
+                                            <h3 className="col-about-title" style={{ textTransform: 'uppercase' }}>Layout <span className="text-primary-blue">{plants[id].title}</span></h3>
+                                            <center><div className="line-banner-small" /></center>
+                                            <p>Línea de prefabricados</p>
+                                        </section>
+                                    </Fade>
+                                    <div className="project" onClick={handleShowLayout}>
+                                        <figure>
+                                            <img
+                                                src={`${plants[id].folder}${plants[id].layout}`}
+                                                style={{ width: '80%', height: 'auto', objectFit: 'scale-down' }}
+                                            />
+                                            <figcaption>
+                                                <div className="project-zoom text-shadow"></div>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </section>
+                            </center>
+                        }
+
                         {/*<section className="col-base col-about-img col-sm-6 col-md-offset-1" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
                             <section>
                                 <h3 className="col-about-title" style={{ textTransform: 'uppercase' }}>{plants[id].title}</h3>
@@ -101,7 +104,7 @@ const Plants = ({ id }) => {
                             height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                             style={{ width: '100%', marginBottom: '1rem' }}
                                 />*/}
-                       
+
                         <hr />
                         <div style={{ display: 'flex', flexDirection: !mobile ? 'row' : 'column', marginTop: 25, justifyContent: 'space-between' }}>
                             {arrayBanner.map((item, index) => {

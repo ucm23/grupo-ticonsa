@@ -9,7 +9,7 @@ const CarouselStaticBG = ({ title, place, names, folder }) => {
         <div
             style={{
                 backgroundColor: "#B6B6B6",
-                backgroundImage: `url('/systems/4.jpg')`,
+                backgroundImage: `url('/${folder}/bg.jpg')`,
                 backgroundBlendMode: "soft-light",
                 backgroundSize: 'cover',
                 backgroundRepeat: "no-repeat",
@@ -35,7 +35,7 @@ const CarouselStaticBG = ({ title, place, names, folder }) => {
                     <h1 style={{ textTransform: 'uppercase', fontWeight: 'bold', color: color.primary + '99', fontFamily: 'monospace', fontSize: 14 }}>{place}</h1>
                 </Fade>
             </div>
-            <Fade delay={450} >
+            <Fade delay={300} >
                 <Carousel className="shadow" fade style={{ height: 450, width: 450, top: 42, borderRadius: "10px" }}>
                     {names.map(item =>
                         <Carousel.Item key={`names-item-${item}`} interval={2600}>

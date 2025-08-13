@@ -1,0 +1,42 @@
+[
+   
+    {
+        "name": "Planta Hidalgo",
+        "projects": [
+            {
+                "name": "Planta Hidalgo",
+                "extra": "",
+                "position": {
+                    "top": "57%",
+                    "left": "53%"
+                }
+            }
+        ]
+    },
+    {
+        "name": "Planta Teotihuacán",
+        "projects": [
+            {
+                "name": "Planta Teotihuacán",
+                "extra": "",
+                "position": {
+                    "top": "60%",
+                    "left": "54%"
+                }
+            }
+        ]
+    },
+    {
+        "name": "Planta Cancún",
+        "projects": [
+            {
+                "name": "Planta Cancún",
+                "extra": "",
+                "position": {
+                    "top": "57%",
+                    "left": "93%"
+                }
+            }
+        ]
+    }
+]

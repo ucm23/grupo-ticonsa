@@ -1,6 +1,7 @@
 import NavBar from "../components/NavBar"
 import items from '../assets/services_card.json'
 import point from '../assets/projects_map.json'
+import plants from '../assets/plantass.json'
 import paths from '../assets/path_map.json'
 import { useState, useRef } from 'react';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
@@ -70,6 +71,14 @@ const features_ = [
         "name": "TRANSPORTE Y MONTAJE DE ELEMENTOS DE CONCRETO",
         "description": "Nuestros procedimientos para el transporte y montaje de los elementos de concreto cuentan con el Certificado Nivel Oro de Calidad Seguridad que el ONNCCE avala.",
         icon: RiThumbUpLine,
+        "url": "/transporte"
+    },
+    {
+        "id": 10,
+        "img": "/imgs/002.jpg",
+        "name": "VALOR AGREGADO: MEJORA CONTÍNUA",
+        "description": "Para GRUPO TICONSA el personal es la pieza fundamental, ya que son los ejecutores de los proyectos. Por ello Grupo TICONSA cuenta con un programa de capacitación para todo su personal, sobre todo aquellos que intervienen en la ejecución de trabajos directamente relacionados con la obra.",
+        icon: RiFolderChartLine,
         "url": "/transporte"
     }
 ]
@@ -301,7 +310,20 @@ const Index = () => {
                                 <Stack direction={mobile ? 'column-reverse' : 'row-reverse'} style={{ paddingBottom: 40, paddingTop: 55 }}>
                                     <div className="col-base col-sm-6 col-md-offset-1" style={{ alignSelf: 'center', }}>
                                         <Stack style={{ justifyContent: 'center', /*paddingRight: 15*/ }}>
-
+                                            <Stack flexDirection={'row'} alignItems={'center'} display={'flex'} justifyContent={'center'}>
+                                                 <CardSimple
+                                                    title={'1'}
+                                                    prefix="#"
+                                                    descrip={'La mejor opción en México'}
+                                                    icon={<RiThumbUpLine color={color.primary} fontSize={24} />}
+                                                />
+                                                <CardSimple
+                                                    title={'100'}
+                                                    suffix="%"
+                                                    descrip={'de clientes satisfechos'}
+                                                    icon={<RiShakeHandsLine color={color.primary} fontSize={24} />}
+                                                />
+                                            </Stack>
                                             <Stack flexDirection={'row'} alignItems={'center'} display={'flex'} justifyContent={'center'}>
                                                 <CardSimple
                                                     title={'50'}
@@ -316,20 +338,7 @@ const Index = () => {
                                                     icon={<RiFolderChartLine color={color.primary} fontSize={24} />}
                                                 />
                                             </Stack>
-                                            <Stack flexDirection={'row'} alignItems={'center'} display={'flex'} justifyContent={'center'}>
-                                                <CardSimple
-                                                    title={'100'}
-                                                    suffix="%"
-                                                    descrip={'de clientes muy satisfechos'}
-                                                    icon={<RiShakeHandsLine color={color.primary} fontSize={24} />}
-                                                />
-                                                <CardSimple
-                                                    title={'1'}
-                                                    prefix="#"
-                                                    descrip={'La mejor opción en México'}
-                                                    icon={<RiThumbUpLine color={color.primary} fontSize={24} />}
-                                                />
-                                            </Stack>
+
                                             {/*<Stack
                                                 style={{ alignContent: 'center', paddingBottom: mobile ? 20 : 140, }}
                                             >
@@ -377,7 +386,7 @@ const Index = () => {
                         </section>
                     </div>
 
-                    <section className={`mt-20 ${mobile ? "" : "_main container"}`}  id="map">
+                    <section className={`mt-20 ${mobile ? "" : "_main container"}`} id="map">
                         <section className="text-center">
                             <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Llevamos nuestros proyectos destacados a una</h2>
                             <Fade direction="down">
@@ -408,26 +417,45 @@ const Index = () => {
                                             }
                                         >
                                             <div className="circle" style={{ top: project_?.position?.top, left: project_?.position?.left, }} onClick={handleClick} />
-                                            {/*<img
+                                        </OverlayTrigger>
+                                    ))
+                                )}
+                                {plants.map((item) =>
+                                    item?.projects.map((project_) => (
+                                        <OverlayTrigger
+                                            trigger='hover'
+                                            placement={'auto'}
+                                            overlay={
+                                                <Popover id={`popover-positioned-bottom`}>
+                                                    <Popover.Header as="h3">{item?.name}</Popover.Header>
+                                                    <Popover.Body>
+                                                        {project_?.extra && <strong>[{project_?.extra}]<br /></strong>}
+                                                        <div dangerouslySetInnerHTML={{ __html: project_?.name }} />
+                                                    </Popover.Body>
+                                                </Popover>
+                                            }
+                                        >
+                                            <img
                                                 src="/logo-round.png" 
                                                 alt="Ícono del proyecto"
-                                                className="absolute w-6 h-6 rounded-full cursor-pointer"
+                                                className="absolute w-6 h-6 rounded-full cursor-pointer shadow-lg"
                                                 style={{
                                                     top: project_?.position?.top,
                                                     left: project_?.position?.left
                                                 }}
                                                 onClick={handleClick}
-                                            />*/}
+                                            />
                                         </OverlayTrigger>
                                     ))
                                 )}
+                                
                                 {paths.map((item) =>
                                     item?.projects.map((project_) => (
                                         <OverlayTrigger
                                             trigger='click'
                                             placement={'auto'}
                                             overlay={
-                                                <Popover id={`popover-positioned-bottom`}>
+                                                <Popover id={`popover-positioned-bottom`} className="popover-maya">
                                                     <Popover.Header as="h3">{item?.name}</Popover.Header>
                                                     <Popover.Body>
                                                         <iframe width="274" height="155" className="iframe-maya" src="https://www.youtube.com/embed/h-tEedJL6Dc" title="Estación Edzna Tren Maya Grupo Ticonsa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

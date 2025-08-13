@@ -34,8 +34,8 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
 
     const SubMenuInst = {
         name: "Plantas",
-        options: ["Teotihuacán", "Puerto Morelos", /*"Campeche",*/ "Cancún T5NF1", /*"Puerto Progreso"*/],
-        actions: ["plant-teotihuacan", "plant-morelos", /*"plant-campeche",*/ "plant-cancun", /*"plant-progreso"*/]
+        options: ["Teotihuacán", "Puerto Hidalgo", /*"Campeche",*/ "Cancún T5NF1", /*"Puerto Progreso"*/],
+        actions: ["plant-teotihuacan", "plant-hidalgo", /*"plant-campeche",*/ "plant-cancun", /*"plant-progreso"*/]
     }
 
     const menuprojects = {

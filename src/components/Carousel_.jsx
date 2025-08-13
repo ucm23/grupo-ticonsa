@@ -65,29 +65,41 @@ export default function Carousel_({ handleVideo }) {
             image: '/periferico.jpg',
         },
         {
+            name: "Base Naval",
+            place: "Cancún, Quintana Roo",
+            description: "Ingenieros Civiles Asociados",
+            image: '/base_naval.png',
+        },
+        {
+            name: "Centro Comercial Tlalnepantla",
+            place: "Ciudad de México",
+            description: "",
+            image: '/cctlanepantla.png',
+        },
+        /*{
             name: "Hotel Moon Palace",
             place: "Cancún, Quintana Roo",
             description: "Tiempo récord: Se construyeron más de 40 mil m² en 3.5 meses",
             image: '/moon-alace.jpg',
-        },
-        {
+        },*/
+        /*{
             name: "Hotel Oasis",
             place: "Cancún, Quintana Roo",
             description: "Solución con marcos estructurales de concreto articulados",
             image: '/oasis.jpg',
-        },
-        {
+        },*/
+        /*{
             name: "Foro Sol",
             place: "Ciudad de México",
             description: "Obra merecedora al Premio Nacional de la Prefabricación 1998 y al PCI Awards en 1999",
             image: '/foro-sol.jpg',
-        },
-        {
+        },*/
+        /*{
             name: "Aud Tec de Monterrey",
             place: "Ciudad de México",
             description: "Edificio totalmente prefabricado incluyendo estructura y fachadas",
             image: '/tec-fachada.jpg',
-        },
+        },*/
     ]
 
     const handleBeforeChange = () => {

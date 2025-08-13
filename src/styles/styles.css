@@ -1460,20 +1460,18 @@ a.dropdown-item {
   opacity: 1;
 }
 
-
-
 .product-image-modal {
   filter: drop-shadow(5px 5px 8px rgba(162, 129, 88, 0.8));
 }
 
-.relative-cont {
-      overflow: hidden; /* Esto recorta el contenido que se sale */
+.relativo {
+      overflow: hidden;
   }
 
 .gallery-image {
     transition: opacity 300ms;
     position: relative;
-    overflow: hidden; /* Esto recorta el contenido que se sale */
+    overflow: hidden;
     width: 100%;
     height: 100%;
 }
@@ -1492,17 +1490,17 @@ a.dropdown-item {
     transition: opacity 300ms, transform 1000ms cubic-bezier(0.25, 0.45, 0.45, 0.95);
   }
   
-  .relative-cont:hover .gallery-overlay {
+.relativo:hover .gallery-overlay {
     opacity: 1;
   }
   
-  .relative-cont:hover .gallery-image {
+.relativo:hover .gallery-image {
     opacity: 0.4;
     transform: scale(1.15);
     transition: transform 1000ms cubic-bezier(0.25, 0.45, 0.45, 0.95);
   }
   
-  .zoom-icon {
+.zoom-icon {
     width: 2rem;
     height: 2rem;
     padding: 0.5rem;
@@ -1511,10 +1509,14 @@ a.dropdown-item {
     transition: background 200ms;
   }
   
-  .zoom-icon:hover {
+.zoom-icon:hover {
     background: rgba(255,255,255,0.5);
   }
 
-  .minusculas {
+.minusculas {
   text-transform: lowercase;
+}
+
+.popover-maya {
+  z-index: 99 !important;
 }

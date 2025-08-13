@@ -31,6 +31,7 @@ function App() {
             <Route path="/plant-cancun" element={<Plants id={3} />} />
             <Route path="/plant-teotihuacan" element={<Plants id={4} />} />
             <Route path="/plant-morelos" element={<Plants id={5} />} />
+            <Route path="/plant-hidalgo" element={<Plants id={6} />} />
 
             <Route path="/infraestructura" element={<Services id={1} />} />
             <Route path="/edificacion" element={<Services id={2} />} />

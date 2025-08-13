@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Teotihuacán",
+        "projects": [
+            {
+                "extra": "Planta Teotihuacán",
+                "name": "Estado de México"
+            }
+        ]
+    },
+    {
+        "name": "Hidalgo",
+        "projects": [
+            {
+                "extra": "Planta Hidalgo",
+                "name": "Estado de Hidalgo"
+            }
+        ]
+    },
+    {
+        "name": "Cancún",
+        "projects": [
+            {
+                "extra": "Planta Cancún",
+                "name": "Estado de Quintana Roo"
+            }
+        ]
+    }
+]

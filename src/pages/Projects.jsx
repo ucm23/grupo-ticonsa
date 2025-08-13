@@ -5,8 +5,7 @@ import BGPoints from "../components/BGPoints";
 import color from "../color";
 import { useBreakpointValue } from '@chakra-ui/react';
 import { FiZoomIn } from "react-icons/fi";
-import ImageGallery from "react-image-gallery";
-//import "react-image-gallery/styles/css/image-gallery.css";
+import "react-image-gallery/styles/css/image-gallery.css";
 
 const fullWidthPositions = [3, 8, 11, 16, 23];
 
@@ -19,7 +18,7 @@ const ImageGrid = ({ images }) => {
                 return (
                     <div
                         key={index}
-                        className={`relative-cont ${isFullWidth ? 'col-span-2' : ''}`}
+                        className={`relative relativo ${isFullWidth ? 'col-span-2' : ''}`}
                     >
                         <img
                             src={item?.route_img ? `/projects/especiales/${item?.route_img}/${item?.imgs[0]}.png` : item?.src}
@@ -27,7 +26,6 @@ const ImageGrid = ({ images }) => {
                             className="gallery-image"
                         />
 
-                        {/* Overlay en hover */}
                         <div className="gallery-overlay">
                             <p className="text-white font-flama-light tracking-wider font-light leading-[0px]">
                                 {item?.years}
@@ -246,10 +244,6 @@ const images = [
     },
 ];
 
-import { RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine, RiBuildingLine, RiPencilRuler2Line, RiPageSeparator, RiP2PLine, } from "react-icons/ri";
-
-
-
 const Projects = ({ id }) => {
 
     const types = {
@@ -297,11 +291,6 @@ const Projects = ({ id }) => {
                             </div>
                         </div>
                     </div>
-                    {/*<ImageGallery
-                        items={images}
-                        showPlayButton={false}
-                        showFullscreenButton={false}
-                    />*/}
 
                     <div className="container mx-auto pb-16 p-1.5 ">
                         <ImageGrid images={images} />

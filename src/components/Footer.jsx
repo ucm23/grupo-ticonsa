@@ -84,7 +84,7 @@ export default function SmallCentered({ photo, certificates }) {
                                 alt="Ookla"
                                 class="absolute -top-16 left-1/2 transform -translate-x-1/2 h-40 w-40 object-contain" />
                             <p class="text-white mt-4">
-                                Asociación Nacional de Industriales <br/> del Presfuerzo y la Prefabricación A.C.
+                                ANIPPAC<span class="text-blue-400">®</span> <br/> Asociación Nacional de Industriales <br/> del Presfuerzo y la Prefabricación A.C.
                             </p>
                         </div>
 
@@ -100,8 +100,8 @@ export default function SmallCentered({ photo, certificates }) {
 
 
                     <p class="text-sm text-gray-400 text-center max-w-lg">
-                        * ANIPPAC: Aval técnico en prefabricados de concreto presforzado. <br />
-                        ** ONNCCE: Certificación internacional en accesibilidad.
+                        * ANIPPAC: Aval técnico en Prefabricados de Concreto Presforzado. <br />
+                        ** ONNCCE: Certificación Internacional en Accesibilidad.
                     </p>
 
                     <div class="text-center space-y-2">
