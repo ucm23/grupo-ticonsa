@@ -2,6 +2,7 @@
    
     {
         "name": "Planta Hidalgo",
+        "img": "plants/hidalgo/bg.jpg",
         "projects": [
             {
                 "name": "Planta Hidalgo",
@@ -15,6 +16,7 @@
     },
     {
         "name": "Planta Teotihuacán",
+        "img": "plants/teotihuacan/bg.jpg",
         "projects": [
             {
                 "name": "Planta Teotihuacán",
@@ -28,6 +30,7 @@
     },
     {
         "name": "Planta Cancún",
+        "img": "plants/cancun/bg.jpg",
         "projects": [
             {
                 "name": "Planta Cancún",

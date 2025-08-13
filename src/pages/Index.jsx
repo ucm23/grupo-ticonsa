@@ -311,7 +311,7 @@ const Index = () => {
                                     <div className="col-base col-sm-6 col-md-offset-1" style={{ alignSelf: 'center', }}>
                                         <Stack style={{ justifyContent: 'center', /*paddingRight: 15*/ }}>
                                             <Stack flexDirection={'row'} alignItems={'center'} display={'flex'} justifyContent={'center'}>
-                                                 <CardSimple
+                                                <CardSimple
                                                     title={'1'}
                                                     prefix="#"
                                                     descrip={'La mejor opción en México'}
@@ -429,14 +429,17 @@ const Index = () => {
                                                 <Popover id={`popover-positioned-bottom`}>
                                                     <Popover.Header as="h3">{item?.name}</Popover.Header>
                                                     <Popover.Body>
-                                                        {project_?.extra && <strong>[{project_?.extra}]<br /></strong>}
-                                                        <div dangerouslySetInnerHTML={{ __html: project_?.name }} />
+                                                        <img
+                                                            src={item?.img}
+                                                            className="iframe w-full h-full"
+                                                            loading="lazy"
+                                                        />
                                                     </Popover.Body>
                                                 </Popover>
                                             }
                                         >
                                             <img
-                                                src="/logo-round.png" 
+                                                src="/logo-round.png"
                                                 alt="Ícono del proyecto"
                                                 className="absolute w-6 h-6 rounded-full cursor-pointer shadow-lg"
                                                 style={{
@@ -448,7 +451,7 @@ const Index = () => {
                                         </OverlayTrigger>
                                     ))
                                 )}
-                                
+
                                 {paths.map((item) =>
                                     item?.projects.map((project_) => (
                                         <OverlayTrigger
