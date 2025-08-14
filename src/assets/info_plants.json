@@ -29,12 +29,6 @@
                 ]
             },
             {
-                "id": 2,
-                "list": [
-                    "Producción semanal: 600 m"
-                ]
-            },
-            {
                 "id": 3,
                 "list": [
                     "Trabes AASHTO",
@@ -42,6 +36,12 @@
                     "Columnas con o sin zapata Integrada",
                     "Cabezales",
                     "Barreras centrales, prelosas, guarniciones, faldones, parapetos."
+                ]
+            },
+            {
+                "id": 2,
+                "list": [
+                    "Producción semanal: 600 m"
                 ]
             }
         ]
@@ -127,12 +127,6 @@
                 ]
             },
             {
-                "id": 2,
-                "list": [
-                    "Producción semanal: 800 m"
-                ]
-            },
-            {
                 "id": 3,
                 "list": [
                     "Trabes AASHTO tipo I, II, III, IV, V y VI",
@@ -149,6 +143,12 @@
                     "Cabezales",
                     "Barreras centrales, prelosas, guarniciones, faldones, parapetos."
 
+                ]
+            },
+            {
+                "id": 2,
+                "list": [
+                    "Producción semanal: 800 m"
                 ]
             }
         ]

@@ -66,7 +66,7 @@ export default function Carousel_({ handleVideo }) {
         },
         {
             name: "Base Naval",
-            place: "Cancún, Quintana Roo",
+            place: "Isla Mujeres, Quintana Roo",
             description: "Ingenieros Civiles Asociados",
             image: '/base_naval.png',
         },

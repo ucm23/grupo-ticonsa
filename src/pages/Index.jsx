@@ -26,23 +26,31 @@ import Modal from 'react-bootstrap/Modal';
 
 const features_ = [
     {
-        "id": 4,
+        "id": 0,
         "img": "/imgs/004.jpg",
         "name": "SISTEMA PRETENSADO Y POSTENSADO",
         description: "Desarrollando tecnologías propias en prefabricación de trabes para puentes y viaductos elevados de hasta más de 300 toneladas.",
         icon: RiFolderChartLine,
-        "url": "/infraestructura"
+        "url": "/prefabricado"
     },
     {
+        "id": 0,
+        "img": "/imgs/004.jpg",
+        "name": "SISTEMA PRETENSADO Y POSTENSADO",
+        description: "En nuestro complejo industrial fabricamos soluciones constructivas estandarizadas que revolucionan la ejecución de obras.",
+        icon: RiFolderChartLine,
+        "url": "/productos"
+    },
+    /*{
         "id": 7,
         "img": "/foro-sol.jpg",
         "name": "PROYECTOS Y SISTEMAS ARQUITECTÓNICOS",
         "description": "Nos encargamos de la estructura base que dan fuerza a un gran número de proyectos.",
         icon: RiFolderUserLine,
         "url": "/infraestructura"
-    },
+    },*/
     {
-        "id": 5,
+        "id": 1,
         "img": "/imgs/005.jpg",
         "name": "DISEÑO ESTRUCTURAL",
         "description": "Planeamos y diseñamos las soluciones estructurales que nuestros clientes necesitan.",
@@ -50,23 +58,7 @@ const features_ = [
         "url": "/edificacion"
     },
     {
-        "id": 6,
-        "img": "/imgs/people.jpeg",
-        "name": "DIRECCIÓN Y SUPERVISIÓN DE OBRAS",
-        "description": "La supervisión es una de las funciones administrativas de gran valor e importancia que realizamos para que se cumplan en tiempo y forma los objetivos del proyecto. ",
-        icon: RiNurseLine,
-        "url": "/supervision"
-    },
-    {
-        "id": 8,
-        "img": "/services_card5.jpg",
-        "name": "FABRICACIÓN DE ELEMENTOS DE CONCRETO",
-        "description": "Nuestros procesos de fabricación cuentan con el Certificado nivel Oro de Calidad y Sustentabilidad que el ONNCCE avala. ",
-        icon: RiShakeHandsLine,
-        "url": "/montaje"
-    },
-    {
-        "id": 9,
+        "id": 4,
         "img": "/imgs/002.jpg",
         "name": "TRANSPORTE Y MONTAJE DE ELEMENTOS DE CONCRETO",
         "description": "Nuestros procedimientos para el transporte y montaje de los elementos de concreto cuentan con el Certificado Nivel Oro de Calidad Seguridad que el ONNCCE avala.",
@@ -74,12 +66,28 @@ const features_ = [
         "url": "/transporte"
     },
     {
-        "id": 10,
+        "id": 3,
+        "img": "/services_card5.jpg",
+        "name": "FABRICACIÓN DE ELEMENTOS DE CONCRETO",
+        "description": "Nuestros procesos de fabricación cuentan con el Certificado nivel Oro de Calidad y Sustentabilidad que el ONNCCE avala. ",
+        icon: RiShakeHandsLine,
+        "url": "/montaje"
+    },
+    {
+        "id": 2,
+        "img": "/imgs/people.jpeg",
+        "name": "DIRECCIÓN Y SUPERVISIÓN DE OBRAS",
+        "description": "La supervisión es una de las funciones administrativas de gran valor e importancia que realizamos para que se cumplan en tiempo y forma los objetivos del proyecto. ",
+        icon: RiNurseLine,
+        "url": "/supervision"
+    },
+    {
+        "id": 5,
         "img": "/imgs/002.jpg",
         "name": "VALOR AGREGADO: MEJORA CONTÍNUA",
         "description": "Para GRUPO TICONSA el personal es la pieza fundamental, ya que son los ejecutores de los proyectos. Por ello Grupo TICONSA cuenta con un programa de capacitación para todo su personal, sobre todo aquellos que intervienen en la ejecución de trabajos directamente relacionados con la obra.",
         icon: RiFolderChartLine,
-        "url": "/transporte"
+        "url": ""
     }
 ]
 
@@ -514,7 +522,9 @@ const Index = () => {
                                                             <feature.icon className="absolute left-1 top-1 h-5 w-5" color={color.primary} aria-hidden="true" />
                                                             {feature.name}
                                                         </dt><br />
-                                                        <dd className="inline">{feature.description}</dd> <a href={feature.url} style={{ fontWeight: 'bold', color: color.orange }}>Ver más...</a>
+                                                        <dd className="inline">
+                                                            {feature.description} {feature?.url && <a href={feature.url} style={{ fontWeight: 'bold', color: color.orange }}>Leer más...</a>}
+                                                        </dd>
                                                     </div>
                                                 ))}
                                             </dl>

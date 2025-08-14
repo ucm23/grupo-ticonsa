@@ -9,51 +9,8 @@ import "react-image-gallery/styles/css/image-gallery.css";
 
 const fullWidthPositions = [3, 8, 11, 16, 23];
 
-const ImageGrid = ({ images }) => {
-    return (
-        <div className="grid grid-cols-2 gap-2">
-            {images.map((item, index) => {
-                const position = index + 1;
-                const isFullWidth = fullWidthPositions.includes(position);
-                return (
-                    <div
-                        key={index}
-                        className={`relative relativo ${isFullWidth ? 'col-span-2' : ''}`}
-                    >
-                        <img
-                            src={item?.route_img ? `/projects/especiales/${item?.route_img}/${item?.imgs[0]}.png` : item?.src}
-                            alt={item.alt}
-                            className="gallery-image"
-                            loading="lazy"
-                        />
-
-                        <div className="gallery-overlay">
-                            <p className="text-white font-flama-light tracking-wider font-light leading-[0px]">
-                                {item?.years}
-                            </p>
-                            <p className="text-white font-flama uppercase text-2xl font-extrabold mb-1.5">
-                                <div dangerouslySetInnerHTML={{ __html: item?.title }} />
-                            </p>
-                            {
-                                item?.extra1 && <p className="text-white font-flama font-medium text-[16px] leading-[8px]">
-                                    {item?.extra1}
-                                </p>
-                            }
-                            <div className="line-banner-white" style={{ backgroundColor: 'white' }} />
-                            <p className="text-white font-flama-light text-[14px] tracking-wider font-light">
-                                <div dangerouslySetInnerHTML={{ __html: item?.estado }} />
-                            </p>
-                        </div>
-
-                    </div>
-                )
-            })}
-        </div>
-    );
-};
-
 const images = [
-    {
+    /*{
         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
         alt: "Naturaleza",
         title: "Gradas para Campos Deportivos",
@@ -76,16 +33,6 @@ const images = [
         years: 1974,
         estado: "Estado de México",
         extra1: "Ciprés del Bosque"
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Auditorio para la Guelaguetza",
-        years: 1974,
-        estado: "Oaxaca",
-        extra1: "Gobierno del Estado de Oaxaca",
-        route_img: "Guelaguetza",
-        imgs: [1, 2,]
     },
     {
         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
@@ -178,93 +125,288 @@ const images = [
     {
         src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
         alt: "Ciudad",
-        title: "Estadio Foro Sol del Autódromo Hermanos Rodríguez ICA",
-        years: 1997,
-        estado: "México. CDMX",
-        extra1: "Construcción Urbana",
-        route_img: "ForoSol",
-        imgs: [1, 2, 3, 4]
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Estadio de Fútbol 'Miguel Alemán Valdez' ",
-        years: 1997,
-        estado: "Guanajuato",
-        extra1: "Club Deportivo Celaya AC",
-        route_img: "MiguelAleman",
-        imgs: [1, 2, 3, 4]
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Centro de Exposiciones Banamex, Hipódromo de las Américas AMH - CIE",
-        years: 1999,
-        estado: "México. CDMX",
-        extra1: "",
-        route_img: "CentroBanamex",
-        imgs: [1, 2,]
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
         title: "Cubierta para Estufa Industrial ESGO Construcciones, S.A. de C.V.",
         years: 2018,
         estado: "Estado de México",
         extra1: ""
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Departamentos y Hotel Amaná Live & Enjoy Tulum",
-        years: 2022,
-        estado: "Quintana Roo",
-        extra1: "Grupo TYPSA",
-        route_img: "HotelAmana",
-        imgs: [1, 2,]
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Tren Maya tramo 2 - Estación Edzná",
-        years: 2023,
-        estado: "Campeche",
-        extra1: "GRUPO CARSO",
-        route_img: "TMEdzna",
-        imgs: [1, 2, 3, 4]
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Tren Maya tramo 2 - Paradero Tenabo",
-        years: 2023,
-        estado: "Campeche",
-        extra1: "GRUPO CARSO",
-        route_img: "TMF1T5N",
-        imgs: [1, 2, 3, 4]
-    },
+    },*/
 ];
+
+const types = {
+    1: {
+        "name": "Especiales",
+        "description": "Innovación y Precisión en Cada Obra",
+        "header": "En <strong>Grupo Ticonsa Inmobiliaria</strong>, transformamos desafíos en soluciones. <br/> Desde <strong>centros de espectáculos</strong> hasta <strong>viviendas modulares</strong>, cada proyecto lleva nuestro sello de calidad, seguridad y dedicación. Aplicamos experticia y mejores prácticas de la industria para superar tus expectativas.",
+        "images": [
+            {
+                alt: "Ciudad",
+                title: "Auditorio para la Guelaguetza",
+                years: 1974,
+                estado: "Oaxaca",
+                extra1: "Gobierno del Estado de Oaxaca",
+                route_img: "Guelaguetza",
+                imgs: [1, 2,]
+            },
+            {
+                alt: "Ciudad",
+                title: "Estadio Foro Sol del Autódromo Hermanos Rodríguez ICA",
+                years: 1997,
+                estado: "México. CDMX",
+                extra1: "Construcción Urbana",
+                route_img: "ForoSol",
+                imgs: [1, 2, 3, 4]
+            },
+            {
+                src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+                alt: "Ciudad",
+                title: "Estadio de Fútbol 'Miguel Alemán Valdez' ",
+                years: 1997,
+                estado: "Guanajuato",
+                extra1: "Club Deportivo Celaya AC",
+                route_img: "MiguelAleman",
+                imgs: [1, 2, 3, 4]
+            },
+            {
+                alt: "Ciudad",
+                title: "Centro de Exposiciones Banamex, Hipódromo de las Américas AMH - CIE",
+                years: 1999,
+                estado: "México. CDMX",
+                extra1: "",
+                route_img: "CentroBanamex",
+                imgs: [1, 2,]
+            },
+            {
+                alt: "Ciudad",
+                title: "Departamentos y Hotel Amaná Live & Enjoy Tulum",
+                years: 2022,
+                estado: "Quintana Roo",
+                extra1: "Grupo TYPSA",
+                route_img: "HotelAmana",
+                imgs: [1, 2,]
+            },
+            {
+                alt: "Ciudad",
+                title: "Tren Maya tramo 2 - Estación Edzná",
+                years: 2023,
+                estado: "Campeche",
+                extra1: "GRUPO CARSO",
+                route_img: "TMEdzna",
+                imgs: [1, 2, 3, 4]
+            },
+            {
+                alt: "Ciudad",
+                title: "Tren Maya tramo 2 - Paradero Tenabo",
+                years: 2023,
+                estado: "Campeche",
+                extra1: "GRUPO CARSO",
+                route_img: "TMF1T5N",
+                imgs: [1, 2, 3, 4]
+            },
+        ]
+    },
+
+    2: {
+        "name": "Infraestructura",
+        "description": "Cimientos para el Desarrollo Sostenible",
+        "header": "En <strong>Grupo Ticonsa Inmobiliaria</strong>, construimos las arterias que conectan comunidades con soluciones técnicas de vanguardia. <br/> Nuestros proyectos —<strong>carreteras inteligentes</strong>, <strong>puentes estratégicos</strong> y <strong>sistemas hidráulicos</strong>— priorizan la <strong>sostenibilidad</strong> y el <strong>impacto social</strong>, utilizando tecnologías modulares y materiales de baja huella ambiental. Cada obra es un legado duradero que optimiza recursos y mejora la calidad de vida urbana.",
+        "images": [
+            {
+                title: "Linea 8 del Metro y Puente Vehicular Coyuya",
+                years: 1993,
+                estado: "Estado de México",
+                extra1: "",
+                src: "infraestructura/1.jpg",
+            },
+            {
+                title: "Linea 9 del Metro",
+                years: 1985,
+                estado: "México. D.F.",
+                extra1: "",
+                src: "infraestructura/2.jpg",
+            },
+            {
+                title: "Puente Cazones",
+                years: 1998,
+                estado: "Veracruz",
+                extra1: "Barra del río Cazones",
+                src: "infraestructura/3.jpg",
+            },
+            {
+                title: "Puente de El Zacatal",
+                years: 1994,
+                estado: "Ciudad del Carmen, Campeche",
+                extra1: "",
+                src: "infraestructura/4.jpg",
+            },
+            {
+                title: "Puente Urawa",
+                years: 1996,
+                estado: "México. D.F.",
+                extra1: "",
+                src: "infraestructura/5.jpg",
+            },
+            {
+                title: "Puente Vehicular del Miramontes",
+                years: 1994,
+                estado: "Estado de México",
+                extra1: "",
+                src: "infraestructura/6.jpg",
+            },
+            {
+                title: "Puente Vehicular Emiliano Zapata",
+                years: 1990,
+                estado: "México. D.F.",
+                extra1: "",
+                src: "infraestructura/7.jpg",
+            },
+            {
+                title: "Puente Vehicular Periférico Puebla",
+                years: 1995,
+                estado: "Puebla, Puebla",
+                extra1: "",
+                src: "infraestructura/8.jpg",
+            },
+            {
+                title: "Puente Vehicular Primero de Mayo",
+                 years: 2000,
+                estado: "Estado de México",
+                extra1: "Naucalpan",
+                src: "infraestructura/9.jpg",
+            },
+            {
+                title: "Puente Quetzalapa",
+                years: 1993,
+                estado: "Quetzalapa, Guerrero",
+                extra1: "",
+                src: "infraestructura/10.jpg",
+            },
+            {
+                title: "Puente vehicular CAPU",
+                years: 1996,
+                estado: "Puebla, Puebla",
+                extra1: "",
+                src: "infraestructura/11.jpg",
+            },
+            {
+                title: "Segundo Piso Periférico",
+                years: "2005 - 2007",
+                estado: "Estado de México",
+                extra1: "",
+                src: "infraestructura/12.jpg",
+            },
+            {
+                title: "Distribuidor Vial Angelópolis",
+                years: 2006,
+                estado: "Puebla, Puebl",
+                extra1: "",
+                src: "infraestructura/13.jpg",
+            },
+        ]
+    },
+    3: {
+        "name": "Edificación",
+        "description": "Espacios que Inspiran Progreso",
+        "header": "En <strong>Grupo Ticonsa Inmobiliaria</strong>, redefinimos skylines con arquitectura que combina <strong>función</strong> y <strong>visionariedad</strong>. <br/> Nuestros <strong>complejos habitacionales</strong>, <strong>torres corporativas</strong> y <strong>centros educativos</strong> incorporan <strong>diseño bioclimático</strong>, <strong>eficiencia energética</strong> y certificaciones internacionales de seguridad. Creamos espacios adaptados a las necesidades humanas, donde la innovación constructiva eleva estándares de confort y productividad.",
+        "images": [
+            {
+                title: "Auditorio Tec de Monterrey",
+                years: 1984,
+                estado: "Atizapán de Zaragozas, Estado de México",
+                extra1: "",
+                src: "edificacion/1.jpg",
+            },
+            {
+                title: "Centro Bancomer",
+                years: 1977,
+                estado: "México. D.F.",
+                extra1: "",
+                src: "edificacion/2.jpg",
+            },
+            {
+                title: "Centro Corporativo GNP",
+                years: 1992,
+                estado: "México, D.F.",
+                extra1: "",
+                src: "edificacion/3.jpg",
+            },
+            {
+                title: "Centro Lemun",
+                years: 1982,
+                estado: "México. D.F.",
+                extra1: "",
+                src: "edificacion/4.jpg",
+            },
+            {
+                title: "Edificio de Oficinas ALGI",
+                years: 2001,
+                estado: "México. D.F.",
+                extra1: "",
+                src: "edificacion/5.jpg",
+            },
+            {
+                title: "Edificio de Oficinas CBI",
+                years: 2023,
+                estado: "México. D.F.",
+                extra1: "Polanco",
+                src: "edificacion/6.jpg",
+            },
+            {
+                title: "Edificio Plamat",
+                years: 1980,
+                estado: "México. D.F.",
+                extra1: "",
+                src: "edificacion/7.jpg",
+            },
+            {
+                title: "Edificio de Oficinas del SNTISSSTE",
+                years: 1990,
+                estado: "México. D.F.",
+                extra1: "",
+                src: "edificacion/8.jpg",
+            },
+            {
+                title: "Edificio de Urnas de Gayosso",
+                years: 2000,
+                estado: "México. D.F.",
+                extra1: "",
+                src: "edificacion/9.jpg",
+            },
+            {
+                title: "Escuelas 1 y 2 niveles",
+                years: "1971 - 1977",
+                estado: "México, Veracruz y Puebla",
+                extra1: "",
+                src: "edificacion/10.jpg",
+            },
+            {
+                title: "Instituto mexicano del Petróleo",
+                years: 1983,
+                estado: "México. D.F.",
+                extra1: "",
+                src: "edificacion/11.jpg",
+            },
+            {
+                title: "Laboratorio Ligeros de la CFE",
+                years: 1980,
+                estado: "Irapuato, Guanajuato",
+                extra1: "",
+                src: "edificacion/12.jpg",
+            },
+            {
+                title: "Villa de los Niños",
+                years: 2000,
+                estado: "Chalco, Estado de México",
+                extra1: "",
+                src: "edificacion/13.jpg",
+            },
+        ]
+    }
+
+}
+
 
 const Projects = ({ id }) => {
 
-    const types = {
-        6: {
-            "name": "Especiales",
-            "description": "La supervisión de las obras forma parte de las funciones administrativas de gran valor e importancia que realizamos para que se cumplan efectiva y puntualmente los objetivos del proyecto de forma legal, en tiempo y calidad.",
-            "header": "En <strong>Grupo Ticonsa Inmobiliaria</strong>, transformamos desafíos en soluciones. <br/> Desde <strong>centros de espectáculos</strong> hasta <strong>viviendas modulares</strong>, cada proyecto lleva nuestro sello de calidad, seguridad y dedicación. Aplicamos experticia y mejores prácticas de la industria para superar tus expectativas.",
-            "word_key": [
-                "Supervisión técnica especializada en instalación de prefabricados",
-                "Gestión de la seguridad en el sitio de construcción",
-                "Innovación en métodos de instalación",
-                "Liderazgo en la coordinación de equipos de trabajo",
-                "Planificación y ejecución de procesos de montaje",
-                "Estrategias para la optimización de recursos",
-                "Eficiencia en la integración de estructuras prefabricadas",
-            ],
-            "content": "Nuestro equipo de supervisores, <strong>con una vasta experiencia en roles de dirección y técnica</strong>, imparte conferencias que combinan conocimientos prácticos con enfoques motivadores. Nos destacamos como líderes en el sector, aplicando nuestra experiencia en proyectos de instalación de estructuras prefabricadas en diversos contextos y escalas.",
-            "footer": "En cada presentación, <strong>nos esforzamos por comunicar de manera clara y accesible los principios esenciales de la supervisión en la instalación de estructuras prefabricadas</strong>, inspirando a nuestra audiencia a implementar prácticas avanzadas que generen eficiencia y un valor añadido en esta fase crítica de la construcción."
-        }
-    }
 
     const mobile = useBreakpointValue({ base: true, md: false });
 
@@ -274,7 +416,7 @@ const Projects = ({ id }) => {
                 names={[10, 11, 12]}
                 folder='systems/'
                 title={`Nuestros proyectos ${types[id]?.name}`}
-                place={'Innovación y Precisión en Cada Obra'}
+                place={types[id]?.description}
             />
 
             <BGPoints>
@@ -294,7 +436,44 @@ const Projects = ({ id }) => {
                     </div>
 
                     <div className="container mx-auto pb-16 p-1.5 ">
-                        <ImageGrid images={images} />
+                        <div className="grid grid-cols-2 gap-2">
+                            {types[id]?.images.map((item, index) => {
+                                const position = index + 1;
+                                const isFullWidth = fullWidthPositions.includes(position);
+                                return (
+                                    <div
+                                        key={index}
+                                        className={`relative relativo ${isFullWidth ? 'col-span-2' : ''}`}
+                                    >
+                                        <img
+                                            src={item?.route_img ? `/projects/especiales/${item?.route_img}/${item?.imgs[0]}.png` : `/projects/${item?.src}`}
+                                            alt={item?.title}
+                                            className="gallery-image"
+                                            loading="lazy"
+                                        />
+
+                                        <div className="gallery-overlay">
+                                            <p className="text-white font-flama-light tracking-wider font-light leading-[0px]">
+                                                {item?.years}
+                                            </p>
+                                            <p className="text-white font-flama uppercase text-2xl font-extrabold mb-1.5">
+                                                <div dangerouslySetInnerHTML={{ __html: item?.title }} />
+                                            </p>
+                                            {
+                                                item?.extra1 && <p className="text-white font-flama font-medium text-[16px] leading-[8px]">
+                                                    {item?.extra1}
+                                                </p>
+                                            }
+                                            <div className="line-banner-white" style={{ backgroundColor: 'white' }} />
+                                            <p className="text-white font-flama-light text-[14px] tracking-wider font-light">
+                                                <div dangerouslySetInnerHTML={{ __html: item?.estado }} />
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                )
+                            })}
+                        </div>
                     </div>
                 </section>
             </BGPoints>

@@ -70,7 +70,7 @@ const Plants = ({ id }) => {
                                 <section className="col-base col-about-img col-sm-6 col-md-offset-1" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
                                     <Fade direction="down">
                                         <section className="text-center">
-                                            <h3 className="col-about-title" style={{ textTransform: 'uppercase' }}>Layout <span className="text-primary-blue">{plants[id].title}</span></h3>
+                                            <h3 className="col-about-title mt-5" style={{ textTransform: 'uppercase' }}>Layout <span className="text-primary-blue">{plants[id].title}</span></h3>
                                             <center><div className="line-banner-small" /></center>
                                             <p>Línea de prefabricados</p>
                                         </section>

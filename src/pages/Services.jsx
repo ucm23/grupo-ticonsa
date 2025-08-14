@@ -14,6 +14,47 @@ const Services = ({ id }) => {
 
     const types = {
         1: {
+            id: 1,
+            "name": "Desarrollo de Ingeniería",
+            "description": "Planeamos y diseñamos las soluciones estructurales que nuestros clientes necesitan. Contamos con Ingenieros expertos con experiencia probada en decenas de proyectos y acompañamos a nuestros clientes durante toda la construcción para asegurar que la ejecución se apega al proyecto estructural ejecutivo.",
+            "header": "<strong>Nuestra empresa</strong> posee una <strong>reconocida trayectoria en diseño estructural</strong>, abordando aspectos fundamentales para el éxito en proyectos de ingeniería:",
+            "word_key": [
+                "Ingeniería estructural avanzada",
+                "Soluciones personalizadas",
+                "Normativas y códigos de construcción",
+                "Innovación en diseño estructural",
+                "Liderazgo en proyectos complejos",
+                "Planificación y ejecución de diseños",
+                "Análisis estructural especializado",
+                "Coordinación multidisciplinaria",
+                "Tecnologías de modelado BIM",
+                "Garantía de integridad estructural"
+            ],
+            "content": "Nuestro equipo de ingenieros, <strong>con amplia experiencia en proyectos de gran envergadura y roles académicos</strong>, ofrece conferencias que combinan conocimientos técnicos especializados con enfoques prácticos. Hemos destacado como referentes en el sector, aplicando nuestra experiencia como diseñadores estructurales, consultores para organismos reguladores y docentes en prestigiosas instituciones de ingeniería.",
+            "footer": "En cada presentación, <strong>transmitimos de manera clara los principios esenciales del diseño estructural</strong>, inspirando a nuestra audiencia a implementar soluciones innovadoras que generen estructuras seguras, eficientes y con valor añadido para cada proyecto."
+        },
+        2: {
+            id: 2,
+            "name": "Fabricación de Elementos de Concreto",
+            "description": "Nuestros procesos cuentan con el Certificado nivel Oro de Calidad y Sustentabilidad avalado por el ONNCCE. Garantizamos estrictos estándares de calidad donde la satisfacción del cliente, la seguridad y la sustentabilidad son nuestros ejes rectores.",
+            "header": "<strong>Nuestra compañía</strong> ha construido durante más de 50 años una <strong>reputación excepcional en fabricación de elementos de concreto</strong>, destacando en aspectos clave para la excelencia industrial:",
+            "word_key": [
+                "Certificación Oro ONNCCE",
+                "Procesos de fabricación de alta precisión",
+                "Control de calidad exhaustivo",
+                "Innovación en prefabricados de concreto",
+                "Liderazgo en producción sustentable",
+                "Tecnologías de fabricación avanzadas",
+                "Seguridad industrial certificada",
+                "Trazabilidad de materiales",
+                "Optimización de recursos",
+                "Satisfacción del cliente garantizada"
+            ],
+            "content": "Nuestros expertos en fabricación, <strong>con décadas de experiencia en producción industrial y aseguramiento de calidad</strong>, ofrecen conferencias que combinan conocimiento técnico profundo con casos de éxito reales. Hemos sido pioneros en implementar los más altos estándares del sector, aplicando nuestra experiencia como productores certificados, auditores de calidad y consultores para normas industriales nacionales e internacionales.",
+            "footer": "En cada presentación, <strong>compartimos de manera práctica los principios de fabricación de excelencia</strong>, motivando a nuestra audiencia a adoptar prácticas que aseguren calidad, sustentabilidad y eficiencia en la producción de elementos prefabricados de concreto."
+        },
+        /*1: {
+            id: 1,
             "name": "Infraestructura",
             "description": "Somos responsables de la estructura base que da fuerza y sostiene a un gran número de construcciones. Somos la diferencia en obras públicas gracias a nuestra gran experiencia.",
             "header": "<strong>Nuestra empresa</strong> posee una <strong>sólida trayectoria en aspectos fundamentales para el éxito en el ámbito de la construcción</strong>:",
@@ -33,6 +74,7 @@ const Services = ({ id }) => {
             "footer": "En cada presentación, <strong>buscamos transmitir de manera clara y accesible los principios esenciales de la construcción</strong>, inspirando a nuestra audiencia a implementar cambios que generen satisfacción y un valor añadido tanto en su desarrollo personal como en su carrera profesional."
         },
         2: {
+            id: 2,
             "name": "Edificación",
             "description": "Diseñamos y planificamos eficientemente edificios e inmuebles de acuerdo a las necesidades que requieran para sus proyectos habitacionales.",
             "header": "<strong>Nuestra firma</strong> cuenta con una <strong> extensa trayectoria en el ámbito de la edificación</strong>, abordando aspectos fundamentales para el éxito en este campo:",
@@ -47,8 +89,9 @@ const Services = ({ id }) => {
             ],
             "content": "Nuestro equipo de expertos, <strong>con amplia experiencia en roles directivos y académicos</strong>, ofrece conferencias que combinan conocimientos técnicos con enfoques inspiradores. Hemos destacado como líderes en el sector, aplicando nuestra experiencia como directores generales, docentes en instituciones destacadas y consultores en diversas organizaciones nacionales e internacionales.",
             "footer": "En cada presentación, <strong>buscamos comunicar de manera clara y accesible los principios esenciales de la edificación</strong>, inspirando a nuestra audiencia a implementar cambios que generen satisfacción y un valor añadido tanto en su desarrollo personal como en su carrera profesional en el emocionante mundo de la construcción."
-        },
+        },*/
         3: {
+            id: 3,
             "name": "Transporte",
             "description": "Parte fundamental de entorno del prefabricado es el transporte el cual consiste en el desplazamiento de los elementos prefabricados a los sitos indicados por nuestros clientes. Contamos con el mejor equipo de Transporte para lograr una eficaz ejecución de todos tus proyectos.",
             "header": "<strong>Nuestra empresa</strong> ha forjado una sólida trayectoria en el <strong>ámbito del transporte de materiales y estructuras prefabricadas</strong>, abordando aspectos críticos para garantizar el éxito en esta área especializada:",
@@ -65,6 +108,7 @@ const Services = ({ id }) => {
             "footer": "En cada presentación, <strong>nos esforzamos por comunicar de manera clara y accesible los principios esenciales del transporte de materiales y estructuras prefabricadas</strong>, inspirando a nuestra audiencia a implementar prácticas innovadoras que generen eficiencia y un valor añadido en esta dinámica y esencial área de la construcción."
         },
         4: {
+            id: 4,
             "name": "Montaje",
             "description": "Una vez realizada la fabricación y el transporte, ejecutamos el montaje de las piezas prefabricadas con seguridad y precisión para construir la estructura proyectada.",
             "header": "<strong>Nuestra empresa</strong> ha consolidado una destacada experiencia en el <strong>ámbito del montaje de materiales y estructuras prefabricadas</strong>, abordando aspectos fundamentales para el éxito en esta especialidad:",
@@ -81,6 +125,7 @@ const Services = ({ id }) => {
             "footer": "En cada presentación, <strong>nos esforzamos por comunicar de manera clara y accesible los principios esenciales del montaje de materiales y estructuras prefabricadas</strong>, inspirando a nuestra audiencia a implementar prácticas innovadoras que generen eficiencia y un valor añadido en esta crítica etapa del proceso constructivo."
         },
         5: {
+            id: 5,
             "name": "Supervisión",
             "description": "La supervisión de las obras forma parte de las funciones administrativas de gran valor e importancia que realizamos para que se cumplan efectiva y puntualmente los objetivos del proyecto de forma legal, en tiempo y calidad.",
             "header": "<strong>Nuestra firma</strong> se distingue por su <strong>destacada supervisión en los procesos de instalación de estructuras prefabricadas</strong>, abordando aspectos cruciales para garantizar la eficiencia y la calidad en cada fase del proyecto:",
@@ -102,7 +147,8 @@ const Services = ({ id }) => {
 
     return (
         <NavBar photo={true} mobile={mobile}>
-            <CarouselStatic names={[10, 11, 12]} folder='systems/' />
+            <CarouselStatic names={[types[id]?.id]} folder='services/' />
+
 
             <BGPoints>
                 <section className="_main container">

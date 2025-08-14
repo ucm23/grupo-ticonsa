@@ -33,14 +33,19 @@ function App() {
             <Route path="/plant-morelos" element={<Plants id={5} />} />
             <Route path="/plant-hidalgo" element={<Plants id={6} />} />
 
-            <Route path="/infraestructura" element={<Services id={1} />} />
-            <Route path="/edificacion" element={<Services id={2} />} />
+            {/*<Route path="/infraestructura" element={<Services id={1} />} />
+            <Route path="/edificacion" element={<Services id={2} />} />*/}
+            <Route path="/ingenieria" element={<Services id={1} />} />
+            <Route path="/fabricacion" element={<Services id={2} />} />
             <Route path="/transporte" element={<Services id={3} />} />
-            <Route path="/montaje" element={<Services id={5} />} />
+            <Route path="/montaje" element={<Services id={4} />} />
             <Route path="/supervision" element={<Services id={5} />} />
-            <Route path="/desarrollo" element={<Services id={6} />} />
+            
 
-            <Route path="/especiales" element={<Projects id={6} />} />
+            <Route path="/especiales" element={<Projects id={1} />} />
+            <Route path="/infraestructura" element={<Projects id={2} />} />
+            <Route path="/edificacion" element={<Projects id={3} />} />
+
 
             <Route path="/document_cv" element={<Documents type={'cv'} />} />
             <Route path="/document_presencia" element={<Documents type={'presencia'} />} />

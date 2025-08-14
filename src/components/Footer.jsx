@@ -76,7 +76,7 @@ export default function SmallCentered({ photo, certificates }) {
                                 alt="Ookla"
                                 class="absolute -top-16 left-1/2 transform -translate-x-1/2 h-40 w-40 object-contain" />
                             <p class="text-white mt-4">
-                                Sistema de construcción industrializada <br/> certificado Avalado por <br/> ANIPPAC<span class="text-blue-400">®</span> *
+                                Sistema de construcción industrializada <br/> Avalada por ANIPPAC<span class="text-blue-400">®</span> *
                             </p>
                         </div>
                         <div class="relative bg-[#1a1a1a] pt-20 mt-14 px-6 rounded-[10px] text-center max-w-md w-full">
