@@ -55,7 +55,15 @@ const features_ = [
         "name": "DISEÑO ESTRUCTURAL",
         "description": "Planeamos y diseñamos las soluciones estructurales que nuestros clientes necesitan.",
         icon: RiBuilding2Line,
-        "url": "/edificacion"
+        "url": "/ingenieria"
+    },
+    {
+        "id": 3,
+        "img": "/services_card5.jpg",
+        "name": "FABRICACIÓN DE ELEMENTOS DE CONCRETO",
+        "description": "Nuestros procesos de fabricación cuentan con el Certificado nivel Oro de Calidad y Sustentabilidad que el ONNCCE avala. ",
+        icon: RiShakeHandsLine,
+        "url": "/fabricacion"
     },
     {
         "id": 4,
@@ -65,14 +73,7 @@ const features_ = [
         icon: RiThumbUpLine,
         "url": "/transporte"
     },
-    {
-        "id": 3,
-        "img": "/services_card5.jpg",
-        "name": "FABRICACIÓN DE ELEMENTOS DE CONCRETO",
-        "description": "Nuestros procesos de fabricación cuentan con el Certificado nivel Oro de Calidad y Sustentabilidad que el ONNCCE avala. ",
-        icon: RiShakeHandsLine,
-        "url": "/montaje"
-    },
+
     {
         "id": 2,
         "img": "/imgs/people.jpeg",
