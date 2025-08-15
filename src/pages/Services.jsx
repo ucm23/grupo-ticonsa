@@ -6,7 +6,7 @@ import color from "../color";
 import { useBreakpointValue } from '@chakra-ui/react';
 import { RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine, RiBuildingLine, RiPencilRuler2Line, RiPageSeparator, RiP2PLine, } from "react-icons/ri";
 
-const icons_ = [RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine, RiBuildingLine, RiPencilRuler2Line, RiPageSeparator, RiP2PLine,]
+const icons_ = [RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine, RiBuildingLine, RiPencilRuler2Line, RiPageSeparator, RiP2PLine, RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiShakeHandsLine, RiThumbUpLine, RiBuildingLine, RiPencilRuler2Line, RiPageSeparator, RiP2PLine,]
 
 
 const Services = ({ id }) => {
@@ -92,8 +92,8 @@ const Services = ({ id }) => {
         },*/
         3: {
             id: 3,
-            "name": "Transporte",
-            "description": "Parte fundamental de entorno del prefabricado es el transporte el cual consiste en el desplazamiento de los elementos prefabricados a los sitos indicados por nuestros clientes. Contamos con el mejor equipo de Transporte para lograr una eficaz ejecución de todos tus proyectos.",
+            "name": "Transporte y montaje",
+            "description": "Parte fundamental de entorno del prefabricado es el transporte el cual consiste en el desplazamiento de los elementos prefabricados a los sitos indicados por nuestros clientes. Contamos con el mejor equipo de Transporte para lograr una eficaz ejecución de todos tus proyectos, a su vez ejecutamos el montaje de las piezas prefabricadas con seguridad y precisión para construir la estructura proyectada.",
             "header": "<strong>Nuestra empresa</strong> ha forjado una sólida trayectoria en el <strong>ámbito del transporte de materiales y estructuras prefabricadas</strong>, abordando aspectos críticos para garantizar el éxito en esta área especializada:",
             "word_key": [
                 "Logística eficiente en el transporte de materiales",
@@ -103,11 +103,18 @@ const Services = ({ id }) => {
                 "Planificación y ejecución de rutas especializadas",
                 "Estrategias para la optimización del transporte",
                 "Eficiencia en la manipulación de estructuras prefabricadas",
+                "Técnicas avanzadas de montaje",
+                "Planificación detallada de la instalación",
+                "Innovación en procesos de ensamblaje",
+                "Liderazgo en proyectos de montaje",
+                "Coordinación eficiente de equipos de trabajo",
+                "Estrategias para la optimización del proceso de montaje",
+                "Garantía de seguridad en la instalación",
             ],
             "content": "Nuestro equipo de especialistas, <strong>con una amplia experiencia en roles directivos y técnicos</strong>, ofrece conferencias que combinan conocimientos prácticos con enfoques inspiradores. Hemos destacado como líderes en el sector, aplicando nuestra experiencia en proyectos logísticos complejos, tanto a nivel nacional como internacional.",
-            "footer": "En cada presentación, <strong>nos esforzamos por comunicar de manera clara y accesible los principios esenciales del transporte de materiales y estructuras prefabricadas</strong>, inspirando a nuestra audiencia a implementar prácticas innovadoras que generen eficiencia y un valor añadido en esta dinámica y esencial área de la construcción."
+            "footer": "En cada presentación, <strong>nos esforzamos por comunicar de manera clara y accesible los principios esenciales del transporte y montaje de materiales y estructuras prefabricadas</strong>, inspirando a nuestra audiencia a implementar prácticas innovadoras que generen eficiencia y un valor añadido en esta dinámica y esencial área de la construcción."
         },
-        4: {
+        /*4: {
             id: 4,
             "name": "Montaje",
             "description": "Una vez realizada la fabricación y el transporte, ejecutamos el montaje de las piezas prefabricadas con seguridad y precisión para construir la estructura proyectada.",
@@ -123,7 +130,7 @@ const Services = ({ id }) => {
             ],
             "content": "Nuestro equipo de especialistas, <strong>con una amplia experiencia en roles directivos y técnicos</strong>, ofrece conferencias que combinan conocimientos técnicos con enfoques inspiradores. Nos destacamos como líderes en el sector, aplicando nuestra experiencia en proyectos de montaje complejos, tanto a nivel nacional como internacional.",
             "footer": "En cada presentación, <strong>nos esforzamos por comunicar de manera clara y accesible los principios esenciales del montaje de materiales y estructuras prefabricadas</strong>, inspirando a nuestra audiencia a implementar prácticas innovadoras que generen eficiencia y un valor añadido en esta crítica etapa del proceso constructivo."
-        },
+        },*/
         5: {
             id: 5,
             "name": "Supervisión",

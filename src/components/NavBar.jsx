@@ -28,8 +28,8 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
 
     const SubMenuProd = {
         name: "Servicios",
-        options: ["Desarrollo de Ingeniería", "Fabricación", "Transporte", "Montaje", "Supervisión"],
-        actions: ["ingenieria", "fabricacion", "transporte", "montaje", "supervision"]
+        options: ["Desarrollo de Ingeniería", "Fabricación", "Transporte y Montaje", "Supervisión"],
+        actions: ["ingenieria", "fabricacion", "transporte", "supervision"]
     }
 
     const SubMenuInst = {
