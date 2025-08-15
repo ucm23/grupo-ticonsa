@@ -310,6 +310,10 @@ figure {
   margin-bottom: 1rem;
 }
 
+.iframe-maya-2 {
+  margin: -1rem;
+}
+
 .path-web {
   top: 15%;
   left: 50%;
@@ -1525,3 +1529,13 @@ a.dropdown-item {
   z-index: 99 !important;
 }
 
+.selector {
+  font-style: italic;
+  color: #3498db;
+  transition: all 0.3s ease;
+}
+.selector:hover {
+  color: #2980b9; 
+  text-decoration: underline;
+  cursor: pointer;
+}

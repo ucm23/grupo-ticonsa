@@ -24,6 +24,8 @@ import BGPoints from "../components/BGPoints"
 import ModalCenter from "../components/ModalCenter";
 import Modal from 'react-bootstrap/Modal';
 
+import { useNavigate } from 'react-router-dom';
+
 const features_ = [
     {
         "id": 0,
@@ -149,6 +151,8 @@ const success = [
 ]
 
 const Index = () => {
+
+    const navigate = useNavigate();
 
     const [show, setShow] = useState(false);
     const [modalShow, setModalShow] = useState(false);
@@ -432,15 +436,21 @@ const Index = () => {
                                 {plants.map((item) =>
                                     item?.projects.map((project_) => (
                                         <OverlayTrigger
-                                            trigger='hover'
+                                            trigger='click'
                                             placement={'auto'}
                                             overlay={
-                                                <Popover id={`popover-positioned-bottom`}>
-                                                    <Popover.Header as="h3">{item?.name}</Popover.Header>
-                                                    <Popover.Body>
+                                                <Popover id={`popover-positioned-bottom`} className="popover-maya" >
+                                                    <Popover.Header
+                                                        as="h3" className="selector"
+                                                        onClick={() => {
+                                                            navigate(`${project_?.url}`);
+                                                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                                                        }}
+                                                    >{item?.name}</Popover.Header>
+                                                    <Popover.Body className="iframe-maya-2">
                                                         <img
                                                             src={item?.img}
-                                                            className="iframe w-full h-full"
+                                                            className="w-[294px] h-[155px]"
                                                             loading="lazy"
                                                         />
                                                     </Popover.Body>

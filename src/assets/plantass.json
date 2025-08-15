@@ -7,6 +7,7 @@
             {
                 "name": "Planta Hidalgo",
                 "extra": "",
+                "url": "/plant-hidalgo",
                 "position": {
                     "top": "57%",
                     "left": "53%"
@@ -21,6 +22,7 @@
             {
                 "name": "Planta Teotihuacán",
                 "extra": "",
+                "url": "/plant-teotihuacan",
                 "position": {
                     "top": "60%",
                     "left": "54%"
@@ -35,6 +37,7 @@
             {
                 "name": "Planta Cancún",
                 "extra": "",
+                "url": "/plant-cancun",
                 "position": {
                     "top": "57%",
                     "left": "93%"
