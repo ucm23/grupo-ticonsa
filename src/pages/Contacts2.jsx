@@ -19,7 +19,7 @@ const ubications = [
     {
         id: 1,
         name: "Oficina Central, Grupo Ticonsa",
-        direction: "Presa 85, San Jerónimo Lídice, Magdalena Contreras, CP. 10200.",
+        direction: "Presa 85, San Jerónimo Lídice, Magdalena Contreras No. 5, CP. 10200.",
         place: "Ciudad de México, CDMX",
         url: "https://maps.app.goo.gl/tADpi5iFEtPCVV9e6",
         phone: "(55) 5484 8355"
@@ -31,13 +31,13 @@ const ubications = [
         direction: "Camino a San Isidro del Progreso, San Juan Teotihuacán de Arista, CP 55800.",
         place: "Estado DE MÉXICO",
         url: "https://maps.app.goo.gl/QE3UzXABoY49Dcah7",
-        phone: ""
+        phone: "(55) 5484 8564"
 
     },
     {
         id: 3,
         name: "Oficina Cancún",
-        direction: "Kukulcan Boulevard, Zona Hotelera, CP. 77500.",
+        direction: "Av Bonampak 17, Kukulcan Boulevard, Zona Hotelera, CP. 77500.",
         place: "Cancún, Quintana Roo",
         url: "https://maps.app.goo.gl/ihhwxX88Horn6GgJ6",
         phone: "(998) 892-3143"

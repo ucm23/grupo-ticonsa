@@ -248,7 +248,7 @@ const Index = () => {
                                             desarrollado soluciones innovadoras que aportan valor agregado a
                                             los proyectos de sus clientes.
                                         </p>
-                                        <p className={mobile && "text-center"}><strong>CDMX – Teotihuacán – Cancún</strong></p>
+                                        <p className={mobile && "text-center"}><strong>Teotihuacán – Hidalgo – Cancún</strong></p>
                                     </div>
                                 </div>
                                 <div className="col-base col-sm-6 col-md-6 content-img-round"
@@ -400,7 +400,7 @@ const Index = () => {
                             <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Llevamos nuestros proyectos destacados a una</h2>
                             <Fade direction="down">
                                 <section className="text-center">
-                                    <h2 className="section-title">Presencia en <span className="text-primary-blue">todo México</span></h2>
+                                    <h2 className="section-title">Presencia en <span className="text-primary-blue">Latinoamérica</span></h2>
                                 </section>
                             </Fade>
                             <div className="content-circle" ref={ref}>
@@ -585,7 +585,7 @@ const Index = () => {
                                 Teotihuacán. Ciudad milenaria que desde entonces nos identifica como empresa.</p>
                             <p>Después de tantos años de <span class="font-bold text-blue-600">trabajo intenso, continuo, creativo y exitoso</span>, aunque no pocas veces
                                 desalentador, tenemos la enorme satisfacción de poder mostrar a nuestros <span class="underline decoration-blue-400">clientes, colaboradores y
-                                    amigos</span> las realizaciones de un gran número de proyectos que marcaron, muchos de ellos, nuevas
+                                    amigos,</span> las realizaciones de un gran número de proyectos que marcaron, muchos de ellos, nuevas
                                 rutas en el desarrollo de la industria de la cual formamos parte:
                                 <span class="font-bold text-blue-600"> la industria del concreto prefabricado y presforzado en México.</span></p>
                             <p>En muchos aspectos <span class="underline decoration-blue-400">hemos desarrollado nuestra propia tecnología</span>, dentro de la cual hemos obtenido

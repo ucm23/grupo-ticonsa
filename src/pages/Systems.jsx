@@ -115,7 +115,6 @@ const pros = [
     "Mejores costos de supervisión al tener procesos más simples de controlar.",
     "Estructura más ligera que puede representar ahorros en cimentación.",
     "Menor impacto ambiental en el sitio de la obra gracias a la reducción de hasta un 80% de la mano de obra necesaria para la construcción de la estructura.",
-    "Se reduce el riesgo de problemas obrero-patronales ya que el personal de producción, transporte y montaje de la estructura depende directamente de Grupo TICONSA.",
     "Versatilidad de adaptación a cualquier proyecto arquitectónico.",
 ]
 
@@ -243,7 +242,7 @@ const Systems = () => {
                                 <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>De la idea al Concreto</h2>
                                 <Fade direction="down">
                                     <section className="text-center">
-                                        <h2 className="section-title">Método Constructivo Prefabricado<span className="text-primary-blue">Prefabricado</span></h2>
+                                        <h2 className="section-title">Método Constructivo <span className="text-primary-blue"> Prefabricado</span></h2>
                                     </section>
                                 </Fade>
                                 <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -257,14 +256,14 @@ const Systems = () => {
                                             <h1 className="number-step-bg">
                                                 {index + 1}
                                             </h1>
-                                            <div className={` mb-10`}>
-                                                <div className="feature-title">{item.name}</div>
+                                            <div className={`mb-10`}>
+                                                <div className="feature-title number-step-bg-2">{item.name}</div>
                                                 <dd className="mt-2 text-base leading-7 text-gray-600">{item.description}</dd>
                                             </div>
                                         </div>
                                     )
                                 })}
-                                <div id="features"></div>
+                                <div id="features" className={` mb-[70px]`}></div>
 
                                 {/*<ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
                                     <li>
@@ -349,13 +348,13 @@ const Systems = () => {
                         <div className="mx-auto max-w-7xl pb-[5rem]">
                             <div className="mx-auto mt-10 max-w-2xl lg:max-w-4xl">
                                 <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-                                    {pros.map((feature) => (
-                                        <div key={feature} className="relative pl-16 flex items-center">
-                                            <dt className="">
+                                    {pros.map((feature, index) => (
+                                        <div key={`pros-systems-${index}`} className={`relative pl-16 flex ${index == 0 && 'items-center'} `}>
+                                            <dt className="disabsolute">
                                                 <div className="absolute left-0 top-1.5 flex h-10 w-10 items-center justify-center rounded-lg" style={{ backgroundColor: color.primary }}>
                                                     <RiThumbUpLine className="h-6 w-6 text-white" aria-hidden="true" />
                                                 </div>
-                                                <dd className="text-base leading-7 text-gray-600">{feature}</dd>
+                                                <dd className="leading-7 text-gray-600">{feature}</dd>
                                             </dt>
                                         </div>
                                     ))}

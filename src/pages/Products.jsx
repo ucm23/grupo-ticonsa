@@ -329,7 +329,7 @@ const Products = () => {
                     />
                 </Box>
 
-                <Box px={mobile ? 4 : 20} my={'145px'}>
+                <Box my={'145px'} className={`${mobile ? "px-4" : "px-40"} `}>
                     <Flex direction={mobile ? "column" : "row"} align="center" gap={10} mb={10}>
                         <Box flex="1" maxW={mobile ? "100%" : "40%"}>
                             {consdata[0] && (
@@ -361,35 +361,47 @@ const Products = () => {
                             </Text>
                             <Stack spacing={6}>
                                 <Flex align="center" gap={5}>
-                                    <CheckCircleIcon color="green.400" boxSize={30} pb={1.5}/>
+                                    <CheckCircleIcon color="green.400" boxSize={30} pb={1.5} />
                                     <Box>
                                         <Heading as="h3" fontSize="xl" fontWeight="semibold" color="black" mb={1}>
-                                            Certificaciones ONNCCE / ANIPPAC
+                                            CALIDAD
                                         </Heading>
                                         <Text fontSize="sm" color="gray.500">
-                                            Contamos con diversas Certificaciones en todos nuestros procesos y productos, mediante protocolos de verificación en todas las etapas de producción.
+                                            En <strong>Grupo TICONSA </strong>
+                                            alcanzamos el <strong>Nivel ORO </strong> de la Certificación
+                                            <strong>“Empresa Sustentable ANIPPAC”, </strong>
+                                            la cual es una certificación de Calidad y de buenas prácticas ambientales que está avalada por el
+                                            <strong>Organismo Nacional de Normalización y Certificación de la Construcción y Edificación, S. C. (ONNCCE). </strong>
                                         </Text>
                                     </Box>
                                 </Flex>
                                 <Flex align="center" gap={5}>
-                                    <SettingsIcon color="blue.400" boxSize={30} pb={1.5}/>
+                                    <SettingsIcon color="blue.400" boxSize={30} pb={1.5} />
                                     <Box>
                                         <Heading as="h3" fontSize="xl" fontWeight="semibold" color="black" mb={1}>
-                                            Expertos en Soluciones Complejas
+                                            INNOVACIÓN Y DESARROLLO TECNOLÓGICO
                                         </Heading>
                                         <Text fontSize="sm" color="gray.500">
-                                            Asesoría técnica especializada para proyectos desafiantes. Nuestros ingenieros resuelven tus retos estructurales con soluciones prácticas.
+                                            <strong>Grupo TICONSA </strong>
+                                            cuenta con patentes de soluciones estructurales como la
+                                            <strong>“Conexión Columna-Columna” </strong>
+                                            para la construcción de edificios altos, y la losa
+                                            <strong>“Penta-T” y “Multi-T” </strong>
+                                            especialmente usada en edificación hotelera y comercial.
                                         </Text>
                                     </Box>
                                 </Flex>
                                 <Flex align="center" gap={5}>
-                                    <StarIcon color="yellow.400" boxSize={30} pb={1.5}/>
+                                    <StarIcon color="yellow.400" boxSize={30} pb={1.5} />
                                     <Box>
                                         <Heading as="h3" fontSize="xl" fontWeight="semibold" color="black" mb={1}>
-                                            Prefabricados de la más alta calidad en el mercado
+                                            VERSATILIDAD
                                         </Heading>
                                         <Text fontSize="sm" color="gray.500">
-                                            Materiales ecoeficientes, diseños modulares inteligentes y tecnología Multi T que reducen plazos y costos sin comprometer la resistencia estructural.
+                                            <strong>Grupo TICONSA </strong>
+                                            cuenta con la patente de las
+                                            <strong>mesas de presfuerzo portátiles,</strong>
+                                            lo que nos permite instalar una planta de producción donde sea necesaria, abatiendo tiempo de obra y reduciendo costos de transporte de los elementos.
                                         </Text>
                                     </Box>
                                 </Flex>
