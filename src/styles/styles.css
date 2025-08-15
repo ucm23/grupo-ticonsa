@@ -605,6 +605,8 @@ button#dropdown-basic-2 {
   align-items: center;
   line-height: 59px;
   border: 0px;
+  text-shadow: 5px 5px 10px #61616164;
+  color: white;
 }
 
 .white {

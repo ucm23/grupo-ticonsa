@@ -83,7 +83,7 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
         <>
             <nav className={`${showShadow ? 'shadow nav-small' : 'nav'}`} style={{ backgroundColor: (showShadow || isChecked || doc) ? 'white' : 'transparent' }}>
                 <a href="/" className={`enlace d-flex justify-content-center align-items-center ${(mobile && showShadow) && "center-logo"}`}>
-                    <img src={(showShadow || isChecked || doc) ? "/logo-removebg.png" : "/logo-white.png"} className={showShadow ? 'logo-small' : 'logo'} />
+                    <img src={(showShadow || isChecked || doc) ? "/logo-removebg.png" : "/logo-white.png"} className={showShadow ? 'logo-small' : 'logo text-shadow'} />
                     <h1 className="m-0"></h1>
                 </a>
                 <input type="checkbox" id="check" onChange={handleCheckBoxChange} />
@@ -121,7 +121,7 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
                                     //leftIcon={<div />}
                                     //fontWeight={'bold'}
                                     title="Ver currículum de Grupo Ticonsa"
-                                    className='cursor-crosshair'
+                                    className={`cursor-crosshair ${(!showShadow && !mobile) && "text-shadow"}`}
                                     //colorPalette="red" 
                                     fontSize={13}
                                     _hover={{ bg: '#e25a28' }}
@@ -131,7 +131,7 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
                                 >
                                     Ver Currículum
                                 </Button>
-                                : <a href={href} className={`${href === pathname && "active"} ${(!showShadow && !mobile) && "white"}`}>{content}</a>
+                                : <a href={href} className={`${href === pathname && "active"} ${(!showShadow && !mobile) && "white text-shadow"}`}>{content}</a>
 
                             }
                         </li>

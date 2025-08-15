@@ -233,28 +233,28 @@ export default function Carousel_({ handleVideo }) {
                                             onClick={() => window.location.href = '/contacto'}
                                             //aria-label="Redirigir a Contacto"
                                             title="Redirigir a Contacto"
-                                            className='cursor-crosshair'
+                                            className='cursor-crosshair text-shadow'
                                         >
                                             Contáctanos
                                         </Button>
                                     </div>
                                     <Stack direction={'row'}>
-                                        <a href={'https://twitter.com/GRUPO_TICONSA'} target="_blank">
+                                        <a href={'https://twitter.com/GRUPO_TICONSA'} target="_blank" >
                                             <SocialButton>
-                                                <FaTwitter />
+                                                <FaTwitter className='text-shadow'/>
                                             </SocialButton>
                                         </a>
-                                        <a href={'https://www.youtube.com/@GRUPOTICONSASADECV'} target="_blank">
-                                            <SocialButton>
+                                        <a href={'https://www.youtube.com/@GRUPOTICONSASADECV'} target="_blank" className='text-shadow'>
+                                            <SocialButton className='text-shadow'>
                                                 <FaYoutube />
                                             </SocialButton>
                                         </a>
-                                        <a href={'https://www.instagram.com/grupo_ticonsa/'} target="_blank">
+                                        <a href={'https://www.instagram.com/grupo_ticonsa/'} target="_blank" className='text-shadow'>
                                             <SocialButton>
                                                 <FaInstagram />
                                             </SocialButton>
                                         </a>
-                                        <a href={'https://www.facebook.com/GrupoTiconsa/'} target="_blank">
+                                        <a href={'https://www.facebook.com/GrupoTiconsa/'} target="_blank" className='text-shadow'>
                                             <SocialButton>
                                                 <FaFacebook />
                                             </SocialButton>
