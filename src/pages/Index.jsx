@@ -461,7 +461,7 @@ const Index = () => {
 
                                                             <div className="gallery-overlay">
                                                                 <a className="text-white font-flama font-medium text-[16px] leading-[24px]" >
-                                                                    {item?.name}
+                                                                    {project_?.name}
                                                                 </a>
                                                                 <br/>
                                                                 <div className="flex row-auto justify-between">
