@@ -67,7 +67,7 @@ export default function SmallCentered({ photo, certificates }) {
                     }}
                 >
                     <h1 class="text-3xl font-bold text-center tracking-tight sm:text-4xl">
-                        Los estándares más reconocidos de calidad en construcción
+                        Nuestro compromiso con la calidad
                     </h1>
 
                     <div class="flex flex-col md:flex-row gap-10 items-center justify-center">
@@ -76,7 +76,10 @@ export default function SmallCentered({ photo, certificates }) {
                                 alt="Ookla"
                                 class="absolute -top-16 left-1/2 transform -translate-x-1/2 h-40 w-40 object-contain" />
                             <p class="text-white mt-4">
-                                Sistema de construcción industrializada <br/> Avalada por ANIPPAC<span class="text-blue-400">®</span> *
+                                Excelencia en la calidad y sustentabilidad <br /> de nuestros procesos.<br />
+                                No. de Certificado: <br />
+                                <strong>QNQ-049-001/25.</strong>
+                                {/*Sistema de construcción industrializada <br /> Avalada por ANIPPAC<span class="text-blue-400">®</span> **/}
                             </p>
                         </div>
                         <div class="relative bg-[#1a1a1a] pt-20 mt-14 px-6 rounded-[10px] text-center max-w-md w-full">
@@ -84,7 +87,8 @@ export default function SmallCentered({ photo, certificates }) {
                                 alt="Ookla"
                                 class="absolute -top-16 left-1/2 transform -translate-x-1/2 h-40 w-40 object-contain" />
                             <p class="text-white mt-4">
-                                ANIPPAC<span class="text-blue-400">®</span> <br/> Asociación Nacional de Industriales <br/> del Presfuerzo y la Prefabricación A.C.
+                                Somos miembros fundadores de la <br />Asociación Nacional <br />de Industriales de Presfuerzo y la <br />Prefabricación, A.C.
+                                {/*ANIPPAC<span class="text-blue-400">®</span> <br /> Asociación Nacional de Industriales <br /> del Presfuerzo y la Prefabricación A.C.*/}
                             </p>
                         </div>
 
@@ -93,22 +97,25 @@ export default function SmallCentered({ photo, certificates }) {
                                 alt="nPerf"
                                 class="absolute -top-16 left-1/2 transform -translate-x-1/2 h-40 w-40 object-cover rounded-full" />
                             <p class="text-white mt-4">
-                                Excelencia en seguridad <br/> y accesibilidad Certificación <br/> ONNCCE<span class="text-blue-400">®</span> **
+                                Contamos con certificación avalada<br /> por el Organismo Nacional de <br /> Normalización y Certificación de la Construcción y Edificación.
+                                {/*Excelencia en seguridad <br /> y accesibilidad Certificación <br /> ONNCCE<span class="text-blue-400">®</span> ***/}
                             </p>
                         </div>
                     </div>
 
 
-                    <p class="text-sm text-gray-400 text-center max-w-lg">
+                    {/*<p class="text-sm text-gray-400 text-center max-w-lg">
                         * ANIPPAC: Aval técnico en Prefabricados de Concreto Presforzado. <br />
                         ** ONNCCE: Certificación Internacional en Accesibilidad.
-                    </p>
+                    </p>*/}
 
                     <div class="text-center space-y-2">
                         <h2 class="text-2xl md:text-3xl font-bold">
-                            "Optimiza tus proyectos con soluciones certificadas"
+                            Asegura tu inversión trabajando con empresas certificadas.
                         </h2>
-                        <p>Combina nuestros sistemas estructurales con servicios adicionales y obtén beneficios exclusivos</p>
+                        <p>
+                            La construcción industrial y las nuevas tecnologías antisísmicas representan el futuro. <br />Nuestros ingenieros pueden asesorarte para encontrar la solución más eficiente para tu proyecto.
+                        </p>
                     </div>
                 </div>}
             <div className='bg-footer'>

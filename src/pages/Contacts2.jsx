@@ -120,37 +120,39 @@ const Contacts2 = () => {
                     <ContactForm2 />
                 </div>
             </Stack>
-            <div style={{ backgroundColor: color.primary, padding: mobile ? 20 : 80 }}>
-                <Fade direction="down">
-                    <strong><h3 className="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', }}>NUESTRAS UBICACIONES</h3></strong>
-                </Fade>
-                <Fade direction="down" delay={0.5}>
-                    <strong><h3 className="col-about-title" style={{ color: 'white', fontSize: 52, fontWeight: '700', marginBottom: '0rem', }}>PRESENCIA NACIONAL</h3></strong>
-                </Fade>
-                <div style={{ display: 'flex', flexDirection: direction, marginTop: 30, gap: 25, flexWrap: 'wrap' }}>
-                    {ubications.map((item, index) => (
-                        <div key={`${index}-${item?.name}`}>
-                            <div>
-                                <h3 className="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase' }}>{item?.name}</h3>
-                                <a href={item?.url} target="_blank" >
-                                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                                        <FaDirections color="white" />
-                                        <h3 style={{ color: 'white', fontSize: 12, marginTop: '0.5rem' }}>{item?.direction}<br />{item?.place}</h3>
-                                    </div>
-                                </a>
-                                <a href={`tel:+52${item?.phone}`} target="_blank" >
-                                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                                        <MdOutlinePhoneInTalk color="white" />
-                                        <h3 style={{ color: 'white', fontSize: 12, marginTop: '0.5rem' }}>{item?.phone}</h3>
-                                    </div>
-                                </a>
-                                <div className="line-banner-btn" />
+            
+                <div style={{ backgroundColor: color.primary, padding: mobile ? 20 : 80 }}>
+                    <Fade direction="down">
+                        <strong><h3 className="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', }}>NUESTRAS UBICACIONES</h3></strong>
+                    </Fade>
+                    <Fade direction="down" delay={0.5}>
+                        <strong><h3 className="col-about-title" style={{ color: 'white', fontSize: 52, fontWeight: '700', marginBottom: '0rem', }}>PRESENCIA NACIONAL</h3></strong>
+                    </Fade>
+                    <div style={{ display: 'flex', flexDirection: direction, marginTop: 30, gap: 25, flexWrap: 'wrap' }}>
+                        {ubications.map((item, index) => (
+                            <div key={`${index}-${item?.name}`}>
+                                <div>
+                                    <h3 className="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase', lineHeight: '2' }}>{item?.name}</h3>
+                                    <div className="line-banner-btn" />
+                                    <a href={item?.url} target="_blank" >
+                                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6, paddingTop: '0.5rem' }}>
+                                            <FaDirections color="white" />
+                                            <h3 style={{ color: 'white', fontSize: 12, marginTop: '0.5rem' }}>{item?.direction}<br />{item?.place}</h3>
+                                        </div>
+                                    </a>
+                                    <a href={`tel:+52${item?.phone}`} target="_blank" >
+                                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                                            <MdOutlinePhoneInTalk color="white" />
+                                            <h3 style={{ color: 'white', fontSize: 12, marginTop: '0.5rem' }}>{item?.phone}</h3>
+                                        </div>
+                                    </a>
+                                    
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </NavBar >
+        </NavBar>
     )
 }
 

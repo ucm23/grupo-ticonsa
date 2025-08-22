@@ -3,6 +3,7 @@ import items from '../assets/services_card.json'
 import point from '../assets/projects_map.json'
 import plants from '../assets/plantass.json'
 import paths from '../assets/path_map.json'
+import path_jamaica from '../assets/path_jamaica.json'
 import { useState, useRef } from 'react';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
@@ -410,7 +411,7 @@ const Index = () => {
                             <div className="content-circle" ref={ref}>
                                 <Image
                                     borderRadius="lg"
-                                    src='/mapa.png'
+                                    src='/mapa-1.png'
                                     className="img-responsive"
                                     style={{ /*width: '100%', objectFit: 'cover', paddingLeft: 50, paddingRight: 50, display: 'initial'*/ }}
                                 />
@@ -448,11 +449,33 @@ const Index = () => {
                                                         }}
                                                     >{item?.name}</Popover.Header>
                                                     <Popover.Body className="iframe-maya-2">
-                                                        <img
-                                                            src={item?.img}
-                                                            className="w-[294px] h-[155px]"
-                                                            loading="lazy"
-                                                        />
+                                                        <div
+                                                            key={index}
+                                                            className={`relative relativo relativo-2`}
+                                                        >
+                                                            <img
+                                                                src={item?.img}
+                                                                className="w-[294px] h-[155px] gallery-image-plant"
+                                                                loading="lazy"
+                                                            />
+
+                                                            <div className="gallery-overlay">
+                                                                <a className="text-white font-flama font-medium text-[16px] leading-[24px]" >
+                                                                    {item?.name}
+                                                                </a>
+                                                                <br/>
+                                                                <div className="flex row-auto justify-between">
+                                                                    <a className="text-white font-flama-light text-[14px] tracking-wider font-light" href={project_?.url}>
+                                                                        Ver más...
+                                                                    </a>
+                                                                    <a className="text-white font-flama-light text-[14px] tracking-wider font-light" href={"/contacto#locations"}>
+                                                                        Contacto
+                                                                    </a>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
                                                     </Popover.Body>
                                                 </Popover>
                                             }
@@ -489,6 +512,25 @@ const Index = () => {
                                             }
                                         >
                                             <div className={`path ${mobile ? "path-web" : "path-mov"}`} onClick={handleClick} />
+                                        </OverlayTrigger>
+                                    ))
+                                )}
+                                {path_jamaica.map((item) =>
+                                    item?.projects.map((project_) => (
+                                        <OverlayTrigger
+                                            trigger='click'
+                                            placement={'auto'}
+                                            overlay={
+                                                <Popover id={`popover-positioned-bottom`} className="popover-maya">
+                                                    <Popover.Header as="h3">{item?.name}</Popover.Header>
+                                                    <Popover.Body>
+                                                        <iframe width="274" height="155" className="iframe-maya" src="https://www.youtube.com/embed/4YodsWpZdew?si=92SHooT7z7jYngP6&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                        <strong>{project_?.extra}<br /></strong>
+                                                    </Popover.Body>
+                                                </Popover>
+                                            }
+                                        >
+                                            <div className={`path-jamaica ${mobile ? "path-web-jamaica" : "path-mov-jamaica"}`} onClick={handleClick} />
                                         </OverlayTrigger>
                                     ))
                                 )}

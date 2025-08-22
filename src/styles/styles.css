@@ -316,12 +316,33 @@ figure {
 
 .path-web {
   top: 15%;
-  left: 50%;
+  left: 40%;
 }
 
 .path-mov {
-  top: 48%;
-  left: 75%;
+  top: 50%;
+  left: 68%;
+}
+
+.path-jamaica {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-image: url('/icons/hotel.ico');
+  z-index: 100;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  scale: 0.5;
+}
+
+.path-web-jamaica {
+  top: 15%;
+  left: 40%;
+}
+
+.path-mov-jamaica {
+  top: 33%;
+  left: 82%;
 }
 
 .project {
@@ -1475,6 +1496,13 @@ a.dropdown-item {
   border-radius: 10px;
 }
 
+
+
+.gallery-image-plant:hover {
+  cursor: crosshair;
+}
+
+
 .gallery-image {
   transition: opacity 300ms;
   position: relative;
@@ -1508,6 +1536,9 @@ a.dropdown-item {
   border-radius: 10px;
 }
 
+.relativo-2 {
+  border-radius: 0px;
+}
 .zoom-icon {
   width: 2rem;
   height: 2rem;

@@ -7,7 +7,7 @@
                 "extra": "",
                 "position": {
                     "top": "15%",
-                    "left": "6%"
+                    "left": "5%"
                 }
             }
         ]
@@ -20,7 +20,7 @@
                 "extra": "",
                 "position": {
                     "top": "40%",
-                    "left": "18%"
+                    "left": "15%"
                 }
             }
         ]
@@ -33,7 +33,7 @@
                 "extra": "",
                 "position": {
                     "top": "24%",
-                    "left": "32%"
+                    "left": "30%"
                 }
             }
         ]
@@ -45,8 +45,8 @@
                 "name": "Puentes Carretera, Saltillo",
                 "extra": "",
                 "position": {
-                    "top": "30%",
-                    "left": "47%"
+                    "top": "31%",
+                    "left": "43%"
                 }
             }
         ]
@@ -58,8 +58,8 @@
                 "name": "Gran Túnel de la Gran Plaza (Macroplaza)",
                 "extra": "",
                 "position": {
-                    "top": "35%",
-                    "left": "50%"
+                    "top": "38%",
+                    "left": "48%"
                 }
             }
         ]
@@ -72,7 +72,7 @@
                 "extra": "",
                 "position": {
                     "top": "42%",
-                    "left": "34%"
+                    "left": "26%"
                 }
             }
         ]
@@ -85,7 +85,7 @@
                 "extra": "",
                 "position": {
                     "top": "48%",
-                    "left": "57%"
+                    "left": "53%"
                 }
             }
         ]
@@ -97,8 +97,8 @@
                 "name": "Puentes Carretera Maravatio<br/><br/>Estacionamiento Grupo Modelo",
                 "extra": "",
                 "position": {
-                    "top": "58%",
-                    "left": "35%"
+                    "top": "59%",
+                    "left": "34%"
                 }
             }
         ]
@@ -110,8 +110,8 @@
                 "name": "Postes para bardas y limite de Aeropuerto de Manzanillo",
                 "extra": "",
                 "position": {
-                    "top": "68%",
-                    "left": "39%"
+                    "top": "72%",
+                    "left": "35%"
                 }
             }
         ]
@@ -123,21 +123,8 @@
                 "name": "Almacenes Complejo Fosforados. Lázara Cárdenas<br/><br/>Almacenes DAP/NPK. FERTIMEX<br/><br/>Edificio de Paletizado y Despaletizado. <br/><br/>FERTIMEX Proyecto 1291 Instalaciones Navales Marina PEMEX<br/><br/>Construcción Del Puente Vehicular del Acceso a la PEMEX. Morelia<br/><br/>Puente Yurécuaro<br/><br/>Fabricación de estacionamientos. Morelia",
                 "extra": "",
                 "position": {
-                    "top": "67%",
-                    "left": "42%"
-                }
-            }
-        ]
-    },
-    {
-        "name": "Guerrero",
-        "projects": [
-            {
-                "name": "Centro Comercial Costera Miguel Alemán Acapulco<br/><br/>Centro Comercial Ixtapa",
-                "extra": "1983 - Icor, S.A. de C.V.",
-                "position": {
-                    "top": "72%",
-                    "left": "46%"
+                    "top": "75%",
+                    "left": "40%"
                 }
             }
         ]
@@ -149,8 +136,8 @@
                 "name": "Reconstrucción de Estructuras y Techumbres para Estadio de Béisbol<br/><br/>Escuela Primaria Luis Farallón<br/><br/>Bodegas Y Talleres Laguna Farallón <br/><br/>Estructura de 4 niveles Hotel Laguna Farallón<br/><br/>Cubierta Nave de 20 m. y oficinas<br/><br/>Puentes Carretera Córdoba - Veracruz<br/><br/>Puente Cotaxla<br/><br/>Puente Boca del Río<br/><br/>Centro de Exposiciones del World Trade Center",
                 "extra": "",
                 "position": {
-                    "top": "60%",
-                    "left": "60%"
+                    "top": "63%",
+                    "left": "54%"
                 }
             }
         ]
@@ -162,8 +149,8 @@
                 "name": "Tabasco G.P.Q. Complejo<br/><br/>Centro Comercial Plaza 'Las Américas'<br/><br/>Hotel Viva Inn Cárdenas<br/><br/>Taller PEMEX",
                 "extra": "",
                 "position": {
-                    "top": "72%",
-                    "left": "81%"
+                    "top": "77%",
+                    "left": "69%"
                 }
             }
         ]
@@ -175,8 +162,8 @@
                 "name": "Puentes de la Autopista Huixtla Arriaga",
                 "extra": "",
                 "position": {
-                    "top": "79%",
-                    "left": "79%"
+                    "top": "84%",
+                    "left": "70%"
                 }
             }
         ]
@@ -188,8 +175,8 @@
                 "name": "Puente 'El Zacatal'",
                 "extra": "",
                 "position": {
-                    "top": "70%",
-                    "left": "82%"
+                    "top": "74%",
+                    "left": "74%"
                 }
             }
         ]
@@ -201,8 +188,8 @@
                 "name": "Cubierta de Aeropuerto de Querétaro<br/><br/>Nave Industrial Papeles Ponderosa",
                 "extra": "",
                 "position": {
-                    "top": "55%",
-                    "left": "50%"
+                    "top": "58%",
+                    "left": "45%"
                 }
             }
         ]
@@ -214,8 +201,21 @@
                 "name": "Puentes Carretera Cuacnopalan<br/><br/>Auditorio para la Guelaguetza",
                 "extra": "",
                 "position": {
-                    "top": "77%",
-                    "left": "64%"
+                    "top": "85%",
+                    "left": "59%"
+                }
+            }
+        ]
+    },
+    {
+        "name": "Guerrero",
+        "projects": [
+            {
+                "name": "Centro Comercial Costera Miguel Alemán Acapulco<br/><br/>Centro Comercial Ixtapa",
+                "extra": "1983 - Icor, S.A. de C.V.",
+                "position": {
+                    "top": "82%",
+                    "left": "49%"
                 }
             }
         ]
@@ -227,8 +227,8 @@
                 "name": "Foro Sol<br/><br/>Segundo Piso Periférico<br/><br/>Auditorio Tec de Monterrey<br/><br/>Edificio Comercial San Cosme<br/><br/>Centro Comercial “Plaza Imagen”, Jardines de la Montaña<br/><br/>Centro Comercial “Plaza Zapato” o “Plaza Gran Sur”",
                 "extra": "",
                 "position": {
-                    "top": "61%",
-                    "left": "53%"
+                    "top": "65%",
+                    "left": "48%"
                 }
             }
         ]
@@ -240,8 +240,21 @@
                 "name": "Hotel Moon Palace<br/><br/> Hotel Oasis<br/><br/> Sears San Luis Potosí, Grupo Sanborns<br/><br/>Centro Comercial “Las Palmas“ <br/><br/>Centro Comercial Galería Infinity Grupo Isla<br/><br/>Royal Parking<br/><br/>Estacionamiento Ultramar, Ruta Naútica<br/><br/>Fachadas IMSS, Ingenieros Civiles Asociados <br/><br/>Fachadas Base Naval, Ingenieros Civiles Asociados",
                 "extra": "",
                 "position": {
-                    "top": "56%",
-                    "left": "92.5%"
+                    "top": "62%",
+                    "left": "85%"
+                }
+            }
+        ]
+    },
+        {
+        "name": "Jamaica",
+        "projects": [
+            {
+                "name": "Hotel Moon Palace<br/><br/> Hotel Oasis<br/><br/> Sears San Luis Potosí, Grupo Sanborns<br/><br/>Centro Comercial “Las Palmas“ <br/><br/>Centro Comercial Galería Infinity Grupo Isla<br/><br/>Royal Parking<br/><br/>Estacionamiento Ultramar, Ruta Naútica<br/><br/>Fachadas IMSS, Ingenieros Civiles Asociados <br/><br/>Fachadas Base Naval, Ingenieros Civiles Asociados",
+                "extra": "",
+                "position": {
+                    "top": "62%",
+                    "left": "85%"
                 }
             }
         ]

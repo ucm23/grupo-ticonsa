@@ -41,10 +41,10 @@ const CarouselStatic = ({ title, place, names, folder, logo }) => {
                     <Carousel.Item key={`names-item-${item}`} interval={2600}>
                         <img
                             className="d-block w-100 _img_corousel"
-                            src={`/${folder}/${item}.jpg`}
+                            src={`/${folder}/${item}.${'jpg' || 'png'}`}
                             alt="First slide"
                             //style={{ height: mobile?"23rem":"26rem", objectFit: "cover", top: 100}}
-                            style={{ height: 600, width: '100%', objectFit: "cover", /*top: 100 */ }}
+                            style={{ height: 600, width: '100%', objectFit: 'cover', /*top: 100 */ }}
                             loading="lazy"
                         />
                     </Carousel.Item>

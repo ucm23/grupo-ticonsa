@@ -95,7 +95,7 @@ const process = [
         description: 'Una vez que los elementos están listos y las condiciones en la obra son las adecuadas, se inicia el transporte de las piezas hasta el sitio de la obra. Se ejecuta de manera ordenada y controlada de acuerdo con el plan de logística previamente definido. Una coordinación precisa y eficiente entre el personal de la obra y el de la planta es esencial para garantizar que cada pieza llega en condiciones óptimas y en el momento adecuado.',
         icon: '/icons/montaje.png',
     },
-        {
+    {
         name: 'Montaje',
         description: 'Esta es la etapa más observada y representativa de la obra, por lo que una planeación minuciosa y verificación de las condiciones de seguridad son imprescindibles, tanto como una ejecución cuidadosa y orden de todo el personal que participa en el montaje.',
         icon: '/icons/montaje.png',
@@ -187,7 +187,7 @@ const Systems = () => {
         <>
             <NavBar photo={true} mobile={mobile}>
                 <BGPoints>
-                    <CarouselStatic names={[1, 2, 3]} folder='img_system' />
+                    <CarouselStatic names={[1, 4, 5, 6, 7, 8]} folder='img_system' />
                     <section className="_main container">
                         <div className="row-base row">
                             <section className="text-center">

@@ -59,24 +59,63 @@ export default function Carousel_({ handleVideo }) {
 
     const cards = [
         {
+            name: "Tren Maya",
+            place: "Campeche",
+            description: "",
+            image: '/TrenMayaInicio.jpg',
+        },
+        {
             name: "Segundo Piso Periférico",
             place: "Ciudad de México",
             description: "Obra magna de la Ciudad de México aportando soluciones de infraestructura urbano",
             image: '/periferico.jpg',
         },
         {
+            name: "Estadio GNP",
+            place: "Ciudad de México",
+            description: "Antes Foro Sol",
+            image: "/forosol.png",
+        },
+        {
+            name: "Libramiento Puerto Progreso",
+            place: "Ciudad de México",
+            description: " ",
+            image: '/PuertoProgreso.JPG',
+        },
+        {
+            name: "Hotel Princess Grand Jamaica",
+            place: "Jamaica",
+            description: "",
+            image: "/Jamaica.JPG",
+        },
+        {
+            name: "ATELIER-Playa-Mujeres",
+            place: "Isla Mujeres, Quintana Roo",
+            description: " ",
+            image: '/ATELIER-Playa-Mujeres.jpg',
+        },
+        {
+            name: "Hotel Oasis",
+            place: "Cancún, Quintana Roo",
+            description: "",
+            image: "/HotelOasis.jpg",
+        },
+        {
             name: "Base Naval",
             place: "Isla Mujeres, Quintana Roo",
             description: "Ingenieros Civiles Asociados",
-            image: '/base_naval.png',
+            image: '/BaseNavalIsla Mujeres.JPG',
         },
+        
+
+        /*
         {
             name: "Centro Comercial Tlalnepantla",
             place: "Ciudad de México",
             description: "",
             image: '/cctlanepantla.png',
         },
-        /*{
+        {
             name: "Hotel Moon Palace",
             place: "Cancún, Quintana Roo",
             description: "Tiempo récord: Se construyeron más de 40 mil m² en 3.5 meses",

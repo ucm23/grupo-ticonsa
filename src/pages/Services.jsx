@@ -16,6 +16,7 @@ const Services = ({ id }) => {
         1: {
             id: 1,
             "name": "Desarrollo de Ingeniería",
+            "imgs": [1, 2, 3, 4],
             "description": "Planeamos y diseñamos las soluciones estructurales que nuestros clientes necesitan. Contamos con Ingenieros expertos con experiencia probada en decenas de proyectos y acompañamos a nuestros clientes durante toda la construcción para asegurar que la ejecución se apega al proyecto estructural ejecutivo.",
             "header": "<strong>Nuestra empresa</strong> posee una <strong>reconocida trayectoria en diseño estructural</strong>, abordando aspectos fundamentales para el éxito en proyectos de ingeniería:",
             "word_key": [
@@ -36,6 +37,7 @@ const Services = ({ id }) => {
         2: {
             id: 2,
             "name": "Fabricación de Elementos de Concreto",
+            "imgs": [1, 2, 3, 4],
             "description": "Nuestros procesos cuentan con el Certificado nivel Oro de Calidad y Sustentabilidad avalado por el ONNCCE. Garantizamos estrictos estándares de calidad donde la satisfacción del cliente, la seguridad y la sustentabilidad son nuestros ejes rectores.",
             "header": "<strong>Nuestra compañía</strong> ha construido durante más de 50 años una <strong>reputación excepcional en fabricación de elementos de concreto</strong>, destacando en aspectos clave para la excelencia industrial:",
             "word_key": [
@@ -93,6 +95,7 @@ const Services = ({ id }) => {
         3: {
             id: 3,
             "name": "Transporte y montaje",
+            "imgs": [1, 2, 3, 4, 5, 6, 7, 8, 9],
             "description": "Parte fundamental de entorno del prefabricado es el transporte el cual consiste en el desplazamiento de los elementos prefabricados a los sitos indicados por nuestros clientes. Contamos con el mejor equipo de Transporte para lograr una eficaz ejecución de todos tus proyectos, a su vez ejecutamos el montaje de las piezas prefabricadas con seguridad y precisión para construir la estructura proyectada.",
             "header": "<strong>Nuestra empresa</strong> ha forjado una sólida trayectoria en el <strong>ámbito del transporte de materiales y estructuras prefabricadas</strong>, abordando aspectos críticos para garantizar el éxito en esta área especializada:",
             "word_key": [
@@ -134,6 +137,7 @@ const Services = ({ id }) => {
         5: {
             id: 5,
             "name": "Supervisión",
+            "imgs": [1, 2, 3, 4],
             "description": "La supervisión de las obras forma parte de las funciones administrativas de gran valor e importancia que realizamos para que se cumplan efectiva y puntualmente los objetivos del proyecto de forma legal, en tiempo y calidad.",
             "header": "<strong>Nuestra firma</strong> se distingue por su <strong>destacada supervisión en los procesos de instalación de estructuras prefabricadas</strong>, abordando aspectos cruciales para garantizar la eficiencia y la calidad en cada fase del proyecto:",
             "word_key": [
@@ -154,8 +158,7 @@ const Services = ({ id }) => {
 
     return (
         <NavBar photo={true} mobile={mobile}>
-            <CarouselStatic names={[types[id]?.id]} folder='services/' />
-
+            <CarouselStatic names={types[id]?.imgs} folder={`services/${types[id]?.id}`} />
 
             <BGPoints>
                 <section className="_main container">

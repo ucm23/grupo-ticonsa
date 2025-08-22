@@ -23,9 +23,10 @@ import ProductModal from "../components/ProductModal";
 import productsData from "../assets/products.json";
 
 const carouselImages = [
-    "/productos/producto1.jpeg",
-    "/productos/producto2.jpg",
-    "/productos/producto3.jpeg",
+    "/productos/photos/1.jpg",
+    "/productos/photos/2.jpg",
+    "/productos/photos/3.jpg",
+    "/productos/photos/4.jpg",
 ];
 const consdata = [
     {
@@ -367,11 +368,11 @@ const Products = () => {
                                             CALIDAD
                                         </Heading>
                                         <Text fontSize="sm" color="gray.500">
-                                            En <strong>Grupo TICONSA </strong>
-                                            alcanzamos el <strong>Nivel ORO </strong> de la Certificación
-                                            <strong>“Empresa Sustentable ANIPPAC”, </strong>
-                                            la cual es una certificación de Calidad y de buenas prácticas ambientales que está avalada por el
-                                            <strong>Organismo Nacional de Normalización y Certificación de la Construcción y Edificación, S. C. (ONNCCE). </strong>
+                                            En <strong>Grupo TICONSA </strong> 
+                                            alcanzamos el <strong>Nivel ORO </strong> de la Certificación 
+                                            <strong> “Empresa Sustentable ANIPPAC”, </strong> 
+                                            la cual es una certificación de Calidad y de buenas prácticas ambientales que está avalada por el 
+                                            <strong> Organismo Nacional de Normalización y Certificación de la Construcción y Edificación, S. C. (ONNCCE). </strong>
                                         </Text>
                                     </Box>
                                 </Flex>
@@ -382,11 +383,11 @@ const Products = () => {
                                             INNOVACIÓN Y DESARROLLO TECNOLÓGICO
                                         </Heading>
                                         <Text fontSize="sm" color="gray.500">
-                                            <strong>Grupo TICONSA </strong>
-                                            cuenta con patentes de soluciones estructurales como la
-                                            <strong>“Conexión Columna-Columna” </strong>
-                                            para la construcción de edificios altos, y la losa
-                                            <strong>“Penta-T” y “Multi-T” </strong>
+                                            <strong>Grupo TICONSA </strong> 
+                                            cuenta con patentes de soluciones estructurales como la 
+                                            <strong> “Conexión Columna-Columna” </strong> 
+                                            para la construcción de edificios altos, y la losa 
+                                            <strong> “Penta-T” y “Multi-T” </strong> 
                                             especialmente usada en edificación hotelera y comercial.
                                         </Text>
                                     </Box>
@@ -398,9 +399,9 @@ const Products = () => {
                                             VERSATILIDAD
                                         </Heading>
                                         <Text fontSize="sm" color="gray.500">
-                                            <strong>Grupo TICONSA </strong>
-                                            cuenta con la patente de las
-                                            <strong>mesas de presfuerzo portátiles,</strong>
+                                            <strong>Grupo TICONSA </strong> 
+                                            cuenta con la patente de las 
+                                            <strong> mesas de presfuerzo portátiles,</strong> 
                                             lo que nos permite instalar una planta de producción donde sea necesaria, abatiendo tiempo de obra y reduciendo costos de transporte de los elementos.
                                         </Text>
                                     </Box>
@@ -448,6 +449,7 @@ const Products = () => {
                                         }}
                                         //onError={() => handleImageError(product.id)}
                                         onLoad={() => setLoadingImages(false)}
+                                        loading="lazy"
                                     />
 
                                 </div>
