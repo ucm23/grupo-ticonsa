@@ -62,7 +62,7 @@ export default function Carousel_({ handleVideo }) {
             name: "Tren Maya",
             place: "Campeche",
             description: "",
-            image: '/TrenMayaInicio.jpg',
+            image: '/tren.jpeg',
         },
         {
             name: "Segundo Piso Periférico",

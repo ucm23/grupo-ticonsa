@@ -411,7 +411,7 @@ const Index = () => {
                             <div className="content-circle" ref={ref}>
                                 <Image
                                     borderRadius="lg"
-                                    src='/mapa-1.png'
+                                    src='/map.png'
                                     className="img-responsive"
                                     style={{ /*width: '100%', objectFit: 'cover', paddingLeft: 50, paddingRight: 50, display: 'initial'*/ }}
                                 />
