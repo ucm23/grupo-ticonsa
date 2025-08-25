@@ -187,7 +187,7 @@ const Systems = () => {
         <>
             <NavBar photo={true} mobile={mobile}>
                 <BGPoints>
-                    <CarouselStatic names={[1, 4, 5, 6, 7, 8]} folder='img_system' />
+                    <CarouselStatic names={[1, 2, 3, 4, 5]} folder='img_system' />
                     <section className="_main container">
                         <div className="row-base row">
                             <section className="text-center">
