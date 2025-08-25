@@ -235,7 +235,7 @@ const Products = () => {
                 //backgroundImage="radial-gradient(circle, #e2e8f0 1px, transparent 1px)"
                 backgroundSize="20px 20px"
             >
-                <Box position="relative" h={mobile ? "60vh" : "90vh"} w="full" overflow="hidden">
+                <Box position="relative" h={mobile ? "60vh" : "600px"} w="full" overflow="hidden">
                     {carouselImages.map((image, index) => (
                         <Box
                             key={index}
@@ -330,7 +330,7 @@ const Products = () => {
                     />
                 </Box>
 
-                <Box my={'145px'} className={`${mobile ? "px-4" : "px-40"} `}>
+                <Box my={'145px'} mt={mobile ? "40px" : "80px"} className={`${mobile ? "px-4" : "px-40"} `}>
                     <Flex direction={mobile ? "column" : "row"} align="center" gap={10} mb={10}>
                         <Box flex="1" maxW={mobile ? "100%" : "40%"}>
                             {consdata[0] && (
@@ -401,7 +401,7 @@ const Products = () => {
                                         <Text fontSize="sm" color="gray.500">
                                             <strong>Grupo TICONSA </strong> 
                                             cuenta con la patente de las 
-                                            <strong> mesas de presfuerzo portátiles,</strong> 
+                                            <strong> mesas de presfuerzo portátiles, </strong> 
                                             lo que nos permite instalar una planta de producción donde sea necesaria, abatiendo tiempo de obra y reduciendo costos de transporte de los elementos.
                                         </Text>
                                     </Box>
