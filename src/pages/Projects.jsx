@@ -5,7 +5,7 @@ import BGPoints from "../components/BGPoints";
 import color from "../color";
 import { useBreakpointValue } from '@chakra-ui/react';
 import { FiZoomIn } from "react-icons/fi";
-import "react-image-gallery/styles/css/image-gallery.css";
+//import "react-image-gallery/styles/css/image-gallery.css";
 
 const fullWidthPositions = [3, 8, 11, 16, 23];
 

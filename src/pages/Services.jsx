@@ -95,7 +95,7 @@ const Services = ({ id }) => {
         3: {
             id: 3,
             "name": "Transporte y montaje",
-            "imgs": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+            "imgs": [1, 2, 3, 4, 5, 6, 7, 8],
             "description": "Parte fundamental de entorno del prefabricado es el transporte el cual consiste en el desplazamiento de los elementos prefabricados a los sitos indicados por nuestros clientes. Contamos con el mejor equipo de Transporte para lograr una eficaz ejecución de todos tus proyectos, a su vez ejecutamos el montaje de las piezas prefabricadas con seguridad y precisión para construir la estructura proyectada.",
             "header": "<strong>Nuestra empresa</strong> ha forjado una sólida trayectoria en el <strong>ámbito del transporte de materiales y estructuras prefabricadas</strong>, abordando aspectos críticos para garantizar el éxito en esta área especializada:",
             "word_key": [
