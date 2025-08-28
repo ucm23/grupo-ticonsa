@@ -52,7 +52,6 @@ function App() {
 
             <Route path="/legal" element={<Legal />} />
             <Route path="/privacity" element={<Privacity />} />
-    
         </Routes>
     )
 }
