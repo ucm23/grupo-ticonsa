@@ -29,7 +29,7 @@ export default function CardsInfo(props) {
         2: 3,
     }
     const titles = {
-        1: 'ÁREA DE SUPERFICIE',
+        1: 'SUPERFICIE',
         2: 'CAPACIDAD',
         3: 'Elementos para Infraestructura Producibles',
         4: 'Elementos para Edificación Producibles',

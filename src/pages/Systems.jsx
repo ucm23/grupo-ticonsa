@@ -193,7 +193,7 @@ const Systems = () => {
                             <section className="text-center">
                                 <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Estructuras Prefabricadas de Concreto, Fachadas de Concreto Arquitectónico y Trabes de Concreto Presforzado</h2>
                                 <Fade direction="down">
-                                    <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Sistema de prefabricado y Desarrollo Multi T</p>
+                                    <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Sistema prefabricado</p>
                                 </Fade>
                             </section>
                         </div>
@@ -204,7 +204,7 @@ const Systems = () => {
                                 <div className="lg:pr-8 lg:pt-4">
                                     <div className="lg:max-w-lg">
                                         <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Proceso constructivo</h2>
-                                        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Sistema de prefabricado</p>
+                                        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Sistema prefabricado</p>
                                         <dl className="mt-10 space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                                             {features_.map((feature) => (
                                                 <div key={feature.name} className="relative pl-9">

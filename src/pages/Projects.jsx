@@ -1,136 +1,21 @@
+import React, { useState, useEffect } from "react";
 import CarouselStatic from "../components/CarouselStatic"
 import NavBar from "../components/NavBar"
 import { Fade } from "react-awesome-reveal";
 import BGPoints from "../components/BGPoints";
 import color from "../color";
-import { useBreakpointValue } from '@chakra-ui/react';
 import { FiZoomIn } from "react-icons/fi";
 //import "react-image-gallery/styles/css/image-gallery.css";
 
+
+import {
+    useBreakpointValue,
+    useDisclosure,
+} from "@chakra-ui/react";
+import ModalProjects from "../components/ModalProjects";
+
 const fullWidthPositions = [3, 8, 11, 16, 23];
 
-const images = [
-    /*{
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Naturaleza",
-        title: "Gradas para Campos Deportivos",
-        years: 1973,
-        estado: "Ciudad Madero, Tamaulipas",
-        extra1: "Instituto Tecnológico Regional"
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Garitas para la Secretaría de Hacienda Ing. Boilard C",
-        years: 1973,
-        estado: "Quintana Roo",
-        extra1: ""
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Naturaleza",
-        title: "Fosas Prefabricadas para panteones 'Los Cipreses'",
-        years: 1974,
-        estado: "Estado de México",
-        extra1: "Ciprés del Bosque"
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Naturaleza",
-        title: "Reconstrucción de estructuras y techumbres para estadio de béisbol",
-        years: 1975,
-        estado: "Veracruz",
-        extra1: "Gobierno de Veracruz"
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Gradas para Campos Deportivos Escuelas de Maestros",
-        years: 1975,
-        estado: "México, CDMX",
-        extra1: ""
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Gradas para Campos Deportivos Laredo Instituto Tecnológico",
-        years: 1975,
-        estado: "Tamaulipas",
-        extra1: ""
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Ampliación de Centro de Convenciones Acapulco Ing. Raúl Figueroa",
-        years: 1976,
-        estado: "Guerrero",
-        extra1: ""
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Auditorio de varios usos Sosa",
-        years: 1980,
-        estado: "Estado de México",
-        extra1: ""
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Tabasco G.P.Q. Complejo OMNI",
-        years: 1981,
-        estado: "Tabasco",
-        extra1: ""
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Tabasco G.P.Q. Complejo Tabasco 1 Colema, S.A.",
-        years: 1981,
-        estado: "Tabasco",
-        extra1: ""
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Tabasco G.P.Q. Complejo Tabasco 1 C.C. y P.",
-        years: 1981,
-        estado: "Tabasco",
-        extra1: ""
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Tabasco G.P.Q. Complejo Tabasco 1 RECSA",
-        years: 1981,
-        estado: "Tabasco",
-        extra1: "RECSA"
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Parapetos del puente Fortuna",
-        years: 1982,
-        estado: "México. CDMX",
-        extra1: "COMETRO"
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: `Tanque de Almacenamiento de agua`,
-        years: 1984,
-        estado: "Estado de México<br/>1500 m³",
-        extra1: "Constructora y Fraccionadora las Quintanas"
-    },
-    {
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        alt: "Ciudad",
-        title: "Cubierta para Estufa Industrial ESGO Construcciones, S.A. de C.V.",
-        years: 2018,
-        estado: "Estado de México",
-        extra1: ""
-    },*/
-];
 
 const types = {
     1: {
@@ -186,15 +71,6 @@ const types = {
             },
             {
                 alt: "Ciudad",
-                title: "Tren Maya tramo 2 - Estación Edzná",
-                years: 2023,
-                estado: "Campeche",
-                extra1: "GRUPO CARSO",
-                route_img: "TMEdzna",
-                imgs: [1, 2, 3, 4]
-            },
-            {
-                alt: "Ciudad",
                 title: "Tren Maya tramo 2 - Paradero Tenabo",
                 years: 2023,
                 estado: "Campeche",
@@ -211,25 +87,13 @@ const types = {
         "header": "En <strong>Grupo Ticonsa Inmobiliaria</strong>, construimos las arterias que conectan comunidades con soluciones técnicas de vanguardia. <br/> Nuestros proyectos —<strong>carreteras inteligentes</strong>, <strong>puentes estratégicos</strong> y <strong>sistemas hidráulicos</strong>— priorizan la <strong>sostenibilidad</strong> y el <strong>impacto social</strong>, utilizando tecnologías modulares y materiales de baja huella ambiental. Cada obra es un legado duradero que optimiza recursos y mejora la calidad de vida urbana.",
         "images": [
             {
-                title: "Linea 8 del Metro y Puente Vehicular Coyuya",
-                years: 1993,
-                estado: "Estado de México",
-                extra1: "",
-                src: "infraestructura/1.jpg",
-            },
-            {
-                title: "Linea 9 del Metro",
-                years: 1985,
-                estado: "México. D.F.",
-                extra1: "",
-                src: "infraestructura/2.jpg",
-            },
-            {
                 title: "Puente Cazones",
                 years: 1998,
                 estado: "Veracruz",
                 extra1: "Barra del río Cazones",
                 src: "infraestructura/3.jpg",
+                folder: "cazones",
+                imgs: [1]
             },
             {
                 title: "Puente de El Zacatal",
@@ -239,53 +103,11 @@ const types = {
                 src: "infraestructura/4.jpg",
             },
             {
-                title: "Puente Urawa",
-                years: 1996,
-                estado: "México. D.F.",
-                extra1: "",
-                src: "infraestructura/5.jpg",
-            },
-            {
-                title: "Puente Vehicular del Miramontes",
-                years: 1994,
-                estado: "Estado de México",
-                extra1: "",
-                src: "infraestructura/6.jpg",
-            },
-            {
-                title: "Puente Vehicular Emiliano Zapata",
-                years: 1990,
-                estado: "México. D.F.",
-                extra1: "",
-                src: "infraestructura/7.jpg",
-            },
-            {
-                title: "Puente Vehicular Periférico Puebla",
-                years: 1995,
-                estado: "Puebla, Puebla",
-                extra1: "",
-                src: "infraestructura/8.jpg",
-            },
-            {
-                title: "Puente Vehicular Primero de Mayo",
-                 years: 2000,
-                estado: "Estado de México",
-                extra1: "Naucalpan",
-                src: "infraestructura/9.jpg",
-            },
-            {
                 title: "Puente Quetzalapa",
                 years: 1993,
                 estado: "Quetzalapa, Guerrero",
                 extra1: "",
                 src: "infraestructura/10.jpg",
-            },
-            {
-                title: "Puente vehicular CAPU",
-                years: 1996,
-                estado: "Puebla, Puebla",
-                extra1: "",
-                src: "infraestructura/11.jpg",
             },
             {
                 title: "Segundo Piso Periférico",
@@ -301,12 +123,24 @@ const types = {
                 extra1: "",
                 src: "infraestructura/13.jpg",
             },
+             {
+                alt: "Ciudad",
+                title: "Tren Maya tramo 2 - Estación Edzná",
+                years: 2023,
+                estado: "Campeche",
+                extra1: "GRUPO CARSO",
+                route_img: "TMEdzna",
+                imgs: [1, 2, 3, 4],
+                folder: "estacion_edza",
+                images: [1,]
+            },
         ]
     },
     3: {
         "name": "Edificación",
         "description": "Espacios que Inspiran Progreso",
         "header": "En <strong>Grupo Ticonsa Inmobiliaria</strong>, redefinimos skylines con arquitectura que combina <strong>función</strong> y <strong>visionariedad</strong>. <br/> Nuestros <strong>complejos habitacionales</strong>, <strong>torres corporativas</strong> y <strong>centros educativos</strong> incorporan <strong>diseño bioclimático</strong>, <strong>eficiencia energética</strong> y certificaciones internacionales de seguridad. Creamos espacios adaptados a las necesidades humanas, donde la innovación constructiva eleva estándares de confort y productividad.",
+        "url": "EDIFICACION",
         "images": [
             {
                 title: "Auditorio Tec de Monterrey",
@@ -410,10 +244,18 @@ const Projects = ({ id }) => {
 
     const mobile = useBreakpointValue({ base: true, md: false });
 
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [selectedProduct, setSelectedProduct] = useState(null);
+
+    const handleOpenModal = (product) => {
+        setSelectedProduct(product);
+        onOpen();
+    };
+
     return (
         <NavBar photo={true} mobile={mobile}>
             <CarouselStatic
-                names={[10, 11, 12]}
+                names={[13, 14, 15]}
                 folder='systems/'
                 title={`Nuestros proyectos ${types[id]?.name}`}
                 place={types[id]?.description}
@@ -444,6 +286,7 @@ const Projects = ({ id }) => {
                                     <div
                                         key={index}
                                         className={`relative relativo ${isFullWidth ? 'col-span-2' : ''}`}
+                                        //onClick={() => handleOpenModal(item)}
                                     >
                                         <img
                                             src={item?.route_img ? `/projects/especiales/${item?.route_img}/${item?.imgs[0]}.png` : `/projects/${item?.src}`}
@@ -476,9 +319,27 @@ const Projects = ({ id }) => {
                         </div>
                     </div>
                 </section>
+                <ModalProjects
+                    isOpen={isOpen}
+                    onClose={onClose}
+                    project={selectedProduct}
+                    folder={selectedProduct?.folder}
+                    images={selectedProduct?.imgs}
+                />
             </BGPoints>
         </NavBar>
     )
 }
 
 export default Projects;
+
+/*
+    Datos requeridos (igual a como están en la reservación de la aerolínea):
+    Aerolínea
+    Código de reservación
+    Nombre(s)
+    Apellido(s)
+    Número de vuelo
+    Fecha del vuelo
+    Hora de salida del vuelo
+*/
