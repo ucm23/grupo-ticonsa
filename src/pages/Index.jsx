@@ -131,7 +131,7 @@ const Index = () => {
         <>
             <NavBar photo={true} certificates={true} mobile={mobile}>
                 <BGPoints>
-                    <Carousel_ handleVideo={handleVideo} />
+                    <Carousel_ handleVideo={handleVideo} t={t} />
                     <section className="_main container" id="#id">
                         <section className="section-5 pl-2 pr-2" id='about-me'>
                             <div class="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden shadow-lg w-full justify-between mt-4">
@@ -497,8 +497,8 @@ const Index = () => {
                                             <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>{t.home.howWeStandOut}</h2>
                                             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{t.home.productsServices}</p>
                                             <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
-                                                {features_.map((feature) => (
-                                                    <div key={`features-${feature?.name}`} className="relative pl-9">
+                                                {features_.map((feature, index) => (
+                                                    <div key={`features-${feature?.id}-${index}`} className="relative pl-9">
                                                         <dt className="inline font-semibold text-gray-900">
                                                             <feature.icon className="absolute left-1 top-1 h-5 w-5" color={color.primary} aria-hidden="true" />
                                                             {feature?.name}

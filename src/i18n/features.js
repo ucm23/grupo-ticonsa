@@ -3,7 +3,7 @@ import { RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, RiNurseLine, RiSh
 
 export const getFeatures = (t) => [
   {
-    "id": 0,
+    "id": 6,
     "img": "/imgs/004.jpg",
     "name": t.home.pretensadoPostensado,
     "description": t.home.pretensadoDesc,
@@ -14,7 +14,7 @@ export const getFeatures = (t) => [
     "id": 0,
     "img": "/imgs/004.jpg",
     "name": t.home.pretensadoPostensado,
-    "description": t.home.pretensadoDesc,
+    "description": t.home.pretensadoDesc2,
     "icon": RiFolderChartLine,
     "url": "/productos"
   },

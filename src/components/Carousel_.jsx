@@ -34,7 +34,7 @@ const settings = {
     slidesToScroll: 1,
 }
 
-export default function Carousel_({ handleVideo }) {
+export default function Carousel_({ handleVideo, t }) {
 
     const [slider, setSlider] = useState(null)
 
@@ -255,10 +255,10 @@ export default function Carousel_({ handleVideo }) {
                                             rightIcon={<div />}
                                             leftIcon={<div />}
                                             fontWeight={'bold'}
-                                            title="Ver video de Introducción"
+                                            title={t.home.introTitle}
                                             className='cursor-crosshair'
                                         >
-                                            Introducción
+                                            {t.home.intro}
                                         </Button>
                                         <Button
                                             bg={'transparent'}
@@ -271,10 +271,10 @@ export default function Carousel_({ handleVideo }) {
                                             _hover={"none"}
                                             onClick={() => window.location.href = '/contacto'}
                                             //aria-label="Redirigir a Contacto"
-                                            title="Redirigir a Contacto"
+                                            title={t.home.contactMeTitle}
                                             className='cursor-crosshair text-shadow'
                                         >
-                                            Contáctanos
+                                            {t.home.contactMe}
                                         </Button>
                                     </div>
                                     <Stack direction={'row'}>

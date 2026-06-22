@@ -9,8 +9,14 @@ import { useLanguage } from '../i18n/LanguageContext.jsx';
 import {
     Button,
     ButtonGroup,
-    IconButton
+    IconButton,
+    Menu,
+    MenuButton,
+    MenuList,
+    Text,
+    MenuItem
 } from '@chakra-ui/react'
+import { CheckIcon } from '@chakra-ui/icons';
 
 const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) => {
     const location = useLocation();
@@ -169,7 +175,7 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
                                     //rightIcon={<div />}
                                     //leftIcon={<div />}
                                     //fontWeight={'bold'}
-                                     title={t.nav.viewCV}
+                                    title={t.nav.viewCV}
                                     className={`cursor-crosshair ${(!showShadow && !mobile) && "text-shadow"}`}
                                     //colorPalette="red" 
                                     fontSize={13}
@@ -185,32 +191,66 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
                             }
                         </li>
                     ))}
-                      <li className="language-selector">
-                        <ButtonGroup size="sm" variant="outline" spacing={1}>
-                            <Button
-                                onClick={() => changeLanguage('esp')}
-                                bg={language === 'esp' ? color.primary : 'transparent'}
-                                color={language === 'esp' ? 'white' : (showShadow || isChecked ? color.primary : 'white')}
-                                borderColor={showShadow || isChecked ? color.primary : 'white'}
-                                _hover={{ bg: color.primary, color: 'white' }}
+                    <li className="language-selector">
+                        <Menu>
+                            <MenuButton
+                                as={Button}
                                 size="sm"
-                                className={(!showShadow && !mobile) ? "text-shadow" : ""}
+                                rounded="full"
+                                w="32px"
+                                h="32px"
+                                p={0}
+                                minW="32px"
+                                bg="transparent"
+                                _hover={{ bg: "transparent" }}
+                                _active={{ bg: "transparent" }}
                             >
-                                ES
-                            </Button>
-                            <Button
-                                onClick={() => changeLanguage('eng')}
-                                bg={language === 'eng' ? color.primary : 'transparent'}
-                                color={language === 'eng' ? 'white' : (showShadow || isChecked ? color.primary : 'white')}
-                                borderColor={showShadow || isChecked ? color.primary : 'white'}
-                                _hover={{ bg: color.primary, color: 'white' }}
-                                size="sm"
-                                className={(!showShadow && !mobile) ? "text-shadow" : ""}
-                            >
-                                EN
-                            </Button>
-                        </ButtonGroup>
+                                <img
+                                    src={language === 'esp' ? '/flags/mex.jpg' : '/flags/usa.jpg'}
+                                    alt={language === 'esp' ? 'Español' : 'English'}
+                                    style={{
+                                        borderRadius: '50%',
+                                        width: '24px',
+                                        height: '24px',
+                                        objectFit: 'cover'
+                                    }}
+                                />
+                            </MenuButton>
+                            <MenuList>
+                                <MenuItem onClick={() => changeLanguage('esp')} minH="40px">
+                                    <img
+                                        src="/flags/mex.jpg"
+                                        alt="Español"
+                                        style={{
+                                            borderRadius: '50%',
+                                            width: '20px',
+                                            height: '20px',
+                                            marginRight: '12px',
+                                            objectFit: 'cover'
+                                        }}
+                                    />
+                                    <span>Español</span>
+                                    {language === 'esp' && <CheckIcon ml="auto" />}
+                                </MenuItem>
+                                <MenuItem onClick={() => changeLanguage('eng')} minH="40px">
+                                    <img
+                                        src="/flags/usa.jpg"
+                                        alt="English"
+                                        style={{
+                                            borderRadius: '50%',
+                                            width: '20px',
+                                            height: '20px',
+                                            marginRight: '12px',
+                                            objectFit: 'cover'
+                                        }}
+                                    />
+                                    <span>English</span>
+                                    {language === 'eng' && <CheckIcon ml="auto" />}
+                                </MenuItem>
+                            </MenuList>
+                        </Menu>
                     </li>
+
                 </ul>
             </nav >
             <main>

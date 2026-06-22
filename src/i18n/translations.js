@@ -100,6 +100,7 @@ export const translations = {
       howWeStandOut: "La forma de destacarnos",
       pretensadoPostensado: "SISTEMA PRETENSADO Y POSTENSADO",
       pretensadoDesc: "Desarrollando tecnologías propias en prefabricación de trabes para puentes y viaductos elevados de hasta más de 300 toneladas.",
+      pretensadoDesc2: "En nuestro complejo industrial fabricamos soluciones constructivas estandarizadas que revolucionan la ejecución de obras.",
       diseñoEstructural: "DISEÑO ESTRUCTURAL",
       diseñoDesc: "Planeamos y diseñamos las soluciones estructurales que nuestros clientes necesitan.",
       fabricacion: "FABRICACIÓN DE ELEMENTOS DE CONCRETO",
@@ -114,7 +115,10 @@ export const translations = {
       downloadCV: "Descargar CV",
       seeMore: "Ver más...",
       contact: "Contacto",
-
+      intro: "Introducción",
+      introTitle: "Ver video de Introducción",
+      contactMe: "Contact us",
+      contactMeTitle: "Redirigir a Contacto",
     },
 
     // Services Page
@@ -843,6 +847,7 @@ export const translations = {
       howWeStandOut: "How we stand out",
       pretensadoPostensado: "PRETENSIONED AND POST-TENSIONED SYSTEM",
       pretensadoDesc: "Developing proprietary technologies in prefabrication of beams for bridges and elevated viaducts of up to more than 300 tons.",
+      pretensadoDesc2: "In our industrial complex, we manufacture standardized construction solutions that revolutionize construction execution.",
       diseñoEstructural: "STRUCTURAL DESIGN",
       diseñoDesc: "We plan and design the structural solutions our clients need.",
       fabricacion: "CONCRETE ELEMENTS MANUFACTURING",
@@ -856,7 +861,11 @@ export const translations = {
       readMore: "Read more...",
       downloadCV: "Download CV",
       seeMore: "See more...",
-      contact: "Contact"
+      contact: "Contact",
+      intro: "Introduction",
+      introTitle: "Watch Introduction Video",
+      contactMe: "Contact us",
+      contactMeTitle: "Go to Contact",
     },
 
     // Services Page
