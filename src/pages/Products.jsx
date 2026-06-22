@@ -241,7 +241,7 @@ const Products = () => {
                                         //w="full"
                                         className="w-[90%]"
                                         onLoad={() => setLoadingImages(false)}
-                                        //fallbackSrc="/productos/placeholder.png"
+                                    //fallbackSrc="/productos/placeholder.png"
                                     />
                                 </Skeleton>
                             )}
@@ -300,10 +300,10 @@ const Products = () => {
 
                 <Box px={mobile ? 4 : 20} py={10} w="100%">
                     <Heading fontSize="4xl" mb={2} textAlign="left" color="gray.800">
-                        {t?.products?.catalog_}
+                        {t?.products?.catalog_} a
                     </Heading>
                     <Text fontSize='md' mb={10} textAlign="left" color="gray.400">
-                        {t?.products?.catalogSubtitle}
+                        {t?.products?.catalogSubtitle} b
                     </Text>
                     <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
                         {consdata.map((product) => (
@@ -315,7 +315,7 @@ const Products = () => {
                                 <div className="image-container-2">
                                     <div className="overlay-content">
                                         <Search2Icon size={24} style={{ margin: '8px' }} />
-                                        <span style={{ fontSize: '0.875rem', fontWeight: '600' }}>Ver más</span>
+                                        <span style={{ fontSize: '0.875rem', fontWeight: '600' }}>{t.products.viewMore}</span>
                                     </div>
                                     <Image
                                         src={`productos/renders/${product?.url}.png`}
@@ -344,8 +344,11 @@ const Products = () => {
                                     <Heading fontSize="xl" fontWeight="semibold" color="gray.800">
                                         {product.nombre}
                                     </Heading>
-                                    <Text fontSize="sm" color="gray.600" noOfLines={2}>
-                                        {product.descripcion}
+                                    <Text
+                                        fontSize="sm" color="gray.600" noOfLines={2}
+                                        dangerouslySetInnerHTML={{
+                                            __html: product.descripcion
+                                        }}>
                                     </Text>
                                 </VStack>
                             </div>
