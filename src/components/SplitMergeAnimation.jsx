@@ -21,7 +21,7 @@ const SplitMergeAnimation = ({ imageUrl, numParts = 6, children }) => {
 
         imageParts.push(
             <div
-                key={i}
+                key={`split-merge-part-${i}`}
                 className="image-part"
                 style={imagePartStyle}
             />

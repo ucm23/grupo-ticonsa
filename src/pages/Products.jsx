@@ -21,6 +21,7 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import NavBar from "../components/NavBar";
 import ProductModal from "../components/ProductModal";
 import productsData from "../assets/products.json";
+import { useLanguage } from "../i18n/LanguageContext";
 
 const carouselImages = [
     "/productos/photos/1.jpg",
@@ -28,181 +29,79 @@ const carouselImages = [
     "/productos/photos/3.jpg",
     "/productos/photos/4.jpg",
 ];
-const consdata = [
-    {
-        id: 0,
-        nombre: "Trabe CAJÓN",
-        descripcion:
-            "Son elementos que destacan por su alta eficiencia estructural, gracias a su sección hueca a lo largo de casi toda su longitud, dejando únicamente los extremos como zonas macizas. " +
-            "Esto permite una relación óptima entre resistencia y peso.<br/>" +
-            "Existen diferentes geometrías con peraltes que van de 85 a 180 cm, capaces de cubrir claros desde 10 hasta 35 metros. " +
-            "Su forma de trapecio invertido las hace muy estables y resistentes a torsión, tanto durante su manipulación como en su etapa de servicio.<br/>" +
-            "Requieren un mantenimiento mínimo, ofrecen una gran capacidad de carga y brindan una elevada seguridad estructural. " +
-            "Su montaje puede realizarse mediante maniobras simples con grúa, y también pueden ser lanzadas. ",
-        usos: [
-            "Puentes vehiculares",
-            "Viaductos elevados",
-            "Pasos a desnivel",
-            "Puentes peatonales",
-            "Distribuidores viales",
-            "Puentes ferroviarios",
-            "Gasas de acceso o salida de viaductos elevados",
-            "Sistemas de piso en edificaciones con grandes claros o cargas extraordinarias",
-        ],
-        url: "TRABE_CAJON"
-    },
-    {
-        id: 1,
-        nombre: "Losa TT",
-        descripcion: `Son elementos formados por dos nervaduras que proporcionan rigidez y 
-            aleros que funcionan como cimbra para recibir el firme de compresión. 
-            Su peralte varía entre 30 y 120 cm, y su ancho entre 170 y 350 cm.<br/>
-            Son piezas muy estables, con una excelente relación peso-capacidad de carga.
-            Pueden almacenarse, transportarse y montarse fácilmente, 
-            sin necesidad de estructuras secundarias temporales.<br/>
-            Gracias a su esbeltez, permiten importantes ahorros en el uso de materiales respecto a las losas macizas, 
-            siendo ideales para cubrir grandes claros debido a su buen comportamiento ante flexión vertical.`,
-        usos: [
-            "Sistemas de piso en edificaciones comerciales e industriales",
-            "Puentes y pasos a desnivel",
-            "Pisos y rampas en estacionamientos",
-            "Cubiertas ligeras",
-            "Muros estructurales",
-            "Tanques de almacenamiento de agua",
-        ],
-        url: "LOSA_TT_ESBELTA",
-    },
-    {
-        id: 2,
-        nombre: "Losa TT ROBUSTA",
-        descripcion:
-            `Variante de la LOSA TT, diseñada para soportar mayores cargas y cubrir claros más amplios. 
-            Cuenta con nervaduras más anchas para alojar un mayor número de cables de presfuerzo. <br/>
-            Su peralte varía entre 60 y 120 cm, y su ancho entre 170 y 350 cm.
-            Al igual que las losas TT convencionales, son versátiles y su instalación no requiere preparaciones especiales.`,
-        usos: [
-            "Puentes vehiculares de carga pesada",
-            "Puentes ferroviarios",
-            "Naves industriales con grandes claros o cargas extraordinarias",
-            "Estacionamientos para tránsito pesado",
-            "Centros logísticos",
-            "Auditorios",
-            "Hangares",
-            "Centros de exposiciones",
-            "Arenas y canchas deportivas",
-        ],
-        url: "LOSA_TT_ROBUSTA",
-    },
-    {
-        id: 3,
-        nombre: "Trabe AASHTO",
-        descripcion:
-            "Elementos en forma de 'I', que pueden ser pretensados o postensados, " +
-            "diseñados conforme a los estándares de la <i>American Association of State Highway and Transportation Officials (AASHTO)</i>.<br/> " +
-            "Existen seis tamaños estándar, cada uno con capacidades estructurales distintas.<br/> " +
-            "Gracias a su estandarización y facilidad de fabricación, son una de las opciones preferidas por los ingenieros estructuristas en proyectos de infraestructura. ",
-        usos: [
-            "Puentes vehiculares y peatonales, carreteros y urbanos",
-            "Distribuidores viales y pasos a desnivel",
-            "Viaductos elevados",
-        ],
-        caption: "Existen seis tamaños estándar, cada uno con capacidades estructurales distintas",
-        dimensiones: [
-            { tipo: "AASHTO I", peralte: "70 cm", longitud: "10 a 12 m" },
-            { tipo: "AASHTO II", peralte: "91 cm", longitud: "12 a 15 m" },
-            { tipo: "AASHTO III", peralte: "115 cm", longitud: "16 a 24 m" },
-            { tipo: "AASHTO IV", peralte: "135 cm", longitud: "21 a 30 m" },
-            { tipo: "AASHTO V", peralte: "160 cm", longitud: "27 a 36 m" },
-            { tipo: "AASHTO VI", peralte: "186 cm", longitud: "33 a 43 m" },
-        ],
-        url: "TRABE_AASHTO",
-    },
-    {
-        id: 4,
-        nombre: "Trabe ARTESA TIPO A",
-        descripcion:
-            "Elementos en forma de 'U', con fondo plano y paredes laterales inclinadas. " +
-            "Son predominantemente huecas, aunque pueden incorporar zonas macizas para formar diafragmas estructurales.<br/>" +
-            "Tienen alturas comunes entre 60 y 250 cm, y longitudes de 20 a 30 m. " +
-            "Están diseñadas para soportar grandes cargas y resistir altos momentos flexionantes y cortantes, superando en rigidez a secciones tipo 'I' o 'T'. " +
-            "Su estabilidad facilita la manipulación y el montaje. ",
-        usos: [
-            "Puentes vehiculares y peatonales",
-            "Pasos a desnivel",
-            "Obras hidráulicas (canales)",
-            "Sistemas de piso en naves industriales con altos requerimientos de carga",
-            "Estacionamientos para tránsito pesado",
-        ],
-        url: "TRABE_CAJON_DEL_VIADUCTO",
-    },
-    {
-        id: 5,
-        nombre: "Trabe ARTESA TIPO B",
-        descripcion:
-            `Variante de la Trabe Artesa Tipo A, que conserva sus principales características y ventajas estructurales.<br/>
-            La diferencia principal radica en que permite una conexión más sencilla con otros elementos estructurales.`,
-        usos: [
-            "Puentes vehiculares y peatonales",
-            "Pasos a desnivel",
-            "Obras hidráulicas (canales)",
-            "Sistemas de piso en naves industriales con altos requerimientos de carga",
-            "Estacionamientos para tránsito pesado",
-        ],
-        url: "TRABE_CAJON_DEL_LIBRAMIENTO",
-    },
-    {
-        id: 6,
-        nombre: "Losa MULTI-T",
-        descripcion:
-            "Elemento de alta ingeniería, originalmente diseñado para edificaciones hoteleras, " +
-            "pero adaptable a otros tipos de construcción por sus propiedades geométricas y estructurales.<br/>" +
-            "Fusiona el sistema de piso con las trabes portantes, incorporando presfuerzo en ambos ejes (trabes y nervaduras). " +
-            "Sus dimensiones van de 14 a 18 m de largo, 5 a 6 m de ancho y apenas 51 cm de peralte.<br/>" +
-            "Diseñadas para apoyarse en cuatro puntos, son autoportantes y no requieren cimbras, puntales ni estructuras temporales.<br/>" +
-            "Por su rapidez de montaje, han sido empleadas en más de 50 hoteles en México y ya se utilizan en el extranjero. ",
-        usos: [
-            "Proyectos hoteleros",
-            "Comerciales",
-            "Industriales",
-            "Hospitales",
-            "Escuelas donde el tiempo de ejecución es crítico",
-        ],
-        url: "TETRAT",
-    },
-    {
-        id: 7,
-        nombre: "Trabe NEBRASKA",
-        descripcion:
-            "Gracias a su esbeltez, ofrecen una excelente relación peso-capacidad de carga. " +
-            "Sin embargo, requieren accesorios adicionales para su manipulación, evitando deformaciones por pandeo lateral. <br/> " +
-            "Durante el montaje, es común asegurar su estabilidad con puntales hasta que se integran mediante diafragmas. ",
-        usos: [
-            "Puentes vehiculares y peatonales",
-            "Infraestructura ferroviaria",
-            "Estructuras provisionales o modulares",
-            "Viaductos elevados urbanos o carreteros",
-        ],
-        caption: `Elementos preesforzado en forma de “I”, disponibles en seis tamaños, cada uno con capacidades estructurales distintas`,
-        dimensiones: [
-            { tipo: "NU-135", peralte: "135 cm", longitud: "20 a 30 m" },
-            { tipo: "NU-160", peralte: "160 cm", longitud: "25 a 32 m" },
-            { tipo: "NU-180", peralte: "180 cm", longitud: "30 a 40 m" },
-            { tipo: "NU-200", peralte: "200 cm", longitud: "35 a 42 m" },
-            { tipo: "NU-220", peralte: "220 cm", longitud: "40 a 48 m" },
-            { tipo: "NU-240", peralte: "240 cm", longitud: "45 a 50 m" },
-        ],
-        url: "TRABE_NEBRASKA"
-    },
-];
+
 
 
 const Products = () => {
     const mobile = useBreakpointValue({ base: true, md: false });
     const [currentSlide, setCurrentSlide] = useState(0);
     const [loadingImages, setLoadingImages] = useState(true);
-
+    const { t } = useLanguage();
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [selectedProduct, setSelectedProduct] = useState(null);
+
+    const consdata = [
+        {
+            id: 0,
+            nombre: t?.products?.catalog.trabeCajon.nombre,
+            descripcion: t?.products?.catalog.trabeCajon.descripcion,
+            usos: t?.products?.catalog.trabeCajon.usos,
+            url: t?.products?.catalog.trabeCajon.url
+        },
+        {
+            id: 1,
+            nombre: t?.products?.catalog.losaTT.nombre,
+            descripcion: t?.products?.catalog.losaTT.descripcion,
+            usos: t?.products?.catalog.losaTT.usos,
+            url: t?.products?.catalog.losaTT.url
+        },
+        {
+            id: 2,
+            nombre: t?.products?.catalog.losaTTRobusta.nombre,
+            descripcion: t?.products?.catalog.losaTTRobusta.descripcion,
+            usos: t?.products?.catalog.losaTTRobusta.usos,
+            url: t?.products?.catalog.losaTTRobusta.url
+        },
+        {
+            id: 3,
+            nombre: t?.products?.catalog.trabeAASHTO.nombre,
+            descripcion: t?.products?.catalog.trabeAASHTO.descripcion,
+            usos: t?.products?.catalog.trabeAASHTO.usos,
+            caption: t?.products?.catalog.trabeAASHTO.caption,
+            dimensiones: t?.products?.catalog.trabeAASHTO.dimensiones,
+            url: t?.products?.catalog.trabeAASHTO.url
+        },
+        {
+            id: 4,
+            nombre: t?.products?.catalog.trabeArtesaTipoA.nombre,
+            descripcion: t?.products?.catalog.trabeArtesaTipoA.descripcion,
+            usos: t?.products?.catalog.trabeArtesaTipoA.usos,
+            url: t?.products?.catalog.trabeArtesaTipoA.url
+        },
+        {
+            id: 5,
+            nombre: t?.products?.catalog.trabeArtesaTipoB.nombre,
+            descripcion: t?.products?.catalog.trabeArtesaTipoB.descripcion,
+            usos: t?.products?.catalog.trabeArtesaTipoB.usos,
+            url: t?.products?.catalog.trabeArtesaTipoB.url
+        },
+        {
+            id: 6,
+            nombre: t?.products?.catalog.losaMultiT.nombre,
+            descripcion: t?.products?.catalog.losaMultiT.descripcion,
+            usos: t?.products?.catalog.losaMultiT.usos,
+            url: t?.products?.catalog.losaMultiT.url
+        },
+        {
+            id: 7,
+            nombre: t?.products?.catalog.trabeNebraska.nombre,
+            descripcion: t?.products?.catalog.trabeNebraska.descripcion,
+            usos: t?.products?.catalog.trabeNebraska.usos,
+            caption: t?.products?.catalog.trabeNebraska.caption,
+            dimensiones: t?.products?.catalog.trabeNebraska.dimensiones,
+            url: t?.products?.catalog.trabeNebraska.url
+        }
+    ];
 
     const arrowStyles = {
         position: "absolute",
@@ -238,7 +137,7 @@ const Products = () => {
                 <Box position="relative" h={mobile ? "60vh" : "600px"} w="full" overflow="hidden">
                     {carouselImages.map((image, index) => (
                         <Box
-                            key={index}
+                            key={`carousel-image-2-${index}`}
                             position="absolute"
                             w="full"
                             h="full"
@@ -267,7 +166,7 @@ const Products = () => {
                                     textShadow="2px 2px 8px rgba(0,0,0,0.7)"
                                     mb={6}
                                 >
-                                    Soluciones Estructurales
+                                    {t?.products?.title}
                                 </Heading>
                                 <Text
                                     maxW="600px"
@@ -277,7 +176,7 @@ const Products = () => {
                                     textAlign={mobile ? "center" : "left"}
                                     mx="auto"
                                 >
-                                    Elementos prefabricados de máxima calidad para proyectos exigentes
+                                    {t?.products?.subtitle}
                                 </Text>
                             </Box>
                         </Box>
@@ -293,7 +192,7 @@ const Products = () => {
                     >
                         {carouselImages.map((_, index) => (
                             <Box
-                                key={index}
+                                key={`carousel-indicator-${index}`}
                                 h="2px"
                                 w={currentSlide === index ? "30px" : "15px"}
                                 bg={currentSlide === index ? "white" : "whiteAlpha.600"}
@@ -342,7 +241,7 @@ const Products = () => {
                                         //w="full"
                                         className="w-[90%]"
                                         onLoad={() => setLoadingImages(false)}
-                                        fallbackSrc="/productos/placeholder.png"
+                                        //fallbackSrc="/productos/placeholder.png"
                                     />
                                 </Skeleton>
                             )}
@@ -355,24 +254,20 @@ const Products = () => {
                                 color="gray.800"
                                 mb={4}
                             >
-                                Ingeniería de excelencia, construcciones de excelencia
+                                {t?.products?.engineeringExcellence}
                             </Heading>
                             <Text fontSize="md" color="gray.600" mb={6}>
-                                Productos prefabricados diseñados para maximizar resistencia, durabilidad y eficiencia en cada proyecto.
+                                {t?.products?.productsDesc}
                             </Text>
                             <Stack spacing={6}>
                                 <Flex align="center" gap={5}>
                                     <CheckCircleIcon color="green.400" boxSize={30} pb={1.5} />
                                     <Box>
                                         <Heading as="h3" fontSize="xl" fontWeight="semibold" color="black" mb={1}>
-                                            CALIDAD
+                                            {t?.products?.quality}
                                         </Heading>
                                         <Text fontSize="sm" color="gray.500">
-                                            En <strong>Grupo TICONSA </strong> 
-                                            alcanzamos el <strong>Nivel ORO </strong> de la Certificación 
-                                            <strong> “Empresa Sustentable ANIPPAC”, </strong> 
-                                            la cual es una certificación de Calidad y de buenas prácticas ambientales que está avalada por el 
-                                            <strong> Organismo Nacional de Normalización y Certificación de la Construcción y Edificación, S. C. (ONNCCE). </strong>
+                                            <div dangerouslySetInnerHTML={{ __html: t?.products?.qualityDesc }} />
                                         </Text>
                                     </Box>
                                 </Flex>
@@ -380,15 +275,10 @@ const Products = () => {
                                     <SettingsIcon color="blue.400" boxSize={30} pb={1.5} />
                                     <Box>
                                         <Heading as="h3" fontSize="xl" fontWeight="semibold" color="black" mb={1}>
-                                            INNOVACIÓN Y DESARROLLO TECNOLÓGICO
+                                            {t?.products?.innovation}
                                         </Heading>
                                         <Text fontSize="sm" color="gray.500">
-                                            <strong>Grupo TICONSA </strong> 
-                                            cuenta con patentes de soluciones estructurales como la 
-                                            <strong> “Conexión Columna-Columna” </strong> 
-                                            para la construcción de edificios altos, y la losa 
-                                            <strong> “Penta-T” y “Multi-T” </strong> 
-                                            especialmente usada en edificación hotelera y comercial.
+                                            <div dangerouslySetInnerHTML={{ __html: t?.products?.innovationDesc }} />
                                         </Text>
                                     </Box>
                                 </Flex>
@@ -396,13 +286,10 @@ const Products = () => {
                                     <StarIcon color="yellow.400" boxSize={30} pb={1.5} />
                                     <Box>
                                         <Heading as="h3" fontSize="xl" fontWeight="semibold" color="black" mb={1}>
-                                            VERSATILIDAD
+                                            {t?.products?.versatility}
                                         </Heading>
                                         <Text fontSize="sm" color="gray.500">
-                                            <strong>Grupo TICONSA </strong> 
-                                            cuenta con la patente de las 
-                                            <strong> mesas de presfuerzo portátiles, </strong> 
-                                            lo que nos permite instalar una planta de producción donde sea necesaria, abatiendo tiempo de obra y reduciendo costos de transporte de los elementos.
+                                            <div dangerouslySetInnerHTML={{ __html: t?.products?.versatilityDesc }} />
                                         </Text>
                                     </Box>
                                 </Flex>
@@ -413,15 +300,15 @@ const Products = () => {
 
                 <Box px={mobile ? 4 : 20} py={10} w="100%">
                     <Heading fontSize="4xl" mb={2} textAlign="left" color="gray.800">
-                        Catálogo
+                        {t?.products?.catalog_}
                     </Heading>
                     <Text fontSize='md' mb={10} textAlign="left" color="gray.400">
-                        Construye con innovación: Soluciones prefabricadas de alto desempeño
+                        {t?.products?.catalogSubtitle}
                     </Text>
                     <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
                         {consdata.map((product) => (
                             <div
-                                key={`product-${product.id}`}
+                                key={`product-1-${product.id}`}
                                 className="product-card"
                                 onClick={() => handleOpenModal(product)}
                             >
@@ -549,7 +436,7 @@ const Products = () => {
                 </Box>
             </Box>
 
-            <ProductModal isOpen={isOpen} onClose={onClose} product={selectedProduct} />
+            <ProductModal isOpen={isOpen} onClose={onClose} product={selectedProduct} t={t} />
         </NavBar>
     );
 }

@@ -216,7 +216,7 @@ export default function Carousel_({ handleVideo }) {
                 </section>*/}
             <Slider {...settings} ref={(slider) => setSlider(slider)} afterChange={handleBeforeChange} >
                 {cards.map((card, index) => (
-                    <Box key={index}>
+                    <Box key={`carousel-card-1-${index}`}>
                         <SplitMergeAnimation
                             imageUrl={card.image}
                             numParts={1}

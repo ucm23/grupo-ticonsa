@@ -24,76 +24,11 @@ import Carousel_ from "../components/Carousel_"
 import BGPoints from "../components/BGPoints"
 import ModalCenter from "../components/ModalCenter";
 import Modal from 'react-bootstrap/Modal';
+import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 import { useNavigate } from 'react-router-dom';
+import { getFeatures } from "../i18n/features.js"
 
-const features_ = [
-    {
-        "id": 0,
-        "img": "/imgs/004.jpg",
-        "name": "SISTEMA PRETENSADO Y POSTENSADO",
-        description: "Desarrollando tecnologías propias en prefabricación de trabes para puentes y viaductos elevados de hasta más de 300 toneladas.",
-        icon: RiFolderChartLine,
-        "url": "/prefabricado"
-    },
-    {
-        "id": 0,
-        "img": "/imgs/004.jpg",
-        "name": "SISTEMA PRETENSADO Y POSTENSADO",
-        description: "En nuestro complejo industrial fabricamos soluciones constructivas estandarizadas que revolucionan la ejecución de obras.",
-        icon: RiFolderChartLine,
-        "url": "/productos"
-    },
-    /*{
-        "id": 7,
-        "img": "/foro-sol.jpg",
-        "name": "PROYECTOS Y SISTEMAS ARQUITECTÓNICOS",
-        "description": "Nos encargamos de la estructura base que dan fuerza a un gran número de proyectos.",
-        icon: RiFolderUserLine,
-        "url": "/infraestructura"
-    },*/
-    {
-        "id": 1,
-        "img": "/imgs/005.jpg",
-        "name": "DISEÑO ESTRUCTURAL",
-        "description": "Planeamos y diseñamos las soluciones estructurales que nuestros clientes necesitan.",
-        icon: RiBuilding2Line,
-        "url": "/ingenieria"
-    },
-    {
-        "id": 3,
-        "img": "/services_card5.jpg",
-        "name": "FABRICACIÓN DE ELEMENTOS DE CONCRETO",
-        "description": "Nuestros procesos de fabricación cuentan con el Certificado nivel Oro de Calidad y Sustentabilidad que el ONNCCE avala. ",
-        icon: RiShakeHandsLine,
-        "url": "/fabricacion"
-    },
-    {
-        "id": 4,
-        "img": "/imgs/002.jpg",
-        "name": "TRANSPORTE Y MONTAJE DE ELEMENTOS DE CONCRETO",
-        "description": "Nuestros procedimientos para el transporte y montaje de los elementos de concreto cuentan con el Certificado Nivel Oro de Calidad Seguridad que el ONNCCE avala.",
-        icon: RiThumbUpLine,
-        "url": "/transporte"
-    },
-
-    {
-        "id": 2,
-        "img": "/imgs/people.jpeg",
-        "name": "DIRECCIÓN Y SUPERVISIÓN DE OBRAS",
-        "description": "La supervisión es una de las funciones administrativas de gran valor e importancia que realizamos para que se cumplan en tiempo y forma los objetivos del proyecto. ",
-        icon: RiNurseLine,
-        "url": "/supervision"
-    },
-    {
-        "id": 5,
-        "img": "/imgs/002.jpg",
-        "name": "VALOR AGREGADO: MEJORA CONTÍNUA",
-        "description": "Para GRUPO TICONSA el personal es la pieza fundamental, ya que son los ejecutores de los proyectos. Por ello Grupo TICONSA cuenta con un programa de capacitación para todo su personal, sobre todo aquellos que intervienen en la ejecución de trabajos directamente relacionados con la obra.",
-        icon: RiFolderChartLine,
-        "url": ""
-    }
-]
 
 const features = [
     {
@@ -161,6 +96,10 @@ const Index = () => {
     const [target, setTarget] = useState(null);
     const ref = useRef(null);
 
+    const { t } = useLanguage();
+
+    const features_ = getFeatures(t);
+
     const mobile = useBreakpointValue({ base: true, md: false });
 
     const handleClick = (event) => {
@@ -204,32 +143,31 @@ const Index = () => {
                                     />
                                 </div>
                                 <div class="md:w-2/3 p-4 self-center cursor-crosshair" onClick={handleShow_}>
-                                    <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Mensaje de nuestro Socio Fundador</h2>
+                                    <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>
+                                        {t.home.foundingPartnerMessage}
+                                        </h2>
                                     <div className="flex flex-row gap-1">
                                         <span class="flex items-center text-white text-xs font-semibold p-1 px-2 rounded-full" style={{ backgroundColor: color.primary }}>
-                                            Trabajo intenso
+                                             {t.home.hardWork}
                                         </span>
                                         <span class="flex items-center text-white text-xs font-semibold p-1 px-2 rounded-full" style={{ backgroundColor: color.primary }}>
-                                            Orgullo
+                                            {t.home.pride}
                                         </span>
                                         <span class="flex items-center text-white text-xs font-semibold p-1 px-2 rounded-full" style={{ backgroundColor: color.primary }}>
-                                            Vanguardia
+                                            {t.home.forefront}
                                         </span>
                                     </div>
                                     <p class="text-black italic mt-3">
-                                        "Después de tantos años de trabajo intenso, continuo, creativo y exitoso,
-                                        tenemos la enorme satisfacción de poder mostrar a nuestros clientes un
-                                        gran número de proyectos que marcaron rutas en el desarrollo de la industria:
-                                        la industria del concreto prefabricado y presforzado en México."
+                                       {t.home.founderMessage}
                                     </p>
                                     <p class="text-gray-700 font-bold leading-[0px] mt-5">
-                                        Ing. Aurelio Zugasti De la Muela †
+                                         {t.home.founderName}
                                     </p>
                                     <p class="text-gray-500">
-                                        Socio Fundador de Grupo Ticonsa<sup>®</sup>
+                                        {t.home.foundingPartner}<sup>®</sup>
                                     </p>
                                     <p class="underline decoration-gray-500 text-gray-500 cursor-crosshair" onClick={handleShow_}>
-                                        Lee la nota completa
+                                        {t.home.readFullNote}
                                     </p>
                                 </div>
                             </div>
@@ -237,33 +175,23 @@ const Index = () => {
 
                         <section className="section-5" id='about-me'>
                             <div className="mx-auto max-w-2xl lg:text-center mt-10">
-                                <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Construimos experiencia, solidez y confianza</h2>
+                                <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>{t.home.buildingExperience}</h2>
                             </div>
                             <Fade direction="down">
                                 <section className="text-center">
-                                    <h2 className="section-title">Sobre Nosotros</h2>
+                                    <h2 className="section-title">{t.home.aboutUs}</h2>
                                 </section>
                             </Fade>
                             <div className="row-base row">
                                 <div className="col-base col-sm-6 col-md-6" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                    <h3 className="col-about-title" style={{ textAlign: 'center' }}> Estructuras prefabricadas y <span className="text-primary-blue">presforzadas</span></h3>
+                                    <h3 className="col-about-title" style={{ textAlign: 'center' }}> {t.home.prefabricatedStructures_1} <span className="text-primary-blue">{t.home.prefabricatedStructures_2}</span></h3>
                                     <div className="col-about-info">
-                                        <p><strong>Grupo TICONSA<sup>®</sup></strong>es un grupo de empresas cuyo origen se remonta al
-                                            15 de febrero de 1971, y que durante todos sus años de existencia ha
-                                            desarrollado soluciones innovadoras que aportan valor agregado a
-                                            los proyectos de sus clientes.
+                                        <p><strong>Grupo TICONSA<sup>®</sup></strong>{t.home.groupDescription}
                                         </p>
                                         <p className={mobile && "text-center"}><strong>Teotihuacán – Hidalgo – Cancún</strong></p>
                                     </div>
                                 </div>
-                                <div className="col-base col-sm-6 col-md-6 content-img-round"
-                                /*style={{
-                                    display: 'flex',
-                                    flexDirection: 'row',
-                                    justifyContent: 'space-between',
-                                    gap: 0.2,
-                                }}*/
-                                >
+                                <div className="col-base col-sm-6 col-md-6 content-img-round">
                                     <img src={`/grua.jpg`} className="img-round" />
                                     <img src={`/1.jpg`} className="img-round" />
                                     <img src={`/ticonsa1.avif`} className="img-round" />
@@ -328,13 +256,13 @@ const Index = () => {
                                                 <CardSimple
                                                     title={'1'}
                                                     prefix="#"
-                                                    descrip={'La mejor opción en México'}
+                                                    descrip={t.home.bestOptionMexico}
                                                     icon={<RiThumbUpLine color={color.primary} fontSize={24} />}
                                                 />
                                                 <CardSimple
                                                     title={'100'}
                                                     suffix="%"
-                                                    descrip={'de clientes satisfechos'}
+                                                    descrip={t.home.satisfiedCustomers}
                                                     icon={<RiShakeHandsLine color={color.primary} fontSize={24} />}
                                                 />
                                             </Stack>
@@ -342,13 +270,13 @@ const Index = () => {
                                                 <CardSimple
                                                     title={'50'}
                                                     prefix="+"
-                                                    descrip={'Años de experiencia, calidad y compromiso'}
+                                                    descrip={t.home.yearsExperience}
                                                     icon={<RiBuilding2Line color={color.primary} fontSize={24} />}
                                                 />
                                                 <CardSimple
                                                     title={'200'}
                                                     prefix="+"
-                                                    descrip={'Proyectos construidos en México y más'}
+                                                    descrip={t.home.projectsBuilt}
                                                     icon={<RiFolderChartLine color={color.primary} fontSize={24} />}
                                                 />
                                             </Stack>
@@ -384,9 +312,9 @@ const Index = () => {
                                         </Stack>
                                     </div>
                                     <Stack justifyContent={'center'}>
-                                        <h3 className="col-about-title" style={{ textAlign: mobile ? 'center' : 'left' /*marginTop: mobile ? 15 : 140,*/, marginBottom: 0 }}>Nuestra experiencia {!mobile && <br />} <span className="text-primary-blue">expresada en números</span></h3>
+                                        <h3 className="col-about-title" style={{ textAlign: mobile ? 'center' : 'left' /*marginTop: mobile ? 15 : 140,*/, marginBottom: 0 }}>{t.home.ourExperience} {!mobile && <br />} <span className="text-primary-blue"> {t.home.numbers}</span></h3>
                                         <div className="col-about-info" style={{ textAlign: mobile ? 'center' : 'left' }}>
-                                            <p>Ofrecemos soluciones prácticas e innovadoras a cada uno de nuestros clientes</p>
+                                            <p>{t.home.weOffer}</p>
                                         </div>
                                     </Stack>
                                     {/*<div className="col-base" style={{ marginBottom: 20, marginTop: 20, display: 'flex', alignItems: 'center' }}>
@@ -402,10 +330,10 @@ const Index = () => {
 
                     <section className={`mt-20 ${mobile ? "" : "_main container"}`} id="map">
                         <section className="text-center">
-                            <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Llevamos nuestros proyectos destacados a una</h2>
+                            <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>{t.home.ourProjects}</h2>
                             <Fade direction="down">
                                 <section className="text-center">
-                                    <h2 className="section-title">Presencia en <span className="text-primary-blue">Latinoamérica</span></h2>
+                                    <h2 className="section-title">{t.home.presenceIn} <span className="text-primary-blue">{t.home.latam}</span></h2>
                                 </section>
                             </Fade>
                             <div className="content-circle" ref={ref}>
@@ -450,7 +378,7 @@ const Index = () => {
                                                     >{item?.name}</Popover.Header>
                                                     <Popover.Body className="iframe-maya-2">
                                                         <div
-                                                            key={index}
+                                                            key={`iframe-maya-2-gallery-1-${item?.name}`}
                                                             className={`relative relativo relativo-2`}
                                                         >
                                                             <img
@@ -566,17 +494,17 @@ const Index = () => {
                                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                                     <div className="lg:pr-8 lg:pt-4">
                                         <div className="lg:max-w-lg">
-                                            <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>La forma de destacarnos</h2>
-                                            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Productos y Servicios</p>
+                                            <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>{t.home.howWeStandOut}</h2>
+                                            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{t.home.productsServices}</p>
                                             <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                                                 {features_.map((feature) => (
-                                                    <div key={feature.name} className="relative pl-9">
+                                                    <div key={`features-${feature?.name}`} className="relative pl-9">
                                                         <dt className="inline font-semibold text-gray-900">
                                                             <feature.icon className="absolute left-1 top-1 h-5 w-5" color={color.primary} aria-hidden="true" />
-                                                            {feature.name}
+                                                            {feature?.name}
                                                         </dt><br />
                                                         <dd className="inline">
-                                                            {feature.description} {feature?.url && <a href={feature.url} style={{ fontWeight: 'bold', color: color.orange }}>Leer más...</a>}
+                                                            {feature?.description} {feature?.url && <a href={feature?.url} style={{ fontWeight: 'bold', color: color.orange }}>{t.home.readMore}</a>}
                                                         </dd>
                                                     </div>
                                                 ))}

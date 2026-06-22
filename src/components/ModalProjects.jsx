@@ -4,55 +4,29 @@ import {
     ModalContent,
     ModalCloseButton,
     ModalBody,
-    Image,
-    Text,
     Heading,
-    Divider,
-    Box,
-    Flex,
-    VStack,
-    HStack,
-    Icon,
-    Table,
-    Thead,
-    Tbody,
-    Tr,
-    Th,
-    Td,
-    TableContainer,
-    TableCaption
 } from "@chakra-ui/react";
-import { FiCheckCircle } from "react-icons/fi";
 import ImageGallery from "react-image-gallery";
-// import stylesheet if you're not already using CSS @import
 import "react-image-gallery/styles/css/image-gallery.css";
+import "./images.css";
 
 const color = "#0056A4";
 
-const images = [
-    {
-        original: "https://picsum.photos/id/1018/1000/600/",
-        thumbnail: "https://picsum.photos/id/1018/250/150/",
-    },
-    {
-        original: "https://picsum.photos/id/1015/1000/600/",
-        thumbnail: "https://picsum.photos/id/1015/250/150/",
-    },
-    {
-        original: "https://picsum.photos/id/1019/1000/600/",
-        thumbnail: "https://picsum.photos/id/1019/250/150/",
-    },
-];
+const ModalProjects = ({ isOpen, onClose, project, folder, images_, mobile }) => {
 
-
-const ModalProjects = ({ isOpen, onClose, project, folder, images_ }) => {
+    let images = project?.imgs.map(item => {
+        return {
+            "original": `/projects/${folder}/${project?.route_img}/${item}.png`,
+            "thumbnail": `/projects/${folder}/${project?.route_img}/${item}.png`
+        }
+    })
 
     return (
         <Modal
             isOpen={isOpen}
             onClose={onClose}
             isCentered
-            size="5xl"
+            size={!mobile ? "full" : '3xl'}
             motionPreset="scale"
         >
             <ModalOverlay bg="rgba(0, 0, 0, 0.6)" backdropFilter="blur(4px)" />
@@ -73,27 +47,48 @@ const ModalProjects = ({ isOpen, onClose, project, folder, images_ }) => {
                     right={4}
                     zIndex={2}
                 />
-                <ModalBody p={8} position="relative" zIndex={1}>
+                <ModalBody p={6} position="relative" zIndex={1}>
                     <Heading
-                        as="h2"
-                        fontSize="3xl"
+                        as="h3"
+                        fontSize="4xl"
                         fontWeight="extrabold"
                         color={color}
-                        mb={10}
+                        mb={6}
                         letterSpacing="wider"
                     >
                         {project?.title}
                     </Heading>
 
-                    <ImageGallery items={images}
+                    <ImageGallery
+                        items={images}
                         showPlayButton={false}
                         lazyLoad={true}
                         autoPlay={true}
                         showFullscreenButton={false}
-                        isRTL={true}
+                        //isRTL={true}
                         showBullets={true}
-                        thumbnailPosition='right'
-                        showThumbnails={true}
+                        thumbnailPosition={!mobile ? 'bottom' : 'right'}
+                        showThumbnails={mobile}
+                        //additionalClass="square-image-gallery" 
+                        renderItem={(item) => (
+                            <div className="custom-wide-item">
+                                <img
+                                    src={item.original}
+                                    alt={item.originalAlt}
+                                    style={{
+                                        aspectRatio: "16/9",
+                                        objectFit: "cover",
+                                        width: "100%",
+                                        height: "auto"
+                                    }}
+                                />
+                                {item.description && (
+                                    <span className="image-gallery-description">
+                                        {item.description}
+                                    </span>
+                                )}
+                            </div>
+                        )}
                     />
                 </ModalBody>
             </ModalContent>

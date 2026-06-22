@@ -10,6 +10,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import SocialButton from './SocialButton'
 import { PiArrowRightThin } from "react-icons/pi";
+import { useLanguage } from '../i18n/LanguageContext';
 
 export default function SmallCentered({ photo, certificates }) {
     const mobile = useBreakpointValue({ base: true, md: false });
@@ -27,6 +28,8 @@ export default function SmallCentered({ photo, certificates }) {
         //backgroundRepeat: "no-repeat",
         backgroundAttachment: 'fixed'
     }
+
+    const { t } = useLanguage();
 
     const [direction, setDirection] = useState('row');
 
@@ -67,7 +70,7 @@ export default function SmallCentered({ photo, certificates }) {
                     }}
                 >
                     <h1 class="text-3xl font-bold text-center tracking-tight sm:text-4xl">
-                        Nuestro compromiso con la calidad
+                        {t.certificates.ourQualityCommitment}
                     </h1>
 
                     <div class="flex flex-col md:flex-row gap-10 items-center justify-center">
@@ -76,8 +79,8 @@ export default function SmallCentered({ photo, certificates }) {
                                 alt="Ookla"
                                 class="absolute -top-16 left-1/2 transform -translate-x-1/2 h-40 w-40 object-contain" />
                             <p class="text-white mt-4">
-                                Excelencia en la calidad y sustentabilidad <br /> de nuestros procesos.<br />
-                                No. de Certificado: <br />
+                                {t.certificates.excellenceQualitySustainability} <br /> {t.certificates.excellenceQualitySustainabilityDesc}.<br />
+                                {t.certificates.certificateNumber}<br />
                                 <strong>QNQ-049-001/25.</strong>
                                 {/*Sistema de construcción industrializada <br /> Avalada por ANIPPAC<span class="text-blue-400">®</span> **/}
                             </p>
@@ -87,7 +90,7 @@ export default function SmallCentered({ photo, certificates }) {
                                 alt="Ookla"
                                 class="absolute -top-16 left-1/2 transform -translate-x-1/2 h-40 w-40 object-contain" />
                             <p class="text-white mt-4">
-                                Somos miembros fundadores de la <br />Asociación Nacional <br />de Industriales de Presfuerzo y la <br />Prefabricación, A.C.
+                                {t.certificates.foundingMembers}  <br />{t.certificates.anippac}
                                 {/*ANIPPAC<span class="text-blue-400">®</span> <br /> Asociación Nacional de Industriales <br /> del Presfuerzo y la Prefabricación A.C.*/}
                             </p>
                         </div>
@@ -97,7 +100,7 @@ export default function SmallCentered({ photo, certificates }) {
                                 alt="nPerf"
                                 class="absolute -top-16 left-1/2 transform -translate-x-1/2 h-40 w-40 object-cover rounded-full" />
                             <p class="text-white mt-4">
-                                Contamos con certificación avalada<br /> por el Organismo Nacional de <br /> Normalización y Certificación de la Construcción y Edificación.
+                                {t.certificates.certifiedBy}  <br />{t.certificates.onncce}
                                 {/*Excelencia en seguridad <br /> y accesibilidad Certificación <br /> ONNCCE<span class="text-blue-400">®</span> ***/}
                             </p>
                         </div>
@@ -111,10 +114,10 @@ export default function SmallCentered({ photo, certificates }) {
 
                     <div class="text-center space-y-2">
                         <h2 class="text-2xl md:text-3xl font-bold">
-                            Asegura tu inversión trabajando con empresas certificadas.
+                            {t.certificates.secureYourInvestment}  <br />
                         </h2>
                         <p>
-                            La construcción industrial y las nuevas tecnologías antisísmicas representan el futuro. <br />Nuestros ingenieros pueden asesorarte para encontrar la solución más eficiente para tu proyecto.
+                            {t.certificates.constructionIndustry}  <br />{t.certificates.engineersAdvice}
                         </p>
                     </div>
                 </div>}
@@ -136,8 +139,8 @@ export default function SmallCentered({ photo, certificates }) {
                                 >
                                     <div>
                                         <Fade>
-                                            <strong><h3 className="col-about-title text-shadow" style={{ fontWeight: '600', textAlign: 'center', }}>Construye con nosotros</h3></strong>
-                                            <p className="text-shadow" style={{ color: 'white', fontWeight: '600', textAlign: 'center' }}>Cuéntanos más acerca de los requerimientos de tu proyecto y te ayudaremos a convertirlo en realidad</p>
+                                            <strong><h3 className="col-about-title text-shadow" style={{ fontWeight: '600', textAlign: 'center', }}>{t.footer.buildWithUs}</h3></strong>
+                                            <p className="text-shadow" style={{ color: 'white', fontWeight: '600', textAlign: 'center' }}>{t.footer.tellUsAbout}</p>
                                         </Fade>
                                     </div>
                                     <Stack style={{ alignContent: 'center' }}>
@@ -153,7 +156,7 @@ export default function SmallCentered({ photo, certificates }) {
                                                 _hover={{ bg: 'blue.500' }}
                                                 title='Redirigir a Contacto y Enviar Mensaje'
                                             >
-                                                Enviar mensaje
+                                                {t.footer.sendMessage}
                                             </Button>
                                         </a>
                                     </Stack>
@@ -171,7 +174,9 @@ export default function SmallCentered({ photo, certificates }) {
                                     alt="logo Grupo Ticonsa"
                                     style={{ width: 123 }}
                                 />
-                                <h3 className="footer-title" style={{ fontWeight: 'normal', marginBottom: 20, textAlign: mobile ? 'center' : 'left' }}>Grupo Ticonsa ®, un grupo con historia</h3>
+                                <h3 className="footer-title" style={{ fontWeight: 'normal', marginBottom: 20, textAlign: mobile ? 'center' : 'left' }}>
+                                    {t.footer.groupHistory}
+                                </h3>
                             </Stack>
                             <Stack direction={direction} justifyContent={'space-between'}>
                                 {/*<Stack paddingRight={5}>
@@ -190,9 +195,9 @@ export default function SmallCentered({ photo, certificates }) {
                                     </Stack>
                                 </Stack>*/}
                                 <Stack paddingRight={5}>
-                                    <h3 className="footer-title uppercase">Ayuda</h3>
+                                    <h3 className="footer-title uppercase">{t.footer.help}</h3>
                                     <Stack flexDirection={'column'}>
-                                        <a href="/contacto" className="footer-link">Contáctanos</a>
+                                        <a href="/contacto" className="footer-link">{t.footer.contactUs}</a>
                                         {/*<a href="https://help-victum-repse.vercel.app/" className="footer-link" target="_blank">Ayuda digital</a>*/}
                                     </Stack>
                                 </Stack>
@@ -203,12 +208,12 @@ export default function SmallCentered({ photo, certificates }) {
                             <Stack direction={direction} gap={4} style={{ alignItems: 'center' }}>
                                 <h3 className="footer-link" style={{ textAlign: 'center' }}>
                                     <a href={'/legal'} target="_blank" className="footer-link">
-                                        Aviso Legal
+                                        {t.footer.legalNotice}
                                     </a>
                                 </h3>
                                 <h3 className="footer-link" style={{ textAlign: 'center' }}>
                                     <a href={'/privacity'} target="_blank" className="footer-link">
-                                        Aviso de Privacidad
+                                        {t.footer.privacyNotice}
                                     </a>
                                 </h3>
                             </Stack>

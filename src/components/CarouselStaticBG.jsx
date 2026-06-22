@@ -38,7 +38,7 @@ const CarouselStaticBG = ({ title, place, names, folder }) => {
             <Fade delay={300} >
                 <Carousel className="shadow" fade style={{ height: 450, width: 450, top: 42, borderRadius: "10px" }}>
                     {names.map(item =>
-                        <Carousel.Item key={`names-item-${item}`} interval={2600}>
+                        <Carousel.Item key={`Carousel-2-names-item-${item}`} interval={2600}>
                             <img
                                 className="d-block _img_corousel"
                                 src={`/${folder}/${item}.jpg`}

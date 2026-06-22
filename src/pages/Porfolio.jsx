@@ -31,7 +31,7 @@ const Porfolio = () => {
             {
                 projects?.map(project =>
                     <CardPorfolio 
-                        key={project.id}
+                        key={`card-porfolio-${project?.name}`}
                         name={project.name}
                         img={project.img}
                         year={project.year}

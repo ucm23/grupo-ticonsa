@@ -2,8 +2,11 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import color from '../color';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export default function ContactForm2() {
+
+    const { t } = useLanguage();
 
     const form = useRef();
     const sendEmail = (e) => {
@@ -25,28 +28,24 @@ export default function ContactForm2() {
         <form ref={form} onSubmit={sendEmail}>
             <div className="form">
                 <p style={{ textAlign: 'justify', marginBottom: 0 }}>
-                    Si necesitas mejorar cualquier aspecto de un nuevo proyecto, escríbenos.
-                    Aclaramos tus dudas y te asesoramos sobre las ayudas a las que puedas tener.
+                    {t.contact.messageTitle}
                 </p>
-                <label>Nombre</label>
-                <input type="text" name="name" placeholder='Escriba su nombre completo' required />
-                <label>Nombre de tu empresa</label>
-                <input type="text" name="empresa" placeholder='Escriba el nombre de empresa' />
-                <label>Teléfono de oficina</label>
-                <input type="number" name="office" placeholder='Escriba el no. teléfono de oficina' />
-                <label>Teléfono personal</label>
-                <input type="number" name="phone" placeholder='Escriba su no. de teléfono personal' />
-                <label>correo electrónico</label>
-                <input type="email" name="email" placeholder='Escriba su correo electrónico' required />
-                <label>mensaje</label>
-                <textarea name="message" placeholder='Escribe un mensaje' required />
-                <input type="submit" value="Enviar" style={{ fontWeight: 'bold' }} />
+                <label>{t.contact.name}</label>
+                <input type="text" name="name" placeholder={t.contact.namePlaceholder} required />
+                <label>{t.contact.companyName}</label>
+                <input type="text" name="empresa" placeholder={t.contact.companyPlaceholder} />
+                <label>{t.contact.officePhone}</label>
+                <input type="number" name="office" placeholder={t.contact.officePhonePlaceholder} />
+                <label>{t.contact.personalPhone}</label>
+                <input type="number" name="phone" placeholder={t.contact.personalPhonePlaceholder} />
+                <label>{t.contact.email}</label>
+                <input type="email" name="email" placeholder={t.contact.emailPlaceholder} required />
+                <label>{t.contact.message}</label>
+                <textarea name="message" placeholder={t.contact.messagePlaceholder} required />
+                <input type="submit" value={t.contact.send} style={{ fontWeight: 'bold' }} />
                 <section id="locations">
                     <p style={{ fontSize: 11, textAlign: 'justify' }}>
-                        Grupo Ticonsa®️ te informa que los datos de carácter personal que proporciones rellenando este formulario serán tratados por si mismos como responsable de esta web.
-                        La finalidad de pedir y tratar los datos personales que te solicitamos serán utilizados para contactar contigo para atender tu mensaje.
-                        El hecho de que no introduzcas los datos de carácter personal que te solicitamos como obligatorios en este formulario, puede implicar que no podamos atender tu petición.
-                        Puedes consultar información adicional en nuestro <a href={'/privacity'} target="_blank" style={{ color: color.primary }}> Aviso de Privacidad</a>.
+                        {t.contact.privacyText} <a href={'/privacity'} target="_blank" style={{ color: color.primary }}> {t.contact.privacy}</a>.
                     </p>
                 </section>
             </div>

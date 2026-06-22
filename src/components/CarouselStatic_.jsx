@@ -6,7 +6,7 @@ const CarouselStatic_ = ({ names, folder }) => {
     const mobile = useBreakpointValue({ base: true, md: false });
     return <Carousel fade data-bs-theme="dark">
         {names.map(item =>
-            <Carousel.Item key={`names-item-${item}`} interval={4000}>
+            <Carousel.Item key={`CarouselStatic_names-item-${item}`} interval={4000}>
                 <img
                     src={`/${folder}/${item}.jpg`}
                     style={{ width: 500, height: mobile ? 350 : 500, objectFit: 'cover', }}

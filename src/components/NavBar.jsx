@@ -5,9 +5,11 @@ import SmallCentered from './Footer'
 import { useState, useEffect } from "react";
 import { Dropdown } from 'react-bootstrap';
 import color from '../color';
-
+import { useLanguage } from '../i18n/LanguageContext.jsx';
 import {
     Button,
+    ButtonGroup,
+    IconButton
 } from '@chakra-ui/react'
 
 const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) => {
@@ -19,6 +21,7 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
 
     const [isChecked, setIsChecked] = useState(false);
     const [showShadow, setShowShadow] = useState(shadow);
+    const { language, changeLanguage, t } = useLanguage();
 
     useEffect(() => {
         const handleScroll = () => window.scrollY > 0 ? setShowShadow(true) : setShowShadow(false)
@@ -26,7 +29,7 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const SubMenuProd = {
+    /*const SubMenuProd = {
         name: "Servicios",
         options: ["Desarrollo de Ingeniería", "Fabricación", "Transporte y Montaje", "Supervisión"],
         actions: ["ingenieria", "fabricacion", "transporte", "supervision"]
@@ -34,15 +37,15 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
 
     const SubMenuInst = {
         name: "Plantas",
-        options: ["Teotihuacán", "Hidalgo", /*"Campeche",*/ "Cancún", /*"Puerto Progreso"*/],
-        actions: ["plant-teotihuacan", "plant-hidalgo", /*"plant-campeche",*/ "plant-cancun", /*"plant-progreso"*/]
+        options: ["Teotihuacán", "Hidalgo", / "Campeche", / "Cancún", /  "Puerto Progreso" /],
+        actions: ["plant-teotihuacan", "plant-hidalgo", / "plant-campeche", / "plant-cancun", / "plant-progreso" /]
     }
 
     const menuprojects = {
         name: "Proyectos",
         options: ["Infraestructura", "Edificación", "Especiales",],
         actions: ["infraestructura", "edificacion", "especiales",]
-    }
+    }*/
 
     /*const SubMenuInst = {
         name: "INSTALACIONES",
@@ -50,7 +53,25 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
         actions: ["plantas", "instalaciones"]
     }*/
 
-    const routes = [
+    const SubMenuProd = {
+        name: t.nav.services, // Traducido
+        options: [t.submenus.services.engineering, t.submenus.services.manufacturing, t.submenus.services.transportInstall, t.submenus.services.supervision],
+        actions: ["ingenieria", "fabricacion", "transporte", "supervision"]
+    }
+
+    const SubMenuInst = {
+        name: t.nav.plants, // Traducido
+        options: [t.submenus.plants.teotihuacan, t.submenus.plants.hidalgo, t.submenus.plants.cancun],
+        actions: ["plant-teotihuacan", "plant-hidalgo", "plant-cancun"]
+    }
+
+    const menuprojects = {
+        name: t.nav.projects, // Traducido
+        options: [t.submenus.projects.infrastructure, t.submenus.projects.building, t.submenus.projects.special],
+        actions: ["infraestructura", "edificacion", "especiales"]
+    }
+
+    /*const routes = [
         { id: 1, href: "/", content: "Inicio" },
         { id: 2, href: "/prefabricado", content: "Sistema Prefabricado" },
         { id: 3, href: "/#", hasSubMenu: SubMenuInst },
@@ -59,7 +80,35 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
         { id: 6, href: "/#", hasSubMenu: menuprojects },
         { id: 7, href: "/contacto", content: "Contacto" },
         { id: 8, href: "/document_cv", content: "Proveedores", onlyLink: true },
+    ]*/
+
+
+    const routes = [
+        { id: 1, href: "/", content: t.nav.home },
+        { id: 2, href: "/prefabricado", content: t.nav.prefabricatedSystem },
+        { id: 3, href: "/#", hasSubMenu: SubMenuInst },
+        { id: 4, href: "/productos", content: t.nav.products },
+        { id: 5, href: "/#", hasSubMenu: SubMenuProd },
+        { id: 6, href: "/#", hasSubMenu: menuprojects },
+        { id: 7, href: "/contacto", content: t.nav.contact },
+        { id: 8, href: "/document_cv", content: t.nav.proveedores, onlyLink: true },
     ]
+
+    useEffect(() => {
+        SubMenuProd.name = t.nav.services;
+        SubMenuProd.options = [t.submenus.services.engineering, t.submenus.services.manufacturing, t.submenus.services.transportInstall, t.submenus.services.supervision];
+        SubMenuInst.name = t.nav.plants;
+        SubMenuInst.options = [t.submenus.plants.teotihuacan, t.submenus.plants.hidalgo, t.submenus.plants.cancun];
+        menuprojects.name = t.nav.projects;
+        menuprojects.options = [t.submenus.projects.infrastructure, t.submenus.projects.building, t.submenus.projects.special];
+
+        // Actualizar las rutas
+        routes[0].content = t.nav.home;
+        routes[1].content = t.nav.prefabricatedSystem;
+        routes[3].content = t.nav.products;
+        routes[6].content = t.nav.contact;
+        routes[7].content = t.nav.proveedores;
+    }, [t]);
 
     const handleCheckBoxChange = ({ target }) => setIsChecked(target.checked);
 
@@ -120,7 +169,7 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
                                     //rightIcon={<div />}
                                     //leftIcon={<div />}
                                     //fontWeight={'bold'}
-                                    title="Ver currículum de Grupo Ticonsa"
+                                     title={t.nav.viewCV}
                                     className={`cursor-crosshair ${(!showShadow && !mobile) && "text-shadow"}`}
                                     //colorPalette="red" 
                                     fontSize={13}
@@ -129,13 +178,39 @@ const NavBar = ({ children, photo, certificates, mobile, doc, shadow = false }) 
                                         transform: 'scale(0.98)'
                                     }}
                                 >
-                                    Ver Currículum
+                                    {t.nav.viewCV}
                                 </Button>
                                 : <a href={href} className={`${href === pathname && "active"} ${(!showShadow && !mobile) && "white text-shadow"}`}>{content}</a>
 
                             }
                         </li>
                     ))}
+                      <li className="language-selector">
+                        <ButtonGroup size="sm" variant="outline" spacing={1}>
+                            <Button
+                                onClick={() => changeLanguage('esp')}
+                                bg={language === 'esp' ? color.primary : 'transparent'}
+                                color={language === 'esp' ? 'white' : (showShadow || isChecked ? color.primary : 'white')}
+                                borderColor={showShadow || isChecked ? color.primary : 'white'}
+                                _hover={{ bg: color.primary, color: 'white' }}
+                                size="sm"
+                                className={(!showShadow && !mobile) ? "text-shadow" : ""}
+                            >
+                                ES
+                            </Button>
+                            <Button
+                                onClick={() => changeLanguage('eng')}
+                                bg={language === 'eng' ? color.primary : 'transparent'}
+                                color={language === 'eng' ? 'white' : (showShadow || isChecked ? color.primary : 'white')}
+                                borderColor={showShadow || isChecked ? color.primary : 'white'}
+                                _hover={{ bg: color.primary, color: 'white' }}
+                                size="sm"
+                                className={(!showShadow && !mobile) ? "text-shadow" : ""}
+                            >
+                                EN
+                            </Button>
+                        </ButtonGroup>
+                    </li>
                 </ul>
             </nav >
             <main>

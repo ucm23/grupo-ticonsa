@@ -1,0 +1,16 @@
+.wide-responsive-gallery {
+  max-width: 100%;
+}
+
+.wide-responsive-gallery .image-gallery-image {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* En móviles hacerlo menos ancho */
+@media (max-width: 768px) {
+  .wide-responsive-gallery .image-gallery-image {
+    aspect-ratio: 4 / 3;
+  }
+}

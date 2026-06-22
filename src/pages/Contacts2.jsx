@@ -14,6 +14,7 @@ import ContactForm2 from "../components/ContactForm2";
 import { FaDirections } from "react-icons/fa";
 import { TbMapShare } from "react-icons/tb";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
+import { useLanguage } from "../i18n/LanguageContext";
 
 const ubications = [
     {
@@ -50,6 +51,8 @@ const Contacts2 = () => {
     const mobile = useBreakpointValue({ base: true, md: false });
 
     const [width_, setWidth] = useState('50%');
+
+    const { t } = useLanguage();
 
     useEffect(() => {
         const newWidth = mobile ? '100%' : '50%';
@@ -88,10 +91,10 @@ const Contacts2 = () => {
         <NavBar photo={true} mobile={mobile}>
             <div style={styles}>
                 <Fade>
-                    <strong><h3 className="col-about-title" style={{ color: 'white', fontSize: mobile ? 35 : 50, fontWeight: '700', textAlign: 'center', textTransform: 'uppercase', marginTop: mobile ? 150 : 0 }}>CONTÁCTANOS</h3></strong>
+                    <strong><h3 className="col-about-title" style={{ color: 'white', fontSize: mobile ? 35 : 50, fontWeight: '700', textAlign: 'center', textTransform: 'uppercase', marginTop: mobile ? 150 : 0 }}>{t.contact.title}</h3></strong>
                 </Fade>
                 <div className="line-banner" style={{ backgroundColor: 'white' }} />
-                <p style={{ color: 'white', fontWeight: '400', textAlign: 'center', margin: mobile ? 0 : '0 9rem', fontStyle: 'italic' }}>"Ya sea que estés buscando a un contratista general experto o que deseas trabajar con nosotros, {!mobile && <br />} encontrarás todo lo que necesitas para ponerte en contacto con Grupo Ticonsa"</p>
+                <p style={{ color: 'white', fontWeight: '400', textAlign: 'center', margin: mobile ? 0 : '0 9rem', fontStyle: 'italic' }}>{t.contact.subtitle} {!mobile && <br />} {t.contact.subtitle2}</p>
                 <div className="animated-accordion">
                     <RiArrowDownSLine className='text-3xl' color="white" />
                 </div>
@@ -102,17 +105,17 @@ const Contacts2 = () => {
             >
                 <div style={{ width: width_, backgroundColor: '#c3964e10', display: 'flex', flexDirection: 'column', padding: mobile ? 0 : '1rem 5rem', justifyContent: 'center', paddingTop: mobile ? 30 : '1rem' }}>
                     <div className="mx-auto max-w-2xl lg:text-center">
-                        <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>Estamos a tus órdenes</h2>
+                        <h2 className="text-base font-semibold leading-7" style={{ color: color.primary }}>{t.contact.atYourService}</h2>
                     </div>
                     <Fade>
                         <section className="text-center">
-                            <h2 className="section-title">Conversa con <span className="text-primary-blue">GRUPO TICONSA<sup>®</sup></span></h2>
+                            <h2 className="section-title">{t.contact.talkWithUs}<span className="text-primary-blue"> GRUPO TICONSA<sup>®</sup></span></h2>
                         </section>
                     </Fade>
                     <div className="line-banner" style={{ backgroundColor: color.primary }} />
                     {!mobile &&
                         <div className="col-about-info">
-                            <p>Nuestra dedicación al cliente empieza antes incluso de que se conciba el proyecto. Con entusiasmo ofrecemos nuestra visión y asesoramiento a todos aquellos que aspiran a <span style={{ color: color.orange }}>EDIFICAR EN MÉXICO.</span></p>
+                            <p>{t.contact.dedication} <span style={{ color: color.orange }}>{t.contact.build}</span></p>
                         </div>
                     }
                 </div>
@@ -120,38 +123,38 @@ const Contacts2 = () => {
                     <ContactForm2 />
                 </div>
             </Stack>
-            
-                <div style={{ backgroundColor: color.primary, padding: mobile ? 20 : 80 }}>
-                    <Fade direction="down">
-                        <strong><h3 className="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', }}>NUESTRAS UBICACIONES</h3></strong>
-                    </Fade>
-                    <Fade direction="down" delay={0.5}>
-                        <strong><h3 className="col-about-title" style={{ color: 'white', fontSize: 52, fontWeight: '700', marginBottom: '0rem', }}>PRESENCIA NACIONAL</h3></strong>
-                    </Fade>
-                    <div style={{ display: 'flex', flexDirection: direction, marginTop: 30, gap: 25, flexWrap: 'wrap' }}>
-                        {ubications.map((item, index) => (
-                            <div key={`${index}-${item?.name}`}>
-                                <div>
-                                    <h3 className="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase', lineHeight: '2' }}>{item?.name}</h3>
-                                    <div className="line-banner-btn" />
-                                    <a href={item?.url} target="_blank" >
-                                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6, paddingTop: '0.5rem' }}>
-                                            <FaDirections color="white" />
-                                            <h3 style={{ color: 'white', fontSize: 12, marginTop: '0.5rem' }}>{item?.direction}<br />{item?.place}</h3>
-                                        </div>
-                                    </a>
-                                    <a href={`tel:+52${item?.phone}`} target="_blank" >
-                                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                                            <MdOutlinePhoneInTalk color="white" />
-                                            <h3 style={{ color: 'white', fontSize: 12, marginTop: '0.5rem' }}>{item?.phone}</h3>
-                                        </div>
-                                    </a>
-                                    
-                                </div>
+
+            <div style={{ backgroundColor: color.primary, padding: mobile ? 20 : 80 }}>
+                <Fade direction="down">
+                    <strong><h3 className="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', }}>{t.contact.ourLocations}</h3></strong>
+                </Fade>
+                <Fade direction="down" delay={0.5}>
+                    <strong><h3 className="col-about-title" style={{ color: 'white', fontSize: 52, fontWeight: '700', marginBottom: '0rem', }}>{t.contact.nationalPresence}</h3></strong>
+                </Fade>
+                <div style={{ display: 'flex', flexDirection: direction, marginTop: 30, gap: 25, flexWrap: 'wrap' }}>
+                    {ubications.map((item, index) => (
+                        <div key={`ubications-${index}-${item?.name}`}>
+                            <div>
+                                <h3 className="col-about-title" style={{ color: 'white', fontSize: 22, fontWeight: '700', marginBottom: '0rem', textTransform: 'uppercase', lineHeight: '2' }}>{item?.name}</h3>
+                                <div className="line-banner-btn" />
+                                <a href={item?.url} target="_blank" >
+                                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6, paddingTop: '0.5rem' }}>
+                                        <FaDirections color="white" />
+                                        <h3 style={{ color: 'white', fontSize: 12, marginTop: '0.5rem' }}>{item?.direction}<br />{item?.place}</h3>
+                                    </div>
+                                </a>
+                                <a href={`tel:+52${item?.phone}`} target="_blank" >
+                                    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                                        <MdOutlinePhoneInTalk color="white" />
+                                        <h3 style={{ color: 'white', fontSize: 12, marginTop: '0.5rem' }}>{item?.phone}</h3>
+                                    </div>
+                                </a>
+
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
+            </div>
         </NavBar>
     )
 }

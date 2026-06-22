@@ -12,12 +12,14 @@ import {
 
 import '../api/ZoomableImage.js';
 import BGPoints from "../components/BGPoints.jsx";
-import plants from '../assets/info_plants.json'
+import { getPlants, getPlantsArray, getPlantById } from '../../src/assets/info_plants.js';
+import { useLanguage } from "../i18n/LanguageContext.jsx";
 
 const Plants = ({ id }) => {
 
     const [show, setShow] = useState(false);
     const handleShow = () => setShow(!show);
+    const { t } = useLanguage();
 
     const [showLayout, setShowLayout] = useState(false);
     const handleShowLayout = () => setShowLayout(!showLayout);
@@ -39,11 +41,27 @@ const Plants = ({ id }) => {
         setTransform('scale(1)');
     };
 
-    const [arrayBanner, setArrayBanner] = useState(Object.values(plants))
+    /*const [arrayBanner, setArrayBanner] = useState(Object.values(plants))
 
     useEffect(() => {
         setArrayBanner(Object.values(plants))
-    }, []);
+    }, []);*/
+
+    // Obtener las plantas con traducciones
+    const plants = getPlants(t);
+    const plantsArray = getPlantsArray(t);
+    const currentPlant = getPlantById(t, id);
+
+    // Mapeo de info IDs a títulos traducidos
+    const infoTitles = {
+        1: t?.common?.capacity,
+        2: t.common.production,
+        3: t.common.infrastructure,
+        4: t.common.products,
+    };
+
+    const getInfoTitle = (id) => infoTitles[id];
+    console.log("🚀 ~ getInfoTitle ~ getInfoTitle:", getInfoTitle)
 
 
     return (
@@ -56,29 +74,32 @@ const Plants = ({ id }) => {
                     <section className="_main container">
                         <div className="row-base row">
                             <section className="d-flex justify-content-around pb-5 flex-wrap" >
-                                {plants[id].info.map((item, index) => (
+                                {currentPlant?.info.map((item, index) => (
                                     <CardsInfo
                                         key={`${index}-${item?.id}`}
                                         id={item?.id}
                                         properties={item?.list}
+                                        title={getInfoTitle(item?.id) || item?.id}
                                     />
                                 ))}
                             </section>
                         </div>
-                        {plants[id].layout &&
+                        {currentPlant?.layout &&
                             <center>
                                 <section className="col-base col-about-img col-sm-6 col-md-offset-1" style={{ width: '100%', alignItems: 'center', justifyItems: 'center', alignSelf: 'center' }}>
                                     <Fade direction="down">
                                         <section className="text-center">
-                                            <h3 className="col-about-title mt-5" style={{ textTransform: 'uppercase' }}>Layout <span className="text-primary-blue">{plants[id].title}</span></h3>
+                                            <h3 className="col-about-title mt-5" style={{ textTransform: 'uppercase' }}>
+                                                {t.plants.layout || 'Línea de prefabricados'} <span className="text-primary-blue">{currentPlant?.title}</span>
+                                            </h3>
                                             <center><div className="line-banner-small" /></center>
-                                            <p>Línea de prefabricados</p>
+                                            <p>{t.common.prefabricatedLine || 'Línea de prefabricados'}</p>
                                         </section>
                                     </Fade>
                                     <div className="project" onClick={handleShowLayout}>
                                         <figure>
                                             <img
-                                                src={`${plants[id].folder}${plants[id].layout}`}
+                                                src={`${currentPlant?.folder}${currentPlant?.layout}`}
                                                 style={{ width: '80%', height: 'auto', objectFit: 'scale-down' }}
                                                 loading="lazy"
                                             />
@@ -108,8 +129,8 @@ const Plants = ({ id }) => {
 
                         <hr />
                         <div style={{ display: 'flex', flexDirection: !mobile ? 'row' : 'column', marginTop: 25, justifyContent: 'space-between' }}>
-                            {arrayBanner.map((item, index) => {
-                                if (item?.id !== id) {
+                            {plantsArray.map((item, index) => {
+                                if (item?.id !== Number(id)) {
                                     return (
                                         <a href={`${item?.url}`} key={`${index}-${item?.title}`}>
                                             <div>
@@ -119,14 +140,13 @@ const Plants = ({ id }) => {
                                                         style={{ height: 175, objectFit: "scale-down" }}
                                                         loading="lazy"
                                                     />
-
                                                     <h3 style={{ fontSize: 12 }}>{item?.title}</h3>
                                                 </center>
                                             </div>
                                         </a>
-
                                     )
                                 }
+                                return null;
                             })}
                         </div>
                     </section>
@@ -167,7 +187,7 @@ const Plants = ({ id }) => {
             >
                 <Modal.Header closeButton>
                     <Modal.Title>
-                        Línea de prefabricados
+                         {t.plants.layout || 'Línea de prefabricados'}
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -193,7 +213,7 @@ const Plants = ({ id }) => {
                         <img
                             className="zoomable-image"
                             src={`${plants[id].folder}${plants[id].layout}`}
-                            alt={'alt'}
+                            alt={currentPlant?.title}
                             style={{ transform, height: '100%', width: '100%', objectFit: 'scale-down', }}
                         />
                     </div>

@@ -26,7 +26,7 @@ import { FiCheckCircle } from "react-icons/fi";
 
 const color = "#0056A4";
 
-const ProductModal = ({ isOpen, onClose, product }) => {
+const ProductModal = ({ isOpen, onClose, product, t }) => {
     if (!product) return null;
 
     return (
@@ -88,11 +88,11 @@ const ProductModal = ({ isOpen, onClose, product }) => {
                                         color={color}
                                         letterSpacing="wider"
                                     >
-                                        Principales usos
+                                        {t?.productModal?.mainUses}
                                     </Heading>
                                     <VStack align="start" spacing={0.5}>
                                         {product.usos.map((uso, idx) => (
-                                            <HStack key={idx} spacing={2} align="start">
+                                            <HStack key={`idx-${idx}`} spacing={2} align="start">
                                                 <Icon
                                                     as={FiCheckCircle}
                                                     color={color}
@@ -139,7 +139,7 @@ const ProductModal = ({ isOpen, onClose, product }) => {
                                     color={color}
                                     letterSpacing="wider"
                                 >
-                                    Dimensiones
+                                    {t?.productModal?.mainUses}
                                 </Heading>
                                 <TableContainer
                                     borderRadius="md"
@@ -153,20 +153,20 @@ const ProductModal = ({ isOpen, onClose, product }) => {
                                         <Thead bg={color}>
                                             <Tr>
                                                 <Th color="white" fontWeight="bold" width="33%" >
-                                                    Tipo
+                                                    {t?.productModal?.type}
                                                 </Th>
                                                 <Th color="white" fontWeight="bold" width="33%" textAlign={'center'}>
-                                                    Peralte
+                                                    {t?.productModal?.depth}
                                                 </Th>
                                                 <Th color="white" fontWeight="bold" width="33%" textAlign={'center'}>
-                                                    Longitud
+                                                    {t?.productModal?.length}
                                                 </Th>
                                             </Tr>
                                         </Thead>
                                         <Tbody>
                                             {product.dimensiones.map((dim, idx) => (
                                                 <Tr
-                                                    key={idx}
+                                                    key={`dimensiones-1-${idx}`}
                                                     bg={idx % 2 === 0 ? "gray.50" : "white"}
                                                     _hover={{ bg: "gray.100" }}
                                                 >

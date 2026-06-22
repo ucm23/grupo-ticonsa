@@ -1,3 +1,4 @@
+// src/components/CardsInfo.jsx
 import {
     Box,
     Center,
@@ -6,15 +7,11 @@ import color from '../color';
 
 import { MdAspectRatio, MdEngineering, MdSquareFoot } from 'react-icons/md'
 
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Popover from 'react-bootstrap/Popover';
-import services_prefa from '../assets/services_prefa.json'
-
 export default function CardsInfo(props) {
-
     const {
         id,
         properties,
+        title = '', // Título traducido pasado desde el padre
     } = props;
 
     const icons = {
@@ -24,21 +21,8 @@ export default function CardsInfo(props) {
         4: <MdSquareFoot color={color.primaryLight} size="70px" />,
     }
 
-    const sups = {
-        1: 2,
-        2: 3,
-    }
-    const titles = {
-        1: 'SUPERFICIE',
-        2: 'CAPACIDAD',
-        3: 'Elementos para Infraestructura Producibles',
-        4: 'Elementos para Edificación Producibles',
-    }
-
-    const getIcon = () => icons[id]
-    const getsup = () => sups[id]
-    const getTitle = () => titles[id]
-    const getText = () => id !== 3;
+    const getIcon = () => icons[id] || icons[1];
+    const getTitle = () => title || '';
 
     return (
         <Box
@@ -63,52 +47,19 @@ export default function CardsInfo(props) {
                     {getTitle()}
                 </h3>
 
-                {properties.map((item, index) => (
-                    //getText() ? (
-                        <h1
-                            key={`cards-info-${index}`}
-                            style={{
-                                fontFamily: 'monospace',
-                                textAlign: 'center',
-                                fontSize: 12,
-                            }}
-                        >
-                            {item} {getsup() && <sup>{getsup()}</sup>}
-                        </h1>
-                    /*) : (
-                        <OverlayTrigger
-                            key={`cards-info-${index}`}
-                            trigger='hover'
-                            placement={'auto-end'}
-                            overlay={
-                                <Popover id={`popover-positioned-bottom`}>
-                                    <Popover.Header as="h1">{item}</Popover.Header>
-                                    <Popover.Body>
-                                        <div>
-                                        <img
-                                            src={services_prefa[item]?.img}
-                                            style={{ width: 'auto', height: 100, objectFit: 'cover', }}
-                                        />
-                                        </div>
-                                        {services_prefa[item]?.text}
-                                    </Popover.Body>
-                                </Popover>
-                            }
-                        >
-                            <h1
-                                style={{
-                                    fontFamily: 'monospace',
-                                    textAlign: 'center',
-                                    fontSize: 12,
-                                }}
-                            >
-                                {item} ℹ️
-                            </h1>
-                        </OverlayTrigger>
-                    )*/
+                {properties?.map((item, index) => (
+                    <h1
+                        key={`cards-info-${index}`}
+                        style={{
+                            fontFamily: 'monospace',
+                            textAlign: 'center',
+                            fontSize: 12,
+                        }}
+                    >
+                        {item}
+                    </h1>
                 ))}
             </div>
         </Box>
     );
 }
-

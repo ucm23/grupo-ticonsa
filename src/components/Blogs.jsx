@@ -35,7 +35,7 @@ export default function Blogs() {
                 </div>
                 <Carousel className="shadow" fade style={{ height: 500 }}>
                     {[1, 2, 3].map(item =>
-                        <Carousel.Item key={`names-item-${item}`} interval={4000}>
+                        <Carousel.Item key={`names-item-blog-${item}`} interval={4000}>
                             <img
                                 className="d-block w-100 _img_corousel"
                                 src={`/systems/${item}.jpg`}

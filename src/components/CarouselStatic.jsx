@@ -38,7 +38,7 @@ const CarouselStatic = ({ title, place, names, folder, logo }) => {
 
             <Carousel className="shadow" fade style={{ height: 600, width: '100%', zIndex: 1 }}>
                 {names.map(item =>
-                    <Carousel.Item key={`names-item-${item}`} interval={2600}>
+                    <Carousel.Item key={`Carousel-1-names-item-${item}`} interval={2600}>
                         <img
                             className="d-block w-100 _img_corousel"
                             src={`/${folder}/${item}.${'jpg' || 'png'}`}
